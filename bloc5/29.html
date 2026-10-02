@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="ca">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apunts Tema 29 - Oposicions C1 AMB</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #ffffff;
+            color: #111111;
+        }
+        h1, h2, h3, h4, .font-arial-bold {
+            font-family: Arial, sans-serif;
+            font-weight: bold;
+        }
+        /* Estil per al quadre de trampes o aspectes clau amb fons vermell suau pastel, text negre i vora esquerra vermella */
+        .highlight-box-custom {
+            background-color: #fff5f5;
+            border: 1px solid #fca5a5;
+            border-left: 4px solid #cc0000;
+            padding: 15px;
+            border-radius: 10px;
+            margin: 10px 0;
+            color: #111111;
+        }
+        /* Estil específic per destacar referències i aplicacions pràctiques de la web i gestió de l'AMB */
+        .amb-web-highlight {
+            background-color: #f0fdf4;
+            border: 1px solid #bbf7d0;
+            border-left: 4px solid #16a34a;
+            padding: 15px;
+            border-radius: 10px;
+            margin: 10px 0;
+            color: #111111;
+        }
+    </style>
+</head>
+<body class="bg-white min-h-screen text-gray-900 flex flex-col justify-between">
+
+    <header class="w-full border-b border-gray-200 bg-white sticky top-0 z-50 shadow-sm">
+        <div class="max-w-7xl mx-auto px-4 py-4 flex flex-col sm:flex-row items-center justify-between gap-4">
+            
+            <div class="flex items-center gap-3 w-full sm:w-auto justify-between sm:justify-start">
+                <div class="flex items-center gap-3">
+                    <div class="flex items-center">
+                        <img src="../img/logo.png" alt="Logo AMB" class="h-10 w-auto object-contain" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+                        <span class="text-xs text-red-600 font-bold hidden text-center px-1">img/logo.png</span>
+                    </div>
+                    <h1 class="text-xl sm:text-2xl font-bold tracking-tight text-black">
+                        Oposicions C1 <span class="text-red-600">AMB</span>
+                    </h1>
+                </div>
+
+                <a href="index.html" class="sm:hidden inline-flex items-center gap-1.5 px-3 py-1.5 text-xs font-bold text-gray-700 bg-gray-50 border border-gray-300 hover:bg-red-600 hover:text-white hover:border-red-600 rounded-lg transition-colors">
+                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18"></path></svg>
+                    <span>Inici</span>
+                </a>
+            </div>
+
+            <div class="flex items-center gap-3 w-full sm:w-auto justify-between sm:justify-end">
+                <div class="w-full sm:w-80">
+                    <div class="relative">
+                        <span class="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none text-gray-400">
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg>
+                        </span>
+                        <input type="text" id="searchInput" placeholder="Cercar als apunts..." class="w-full pl-10 pr-4 py-2 bg-gray-50 border border-gray-300 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-red-600 focus:border-transparent transition-all">
+                    </div>
+                </div>
+
+                <a href="../index.html" class="hidden sm:inline-flex items-center gap-1.5 px-3.5 py-2 text-xs font-bold text-gray-700 bg-gray-50 border border-gray-300 hover:bg-red-600 hover:text-white hover:border-red-600 rounded-lg transition-colors shrink-0 shadow-sm">
+                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18"></path></svg>
+                    <span>Tornar a l'Inici</span>
+                </a>
+            </div>
+
+        </div>
+    </header>
+
+    <main class="max-w-6xl mx-auto px-4 py-8 w-full flex-grow space-y-8">
+        
+        <div class="flex items-center gap-2 text-xs font-bold text-gray-500 uppercase tracking-wider">
+            <span>Bloc V (Temari Específic)</span>
+            <span>/</span>
+            <span class="text-red-600">Tema 29</span>
+        </div>
+
+        <div class="border-b-2 border-red-600 pb-4">
+            <h2 class="text-2xl sm:text-3xl font-bold text-black tracking-tight">
+                Competències i serveis metropolitans. El Pla d’Actuació Metropolità vigent.
+            </h2>
+        </div>
+
+        <!-- CONTENIDOR EN COLUMNES RESPONSIVE (FICHAS) -->
+        <article class="grid grid-cols-1 md:grid-cols-2 gap-6 items-start">
+            
+            <!-- TARJETA 1: MARC JURÍDIC I COMPETÈNCIES DE L'AMB -->
+            <section class="bg-gray-50 border border-gray-200 rounded-xl p-6 shadow-sm space-y-4 hover:border-red-600 transition-colors">
+                <div class="flex items-center gap-2 text-red-600 font-bold text-lg">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"></path></svg>
+                    <h3>1. Marc Jurídic i Naturalesa de l'Àrea Metropolitana de Barcelona (AMB)</h3>
+                </div>
+                <p class="text-xs text-gray-700 leading-relaxed">
+                    L'Àrea Metropolitana de Barcelona (AMB) està regulada per la <strong>Llei 31/2010, del 3 de juliol, de l'Àrea Metropolitana de Barcelona</strong> i pel Decret legislatiu 2/2003 (Llei municipal i de règim local de Catalunya). És una administració pública de caràcter territorial i de cooperació local obligatòria. Es va constituir el 21 de juliol de 2011, substituint les tres entitats anteriors: la Mancomunitat de Municipis, l'Entitat del Medi Ambient i l'Entitat Metropolitana del Transport[cite: 2].
+                </p>
+                <div class="bg-white p-3 rounded-lg border border-gray-200 space-y-2">
+                    <ul class="space-y-1.5 text-xs text-gray-700">
+                        <li class="flex items-start gap-1.5">
+                            <span class="text-red-600 font-bold">▪</span> <span><strong>Àmbit territorial:</strong> Agrupa 36 municipis de la conurbació de Barcelona, amb una població superior als 3,2 milions d'habitants.</span>
+                        </li>
+                        <li class="flex items-start gap-1.5">
+                            <span class="text-red-600 font-bold">▪</span> <span><strong>Òrgans de govern principals:</strong> El Consell Metropolità (òrgan polític suprem), la Presidència i la Junta de Govern.</span>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+
+            <!-- TARJETA 2: CLASSIFICACIÓ DELS SERVEIS METROPOLITANS -->
+            <section class="bg-gray-50 border border-gray-200 rounded-xl p-6 shadow-sm space-y-4 hover:border-red-600 transition-colors">
+                <div class="flex items-center gap-2 text-red-600 font-bold text-lg">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4"></path></svg>
+                    <h3>2. Àmbits competencials i Serveis Metropolitans Essencials</h3>
+                </div>
+                <p class="text-xs text-gray-700 leading-relaxed">
+                    Segons la Llei 31/2010, l'AMB exerceix competències pròpies en grans àrees supramunicipals per garantir l'eficàcia i eficiència en la prestació de serveis públics.
+                </p>
+                <div class="bg-white p-3 rounded-lg border border-gray-200 space-y-2">
+                    <ul class="space-y-1.5 text-xs text-gray-700">
+                        <li class="flex items-start gap-1.5">
+                            <span class="text-red-600 font-bold">▪</span> <span><strong>Mobilitat i Transport:</strong> Gestió del transport públic col·lectiu de superfície (autobusos metropolitans, TMB, NitBus), planificació de la mobilitat sostenible i serveis de taxi metropolità.</span>
+                        </li>
+                        <li class="flex items-start gap-1.5">
+                            <span class="text-red-600 font-bold">▪</span> <span><strong>Medi Ambient i Cicle de l'Aigua:</strong> Tractament i valorització de residus municipals, depuració d'aigües residuals i subministrament d'aigua en alta.</span>
+                        </li>
+                        <li class="flex items-start gap-1.5">
+                            <span class="text-red-600 font-bold">▪</span> <span><strong>Territori, Urbanisme i Infraestructures:</strong> Planejament urbanístic metropolità (Pla General Metropolità - PGM), gestió de parcs metropolitans i platges.</span>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+
+            <!-- TARJETA 3: ALTRES ÀREES DE COOPERACIÓ I PROMOCIÓ ECONÒMICA -->
+            <section class="bg-gray-50 border border-gray-200 rounded-xl p-6 shadow-sm space-y-4 hover:border-red-600 transition-colors">
+                <div class="flex items-center gap-2 text-red-600 font-bold text-lg">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"></path></svg>
+                    <h3>3. Cohesió Social, Habitatge i Desenvolupament Econòmic</h3>
+                </div>
+                <p class="text-xs text-gray-700 leading-relaxed">
+                    A banda dels serveis obligatoris històrics, l'AMB desenvolupa polítiques transversals de reequilibri territorial i suport als municipis, exercint potestats tributàries i financeres per garantir l'equilibri fiscal i la solidaritat entre els municipis membres[cite: 2].
+                </p>
+                <div class="bg-white p-3 rounded-lg border border-gray-200 space-y-2">
+                    <ul class="space-y-1.5 text-xs text-gray-700">
+                        <li class="flex items-start gap-1.5">
+                            <span class="text-red-600 font-bold">▪</span> <span><strong>Habitatge:</strong> Promoció de parc públic d'habitatge social i ajudes a la rehabilitació d'edificis.</span>
+                        </li>
+                        <li class="flex items-start gap-1.5">
+                            <span class="text-red-600 font-bold">▪</span> <span><strong>Desenvolupament Econòmic i Ocupació:</strong> Foment de l'activitat econòmica, suport a la innovació, polígons d'activitat industrial i programes d'ocupació local.</span>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+
+            <!-- TARJETA 4: EL PLA D'ACTUACIÓ METROPOLITÀ (PAM) -->
+            <section class="bg-gray-50 border border-gray-200 rounded-xl p-6 shadow-sm space-y-4 hover:border-red-600 transition-colors">
+                <div class="flex items-center gap-2 text-red-600 font-bold text-lg">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path></svg>
+                    <h3>4. El Pla d’Actuació Metropolità (PAM)</h3>
+                </div>
+                <p class="text-xs text-gray-700 leading-relaxed">
+                    El Pla d'Actuació Metropolità (PAM) és l'instrument estratègic i de planificació superior de l'AMB que defineix les línies polítiques, objectius, programes i inversions prioritàries per a cada mandat corporatiu.
+                </p>
+                <div class="bg-white p-3 rounded-lg border border-gray-200 space-y-2">
+                    <ul class="space-y-1.5 text-xs text-gray-700">
+                        <li class="flex items-start gap-1.5">
+                            <span class="text-red-600 font-bold">▪</span> <span><strong>Aprovació:</strong> Correspon al Consell Metropolità la seva aprovació a proposta de la Junta de Govern, comptant amb la participació i consens dels 36 ajuntaments integrants.</span>
+                        </li>
+                        <li class="flex items-start gap-1.5">
+                            <span class="text-red-600 font-bold">▪</span> <span><strong>Eixos estratègics:</strong> S'estructura generalment al voltant de la transició ecològica, la mobilitat sostenible, la justícia social, l'habitatge i la resiliència econòmica.</span>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+
+            <!-- TAULA ADAPTADA AL TEMA (AMB LA PRIMERA FILA AMB FONS NEGRE I LLETRES BLANQUES) -->
+            <section class="bg-gray-50 border border-gray-200 rounded-xl p-6 shadow-sm space-y-4 hover:border-red-600 transition-colors md:col-span-2">
+                <div class="flex items-center gap-2 text-red-600 font-bold text-lg">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 10h18M3 14h18m-9-4v8m-7 0h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z"></path></svg>
+                    <h3>Quadre resum: Serveis, Competències i Finançament de l'AMB</h3>
+                </div>
+                <div class="overflow-x-auto">
+                    <table class="w-full text-xs text-left border-collapse">
+                        <thead>
+                            <tr style="background-color: #000000; color: #ffffff;">
+                                <th class="p-3 border border-gray-700 font-bold">Àmbit / Servei</th>
+                                <th class="p-3 border border-gray-700 font-bold">Descripció i Competència</th>
+                                <th class="p-3 border border-gray-700 font-bold">Marc / Finançament</th>
+                            </tr>
+                        </thead>
+                        <tbody class="bg-white text-gray-800">
+                            <tr class="border-b border-gray-200">
+                                <td class="p-3 border border-gray-200 font-bold">Mobilitat i Transport</td>
+                                <td class="p-3 border border-gray-200">Gestió del transport públic de superfície (bus metropolità, TMB, NitBus) i taxi metropolità.</td>
+                                <td class="p-3 border border-gray-200">Llei 31/2010 d'Estructura Metropolitana</td>
+                            </tr>
+                            <tr class="border-b border-gray-200 bg-gray-50">
+                                <td class="p-3 border border-gray-200 font-bold">Medi Ambient</td>
+                                <td class="p-3 border border-gray-200">Tractament de residus municipals, depuració d'aigües i aigua en alta.</td>
+                                <td class="p-3 border border-gray-200">Taxes i preus públics específics</td>
+                            </tr>
+                            <tr class="border-b border-gray-200">
+                                <td class="p-3 border border-gray-200 font-bold">Urbanisme i Territori</td>
+                                <td class="p-3 border border-gray-200">Pla General Metropolità (PGM), parcs metropolitans i platges.</td>
+                                <td class="p-3 border border-gray-200">Competència supramunicipal pròpia</td>
+                            </tr>
+                            <tr class="bg-gray-50">
+                                <td class="p-3 border border-gray-200 font-bold">Fiscalitat i Tributs</td>
+                                <td class="p-3 border border-gray-200">Potestat tributària i establiment de recàrrecs (ex. recàrrec sobre l'IBI de fins al 0,2%).</td>
+                                <td class="p-3 border border-gray-200">Art. 153.1.a TRLRHL i Llei 31/2010[cite: 2]</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+
+            <!-- TARJETA 5: APLICACIÓ PRÀCTICA AL WEB I GESTIÓ DE L'AMB (Destacat en verd) -->
+            <section class="bg-gray-50 border border-gray-200 rounded-xl p-6 shadow-sm space-y-4 hover:border-green-600 transition-colors md:col-span-2">
+                <div class="flex items-center gap-2 text-green-700 font-bold text-lg">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9"></path></svg>
+                    <h3>5. Planificació Estratègica i Serveis al Portal Oficial de l'AMB (amb.cat)</h3>
+                </div>
+                
+                <!-- Bloc amb estil verd específic per a la informació extreta de la web de l'AMB -->
+                <div class="amb-web-highlight text-xs space-y-3">
+                    <p class="font-bold mb-2 text-green-900">🌐 SEGUIMENT DEL PAM I GESTIÓ DE SERVEIS METROPOLITANS (amb.cat):</p>
+                    
+                    <div>
+                        <strong class="text-green-800">El Pla d'Actuació Metropolità (PAM) al web corporatiu:</strong>
+                        <ul class="list-disc pl-4 mt-1 space-y-1">
+                            <li>A través del portal <span class="underline">amb.cat</span>, l'AMB ofereix un espai dedicat al seguiment i <strong>rendició de comptes del PAM vigent</strong>, on es pot consultar l'estat d'execució de cadascun dels projectes, indicadors d'assoliment i inversions assignades a cadascun dels 36 municipis metropolitans.</li>
+                        </ul>
+                    </div>
+
+                    <div>
+                        <strong class="text-green-800">Catàleg de Serveis i Tràmits Metropolitans:</strong>
+                        <ul class="list-disc pl-4 mt-1 space-y-1">
+                            <li>El web de l'AMB inclou el directori interactiu dels serveis de transport (com la T-Mobilitat, autobusos diürns i nocturns), la gestió de residus (deixalleries mòbils i fixes), ordenances fiscals i la cartografia oficial del planejament urbanístic metropolità accessible a la ciutadania i empreses[cite: 2].</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <!-- TARJETA 6: TRAMPES D'EXAMEN I PREGUNTES TIPUS TEST (Destacat en vermell) -->
+            <section class="bg-gray-50 border border-gray-200 rounded-xl p-6 shadow-sm space-y-4 hover:border-red-600 transition-colors md:col-span-2">
+                <div class="flex items-center gap-2 text-red-600 font-bold text-lg">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"></path></svg>
+                    <h3>6. Trampes i Preguntes Tipus Test Habituals (Oposicions C1 AMB)</h3>
+                </div>
+                
+                <!-- Bloc amb estil pastel vermell especial per a trampes d'examen -->
+                <div class="highlight-box-custom text-xs space-y-3">
+                    <p class="font-bold mb-2">⚠ PREGUNTES TRAMPA D'EXAMEN SOBRE L'AMB I COMPETÈNCIES:</p>
+                    
+                    <div>
+                        <strong class="text-red-700">Nombre de municipis integrants de l'AMB:</strong>
+                        <ul class="list-disc pl-4 mt-1 space-y-1">
+                            <li>Vigila la trampa d'examen recurrent que confon el nombre de municipis de l'AMB amb altres entitats o comarques. L'Àrea Metropolitana de Barcelona està composta exactament per <strong>36 municipis</strong> (el de Barcelona i 35 municipis més del seu entorn metropolità)[cite: 2].</li>
+                        </ul>
+                    </div>
+
+                    <div>
+                        <strong class="text-red-700">Naturalesa del Pla d'Actuació Metropolità (PAM):</strong>
+                        <ul class="list-disc pl-4 mt-1 space-y-1">
+                            <li>Recorda una altra trampa típica: creure que el PAM és un instrument exclusivament urbanístic equivalent al Pla General Metropolità (PGM). <strong>El PAM és el pla estratègic i de mandat global</strong> de l'ens metropolità, mentre que el PGM és l'instrument d'ordenació urbanística territorial vigent.</li>
+                        </ul>
+                    </div>
+
+                    <div>
+                        <strong class="text-red-700">Recàrrec sobre l'IBI metropolità:</strong>
+                        <ul class="list-disc pl-4 mt-1 space-y-1">
+                            <li>Pregunta trampa de test: sovint intenten fer creure que l'AMB pot fixar un recàrrec lliure sobre l'IBI. Recorda que està limitat legalment per la legislació d'hisendes locals a un percentatge màxim i únic del <strong>0,2%</strong> de la base imposable[cite: 2].</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+        </article>
+
+    </main>
+
+    <footer class="w-full border-t border-gray-200 bg-gray-50 py-4 text-center text-xs text-gray-500">
+        <p>© 2026 OpoAMB | &copy; Creat per JOMP</p>
+    </footer>
+
+<script>
+    // Script funcional per al cercador a les pàgines d'apunts
+    const searchInput = document.getElementById('searchInput');
+    
+    if (searchInput) {
+        searchInput.addEventListener('input', function(e) {
+            const searchTerm = e.target.value.toLowerCase().trim();
+            const sections = document.querySelectorAll('main article section');
+
+            sections.forEach(section => {
+                const text = section.textContent.toLowerCase();
+                if (searchTerm === '' || text.includes(searchTerm)) {
+                    section.style.display = '';
+                } else {
+                    section.style.display = 'none';
+                }
+            });
+        });
+    }
+</script>
+</body>
+</html>

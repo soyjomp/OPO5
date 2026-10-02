@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="ca">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apunts Tema 31 - Oposicions C1 AMB</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #ffffff;
+            color: #111111;
+        }
+        h1, h2, h3, h4, .font-arial-bold {
+            font-family: Arial, sans-serif;
+            font-weight: bold;
+        }
+        /* Estil per al quadre de trampes o aspectes clau amb fons vermell suau pastel, text negre i vora esquerra vermella */
+        .highlight-box-custom {
+            background-color: #fff5f5;
+            border: 1px solid #fca5a5;
+            border-left: 4px solid #cc0000;
+            padding: 15px;
+            border-radius: 10px;
+            margin: 10px 0;
+            color: #111111;
+        }
+        /* Estil específic per destacar referències i aplicacions pràctiques de la web i gestió de l'AMB */
+        .amb-web-highlight {
+            background-color: #f0fdf4;
+            border: 1px solid #bbf7d0;
+            border-left: 4px solid #16a34a;
+            padding: 15px;
+            border-radius: 10px;
+            margin: 10px 0;
+            color: #111111;
+        }
+    </style>
+</head>
+<body class="bg-white min-h-screen text-gray-900 flex flex-col justify-between">
+
+    <header class="w-full border-b border-gray-200 bg-white sticky top-0 z-50 shadow-sm">
+        <div class="max-w-7xl mx-auto px-4 py-4 flex flex-col sm:flex-row items-center justify-between gap-4">
+            
+            <div class="flex items-center gap-3 w-full sm:w-auto justify-between sm:justify-start">
+                <div class="flex items-center gap-3">
+                    <div class="flex items-center">
+                        <img src="../img/logo.png" alt="Logo AMB" class="h-10 w-auto object-contain" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+                        <span class="text-xs text-red-600 font-bold hidden text-center px-1">img/logo.png</span>
+                    </div>
+                    <h1 class="text-xl sm:text-2xl font-bold tracking-tight text-black">
+                        Oposicions C1 <span class="text-red-600">AMB</span>
+                    </h1>
+                </div>
+
+                <a href="index.html" class="sm:hidden inline-flex items-center gap-1.5 px-3 py-1.5 text-xs font-bold text-gray-700 bg-gray-50 border border-gray-300 hover:bg-red-600 hover:text-white hover:border-red-600 rounded-lg transition-colors">
+                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18"></path></svg>
+                    <span>Inici</span>
+                </a>
+            </div>
+
+            <div class="flex items-center gap-3 w-full sm:w-auto justify-between sm:justify-end">
+                <div class="w-full sm:w-80">
+                    <div class="relative">
+                        <span class="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none text-gray-400">
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg>
+                        </span>
+                        <input type="text" id="searchInput" placeholder="Cercar als apunts..." class="w-full pl-10 pr-4 py-2 bg-gray-50 border border-gray-300 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-red-600 focus:border-transparent transition-all">
+                    </div>
+                </div>
+
+                <a href="../index.html" class="hidden sm:inline-flex items-center gap-1.5 px-3.5 py-2 text-xs font-bold text-gray-700 bg-gray-50 border border-gray-300 hover:bg-red-600 hover:text-white hover:border-red-600 rounded-lg transition-colors shrink-0 shadow-sm">
+                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18"></path></svg>
+                    <span>Tornar a l'Inici</span>
+                </a>
+            </div>
+
+        </div>
+    </header>
+
+    <main class="max-w-6xl mx-auto px-4 py-8 w-full flex-grow space-y-8">
+        
+        <div class="flex items-center gap-2 text-xs font-bold text-gray-500 uppercase tracking-wider">
+            <span>Bloc V (Temari Específic)</span>
+            <span>/</span>
+            <span class="text-red-600">Tema 31</span>
+        </div>
+
+        <div class="border-b-2 border-red-600 pb-4">
+            <h2 class="text-2xl sm:text-3xl font-bold text-black tracking-tight">
+                El servei públic. Formes de gestió del servei públic.
+            </h2>
+        </div>
+
+        <!-- CONTENIDOR EN COLUMNES RESPONSIVE (FICHAS) -->
+        <article class="grid grid-cols-1 md:grid-cols-2 gap-6 items-start">
+            
+            <!-- TARJETA 1: CONCEPTE I PRINCIPIS DEL SERVEI PÚBLIC -->
+            <section class="bg-gray-50 border border-gray-200 rounded-xl p-6 shadow-sm space-y-4 hover:border-red-600 transition-colors">
+                <div class="flex items-center gap-2 text-red-600 font-bold text-lg">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"></path></svg>
+                    <h3>1. Concepte i Principis Essencials del Servei Públic</h3>
+                </div>
+                <p class="text-xs text-gray-700 leading-relaxed">
+                    El <strong>servei públic</strong> és aquella activitat de l'Administració Pública, assumida com a pròpia, la finalitat de la qual és satisfer de manera regular i contínua una necessitat d'interès general.
+                </p>
+                <div class="bg-white p-3 rounded-lg border border-gray-200 space-y-2">
+                    <ul class="space-y-1.5 text-xs text-gray-700">
+                        <li class="flex items-start gap-1.5">
+                            <span class="text-red-600 font-bold">▪</span> <span><strong>Principis clàssics de gestió:</strong> Continuïtat (prestació sense interrupcions injustificades), igualtat de tracte per a tots els usuaris, adaptabilitat al progrés tècnic i social, i obligatorietat.</span>
+                        </li>
+                        <li class="flex items-start gap-1.5">
+                            <span class="text-red-600 font-bold">▪</span> <span><strong>Reserva de serveis:</strong> La llei permet a les administracions públiques reservar determinades activitats essencials en règim de monopolització o exclusivitat (articles de règim local).</span>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+
+            <!-- TARJETA 2: CLASSIFICACIÓ DE LES FORMES DE GESTIÓ -->
+            <section class="bg-gray-50 border border-gray-200 rounded-xl p-6 shadow-sm space-y-4 hover:border-red-600 transition-colors">
+                <div class="flex items-center gap-2 text-red-600 font-bold text-lg">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 10h16M4 14h16M4 18h16"></path></svg>
+                    <h3>2. Modalitats de Gestió dels Serveis Públics Locals</h3>
+                </div>
+                <p class="text-xs text-gray-700 leading-relaxed">
+                    Segons la Llei reguladora de les bases del règim local (LBRL) i la legislació de contractes, les formes de gestió dels serveis públics es divideixen bàsicament en dos grans blocs: gestió directa i gestió indirecta.
+                </p>
+                <div class="bg-white p-3 rounded-lg border border-gray-200 space-y-2">
+                    <ul class="space-y-1.5 text-xs text-gray-700">
+                        <li class="flex items-start gap-1.5">
+                            <span class="text-red-600 font-bold">▪</span> <span><strong>Gestió Directa:</strong> L'Administració presta el servei pels seus propis mitjans. Inclou la gestió per la pròpia entitat local, organisme autònom local, entitat pública empresarial local, o societat mercantil local de capital íntegrament públic.</span>
+                        </li>
+                        <li class="flex items-start gap-1.5">
+                            <span class="text-red-600 font-bold">▪</span> <span><strong>Gestió Indirecta:</strong> La prestació s'encomana a una persona física o jurídica aliena à l'Administració mitjançant diverses figures contractuals (concessió, gestió interessada, concert, etc.).</span>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+
+            <!-- TARJETA 3: TIPUS DE GESTIÓ INDIRECTA (LSP) -->
+            <section class="bg-gray-50 border border-gray-200 rounded-xl p-6 shadow-sm space-y-4 hover:border-red-600 transition-colors">
+                <div class="flex items-center gap-2 text-red-600 font-bold text-lg">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7H5a2 2 0 00-2 2v9a2 2 0 002 2h14a2 2 0 002-2V9a2 2 0 00-2-2h-3m-1 4l-3 3m0 0l-3-3m3 3V4"></path></svg>
+                    <h3>3. Formes contractuals de Gestió Indirecta</h3>
+                </div>
+                <p class="text-xs text-gray-700 leading-relaxed">
+                    Dins de la legislació de contractes del sector públic i règim local, les fórmules tradicionals de gestió indirecta s'articulen principalment a través de contractes de concessió de serveis.
+                </p>
+                <div class="bg-white p-3 rounded-lg border border-gray-200 space-y-2">
+                    <ul class="space-y-1.5 text-xs text-gray-700">
+                        <li class="flex items-start gap-1.5">
+                            <span class="text-red-600 font-bold">▪</span> <span><strong>La Concessió de Serveis:</strong> L'empresari assumeix el risc operatiu de l'explotació del servei (pot incloure o no la construcció d'obres vinculades).</span>
+                        </li>
+                        <li class="flex items-start gap-1.5">
+                            <span class="text-red-600 font-bold">▪</span> <span><strong>Altres modalitats històriques:</strong> Gestió interessada (Administració i empresari comparteixen resultats), concert (amb entitats privades que ja presten serveis similars) i societat d'economia mixta.</span>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+
+            <!-- TARJETA 4: REMUNICIPALITZACIÓ I ENCOMANES DE GESTIÓ -->
+            <section class="bg-gray-50 border border-gray-200 rounded-xl p-6 shadow-sm space-y-4 hover:border-red-600 transition-colors">
+                <div class="flex items-center gap-2 text-red-600 font-bold text-lg">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"></path></svg>
+                    <h3>4. Encomeses de Gestió i Canvis de Model</h3>
+                </div>
+                <p class="text-xs text-gray-700 leading-relaxed">
+                    La normativa actual regula amb rigor els requisits econòmics i jurídics per justificar la tria d'una forma de gestió o revertir serveis externalitzats cap a la gestió pública directa.
+                </p>
+                <div class="bg-white p-3 rounded-lg border border-gray-200 space-y-2">
+                    <ul class="space-y-1.5 text-xs text-gray-700">
+                        <li class="flex items-start gap-1.5">
+                            <span class="text-red-600 font-bold">▪</span> <span><strong>Justificació prèvia:</strong> Qualsevol canvi en la forma de gestió exigeix una memòria econòmica i jurídica que demostri la sostenibilitat, eficiència i avantatge social respecte a les altres opcions.</span>
+                        </li>
+                        <li class="flex items-start gap-1.5">
+                            <span class="text-red-600 font-bold">▪</span> <span><strong>Mitjans propis (Inhouse):</strong> Encàrrecs a entitats que tenen la consideració de mitjà propi i servei tècnic de l'Administració (figura molt rellevant en l'àmbit metropolità).</span>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+
+            <!-- TARJETA 5: TAULA COMPARATIVA DE MODALITATS DE GESTIÓ -->
+            <section class="bg-gray-50 border border-gray-200 rounded-xl p-6 shadow-sm space-y-4 hover:border-red-600 transition-colors md:col-span-2">
+                <div class="flex items-center gap-2 text-red-600 font-bold text-lg">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 10h18M3 14h18m-9-4v8m-7 0h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z"></path></svg>
+                    <h3>5. Quadre Comparatiu de les Formes de Gestió de Serveis Públics</h3>
+                </div>
+                <p class="text-xs text-gray-700 leading-relaxed">
+                    Resum tècnic de les modalitats de gestió directa i indirecta aplicades a l'administració local i a l'AMB:
+                </p>
+                <div class="overflow-x-auto">
+                    <table class="w-full text-left text-xs border-collapse bg-white rounded-lg overflow-hidden shadow-sm">
+                        <thead>
+                            <tr style="background-color: #000000; color: #ffffff;">
+                                <th class="p-3 font-bold">Tipus de Gestió</th>
+                                <th class="p-3 font-bold">Modalitat / Figura</th>
+                                <th class="p-3 font-bold">Titularitat i Risc</th>
+                                <th class="p-3 font-bold">Exemple Pràctic AMB</th>
+                            </tr>
+                        </thead>
+                        <tbody class="divide-y divide-gray-200 text-gray-700">
+                            <tr class="hover:bg-gray-50">
+                                <td class="p-3 font-bold text-red-600">Gestió Directa</td>
+                                <td class="p-3">Gestió per la pròpia Entitat Local</td>
+                                <td class="p-3">Pública / Sense transferència de risc a tercers</td>
+                                <td class="p-3">Serveis administratius generals i gestió directa de tributs.</td>
+                            </tr>
+                            <tr class="hover:bg-gray-50">
+                                <td class="p-3 font-bold text-red-600">Gestió Directa (Instrumental)</td>
+                                <td class="p-3">Societat Mercantil Local (100% pública) o Mitjà Propi</td>
+                                <td class="p-3">Pública / Control analègic al servei intern (In-house)</td>
+                                <td class="p-3">Operadors de transport públic metropolità (TMB).</td>
+                            </tr>
+                            <tr class="hover:bg-gray-50">
+                                <td class="p-3 font-bold text-blue-600">Gestió Indirecta</td>
+                                <td class="p-3">Concessió de Serveis</td>
+                                <td class="p-3">Privada / L'empresari assumeix el <strong>risc operatiu</strong></td>
+                                <td class="p-3">Línies d'autobús de gestió indirecta (NitBus) i serveis externs.</td>
+                            </tr>
+                            <tr class="hover:bg-gray-50">
+                                <td class="p-3 font-bold text-blue-600">Gestió Indirecta</td>
+                                <td class="p-3">Societat d'Economia Mixta / Concert</td>
+                                <td class="p-3">Mixta o col·laborativa / Capital públic i privat</td>
+                                <td class="p-3">Gestió del cicle integral de l'aigua i serveis mediambientals.</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+
+            <!-- TARJETA 6: APLICACIÓ PRÀCTICA AL WEB I GESTIÓ DE L'AMB (Destacat en verd) -->
+            <section class="bg-gray-50 border border-gray-200 rounded-xl p-6 shadow-sm space-y-4 hover:border-green-600 transition-colors md:col-span-2">
+                <div class="flex items-center gap-2 text-green-700 font-bold text-lg">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9"></path></svg>
+                    <h3>6. Models de Gestió dels Serveis Metropolitans a l'AMB (amb.cat)</h3>
+                </div>
+                
+                <!-- Bloc amb estil verd específic per a la informació extreta de la web de l'AMB -->
+                <div class="amb-web-highlight text-xs space-y-3">
+                    <p class="font-bold mb-2 text-green-900">🌐 GESTIÓ DIRECTA, INDIRECTA I SOCIETATS METROPOLITANES (amb.cat):</p>
+                    
+                    <div>
+                        <strong class="text-green-800">Diversitat de models operatius a l'AMB:</strong>
+                        <ul class="list-disc pl-4 mt-1 space-y-1">
+                            <li>Tal com reflecteix el portal corporatiu <span class="underline">amb.cat</span>[cite: 2], l'Àrea Metropolitana de Barcelona gestiona els seus grans serveis públics supramunicipals combinant diferents fórmules jurídiques segons la naturalesa de la prestació.</li>
+                        </ul>
+                    </div>
+
+                    <div>
+                        <strong class="text-green-800">Transport públic i operador intern (TMB):</strong>
+                        <ul class="list-disc pl-4 mt-1 space-y-1">
+                            <li>En l'àmbit de la mobilitat i el transport col·lectiu, l'AMB opera a través de <strong>societats participades i encàrrecs a mitjans propis</strong> (com Transports Metropolitans de Barcelona - TMB) i mitjançant concessions administratives atorgades a operadors privats sota estricte control metropolità per a les línies d'autobús metropolità de gestió indirecta (NitBus, etc.).</li>
+                        </ul>
+                    </div>
+
+                    <div>
+                        <strong class="text-green-800">Cicle de l'aigua i medi ambient:</strong>
+                        <ul class="list-disc pl-4 mt-1 space-y-1">
+                            <li>En matèria de tractament de residus i abastiment d'aigua, l'AMB utilitza models de gestió indirecta mitjançant societats d'economia mixta i concessions especialitzades sotmeses a supervisió pública constant.</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <!-- TARJETA 7: TRAMPES D'EXAMEN I PREGUNTES TIPUS TEST -->
+            <section class="bg-gray-50 border border-gray-200 rounded-xl p-6 shadow-sm space-y-4 hover:border-red-600 transition-colors md:col-span-2">
+                <div class="flex items-center gap-2 text-red-600 font-bold text-lg">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"></path></svg>
+                    <h3>7. Trampes i Preguntes Tipus Test Habituals</h3>
+                </div>
+                
+                <!-- Bloc amb estil pastel vermell especial per a trampes d'examen -->
+                <div class="highlight-box-custom text-xs space-y-3">
+                    <p class="font-bold mb-2">⚠ PREGUNTES TRAMPA D'EXAMEN SOBRE FORMES DE GESTIÓ:</p>
+                    
+                    <div>
+                        <strong class="text-red-700">Concepte de risc operatiu en la concessió de serveis:</strong>
+                        <ul class="list-disc pl-4 mt-1 space-y-1">
+                            <li>Vigila la trampa de test sobre la diferència entre contracte de serveis i concessió de serveis. En la <strong>concessió de serveis</strong>, l'empresari assumeix necessàriament el <strong>risc operatiu</strong> de l'explotació (pot no recuperar la inversió o els costos incorreguts), mentre que en el contracte de serveis clàssic l'Administració retribueix a l'empresari sense transferir-li aquest risc d'explotació de mercat.</li>
+                        </ul>
+                    </div>
+
+                    <div>
+                        <strong class="text-red-700">Naturalesa de les societats mercantils locals:</strong>
+                        <ul class="list-disc pl-4 mt-1 space-y-1">
+                            <li>Una altra trampa habitual consisteix a classificar erròniament les societats mercantils de capital íntegrament públic dins de la gestió indirecta. Recorda que, si el capital és 100% públic, es tracta d'una modalitat de <strong>gestió directa</strong> (instrumental).</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+        </article>
+
+    </main>
+
+    <footer class="w-full border-t border-gray-200 bg-gray-50 py-4 text-center text-xs text-gray-500">
+        <p>© 2026 OpoAMB | &copy; Creat per JOMP</p>
+    </footer>
+
+<script>
+    // Script funcional per al cercador a les pàgines d'apunts
+    const searchInput = document.getElementById('searchInput');
+    
+    if (searchInput) {
+        searchInput.addEventListener('input', function(e) {
+            const searchTerm = e.target.value.toLowerCase().trim();
+            const sections = document.querySelectorAll('main article section');
+
+            sections.forEach(section => {
+                const text = section.textContent.toLowerCase();
+                if (searchTerm === '' || text.includes(searchTerm)) {
+                    section.style.display = '';
+                } else {
+                    section.style.display = 'none';
+                }
+            });
+        });
+    }
+</script>
+</body>
+</html>

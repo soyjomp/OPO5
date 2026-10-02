@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="ca">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apunts Tema 36 - Oposicions C1 AMB</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #ffffff;
+            color: #111111;
+        }
+        h1, h2, h3, h4, .font-arial-bold {
+            font-family: Arial, sans-serif;
+            font-weight: bold;
+        }
+        .highlight-box-custom {
+            background-color: #fff5f5;
+            border: 1px solid #fca5a5;
+            border-left: 4px solid #cc0000;
+            padding: 15px;
+            border-radius: 10px;
+            margin: 10px 0;
+            color: #111111;
+        }
+        .amb-web-highlight {
+            background-color: #f0fdf4;
+            border: 1px solid #bbf7d0;
+            border-left: 4px solid #16a34a;
+            padding: 15px;
+            border-radius: 10px;
+            margin: 10px 0;
+            color: #111111;
+        }
+    </style>
+</head>
+<body class="bg-white min-h-screen text-gray-900 flex flex-col justify-between">
+
+    <header class="w-full border-b border-gray-200 bg-white sticky top-0 z-50 shadow-sm">
+        <div class="max-w-7xl mx-auto px-4 py-4 flex flex-col sm:flex-row items-center justify-between gap-4">
+            
+            <div class="flex items-center gap-3 w-full sm:w-auto justify-between sm:justify-start">
+                <div class="flex items-center gap-3">
+                    <div class="flex items-center">
+                        <img src="../img/logo.png" alt="Logo AMB" class="h-10 w-auto object-contain" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+                        <span class="text-xs text-red-600 font-bold hidden text-center px-1">img/logo.png</span>
+                    </div>
+                    <h1 class="text-xl sm:text-2xl font-bold tracking-tight text-black">
+                        Oposicions C1 <span class="text-red-600">AMB</span>
+                    </h1>
+                </div>
+
+                <a href="index.html" class="sm:hidden inline-flex items-center gap-1.5 px-3 py-1.5 text-xs font-bold text-gray-700 bg-gray-50 border border-gray-300 hover:bg-red-600 hover:text-white hover:border-red-600 rounded-lg transition-colors">
+                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18"></path></svg>
+                    <span>Inici</span>
+                </a>
+            </div>
+
+            <div class="flex items-center gap-3 w-full sm:w-auto justify-between sm:justify-end">
+                <div class="w-full sm:w-80">
+                    <div class="relative">
+                        <span class="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none text-gray-400">
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg>
+                        </span>
+                        <input type="text" id="searchInput" placeholder="Cercar als apunts..." class="w-full pl-10 pr-4 py-2 bg-gray-50 border border-gray-300 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-red-600 focus:border-transparent transition-all">
+                    </div>
+                </div>
+
+                <a href="../index.html" class="hidden sm:inline-flex items-center gap-1.5 px-3.5 py-2 text-xs font-bold text-gray-700 bg-gray-50 border border-gray-300 hover:bg-red-600 hover:text-white hover:border-red-600 rounded-lg transition-colors shrink-0 shadow-sm">
+                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18"></path></svg>
+                    <span>Tornar a l'Inici</span>
+                </a>
+            </div>
+
+        </div>
+    </header>
+
+    <main class="max-w-6xl mx-auto px-4 py-8 w-full flex-grow space-y-8">
+        
+        <div class="flex items-center gap-2 text-xs font-bold text-gray-500 uppercase tracking-wider">
+            <span>Bloc VII (Temari Específic)</span>
+            <span>/</span>
+            <span class="text-red-600">Tema 36</span>
+        </div>
+
+        <div class="border-b-2 border-red-600 pb-4">
+            <h2 class="text-2xl sm:text-3xl font-bold text-black tracking-tight">
+                La gestió del patrimoni públic, tipus de béns, registre d’inventaris i transparència.
+            </h2>
+        </div>
+
+        <!-- CONTENIDOR EN COLUMNES RESPONSIVE (FICHAS) -->
+        <article class="grid grid-cols-1 md:grid-cols-2 gap-6 items-start">
+            
+            <!-- TARJETA 1: MARC NORMATIU I CONCEPTE DE PATRIMONI PÚBLIC -->
+            <section class="bg-gray-50 border border-gray-200 rounded-xl p-6 shadow-sm space-y-4 hover:border-red-600 transition-colors">
+                <div class="flex items-center gap-2 text-red-600 font-bold text-lg">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"></path></svg>
+                    <h3>1. Marc Normatiu i Concepte de Patrimoni</h3>
+                </div>
+                <p class="text-xs text-gray-700 leading-relaxed">
+                    El règim jurídic del patrimoni de les entitats locals i ens públics s'estructura a partir de la Llei del Patrimoni de les Administracions Públiques (LPAP) i la legislació reguladora de les hisendes locals (TRLRHL), complementada per la normativa autonòmica catalana i l'específica de l'AMB (Llei 31/2010).
+                </p>
+                <div class="bg-white p-3 rounded-lg border border-gray-200 space-y-2">
+                    <ul class="space-y-1.5 text-xs text-gray-700">
+                        <li class="flex items-start gap-1.5">
+                            <span class="text-red-600 font-bold">▪</span> <span><strong>Concepte:</strong> El patrimoni de les administracions públiques està constituït pel conjunt de béns i drets, de qualsevol naturalesa, que pertanyin a l'ens públic en règim de titularitat o propietat.</span>
+                        </li>
+                        <li class="flex items-start gap-1.5">
+                            <span class="text-red-600 font-bold">▪</span> <span><strong>Potestats específiques:</strong> Les entitats com l'AMB exerceixen potestats administratives per a la investigació, deslliurament, recuperació d'ofici i inventari dels seus béns.</span>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+
+            <!-- TARJETA 2: TIPOLOGIA DELS BÉNS PÚBLICS -->
+            <section class="bg-gray-50 border border-gray-200 rounded-xl p-6 shadow-sm space-y-4 hover:border-red-600 transition-colors">
+                <div class="flex items-center gap-2 text-red-600 font-bold text-lg">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 7v10c0 2.21 3.582 4 8 4s8-1.79 8-4V7M4 7c0 2.21 3.582 4 8 4s8-1.79 8-4M4 7c0-2.21 3.582-4 8-4s8 1.79 8 4m0 5c0 2.21-3.582 4-8 4s-8-1.79-8-4"></path></svg>
+                    <h3>2. Classificació dels Béns: Dominials i Patrimonials</h3>
+                </div>
+                <p class="text-xs text-gray-700 leading-relaxed">
+                    Els béns i drets de les entitats públiques es divideixen fonamentalment en dues grans categories legals:
+                </p>
+                <div class="bg-white p-3 rounded-lg border border-gray-200 space-y-2">
+                    <ul class="space-y-1.5 text-xs text-gray-700">
+                        <li class="flex items-start gap-1.5">
+                            <span class="text-red-600 font-bold">▪</span> <span><strong>Béns de domini públic (o demanials):</strong> Destinats a un ús públic o a un servei públic. S'inclouen les infraestructures supramunicipals, parcs metropolitans i xarxes col·lectives. Característiques clau i improrrogables en test: són <em>inalienables, imprescriptibles i inembargables</em>.</span>
+                        </li>
+                        <li class="flex items-start gap-1.5">
+                            <span class="text-red-600 font-bold">▪</span> <span><strong>Béns patrimonials (o de propietat privada):</strong> Són la resta de béns titularitat de l'ens públic que no estan destinats directament a un ús públic ni a un servei públic. Es regeixen pel dret privat en la seva gestió i disposició, sense perjudici de les normes de dret públic aplicables en la seva adquisició o alienació.</span>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+
+            <!-- TARJETA 3: INVENTARI GENERAL DE BÉNS I DRETS -->
+            <section class="bg-gray-50 border border-gray-200 rounded-xl p-6 shadow-sm space-y-4 hover:border-red-600 transition-colors">
+                <div class="flex items-center gap-2 text-red-600 font-bold text-lg">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012-2m-6 9l2 2 4-4"></path></svg>
+                    <h3>3. El Registre i Inventari de Béns</h3>
+                </div>
+                <p class="text-xs text-gray-700 leading-relaxed">
+                    L'inventari és el document administratiu de registre obligatori on es reflecteixen fidelment tots els béns i drets que integren el patrimoni de l'entitat.
+                </p>
+                <div class="bg-white p-3 rounded-lg border border-gray-200 space-y-2">
+                    <ul class="space-y-1.5 text-xs text-gray-700">
+                        <li class="flex items-start gap-1.5">
+                            <span class="text-red-600 font-bold">▪</span> <span><strong>Obligatorietat:</strong> Totes les administracions públiques estan obligades a formar i mantenir actualitzat l'inventari dels seus béns i drets, tant immobles com mobles de valor extraordinari o inventariables.</span>
+                        </li>
+                        <li class="flex items-start gap-1.5">
+                            <span class="text-red-600 font-bold">▪</span> <span><strong>Aprovació i revisió:</strong> S'ha de sotmetre a revisió permanent i aprovació per l'òrgan competent (Plenari o Consell Metropolità segons correspongui).</span>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+
+            <!-- TARJETA 4: TRANSPARÈNCIA I PUBLICITAT PATRIMONIAL -->
+            <section class="bg-gray-50 border border-gray-200 rounded-xl p-6 shadow-sm space-y-4 hover:border-red-600 transition-colors">
+                <div class="flex items-center gap-2 text-red-600 font-bold text-lg">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"></path></svg>
+                    <h3>4. Transparència i Publicitat en la Gestió Patrimonial</h3>
+                </div>
+                <p class="text-xs text-gray-700 leading-relaxed">
+                    La gestió dels béns públics està sotmesa als principis de transparència, publicitat, concurrència i objectivitat, especialment en els procediments d'adquisició, alienació, cessió o arrendament.
+                </p>
+                <div class="bg-white p-3 rounded-lg border border-gray-200 space-y-2">
+                    <ul class="space-y-1.5 text-xs text-gray-700">
+                        <li class="flex items-start gap-1.5">
+                            <span class="text-red-600 font-bold">▪</span> <span><strong>Portal de Transparència:</strong> La publicació activa d'informació sobre el patrimoni inclou l'inventari de béns immobles, les autoritzacions d'ús i les concessions de béns domèstics o patrimonials, garantint l'accés a la ciutadania.</span>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+
+            <!-- TAULA ADAPTADA AL TEMA (Fons negre i lletres blanques a la primera fila) -->
+            <section class="bg-gray-50 border border-gray-200 rounded-xl p-6 shadow-sm space-y-4 hover:border-red-600 transition-colors md:col-span-2">
+                <div class="flex items-center gap-2 text-red-600 font-bold text-lg">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 10h18M3 14h18m-9-4v8m-7 0h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z"></path></svg>
+                    <h3>Comparativa: Béns de Domini Públic (Demanials) vs. Béns Patrimonials</h3>
+                </div>
+                <div class="overflow-x-auto">
+                    <table class="w-full text-left text-xs border-collapse">
+                        <thead>
+                            <tr class="bg-black text-white">
+                                <th class="p-3 border border-gray-700">Concepte / Característica</th>
+                                <th class="p-3 border border-gray-700">Béns de Domini Públic (Demanials)</th>
+                                <th class="p-3 border border-gray-700">Béns Patrimonials</th>
+                            </tr>
+                        </thead>
+                        <tbody class="bg-white text-gray-800">
+                            <tr class="border-b border-gray-200">
+                                <td class="p-3 font-bold border border-gray-200">Destinació principal</td>
+                                <td class="p-3 border border-gray-200">Ús públic general o servei públic directe.</td>
+                                <td class="p-3 border border-gray-200">Altres béns titularitat de l'ens sense destí públic directe.</td>
+                            </tr>
+                            <tr class="border-b border-gray-200">
+                                <td class="p-3 font-bold border border-gray-200">Règim jurídic clau</td>
+                                <td class="p-3 border border-gray-200">Dret administratiu estricte i demanial.</td>
+                                <td class="p-3 border border-gray-200">Dret privat en gestió/disposició (amb regles públiques d'adquisició).</td>
+                            </tr>
+                            <tr class="border-b border-gray-200">
+                                <td class="p-3 font-bold border border-gray-200">Protecció especial</td>
+                                <td class="p-3 border border-gray-200">Inalienables, imprescriptibles i inembargables.</td>
+                                <td class="p-3 border border-gray-200">Règim de protecció patrimonial ordinari.</td>
+                            </tr>
+                            <tr>
+                                <td class="p-3 font-bold border border-gray-200">Exemples AMB</td>
+                                <td class="p-3 border border-gray-200">Parcs metropolitans, estacions depuradores (EDAR).</td>
+                                <td class="p-3 border border-gray-200">Sòl sobrer o immobles alienables no afectes a serveis.</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+
+            <!-- TARJETA 5: APLICACIÓ PRÀCTICA AL WEB I GESTIÓ DE L'AMB (Destacat en verd) -->
+            <section class="bg-gray-50 border border-gray-200 rounded-xl p-6 shadow-sm space-y-4 hover:border-green-600 transition-colors md:col-span-2">
+                <div class="flex items-center gap-2 text-green-700 font-bold text-lg">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9"></path></svg>
+                    <h3>5. Gestió Patrimonial i Transparència a l'Àrea Metropolitana de Barcelona (amb.cat)</h3>
+                </div>
+                
+                <div class="amb-web-highlight text-xs space-y-3">
+                    <p class="font-bold mb-2 text-green-900">🌐 PATRIMONI I INVENTARI METROPOLITÀ (amb.cat):</p>
+                    
+                    <div>
+                        <strong class="text-green-800">Inventari de Béns i Infraestructures Metropolitanes:</strong>
+                        <ul class="list-disc pl-4 mt-1 space-y-1">
+                            <li>D'acord amb el portal de transparència i la informació corporativa de l'AMB (<span class="underline">amb.cat</span>), l'ens gestiona un ampli inventari de béns immobles i infraestructures supramunicipals (com parcs metropolitans, instal·lacions de tractament de residus, estacions depuradores d'aigües residuals -EDAR- i xarxes de transport). Aquests béns estan sotmesos al règim demanial quan serveixen a la mobilitat i al medi ambient metropolità.</li>
+                        </ul>
+                    </div>
+
+                    <div>
+                        <strong class="text-green-800">Publicitat i Gestió d'Actius al Portal de Transparència:</strong>
+                        <ul class="list-disc pl-4 mt-1 space-y-1">
+                            <li>L'AMB publica regularment a la seva secció de transparència el detall dels béns immobles de la seva titularitat, les cessions de sòl públic per a habitatge assequible i les concessions administratives atorgades a tercers per a l'explotació de serveis públics o espais de domini públic metropolità.</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <!-- TARJETA 6: TRAMPES D'EXAMEN I PREGUNTES TIPUS TEST (Destacat en vermell) -->
+            <section class="bg-gray-50 border border-gray-200 rounded-xl p-6 shadow-sm space-y-4 hover:border-red-600 transition-colors md:col-span-2">
+                <div class="flex items-center gap-2 text-red-600 font-bold text-lg">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"></path></svg>
+                    <h3>6. Trampes i Preguntes Tipus Test Habituals (Oposicions C1 AMB)</h3>
+                </div>
+                
+                <div class="highlight-box-custom text-xs space-y-3">
+                    <p class="font-bold mb-2">⚠ PREGUNTES TRAMPA D'EXAMEN SOBRE PATRIMONI:</p>
+                    
+                    <div>
+                        <strong class="text-red-700">Característiques inqüestionables dels béns de domini públic:</strong>
+                        <ul class="list-disc pl-4 mt-1 space-y-1">
+                            <li>Recorda de memòria les tres propietats clau inqüestionables en un test: els béns demanials són <strong>inalienables</strong> (no es poden vendre), <strong>imprescriptibles</strong> (no es poden adquirir per usucapió o pas del temps) i <strong>inembargables</strong> (no se'ls pot aplicar execució de deutes). Qualsevol opció que digui que es poden embargar o prescriure en determinats supòsits és una trampa segura per al C1 de la AMB.</li>
+                        </ul>
+                    </div>
+
+                    <div>
+                        <strong class="text-red-700">Règim aplicable als béns patrimonials:</strong>
+                        <ul class="list-disc pl-4 mt-1 space-y-1">
+                            <li>Vigila la trampa de creure que els béns patrimonials es regeixen absolutament pel dret privat en tot moment; tot i que en la seva gestió, arrendament i contractació privada s'aplica el dret privat, l'adquisició i l'alienació s'han de regir pels procediments de dret públic establerts per la legislació de patrimoni de les administracions públiques.</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+        </article>
+
+    </main>
+
+    <footer class="w-full border-t border-gray-200 bg-gray-50 py-4 text-center text-xs text-gray-500">
+        <p>© 2026 OpoAMB | &copy; Creat per JOMP</p>
+    </footer>
+
+<script>
+    const searchInput = document.getElementById('searchInput');
+    
+    if (searchInput) {
+        searchInput.addEventListener('input', function(e) {
+            const searchTerm = e.target.value.toLowerCase().trim();
+            const sections = document.querySelectorAll('main article section');
+
+            sections.forEach(section => {
+                const text = section.textContent.toLowerCase();
+                if (searchTerm === '' || text.includes(searchTerm)) {
+                    section.style.display = '';
+                } else {
+                    section.style.display = 'none';
+                }
+            });
+        });
+    }
+</script>
+</body>
+</html>

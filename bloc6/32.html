@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="ca">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apunts Tema 32 - Oposicions C1 AMB</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #ffffff;
+            color: #111111;
+        }
+        h1, h2, h3, h4, .font-arial-bold {
+            font-family: Arial, sans-serif;
+            font-weight: bold;
+        }
+        /* Estil per al quadre de trampes o aspectes clau amb fons vermell suau pastel, text negre i vora esquerra vermella */
+        .highlight-box-custom {
+            background-color: #fff5f5;
+            border: 1px solid #fca5a5;
+            border-left: 4px solid #cc0000;
+            padding: 15px;
+            border-radius: 10px;
+            margin: 10px 0;
+            color: #111111;
+        }
+        /* Estil específic per destacar referències i aplicacions pràctiques de la web i gestió de l'AMB */
+        .amb-web-highlight {
+            background-color: #f0fdf4;
+            border: 1px solid #bbf7d0;
+            border-left: 4px solid #16a34a;
+            padding: 15px;
+            border-radius: 10px;
+            margin: 10px 0;
+            color: #111111;
+        }
+    </style>
+</head>
+<body class="bg-white min-h-screen text-gray-900 flex flex-col justify-between">
+
+    <header class="w-full border-b border-gray-200 bg-white sticky top-0 z-50 shadow-sm">
+        <div class="max-w-7xl mx-auto px-4 py-4 flex flex-col sm:flex-row items-center justify-between gap-4">
+            
+            <div class="flex items-center gap-3 w-full sm:w-auto justify-between sm:justify-start">
+                <div class="flex items-center gap-3">
+                    <div class="flex items-center">
+                        <img src="../img/logo.png" alt="Logo AMB" class="h-10 w-auto object-contain" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+                        <span class="text-xs text-red-600 font-bold hidden text-center px-1">img/logo.png</span>
+                    </div>
+                    <h1 class="text-xl sm:text-2xl font-bold tracking-tight text-black">
+                        Oposicions C1 <span class="text-red-600">AMB</span>
+                    </h1>
+                </div>
+
+                <a href="index.html" class="sm:hidden inline-flex items-center gap-1.5 px-3 py-1.5 text-xs font-bold text-gray-700 bg-gray-50 border border-gray-300 hover:bg-red-600 hover:text-white hover:border-red-600 rounded-lg transition-colors">
+                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18"></path></svg>
+                    <span>Inici</span>
+                </a>
+            </div>
+
+            <div class="flex items-center gap-3 w-full sm:w-auto justify-between sm:justify-end">
+                <div class="w-full sm:w-80">
+                    <div class="relative">
+                        <span class="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none text-gray-400">
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg>
+                        </span>
+                        <input type="text" id="searchInput" placeholder="Cercar als apunts..." class="w-full pl-10 pr-4 py-2 bg-gray-50 border border-gray-300 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-red-600 focus:border-transparent transition-all">
+                    </div>
+                </div>
+
+                <a href="../index.html" class="hidden sm:inline-flex items-center gap-1.5 px-3.5 py-2 text-xs font-bold text-gray-700 bg-gray-50 border border-gray-300 hover:bg-red-600 hover:text-white hover:border-red-600 rounded-lg transition-colors shrink-0 shadow-sm">
+                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18"></path></svg>
+                    <span>Tornar a l'Inici</span>
+                </a>
+            </div>
+
+        </div>
+    </header>
+
+    <main class="max-w-6xl mx-auto px-4 py-8 w-full flex-grow space-y-8">
+        
+        <div class="flex items-center gap-2 text-xs font-bold text-gray-500 uppercase tracking-wider">
+            <span>Bloc VI (Temari Específic)</span>
+            <span>/</span>
+            <span class="text-red-600">Tema 32</span>
+        </div>
+
+        <div class="border-b-2 border-red-600 pb-4">
+            <h2 class="text-2xl sm:text-3xl font-bold text-black tracking-tight">
+                Pressupostos de les administracions públiques. Estructura pressupostària. Execució del Pressupost.
+            </h2>
+        </div>
+
+        <!-- CONTENIDOR EN COLUMNES RESPONSIVE (FICHAS) -->
+        <article class="grid grid-cols-1 md:grid-cols-2 gap-6 items-start">
+            
+            <!-- TARJETA 1: CONCEPTE I MARC LEGAL DEL PRESSUPOST -->
+            <section class="bg-gray-50 border border-gray-200 rounded-xl p-6 shadow-sm space-y-4 hover:border-red-600 transition-colors">
+                <div class="flex items-center gap-2 text-red-600 font-bold text-lg">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path></svg>
+                    <h3>1. Concepte i Marc Jurídic del Pressupost Local i de l'AMB</h3>
+                </div>
+                <p class="text-xs text-gray-700 leading-relaxed">
+                    El pressupost de les entitats locals i de l'Àrea Metropolitana de Barcelona (AMB) és l'expressió formal, xifrada, conjunta i sistemàtica de les obligacions que, com a màxim, poden reconèixer i dels drets que es preveuen liquidar durant el corresponent exercici econòmic[cite: 2]. L'AMB es va constituir com a administració pública el 21 de juliol de 2011 d'acord amb la Llei 31/2010 del Parlament de Catalunya[cite: 2].
+                </p>
+                <div class="bg-white p-3 rounded-lg border border-gray-200 space-y-2">
+                    <ul class="space-y-1.5 text-xs text-gray-700">
+                        <li class="flex items-start gap-1.5">
+                            <span class="text-red-600 font-bold">▪</span> <span><strong>Marc normatiu bàsic:</strong> Regit pel Text Refós de la Llei reguladora de les hisendes locals (TRLRHL, Reial Decret Legislatiu 2/2004)[cite: 2], la Llei 31/2010 de l'AMB[cite: 2] i la Llei Orgànica 2/2012 d'estabilitat pressupostària[cite: 2].</span>
+                        </li>
+                        <li class="flex items-start gap-1.5">
+                            <span class="text-red-600 font-bold">▪</span> <span><strong>Natura del pressupost:</strong> Actua com a document polític (fixa objectius i prioritats de govern), jurídic (limita la despesa i habilita l'actuació) i comptable (registre de totes les operacions econòmiques)[cite: 2].</span>
+                        </li>
+                        <li class="flex items-start gap-1.5">
+                            <span class="text-red-600 font-bold">▪</span> <span><strong>Principis pressupostaris:</strong> Anualitat, unitat, universalitat, equilibri, especialitat (qualitativa, quantitativa i temporal) i no afectació[cite: 2].</span>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+
+            <!-- TARJETA 2: ESTRUCTURA PRESSUPOSTÀRIA -->
+            <section class="bg-gray-50 border border-gray-200 rounded-xl p-6 shadow-sm space-y-4 hover:border-red-600 transition-colors">
+                <div class="flex items-center gap-2 text-red-600 font-bold text-lg">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 10h16M4 14h16M4 18h16"></path></svg>
+                    <h3>2. Estructura Pressupostària (Despeses i Ingressos)</h3>
+                </div>
+                <p class="text-xs text-gray-700 leading-relaxed">
+                    L'estructura dels pressupostos s'adapta a les ordres ministerials d'elaboració (Ordre EHA/3565/2008 modificada per l'Ordre HAP/419/2014)[cite: 2] i s'organitza en dimensions orgàniques, funcionals i econòmiques[cite: 2].
+                </p>
+                <div class="bg-white p-3 rounded-lg border border-gray-200 space-y-2">
+                    <ul class="space-y-1.5 text-xs text-gray-700">
+                        <li class="flex items-start gap-1.5">
+                            <span class="text-red-600 font-bold">▪</span> <span><strong>Estat de Despeses:</strong> Classificació <em>Orgànica</em> (qui gasta: òrgans i serveis), <em>per Programes</em> (per a què es gasta: finalitats, polítiques i serveis) i <em>Econòmica</em> (en què es gasta: 9 capítols des de personal fins a passius financers)[cite: 2].</span>
+                        </li>
+                        <li class="flex items-start gap-1.5">
+                            <span class="text-red-600 font-bold">▪</span> <span><strong>Estat d'Ingressos:</strong> Estructura econòmica obligatòria dividida en 9 capítols (impostos directes/indirectes, taxes, transferències, ingressos patrimonials, alienació d'inversions, operacions financeres)[cite: 2]. Recorda que l'ingrés no porta classificació per programes[cite: 2].</span>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+
+            <!-- TARJETA 3: EXECUCIÓ DEL PRESSUPOST DE DESPESES -->
+            <section class="bg-gray-50 border border-gray-200 rounded-xl p-6 shadow-sm space-y-4 hover:border-red-600 transition-colors">
+                <div class="flex items-center gap-2 text-red-600 font-bold text-lg">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                    <h3>3. Fases d'Execució del Pressupost de Despeses</h3>
+                </div>
+                <p class="text-xs text-gray-700 leading-relaxed">
+                    El procés d'execució de la despesa pública segueix una tramitació estricta regulada pel TRLRHL (articles 184, 185 i 186)[cite: 2] i la normativa comptable.
+                </p>
+                <div class="bg-white p-3 rounded-lg border border-gray-200 space-y-2">
+                    <ul class="space-y-1.5 text-xs text-gray-700">
+                        <li class="flex items-start gap-1.5">
+                            <span class="text-red-600 font-bold">▪</span> <span><strong>A) Autorització (A):</strong> Acte pel qual s'acorda realitzar una despesa per un import determinat o estimat, reservant crèdit[cite: 2].</span>
+                        </li>
+                        <li class="flex items-start gap-1.5">
+                            <span class="text-red-600 font-bold">▪</span> <span><strong>B) Disposició o Compromís (D):</strong> Acte pel qual s'acorda o concerta la realització de l'obra o servei per un import cert, formalitzant la reserva[cite: 2].</span>
+                        </li>
+                        <li class="flex items-start gap-1.5">
+                            <span class="text-red-600 font-bold">▪</span> <span><strong>C) Reconeixement de l'obligació (O):</strong> Acte que contreu el crèdit exigible contra l'entitat derivat d'una prestació realitzada satisfactòriament[cite: 2].</span>
+                        </li>
+                        <li class="flex items-start gap-1.5">
+                            <span class="text-red-600 font-bold">▪</span> <span><strong>D) Ordenació del pagament (P) i Pagament material:</strong> Ordre expedida contra la Tresoreria i la seva efectiva execució[cite: 2].</span>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+
+            <!-- TARJETA 4: TRAMITACIÓ, LIQUIDACIÓ I CALENDARI PRESSUPOSTARI -->
+            <section class="bg-gray-50 border border-gray-200 rounded-xl p-6 shadow-sm space-y-4 hover:border-red-600 transition-colors">
+                <div class="flex items-center gap-2 text-red-600 font-bold text-lg">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path></svg>
+                    <h3>4. Tramitació, Aprovació i Liquidació del Pressupost</h3>
+                </div>
+                <p class="text-xs text-gray-700 leading-relaxed">
+                    El cicle pressupostari segueix un calendari fix establert al TRLRHL per a la seva formació, aprovació i posterior liquidació anual[cite: 2].
+                </p>
+                <div class="bg-white p-3 rounded-lg border border-gray-200 space-y-2">
+                    <ul class="space-y-1.5 text-xs text-gray-700">
+                        <li class="flex items-start gap-1.5">
+                            <span class="text-red-600 font-bold">▪</span> <span><strong>Fases de tramitació:</strong> Abans del 15 de setembre es remeten els pressupostos dels organismes autònoms; abans del 15 d'octubre el President forma el Pressupost General i el presenta al Ple; s'aprova inicialment, s'exposa al públic 15 dies al BOP i s'aprova definitivament abans del 31 de desembre[cite: 2].</span>
+                        </li>
+                        <li class="flex items-start gap-1.5">
+                            <span class="text-red-600 font-bold">▪</span> <span><strong>Pròrroga automàtica:</strong> Si el dia 1 de gener no s'ha aprovat el nou pressupost, es prorroga automàticament el de l'any anterior en els seus crèdits inicials[cite: 2].</span>
+                        </li>
+                        <li class="flex items-start gap-1.5">
+                            <span class="text-red-600 font-bold">▪</span> <span><strong>Liquidació:</strong> Es confecciona abans de l'1 de març de l'exercici següent, posant de manifest el resultat pressupostari i el romanent de tresoreria[cite: 2].</span>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+
+            <!-- TABLA RESUM DELS CAPÍTOLS PRESSUPOSTARIS (Ocupant tot l'ample) -->
+            <section class="bg-gray-50 border border-gray-200 rounded-xl p-6 shadow-sm space-y-4 hover:border-red-600 transition-colors md:col-span-2">
+                <div class="flex items-center gap-2 text-red-600 font-bold text-lg">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 10h18M3 14h18m-9-4v8m-7 0h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path></svg>
+                    <h3>Taula de Referència: Classificació Econòmica dels Capítols Pressupostaris</h3>
+                </div>
+                <p class="text-xs text-gray-700 leading-relaxed">
+                    quadre resum obligatori amb la desagregació dels capítols de despeses i ingressos segons la normativa d'hisendes locals aplicada a l'AMB[cite: 2]:
+                </p>
+                <div class="overflow-x-auto">
+                    <table class="w-full text-xs text-left border-collapse border border-gray-300">
+                        <thead>
+                            <tr class="bg-black text-white">
+                                <th class="border border-gray-300 p-2.5">Capítol</th>
+                                <th class="border border-gray-300 p-2.5">Estat de Despeses (En què es gasta)</th>
+                                <th class="border border-gray-300 p-2.5">Estat d'Ingressos (Quin és l'origen)</th>
+                            </tr>
+                        </thead>
+                        <tbody class="bg-white text-gray-800">
+                            <tr>
+                                <td class="border border-gray-300 p-2 font-bold text-center">Capítol 1</td>
+                                <td class="border border-gray-300 p-2">Remuneracions de personal[cite: 2]</td>
+                                <td class="border border-gray-300 p-2">Impostos directes[cite: 2]</td>
+                            </tr>
+                            <tr class="bg-gray-50">
+                                <td class="border border-gray-300 p-2 font-bold text-center">Capítol 2</td>
+                                <td class="border border-gray-300 p-2">Despeses corrents de béns i serveis[cite: 2]</td>
+                                <td class="border border-gray-300 p-2">Impostos indirectes[cite: 2]</td>
+                            </tr>
+                            <tr>
+                                <td class="border border-gray-300 p-2 font-bold text-center">Capítol 3</td>
+                                <td class="border border-gray-300 p-2">Despeses financeres (interessos de deute)[cite: 2]</td>
+                                <td class="border border-gray-300 p-2">Taxes, preus públics i altres ingressos[cite: 2]</td>
+                            </tr>
+                            <tr class="bg-gray-50">
+                                <td class="border border-gray-300 p-2 font-bold text-center">Capítol 4</td>
+                                <td class="border border-gray-300 p-2">Transferències corrents[cite: 2]</td>
+                                <td class="border border-gray-300 p-2">Transferències corrents[cite: 2]</td>
+                            </tr>
+                            <tr>
+                                <td class="border border-gray-300 p-2 font-bold text-center">Capítol 5</td>
+                                <td class="border border-gray-300 p-2">Fons de contingència[cite: 2]</td>
+                                <td class="border border-gray-300 p-2">Ingressos patrimonials[cite: 2]</td>
+                            </tr>
+                            <tr class="bg-gray-50">
+                                <td class="border border-gray-300 p-2 font-bold text-center">Capítol 6</td>
+                                <td class="border border-gray-300 p-2">Inversions reals[cite: 2]</td>
+                                <td class="border border-gray-300 p-2">Alienació d'inversions reals[cite: 2]</td>
+                            </tr>
+                            <tr>
+                                <td class="border border-gray-300 p-2 font-bold text-center">Capítol 7</td>
+                                <td class="border border-gray-300 p-2">Transferències de capital[cite: 2]</td>
+                                <td class="border border-gray-300 p-2">Transferències de capital[cite: 2]</td>
+                            </tr>
+                            <tr class="bg-gray-50">
+                                <td class="border border-gray-300 p-2 font-bold text-center">Capítol 8</td>
+                                <td class="border border-gray-300 p-2">Actius financers[cite: 2]</td>
+                                <td class="border border-gray-300 p-2">Variació d'actius financers[cite: 2]</td>
+                            </tr>
+                            <tr>
+                                <td class="border border-gray-300 p-2 font-bold text-center">Capítol 9</td>
+                                <td class="border border-gray-300 p-2">Passius financers (amortització de deute)[cite: 2]</td>
+                                <td class="border border-gray-300 p-2">Variació de passius financers[cite: 2]</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+
+            <!-- TARJETA 5: APLICACIÓ PRÀCTICA AL WEB I GESTIÓ DE L'AMB (Destacat en verd) -->
+            <section class="bg-gray-50 border border-gray-200 rounded-xl p-6 shadow-sm space-y-4 hover:border-green-600 transition-colors md:col-span-2">
+                <div class="flex items-center gap-2 text-green-700 font-bold text-lg">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9"></path></svg>
+                    <h3>5. Gestió Pressupostària, Transparència i Pressupostos de l'AMB (amb.cat)</h3>
+                </div>
+                
+                <!-- Bloc amb estil verd específic per a la informació extreta de la web de l'AMB -->
+                <div class="amb-web-highlight text-xs space-y-3">
+                    <p class="font-bold mb-2 text-green-900">🌐 ESTRUCTURA I ACCÉS AL PRESSUPOST ANUAL DE L'AMB (amb.cat):</p>
+                    
+                    <div>
+                        <strong class="text-green-800">Publicació i Transparència Pressupostària:</strong>
+                        <ul class="list-disc pl-4 mt-1 space-y-1">
+                            <li>A través del portal corporatiu <span class="underline">amb.cat</span> i de l'apartat de Transparència, l'Àrea Metropolitana de Barcelona publica íntegrament el seu <strong>Pressupost Anual consolidat</strong>, detallant la distribució de recursos destinats a mobilitat, medi ambient, habitatge i serveis generals[cite: 2].</li>
+                        </ul>
+                    </div>
+
+                    <div>
+                        <strong class="text-green-800">Especificitats financeres metropolitanes i recàrrec d'I.B.I.:</strong>
+                        <ul class="list-disc pl-4 mt-1 space-y-1">
+                            <li>Segons l'article 153.1.a) del TRLRHL i l'article 41 de la Llei 31/2010 de l'AMB, les àrees metropolitanes poden establir un recàrrec sobre l'Impost sobre Béns Immobles (IBI) per als immobles situats al seu territori, amb un percentatge únic i màxim del 0,2% de la base imposable, gestionat conjuntament amb el mateix impost[cite: 2].</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <!-- TARJETA 6: TRAMPES D'EXAMEN I PREGUNTES TIPUS TEST -->
+            <section class="bg-gray-50 border border-gray-200 rounded-xl p-6 shadow-sm space-y-4 hover:border-red-600 transition-colors md:col-span-2">
+                <div class="flex items-center gap-2 text-red-600 font-bold text-lg">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"></path></svg>
+                    <h3>6. Trampes i Preguntes Tipus Test Habituals per a C1 AMB</h3>
+                </div>
+                
+                <!-- Bloc amb estil pastel vermell especial per a trampes d'examen -->
+                <div class="highlight-box-custom text-xs space-y-3">
+                    <p class="font-bold mb-2">⚠ PREGUNTES TRAMPA D'EXAMEN SOBRE PRESSUPOSTOS AMB:</p>
+                    
+                    <div>
+                        <strong class="text-red-700">Ordre de les fases d'execució de la despesa (A-D-O-P):</strong>
+                        <ul class="list-disc pl-4 mt-1 space-y-1">
+                            <li>Una trampa clàssica d'examen consisteix a alterar l'ordre de les fases comptables de la despesa o confondre'n les definicions. Recorda la seqüència exacta: <strong>Autorització (A), Disposició o Compromís (D), Reconeixement de l'obligació (O) i Ordenació del pagament (P)</strong>[cite: 2].</li>
+                        </ul>
+                    </div>
+
+                    <div>
+                        <strong class="text-red-700">Classificació per programes en ingressos:</strong>
+                        <ul class="list-disc pl-4 mt-1 space-y-1">
+                            <li>Pregunta trampa: "<em>Té el pressupost d'ingressos classificació per programes?</em>". <strong>Fals.</strong> Només el pressupost de despeses disposa de classificació funcional o per programes; el pressupost d'ingressos només s'estructura orgànica i econòmicament[cite: 2].</li>
+                        </ul>
+                    </div>
+
+                    <div>
+                        <strong class="text-red-700">Tipus d'interessos del deute:</strong>
+                        <ul class="list-disc pl-4 mt-1 space-y-1">
+                            <li>No confonguis l'amortització de préstecs (capítol 9 de passius financers) amb el pagament dels interessos d'aquests deutes, els quals es comptabilitzen obligatòriament al <strong>capítol 3 de despeses financeres</strong>[cite: 2].</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+        </article>
+
+    </main>
+
+    <footer class="w-full border-t border-gray-200 bg-gray-50 py-4 text-center text-xs text-gray-500">
+        <p>© 2026 OpoAMB | &copy; Creat per JOMP</p>
+    </footer>
+
+<script>
+    // Script funcional per al cercador a les pàgines d'apunts
+    const searchInput = document.getElementById('searchInput');
+    
+    if (searchInput) {
+        searchInput.addEventListener('input', function(e) {
+            const searchTerm = e.target.value.toLowerCase().trim();
+            const sections = document.querySelectorAll('main article section');
+
+            sections.forEach(section => {
+                const text = section.textContent.toLowerCase();
+                if (searchTerm === '' || text.includes(searchTerm)) {
+                    section.style.display = '';
+                } else {
+                    section.style.display = 'none';
+                }
+            });
+        });
+    }
+</script>
+</body>
+</html>

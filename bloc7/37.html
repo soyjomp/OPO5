@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="ca">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apunts Tema 37 - Oposicions C1 AMB</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #ffffff;
+            color: #111111;
+        }
+        h1, h2, h3, h4, .font-arial-bold {
+            font-family: Arial, sans-serif;
+            font-weight: bold;
+        }
+        /* Estil per al quadre de trampes o aspectes clau amb fons vermell suau pastel, text negre i vora esquerra vermella */
+        .highlight-box-custom {
+            background-color: #fff5f5;
+            border: 1px solid #fca5a5;
+            border-left: 4px solid #cc0000;
+            padding: 15px;
+            border-radius: 10px;
+            margin: 10px 0;
+            color: #111111;
+        }
+        /* Estil específic per destacar referències i aplicacions pràctiques de la web i gestió de l'AMB */
+        .amb-web-highlight {
+            background-color: #f0fdf4;
+            border: 1px solid #bbf7d0;
+            border-left: 4px solid #16a34a;
+            padding: 15px;
+            border-radius: 10px;
+            margin: 10px 0;
+            color: #111111;
+        }
+    </style>
+</head>
+<body class="bg-white min-h-screen text-gray-900 flex flex-col justify-between">
+
+    <header class="w-full border-b border-gray-200 bg-white sticky top-0 z-50 shadow-sm">
+        <div class="max-w-7xl mx-auto px-4 py-4 flex flex-col sm:flex-row items-center justify-between gap-4">
+            
+            <div class="flex items-center gap-3 w-full sm:w-auto justify-between sm:justify-start">
+                <div class="flex items-center gap-3">
+                    <div class="flex items-center">
+                        <img src="../img/logo.png" alt="Logo AMB" class="h-10 w-auto object-contain" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+                        <span class="text-xs text-red-600 font-bold hidden text-center px-1">img/logo.png</span>
+                    </div>
+                    <h1 class="text-xl sm:text-2xl font-bold tracking-tight text-black">
+                        Oposicions C1 <span class="text-red-600">AMB</span>
+                    </h1>
+                </div>
+
+                <a href="index.html" class="sm:hidden inline-flex items-center gap-1.5 px-3 py-1.5 text-xs font-bold text-gray-700 bg-gray-50 border border-gray-300 hover:bg-red-600 hover:text-white hover:border-red-600 rounded-lg transition-colors">
+                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18"></path></svg>
+                    <span>Inici</span>
+                </a>
+            </div>
+
+            <div class="flex items-center gap-3 w-full sm:w-auto justify-between sm:justify-end">
+                <div class="w-full sm:w-80">
+                    <div class="relative">
+                        <span class="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none text-gray-400">
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg>
+                        </span>
+                        <input type="text" id="searchInput" placeholder="Cercar als apunts..." class="w-full pl-10 pr-4 py-2 bg-gray-50 border border-gray-300 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-red-600 focus:border-transparent transition-all">
+                    </div>
+                </div>
+
+                <a href="../index.html" class="hidden sm:inline-flex items-center gap-1.5 px-3.5 py-2 text-xs font-bold text-gray-700 bg-gray-50 border border-gray-300 hover:bg-red-600 hover:text-white hover:border-red-600 rounded-lg transition-colors shrink-0 shadow-sm">
+                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18"></path></svg>
+                    <span>Tornar a l'Inici</span>
+                </a>
+            </div>
+
+        </div>
+    </header>
+
+    <main class="max-w-6xl mx-auto px-4 py-8 w-full flex-grow space-y-8">
+        
+        <div class="flex items-center gap-2 text-xs font-bold text-gray-500 uppercase tracking-wider">
+            <span>Bloc VII (Temari Específic)</span>
+            <span>/</span>
+            <span class="text-red-600">Tema 37</span>
+        </div>
+
+        <div class="border-b-2 border-red-600 pb-4">
+            <h2 class="text-2xl sm:text-3xl font-bold text-black tracking-tight">
+                Aspectes bàsics de la responsabilitat patrimonial de les Administracions Públiques
+            </h2>
+        </div>
+
+        <!-- CONTENIDOR EN COLUMNES RESPONSIVE (FICHAS) -->
+        <article class="grid grid-cols-1 md:grid-cols-2 gap-6 items-start">
+            
+            <!-- TARJETA 1: MARC CONSTITUCIONAL I LEGAL -->
+            <section class="bg-gray-50 border border-gray-200 rounded-xl p-6 shadow-sm space-y-4 hover:border-red-600 transition-colors">
+                <div class="flex items-center gap-2 text-red-600 font-bold text-lg">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 6l3 1m0 0l-3 9a5.002 5.002 0 006.001 0M6 7l3 9M6 7l6-2m6 2l3-1m-3 1l-3 9a5.002 5.002 0 006.001 0M18 7l3 9m-3-9l-6-2m0-2v2m0 16V5m0 16H9m3 0h3"></path></svg>
+                    <h3>1. Marc Constitucional i Legal de la Responsabilitat</h3>
+                </div>
+                <p class="text-xs text-gray-700 leading-relaxed">
+                    La responsabilitat patrimonial de les administracions públiques troba el seu fonament bàsic en l'article 106.2 de la Constitució Espanyola (CE), el qual estableix que els particulars, en els termes establerts per la llei, tindran dret a ser indemnitzats per tota lesió que pateixin en qualsevol dels seus béns i drets, sempre que la lesió sigui conseqüència del funcionament dels serveis públics.
+                </p>
+                <div class="bg-white p-3 rounded-lg border border-gray-200 space-y-2">
+                    <ul class="space-y-1.5 text-xs text-gray-700">
+                        <li class="flex items-start gap-1.5">
+                            <span class="text-red-600 font-bold">▪</span> <span><strong>Lleis de referència (LLEI 39/2015 i 40/2015):</strong> Desenvolupada principalment als articles 32 i següents de la Llei 40/2015 (LRJSP) i a la tramitació procedimental de la Llei 39/2015 (LPACAP).</span>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+
+            <!-- TARJETA 2: REQUISITS DE LA RESPONSABILITAT PATRIMONIAL -->
+            <section class="bg-gray-50 border border-gray-200 rounded-xl p-6 shadow-sm space-y-4 hover:border-red-600 transition-colors">
+                <div class="flex items-center gap-2 text-red-600 font-bold text-lg">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                    <h3>2. Requisits per a l'Exigència de la Responsabilitat</h3>
+                </div>
+                <p class="text-xs text-gray-700 leading-relaxed">
+                    Perquè s'aprovi una reclamació patrimonial i s'reconegui dret a indemnització, cal que concorrin de manera acumulativa els següents requisits legals:
+                </p>
+                <div class="bg-white p-3 rounded-lg border border-gray-200 space-y-2">
+                    <ul class="space-y-1.5 text-xs text-gray-700">
+                        <li class="flex items-start gap-1.5">
+                            <span class="text-red-600 font-bold">▪</span> <span><strong>A) Lesió o dany efectivament produït:</strong> Avaluable econòmicament i referit a una persona o col·lectiu determinat.</span>
+                        </li>
+                        <li class="flex items-start gap-1.5">
+                            <span class="text-red-600 font-bold">▪</span> <span><strong>B) Caràcter antijurídic:</strong> El particular no tingui el deure jurídic de suportar-lo d'acord amb la llei.</span>
+                        </li>
+                        <li class="flex items-start gap-1.5">
+                            <span class="text-red-600 font-bold">▪</span> <span><strong>C) Relació de causalitat:</strong> Nexte causal directe, immediat i exclusiu entre el funcionament del servei públic i el resultat lesiu (sense interferència de força major o culpa exclusiva de la víctima).</span>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+
+            <!-- TARJETA 3: PROCEDIMENT ADMINISTRATIU I TERMINIS -->
+            <section class="bg-gray-50 border border-gray-200 rounded-xl p-6 shadow-sm space-y-4 hover:border-red-600 transition-colors">
+                <div class="flex items-center gap-2 text-red-600 font-bold text-lg">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                    <h3>3. El Procediment i Terminis de Reclamació</h3>
+                </div>
+                <p class="text-xs text-gray-700 leading-relaxed">
+                    La via per reclamar danys i perjudicis patrimonials contra una administració pública segueix regles procedimentals estrictes fixades per la legislació de procediment administratiu comú.
+                </p>
+                <div class="bg-white p-3 rounded-lg border border-gray-200 space-y-2">
+                    <ul class="space-y-1.5 text-xs text-gray-700">
+                        <li class="flex items-start gap-1.5">
+                            <span class="text-red-600 font-bold">▪</span> <span><strong>Termini de prescripció:</strong> El dret a reclamar prescriu al cap d'<strong>un any</strong> des de la producció del fet o de l'acte que motivi la indemnització o des de la manifestació de l'efecte lesiu (en cas de danys físics o psíquics, des de la curació o determinació de seqüeles).</span>
+                        </li>
+                        <li class="flex items-start gap-1.5">
+                            <span class="text-red-600 font-bold">▪</span> <span><strong>Dictamen preceptiu:</strong> En expedients de quantia rellevant o segons normativa, es requereix dictamen de l'òrgan consultiu corresponent (Comissió Jurídica Asesora a Catalunya).</span>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+
+            <!-- TARJETA 4: INCOMPATIBILITATS I EXCLUSIONS -->
+            <section class="bg-gray-50 border border-gray-200 rounded-xl p-6 shadow-sm space-y-4 hover:border-red-600 transition-colors">
+                <div class="flex items-center gap-2 text-red-600 font-bold text-lg">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M18.364 18.364A9 9 0 005.636 5.636m12.728 12.728A9 9 0 015.636 5.636m12.728 12.728L5.636 5.636"></path></svg>
+                    <h3>4. Exclusions i Casos de Força Major</h3>
+                </div>
+                <p class="text-xs text-gray-700 leading-relaxed">
+                    No tot dany patit en l'àmbit públic genera dret a indemnització automàtica per part de l'administració.
+                </p>
+                <div class="bg-white p-3 rounded-lg border border-gray-200 space-y-2">
+                    <ul class="space-y-1.5 text-xs text-gray-700">
+                        <li class="flex items-start gap-1.5">
+                            <span class="text-red-600 font-bold">▪</span> <span><strong>Força major:</strong> S'exclou la responsabilitat quan els danys deriven de força major (entesa com a esdeveniments imprevisibles o inevitables segons l'estat de la ciència o de la tècnica, com fenòmens meteorològics extraordinaris no habituals). <em>Atenció:</em> Els riscs pròpis de la vida quotidiana o l'estat normal de manteniment no cobert per negligència no impliquen responsabilitat.</span>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+
+            <!-- TAULA RESUM TEMA 37 (Requisit: taula adaptada amb capçalera fons negre i lletres blanques) -->
+            <section class="bg-gray-50 border border-gray-200 rounded-xl p-6 shadow-sm space-y-4 hover:border-red-600 transition-colors md:col-span-2">
+                <div class="flex items-center gap-2 text-red-600 font-bold text-lg">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 10h16M4 14h16M4 18h16"></path></svg>
+                    <h3>Taula Resum: Elements Clau de la Responsabilitat Patrimonial</h3>
+                </div>
+                <div class="overflow-x-auto">
+                    <table class="w-full text-left border-collapse text-xs">
+                        <thead>
+                            <tr style="background-color: #000000; color: #ffffff;">
+                                <th class="p-3 font-bold border border-gray-700">Concepte / Element</th>
+                                <th class="p-3 font-bold border border-gray-700">Marc Normatiu / Aplicació</th>
+                                <th class="p-3 font-bold border border-gray-700">Efectes / Requisits</th>
+                            </tr>
+                        </thead>
+                        <tbody class="divide-y divide-gray-200 text-gray-700 bg-white">
+                            <tr>
+                                <td class="p-3 border border-gray-200 font-bold">Fonament Constitucional</td>
+                                <td class="p-3 border border-gray-200">Article 106.2 CE</td>
+                                <td class="p-3 border border-gray-200">Dret a indemnització per lesions derivades del funcionament dels serveis públics.</td>
+                            </tr>
+                            <tr>
+                                <td class="p-3 border border-gray-200 font-bold">Marc Legal Bàsic</td>
+                                <td class="p-3 border border-gray-200">Llei 40/2015 (arts. 32 i ss.) i Llei 39/2015</td>
+                                <td class="p-3 border border-gray-200">Regulació dels requisits substancials i de la tramitació procedimental.</td>
+                            </tr>
+                            <tr>
+                                <td class="p-3 border border-gray-200 font-bold">Termini de Prescripció</td>
+                                <td class="p-3 border border-gray-200">Acció de responsabilitat patrimonial</td>
+                                <td class="p-3 border border-gray-200">1 any des de la producció del fet o de la determinació de seqüeles (en danys físics/psíquics).</td>
+                            </tr>
+                            <tr>
+                                <td class="p-3 border border-gray-200 font-bold">Exclusió de Responsabilitat</td>
+                                <td class="p-3 border border-gray-200">Cas de Força Major</td>
+                                <td class="p-3 border border-gray-200">Eximeix l'Administració (a diferència del cas fortuït intern, que sí genera responsabilitat).</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+
+            <!-- TARJETA 5: APLICACIÓ PRÀCTICA AL WEB I GESTIÓ DE L'AMB (Destacat en verd) -->
+            <section class="bg-gray-50 border border-gray-200 rounded-xl p-6 shadow-sm space-y-4 hover:border-green-600 transition-colors md:col-span-2">
+                <div class="flex items-center gap-2 text-green-700 font-bold text-lg">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9"></path></svg>
+                    <h3>5. Gestió de Reclamacions i Serveis Metropolitans de l'AMB (amb.cat)</h3>
+                </div>
+                
+                <!-- Bloc amb estil verd específic per a la informació extreta de la web de l'AMB -->
+                <div class="amb-web-highlight text-xs space-y-3">
+                    <p class="font-bold mb-2 text-green-900">🌐 TRAMITACIÓ I RESPONSABILITAT PATRIMONIAL A L'AMB (amb.cat):</p>
+                    
+                    <div>
+                        <strong class="text-green-800">Àmbit de reclamació en infraestructures i serveis metropolitans:</strong>
+                        <ul class="list-disc pl-4 mt-1 space-y-1">
+                            <li>D'acord amb els procediments de la seu electrònica i el portal de l'AMB (<span class="underline">amb.cat</span>), l'ens metropolità tramita expedients de responsabilitat patrimonial derivats del funcionament dels serveis de la seva competència directa, tals com desperfectes o incidents en <strong>parcs metropolitans</strong>, obres de xarxes de sanejament o infraestructures públiques gestionades per l'entitat.</li>
+                        </ul>
+                    </div>
+
+                    <div>
+                        <strong class="text-green-800">Canal de tramitació telemàtica:</strong>
+                        <ul class="list-disc pl-4 mt-1 space-y-1">
+                            <li>La seu electrònica de l'AMB habilita espais específics de instància genèrica i reclamació patrimonial on els ciutadans han d'aportar les proves d'infracció o danys (fotografies, informes mèdics, atestats policials) dins del termini legal d'un any, sent resolt l'expedient per la gerència o presidència prèvia instrucció tècnica.</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <!-- TARJETA 6: TRAMPES D'EXAMEN I PREGUNTES TIPUS TEST -->
+            <section class="bg-gray-50 border border-gray-200 rounded-xl p-6 shadow-sm space-y-4 hover:border-red-600 transition-colors md:col-span-2">
+                <div class="flex items-center gap-2 text-red-600 font-bold text-lg">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"></path></svg>
+                    <h3>6. Trampes i Preguntes Tipus Test Habituals</h3>
+                </div>
+                
+                <!-- Bloc amb estil pastel vermell especial per a trampes d'examen -->
+                <div class="highlight-box-custom text-xs space-y-3">
+                    <p class="font-bold mb-2">⚠ PREGUNTES TRAMPA D'EXAMEN SOBRE RESPONSABILITAT PATRIMONIAL:</p>
+                    
+                    <div>
+                        <strong class="text-red-700">El termini de prescripció:</strong>
+                        <ul class="list-disc pl-4 mt-1 space-y-1">
+                            <li>Vigila la trampa clàssica de confondre el termini de prescripció de la acció de responsabilitat patrimonial amb el de les reclamacions de contractes o altres matèries. El termini legal indiscutible per reclamar és d'<strong>un any</strong> (i no 4 anys ni 6 mesos).</li>
+                        </ul>
+                    </div>
+
+                    <div>
+                        <strong class="text-red-700">Concepte de força major vs. cas fortuït:</strong>
+                        <ul class="list-disc pl-4 mt-1 space-y-1">
+                            <li>Recorda que el <em>cas fortuït</em> (allò intern o imprevisible dins del funcionament normal) <strong>sí</strong> genera responsabilitat patrimonial per a l'administració, mentre que la <em>força major</em> externa i inevitable <strong>eximeix</strong> de responsabilitat l'administració. Aquesta distinció és objecte freqüent de pregunta trampa en test d'oposicions.</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+        </article>
+
+    </main>
+
+    <footer class="w-full border-t border-gray-200 bg-gray-50 py-4 text-center text-xs text-gray-500">
+        <p>© 2026 OpoAMB | &copy; Creat per JOMP</p>
+    </footer>
+
+<script>
+    // Script funcional per al cercador a les pàgines d'apunts
+    const searchInput = document.getElementById('searchInput');
+    
+    if (searchInput) {
+        searchInput.addEventListener('input', function(e) {
+            const searchTerm = e.target.value.toLowerCase().trim();
+            const sections = document.querySelectorAll('main article section');
+
+            sections.forEach(section => {
+                const text = section.textContent.toLowerCase();
+                if (searchTerm === '' || text.includes(searchTerm)) {
+                    section.style.display = '';
+                } else {
+                    section.style.display = 'none';
+                }
+            });
+        });
+    }
+</script>
+</body>
+</html>

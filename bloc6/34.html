@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="ca">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apunts Tema 34 - Oposicions C1 AMB</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #ffffff;
+            color: #111111;
+        }
+        h1, h2, h3, h4, .font-arial-bold {
+            font-family: Arial, sans-serif;
+            font-weight: bold;
+        }
+        /* Estil per al quadre de trampes o aspectes clau amb fons vermell suau pastel, text negre i vora esquerra vermella */
+        .highlight-box-custom {
+            background-color: #fff5f5;
+            border: 1px solid #fca5a5;
+            border-left: 4px solid #cc0000;
+            padding: 15px;
+            border-radius: 10px;
+            margin: 10px 0;
+            color: #111111;
+        }
+        /* Estil específic per destacar referències i aplicacions pràctiques de la web i gestió de l'AMB */
+        .amb-web-highlight {
+            background-color: #f0fdf4;
+            border: 1px solid #bbf7d0;
+            border-left: 4px solid #16a34a;
+            padding: 15px;
+            border-radius: 10px;
+            margin: 10px 0;
+            color: #111111;
+        }
+    </style>
+</head>
+<body class="bg-white min-h-screen text-gray-900 flex flex-col justify-between">
+
+    <header class="w-full border-b border-gray-200 bg-white sticky top-0 z-50 shadow-sm">
+        <div class="max-w-7xl mx-auto px-4 py-4 flex flex-col sm:flex-row items-center justify-between gap-4">
+            
+            <div class="flex items-center gap-3 w-full sm:w-auto justify-between sm:justify-start">
+                <div class="flex items-center gap-3">
+                    <div class="flex items-center">
+                        <img src="../img/logo.png" alt="Logo AMB" class="h-10 w-auto object-contain" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+                        <span class="text-xs text-red-600 font-bold hidden text-center px-1">img/logo.png</span>
+                    </div>
+                    <h1 class="text-xl sm:text-2xl font-bold tracking-tight text-black">
+                        Oposicions C1 <span class="text-red-600">AMB</span>
+                    </h1>
+                </div>
+
+                <a href="index.html" class="sm:hidden inline-flex items-center gap-1.5 px-3 py-1.5 text-xs font-bold text-gray-700 bg-gray-50 border border-gray-300 hover:bg-red-600 hover:text-white hover:border-red-600 rounded-lg transition-colors">
+                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18"></path></svg>
+                    <span>Inici</span>
+                </a>
+            </div>
+
+            <div class="flex items-center gap-3 w-full sm:w-auto justify-between sm:justify-end">
+                <div class="w-full sm:w-80">
+                    <div class="relative">
+                        <span class="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none text-gray-400">
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg>
+                        </span>
+                        <input type="text" id="searchInput" placeholder="Cercar als apunts..." class="w-full pl-10 pr-4 py-2 bg-gray-50 border border-gray-300 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-red-600 focus:border-transparent transition-all">
+                    </div>
+                </div>
+
+                <a href="../index.html" class="hidden sm:inline-flex items-center gap-1.5 px-3.5 py-2 text-xs font-bold text-gray-700 bg-gray-50 border border-gray-300 hover:bg-red-600 hover:text-white hover:border-red-600 rounded-lg transition-colors shrink-0 shadow-sm">
+                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18"></path></svg>
+                    <span>Tornar a l'Inici</span>
+                </a>
+            </div>
+
+        </div>
+    </header>
+
+    <main class="max-w-6xl mx-auto px-4 py-8 w-full flex-grow space-y-8">
+        
+        <div class="flex items-center gap-2 text-xs font-bold text-gray-500 uppercase tracking-wider">
+            <span>Bloc VI (Temari Específic)</span>
+            <span>/</span>
+            <span class="text-red-600">Tema 34</span>
+        </div>
+
+        <div class="border-b-2 border-red-600 pb-4">
+            <h2 class="text-2xl sm:text-3xl font-bold text-black tracking-tight">
+                Els ingressos de l’administració. Ingressos no previstos en el pressupost inicial.
+            </h2>
+        </div>
+
+        <!-- CONTENIDOR EN COLUMNES RESPONSIVE (FICHAS) -->
+        <article class="grid grid-cols-1 md:grid-cols-2 gap-6 items-start">
+            
+            <!-- TARJETA 1: CONCEPTE I CLASSIFICACIÓ DELS INGRESSOS PÚBLICS -->
+            <section class="bg-gray-50 border border-gray-200 rounded-xl p-6 shadow-sm space-y-4 hover:border-red-600 transition-colors">
+                <div class="flex items-center gap-2 text-red-600 font-bold text-lg">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                    <h3>1. Concepte i Classificació Econòmica dels Ingressos Locals</h3>
+                </div>
+                <p class="text-xs text-gray-700 leading-relaxed">
+                    Els ingressos públics són totes aquelles entrades de fons financers que rep l'Administració Pública[cite: 2] per a finançar les seves despeses i serveis generals. A diferència de les despeses, els ingressos no tenen caràcter limitatiu, sinó que constitueixen una mera previsió o càlcul comptable dels recursos econòmics a liquidar durant l'exercici[cite: 2].
+                </p>
+                <div class="bg-white p-3 rounded-lg border border-gray-200 space-y-2">
+                    <ul class="space-y-1.5 text-xs text-gray-700">
+                        <li class="flex items-start gap-1.5">
+                            <span class="text-red-600 font-bold">▪</span> <span><strong>Classificació per capítols (TRLRHL):</strong> Agrupats en operacions corrents (Cap. 1 Impostos directes, Cap. 2 Impostos indirectes, Cap. 3 Taxes, preus públics i altres ingressos, Cap. 4 Transferències corrents, Cap. 5 Ingressos patrimonials) i operacions de capital (Cap. 6 Alienació d'inversions reals, Cap. 7 Transferències de capital, Cap. 8 Actius financers, Cap. 9 Passius financers)[cite: 2].</span>
+                        </li>
+                        <li class="flex items-start gap-1.5">
+                            <span class="text-red-600 font-bold">▪</span> <span><strong>Principis dels ingressos:</strong> S'imputen a l'exercici pel seu import íntegre (principi de pressupost brut) segons els drets liquidats, qualsevol que sigui el període de què derivin[cite: 2].</span>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+
+            <!-- TARJETA 2: FASES DE GESTIÓ DEL PRESSUPOST D'INGRESSOS -->
+            <section class="bg-gray-50 border border-gray-200 rounded-xl p-6 shadow-sm space-y-4 hover:border-red-600 transition-colors">
+                <div class="flex items-center gap-2 text-red-600 font-bold text-lg">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4"></path></svg>
+                    <h3>2. Fases de Gestió dels Ingressos</h3>
+                </div>
+                <p class="text-xs text-gray-700 leading-relaxed">
+                    El procediment d'execució comptable dels ingressos públics s'articula mitjançant fases essencials que permeten registrar i materialitzar l'entrada de recursos a la Tresoreria[cite: 2]:
+                </p>
+                <div class="bg-white p-3 rounded-lg border border-gray-200 space-y-2">
+                    <ul class="space-y-1.5 text-xs text-gray-700">
+                        <li class="flex items-start gap-1.5">
+                            <span class="text-red-600 font-bold">▪</span> <span><strong>A) Reconeixement del dret (Liquidació):</strong> Acte pel qual es declara l'existència d'un crèdit a favor de l'entitat derivat d'un ingrés legalment establert, amb indicació del subjecte obligat i de la quantia.</span>
+                        </li>
+                        <li class="flex items-start gap-1.5">
+                            <span class="text-red-600 font-bold">▪</span> <span><strong>B) Cobrament (Recaptació):</strong> Ingrés efectiu i material dels fons a la Tresoreria de l'ens públic[cite: 2], que pot tenir lloc en període voluntari o en període executiu.</span>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+
+            <!-- TARJETA 3: INGRESSOS NO PREVISTS EN EL PRESSUPOST INICIAL -->
+            <section class="bg-gray-50 border border-gray-200 rounded-xl p-6 shadow-sm space-y-4 hover:border-red-600 transition-colors">
+                <div class="flex items-center gap-2 text-red-600 font-bold text-lg">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+                    <h3>3. Ingressos no Previstos i Generacions de Crèdit</h3>
+                </div>
+                <p class="text-xs text-gray-700 leading-relaxed">
+                    Durant l'exercici econòmic poden produir-se ingressos que no estiguessin contemplats inicialment al pressupost o la quantia dels quals superi la previsió[cite: 2]. Per incorporar-los i gastar-los calen modificacions pressupostàries específiques regulades normativament.
+                </p>
+                <div class="bg-white p-3 rounded-lg border border-gray-200 space-y-2">
+                    <ul class="space-y-1.5 text-xs text-gray-700">
+                        <li class="flex items-start gap-1.5">
+                            <span class="text-red-600 font-bold">▪</span> <span><strong>La Generació de Crèdit:</strong> És la modificació pressupostària mitjançant la qual s'incorpora un crèdit al pressupost de despeses com a conseqüència de la realització d'ingressos no previstos o superiors als inicials (per exemple, subvencions finalistes sobrevingudes, indemnitzacions, aportacions d'altres administracions o venda de patrimoni afectat)[cite: 2].</span>
+                        </li>
+                        <li class="flex items-start gap-1.5">
+                            <span class="text-red-600 font-bold">▪</span> <span><strong>Requisits legals:</strong> Exigeix l'expedient de modificació de crèdit degudament justificat i l'acreditació de la recaptació o el compromís ferm de l'ingrés[cite: 2].</span>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+
+            <!-- TARJETA 4: ALTRES MODIFICACIONS I SUPERÀVITS -->
+            <section class="bg-gray-50 border border-gray-200 rounded-xl p-6 shadow-sm space-y-4 hover:border-red-600 transition-colors">
+                <div class="flex items-center gap-2 text-red-600 font-bold text-lg">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"></path></svg>
+                    <h3>4. Incorporació de Romanents i Superàvit de Tresoreria</h3>
+                </div>
+                <p class="text-xs text-gray-700 leading-relaxed">
+                    Altres ingressos o romanents no gastats de l'exercici anterior s'incorporen per finançar noves despeses sota estrictes condicions de regla de despesa i estabilitat pressupostària[cite: 2].
+                </p>
+                <div class="bg-white p-3 rounded-lg border border-gray-200 space-y-2">
+                    <ul class="space-y-1.5 text-xs text-gray-700">
+                        <li class="flex items-start gap-1.5">
+                            <span class="text-red-600 font-bold">▪</span> <span><strong>Romanent de tresoreria per a despeses generals:</strong> Pot utilitzar-se mitjançant expedient de suplement de crèdit o crèdit extraordinari si la liquidació de l'exercici anterior llança saldo positiu[cite: 2].</span>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+
+            <!-- TAULA ADAPTADA AL TEMA (AMB LA PRIMERA FILA AMB FONS NEGRE I LLETRES BLANQUES) -->
+            <section class="bg-gray-50 border border-gray-200 rounded-xl p-6 shadow-sm space-y-4 hover:border-red-600 transition-colors md:col-span-2">
+                <div class="flex items-center gap-2 text-red-600 font-bold text-lg">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 10h18M3 14h18m-9-4v8m-7 0h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z"></path></svg>
+                    <h3>Quadre Resum: Els 9 Capítols del Pressupost d'Ingressos Locals (TRLRHL)</h3>
+                </div>
+                <div class="overflow-x-auto">
+                    <table class="w-full text-left text-xs border-collapse">
+                        <thead>
+                            <tr class="bg-black text-white">
+                                <th class="p-3 border border-gray-700">Capítol</th>
+                                <th class="p-3 border border-gray-700">Denominació del Capítol</th>
+                                <th class="p-3 border border-gray-700">Tipologia / Naturalesa</th>
+                                <th class="p-3 border border-gray-700">Exemple pràctic AMB</th>
+                            </tr>
+                        </thead>
+                        <tbody class="bg-white text-gray-800">
+                            <tr>
+                                <td class="p-2.5 border border-gray-200 font-bold">Capítol 1</td>
+                                <td class="p-2.5 border border-gray-200">Impostos directes</td>
+                                <td class="p-2.5 border border-gray-200">Sense contraprestació (renda/patrimoni)[cite: 2]</td>
+                                <td class="p-2.5 border border-gray-200">Impostos municipals directes</td>
+                            </tr>
+                            <tr class="bg-gray-50">
+                                <td class="p-2.5 border border-gray-200 font-bold">Capítol 2</td>
+                                <td class="p-2.5 border border-gray-200">Impostos indirectes</td>
+                                <td class="p-2.5 border border-gray-200">Sense contraprestació (circulació/consum)[cite: 2]</td>
+                                <td class="p-2.5 border border-gray-200">Impost sobre Construccions (ICIO)</td>
+                            </tr>
+                            <tr>
+                                <td class="p-2.5 border border-gray-200 font-bold">Capítol 3</td>
+                                <td class="p-2.5 border border-gray-200">Taxes, preus públics i altres</td>
+                                <td class="p-2.5 border border-gray-200">Preació de serveis i ús privatiu de domini públic[cite: 2]</td>
+                                <td class="p-2.5 border border-gray-200">Taxes de residus i transport metropolità</td>
+                            </tr>
+                            <tr class="bg-gray-50">
+                                <td class="p-2.5 border border-gray-200 font-bold">Capítol 4</td>
+                                <td class="p-2.5 border border-gray-200">Transferències corrents</td>
+                                <td class="p-2.5 border border-gray-200">Fons rebuts sense contrapartida per operacions corrents[cite: 2]</td>
+                                <td class="p-2.5 border border-gray-200">Subvencions corrents Estat / Generalitat</td>
+                            </tr>
+                            <tr>
+                                <td class="p-2.5 border border-gray-200 font-bold">Capítol 5</td>
+                                <td class="p-2.5 border border-gray-200">Ingressos patrimonials</td>
+                                <td class="p-2.5 border border-gray-200">Rendes de la propietat o patrimoni[cite: 2]</td>
+                                <td class="p-2.5 border border-gray-200">Lloguers de béns de l'AMB, interessos de comptes</td>
+                            </tr>
+                            <tr class="bg-gray-50">
+                                <td class="p-2.5 border border-gray-200 font-bold">Capítol 6</td>
+                                <td class="p-2.5 border border-gray-200">Alienació d'inversions reals</td>
+                                <td class="p-2.5 border border-gray-200">Venda de béns de capital / patrimoni[cite: 2]</td>
+                                <td class="p-2.5 border border-gray-200">Venda de terrenys o edificis inútils</td>
+                            </tr>
+                            <tr>
+                                <td class="p-2.5 border border-gray-200 font-bold">Capítol 7</td>
+                                <td class="p-2.5 border border-gray-200">Transferències de capital</td>
+                                <td class="p-2.5 border border-gray-200">Fons rebuts per finançar operacions d'inversió[cite: 2]</td>
+                                <td class="p-2.5 border border-gray-200">Fons Feder / Next Generation per inversions</td>
+                            </tr>
+                            <tr class="bg-gray-50">
+                                <td class="p-2.5 border border-gray-200 font-bold">Capítol 8</td>
+                                <td class="p-2.5 border border-gray-200">Variació d'actius financers</td>
+                                <td class="p-2.5 border border-gray-200">Reintegrament de préstecs o venda d'actius[cite: 2]</td>
+                                <td class="p-2.5 border border-gray-200">Devolució de bestretes de personal</td>
+                            </tr>
+                            <tr>
+                                <td class="p-2.5 border border-gray-200 font-bold">Capítol 9</td>
+                                <td class="p-2.5 border border-gray-200">Variació de passius financers</td>
+                                <td class="p-2.5 border border-gray-200">Emissió de deute i obtenció de préstecs[cite: 2]</td>
+                                <td class="p-2.5 border border-gray-200">Préstecs bancaris concertats per l'AMB</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+
+            <!-- TARJETA 5: APLICACIÓ PRÀCTICA AL WEB I GESTIÓ DE L'AMB (Destacat en verd) -->
+            <section class="bg-gray-50 border border-gray-200 rounded-xl p-6 shadow-sm space-y-4 hover:border-green-600 transition-colors md:col-span-2">
+                <div class="flex items-center gap-2 text-green-700 font-bold text-lg">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9"></path></svg>
+                    <h3>5. Recursos, Taxes i Ingressos Específics de l'AMB (amb.cat)</h3>
+                </div>
+                
+                <!-- Bloc amb estil verd específic per a la informació extreta de la web de l'AMB -->
+                <div class="amb-web-highlight text-xs space-y-3">
+                    <p class="font-bold mb-2 text-green-900">🌐 SISTEMA D'INGRESSOS I TRIBUTS METROPOLITANS (amb.cat):</p>
+                    
+                    <div>
+                        <strong class="text-green-800">Estructura d'ingressos propis i transferències:</strong>
+                        <ul class="list-disc pl-4 mt-1 space-y-1">
+                            <li>D'acord amb la Llei de l'AMB (Llei 31/2010) i la informació del portal <span class="underline">amb.cat</span>[cite: 2], el finançament de l'ens metropolità prové d'una combinació d'ingressos tributaris propis (com el tribut metropolità i recàrrecs), taxes i preus públics per la prestació de serveis (gestió de residus, transport) i transferències corrents i de capital de la Generalitat, l'Estat i els municipis consorciats[cite: 2].</li>
+                            <li><strong>Recàrrec sobre l'IBI:</strong> Segons l'article 153.1.a) del TRLRHL i l'article 41 de la Llei 31/2010 de l'AMB, les àrees metropolitanes poden establir un recàrrec sobre l'Impost sobre Béns Immobles (IBI) pels immobles situats al seu territori, amb un percentatge únic i màxim del 0,2% de la base imposable, gestionant-se de forma conjunta amb el mateix impost[cite: 2].</li>
+                        </ul>
+                    </div>
+
+                    <div>
+                        <strong class="text-green-800">Gestió d'ingressos no previstos (Subvencions i Fons Europeus):</strong>
+                        <ul class="list-disc pl-4 mt-1 space-y-1">
+                            <li>L'AMB gestiona habitualment ingressos no previstos al pressupost inicial derivats de la <strong>concessió de fons europeus (Next Generation)</strong> o subvencions finalistes d'altres administracions per a projectes de mobilitat sostenible, transició ecològica i habitatge públic, tramitant les <em>generacions de crèdit</em> corresponents per poder executar aquestes inversions[cite: 2].</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <!-- TARJETA 6: TRAMPES D'EXAMEN I PREGUNTES TIPUS TEST -->
+            <section class="bg-gray-50 border border-gray-200 rounded-xl p-6 shadow-sm space-y-4 hover:border-red-600 transition-colors md:col-span-2">
+                <div class="flex items-center gap-2 text-red-600 font-bold text-lg">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"></path></svg>
+                    <h3>6. Trampes i Preguntes Tipus Test Habituals</h3>
+                </div>
+                
+                <!-- Bloc amb estil pastel vermell especial per a trampes d'examen -->
+                <div class="highlight-box-custom text-xs space-y-3">
+                    <p class="font-bold mb-2">⚠ PREGUNTES TRAMPA D'EXAMEN SOBRE INGRESSOS:</p>
+                    
+                    <div>
+                        <strong class="text-red-700">Figura de modificació de crèdit per ingressos sobrevinguts:</strong>
+                        <ul class="list-disc pl-4 mt-1 space-y-1">
+                            <li>Vigila la trampa de confondre quina modificació s'aplica quan entra un ingrés no previst (per exemple, una subvenció finalista nova). La resposta correcta d'examen és la <strong>generació de crèdit</strong>, no una transferència ni un suplement de crèdit genèric[cite: 2].</li>
+                        </ul>
+                    </div>
+
+                    <div>
+                        <strong class="text-red-700">Fases comptables dels ingressos:</strong>
+                        <ul class="list-disc pl-4 mt-1 space-y-1">
+                            <li>Recorda que en el pressupost d'ingressos només existeixen bàsicament dues fases comptables obligatòries: el <strong>reconeixement del dret</strong> i el <strong>cobrament</strong> (no existeixen fases d'autorització ni compromís en els ingressos, ja que aquestes són exclusives de les despeses)[cite: 2].</li>
+                        </ul>
+                    </div>
+
+                    <div>
+                        <strong class="text-red-700">Caràcter jurídic dels ingressos vs. despeses:</strong>
+                        <ul class="list-disc pl-4 mt-1 space-y-1">
+                            <li>Pregunta trampa clàssica: "Els ingressos del pressupost local tenen caràcter limitatiu igual que les despeses?". Fals! Els ingressos són meres <strong>previsions</strong> comptables sense caràcter limitatiu, mentre que les despeses sí que tenen caràcter limitatiu i vinculant[cite: 2].</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+        </article>
+
+    </main>
+
+    <footer class="w-full border-t border-gray-200 bg-gray-50 py-4 text-center text-xs text-gray-500">
+        <p>© 2026 OpoAMB | &copy; Creat per JOMP</p>
+    </footer>
+
+<script>
+    // Script funcional per al cercador a les pàgines d'apunts
+    const searchInput = document.getElementById('searchInput');
+    
+    if (searchInput) {
+        searchInput.addEventListener('input', function(e) {
+            const searchTerm = e.target.value.toLowerCase().trim();
+            const sections = document.querySelectorAll('main article section');
+
+            sections.forEach(section => {
+                const text = section.textContent.toLowerCase();
+                if (searchTerm === '' || text.includes(searchTerm)) {
+                    section.style.display = '';
+                } else {
+                    section.style.display = 'none';
+                }
+            });
+        });
+    }
+</script>
+</body>
+</html>

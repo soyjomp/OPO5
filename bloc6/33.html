@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="ca">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apunts Tema 33 - Oposicions C1 AMB</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #ffffff;
+            color: #111111;
+        }
+        h1, h2, h3, h4, .font-arial-bold {
+            font-family: Arial, sans-serif;
+            font-weight: bold;
+        }
+        /* Estil per al quadre de trampes o aspectes clau amb fons vermell suau pastel, text negre i vora esquerra vermella */
+        .highlight-box-custom {
+            background-color: #fff5f5;
+            border: 1px solid #fca5a5;
+            border-left: 4px solid #cc0000;
+            padding: 15px;
+            border-radius: 10px;
+            margin: 10px 0;
+            color: #111111;
+        }
+        /* Estil específic per destacar referències i aplicacions pràctiques de la web i gestió de l'AMB */
+        .amb-web-highlight {
+            background-color: #f0fdf4;
+            border: 1px solid #bbf7d0;
+            border-left: 4px solid #16a34a;
+            padding: 15px;
+            border-radius: 10px;
+            margin: 10px 0;
+            color: #111111;
+        }
+    </style>
+</head>
+<body class="bg-white min-h-screen text-gray-900 flex flex-col justify-between">
+
+    <header class="w-full border-b border-gray-200 bg-white sticky top-0 z-50 shadow-sm">
+        <div class="max-w-7xl mx-auto px-4 py-4 flex flex-col sm:flex-row items-center justify-between gap-4">
+            
+            <div class="flex items-center gap-3 w-full sm:w-auto justify-between sm:justify-start">
+                <div class="flex items-center gap-3">
+                    <div class="flex items-center">
+                        <img src="../img/logo.png" alt="Logo AMB" class="h-10 w-auto object-contain" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+                        <span class="text-xs text-red-600 font-bold hidden text-center px-1">img/logo.png</span>
+                    </div>
+                    <h1 class="text-xl sm:text-2xl font-bold tracking-tight text-black">
+                        Oposicions C1 <span class="text-red-600">AMB</span>
+                    </h1>
+                </div>
+
+                <a href="index.html" class="sm:hidden inline-flex items-center gap-1.5 px-3 py-1.5 text-xs font-bold text-gray-700 bg-gray-50 border border-gray-300 hover:bg-red-600 hover:text-white hover:border-red-600 rounded-lg transition-colors">
+                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18"></path></svg>
+                    <span>Inici</span>
+                </a>
+            </div>
+
+            <div class="flex items-center gap-3 w-full sm:w-auto justify-between sm:justify-end">
+                <div class="w-full sm:w-80">
+                    <div class="relative">
+                        <span class="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none text-gray-400">
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg>
+                        </span>
+                        <input type="text" id="searchInput" placeholder="Cercar als apunts..." class="w-full pl-10 pr-4 py-2 bg-gray-50 border border-gray-300 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-red-600 focus:border-transparent transition-all">
+                    </div>
+                </div>
+
+                <a href="../index.html" class="hidden sm:inline-flex items-center gap-1.5 px-3.5 py-2 text-xs font-bold text-gray-700 bg-gray-50 border border-gray-300 hover:bg-red-600 hover:text-white hover:border-red-600 rounded-lg transition-colors shrink-0 shadow-sm">
+                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18"></path></svg>
+                    <span>Tornar a l'Inici</span>
+                </a>
+            </div>
+
+        </div>
+    </header>
+
+    <main class="max-w-6xl mx-auto px-4 py-8 w-full flex-grow space-y-8">
+        
+        <div class="flex items-center gap-2 text-xs font-bold text-gray-500 uppercase tracking-wider">
+            <span>Bloc VI (Temari Específic)</span>
+            <span>/</span>
+            <span class="text-red-600">Tema 33</span>
+        </div>
+
+        <div class="border-b-2 border-red-600 pb-4">
+            <h2 class="text-2xl sm:text-3xl font-bold text-black tracking-tight">
+                Règim de la despesa pública local: autorització, disposició, obligació i pagament. Documents comptables. Despeses sense consignació pressupostària.
+            </h2>
+        </div>
+
+        <!-- CONTENIDOR EN COLUMNES RESPONSIVE (FICHAS) -->
+        <article class="grid grid-cols-1 md:grid-cols-2 gap-6 items-start">
+            
+            <!-- TARJETA 1: LES FASES DE LA GESTIÓ DE LA DESPESA (DETALL) -->
+            <section class="bg-gray-50 border border-gray-200 rounded-xl p-6 shadow-sm space-y-4 hover:border-red-600 transition-colors">
+                <div class="flex items-center gap-2 text-red-600 font-bold text-lg">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4"></path></svg>
+                    <h3>1. Fases del Procediment de Gestió de la Despesa</h3>
+                </div>
+                <p class="text-xs text-gray-700 leading-relaxed">
+                    El Text Refós de la Llei reguladora de les hisendes locals (TRLRHL) i la normativa de comptabilitat pública estructuran la gestió de la despesa en quatre fases successives:
+                </p>
+                <div class="bg-white p-3 rounded-lg border border-gray-200 space-y-2">
+                    <ul class="space-y-1.5 text-xs text-gray-700">
+                        <li class="flex items-start gap-1.5">
+                            <span class="text-red-600 font-bold">▪</span> <span><strong>A) Autorització (A):</strong> Acte pel qual l'òrgan competent aprova realitzar una despesa per un import determinat o estimat, reservant el crèdit pressupostari corresponent.</span>
+                        </li>
+                        <li class="flex items-start gap-1.5">
+                            <span class="text-red-600 font-bold">▪</span> <span><strong>B) Disposició o Compromís (D):</strong> Acte pel qual s'acorda, després de complir els tràmits legals, efectuar la despesa per un import cert, originant una relació jurídica amb tercers.</span>
+                        </li>
+                        <li class="flex items-start gap-1.5">
+                            <span class="text-red-600 font-bold">▪</span> <span><strong>C) Reconeixement i Liquidació de l'Obligació (O):</strong> Acte que declara l'existència d'un crèdit exigible contra l'entitat local derivat de la prestació o l'execució realitzada.</span>
+                        </li>
+                        <li class="flex items-start gap-1.5">
+                            <span class="text-red-600 font-bold">▪</span> <span><strong>D) Ordenació del Pagament (P) i Pagament (Pg):</strong> Ordre emesa per l'ordenador de pagaments a la Tresoreria per satisfer el deute i la seva materialització efectiva.</span>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+
+            <!-- TARJETA 2: DOCUMENTS COMPTABLES -->
+            <section class="bg-gray-50 border border-gray-200 rounded-xl p-6 shadow-sm space-y-4 hover:border-red-600 transition-colors">
+                <div class="flex items-center gap-2 text-red-600 font-bold text-lg">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"></path></svg>
+                    <h3>2. Documents Comptables de Gestió</h3>
+                </div>
+                <p class="text-xs text-gray-700 leading-relaxed">
+                    Cada fase de la despesa i l'ingrés es reflecteix formalment al sistema de comptabilitat pressupostària mitjançant documents estàndard codificats:
+                </p>
+                <div class="bg-white p-3 rounded-lg border border-gray-200 space-y-2">
+                    <ul class="space-y-1.5 text-xs text-gray-700">
+                        <li class="flex items-start gap-1.5">
+                            <span class="text-red-600 font-bold">▪</span> <span><strong>Document A (Autorització):</strong> Registra l'existència de crèdit i l'autorització de la despesa.</span>
+                        </li>
+                        <li class="flex items-start gap-1.5">
+                            <span class="text-red-600 font-bold">▪</span> <span><strong>Document D (Disposició/Compromís):</strong> Formalitza el compromís front a tercers. Sovint s'emet de forma acumulada com a document <strong>AD</strong>.</span>
+                        </li>
+                        <li class="flex items-start gap-1.5">
+                            <span class="text-red-600 font-bold">▪</span> <span><strong>Document O (Reconeixement de l'Obligació):</strong> Incorpora la factura o justificant conforme la prestació s'ha completat. Pot emetre's unit a l'anterior com a <strong>ADO</strong>.</span>
+                        </li>
+                        <li class="flex items-start gap-1.5">
+                            <span class="text-red-600 font-bold">▪</span> <span><strong>Document P (Ordenació de Pagament) i K/Pg:</strong> Executen la fase final de sortida de fons de Tresoreria.</span>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+
+            <!-- TARJETA 3: DESPESES SENSE CONSIGNACIÓ PRESSUPOSTÀRIA -->
+            <section class="bg-gray-50 border border-gray-200 rounded-xl p-6 shadow-sm space-y-4 hover:border-red-600 transition-colors">
+                <div class="flex items-center gap-2 text-red-600 font-bold text-lg">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"></path></svg>
+                    <h3>3. Despeses sense Consignació Pressupostària i Modificacions</h3>
+                </div>
+                <p class="text-xs text-gray-700 leading-relaxed">
+                    Com a regla general, no es pot assumir cap obligació ni fer cap despesa sense crèdit suficient. Tanmateix, la llei preveu mecanismes per a situacions sobrevingudes o urgents.
+                </p>
+                <div class="bg-white p-3 rounded-lg border border-gray-200 space-y-2">
+                    <ul class="space-y-1.5 text-xs text-gray-700">
+                        <li class="flex items-start gap-1.5">
+                            <span class="text-red-600 font-bold">▪</span> <span><strong>Nul·litat de ple dret:</strong> Els acords i actes dictats sense crèdit o amb crèdit insuficient són nuls de ple dret d'acord amb la legislació de règim local i administrativa.</span>
+                        </li>
+                        <li class="flex items-start gap-1.5">
+                            <span class="text-red-600 font-bold">▪</span> <span><strong>Instruments de correcció:</strong> Modificacions de crèdit (crèdits extraordinaris, suplements de crèdit, transferències de crèdit o generacions de crèdit per ingressos).</span>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+
+            <!-- TARJETA 4: CONTROL FINANCER I INTERVENCIÓ -->
+            <section class="bg-gray-50 border border-gray-200 rounded-xl p-6 shadow-sm space-y-4 hover:border-red-600 transition-colors">
+                <div class="flex items-center gap-2 text-red-600 font-bold text-lg">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path></svg>
+                    <h3>4. Control de la Despesa i Fiscalització Prèvia</h3>
+                </div>
+                <p class="text-xs text-gray-700 leading-relaxed">
+                    La intervenció de la despesa s'exerceix a través de la fiscalització prèvia limitada o plena, garantint la legalitat i l'existència de cobertura abans d'assumir compromisos.
+                </p>
+                <div class="bg-white p-3 rounded-lg border border-gray-200 space-y-2">
+                    <ul class="space-y-1.5 text-xs text-gray-700">
+                        <li class="flex items-start gap-1.5">
+                            <span class="text-red-600 font-bold">▪</span> <span><strong>Funció interventora:</strong> Fiscalització de tots els actes que donin lloc a reconeixement d'obligacions o ordenació de pagaments.</span>
+                        </li>
+                        <li class="flex items-start gap-1.5">
+                            <span class="text-red-600 font-bold">▪</span> <span><strong>Disconformitats:</strong> Si la Intervenció s'oposa per manca de crèdit o ilegalitat, s'eleva el repara a l'òrgan competent per resoldre o elevar al Ple segons correspongui.</span>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+
+            <!-- NOU BLOC DE TAULA ADAPTADA AL TEMA (AMB FONST NEGRE I LLETRES BLANQUES A LA CABÇALERA) -->
+            <section class="bg-gray-50 border border-gray-200 rounded-xl p-6 shadow-sm space-y-4 hover:border-red-600 transition-colors md:col-span-2">
+                <div class="flex items-center gap-2 text-red-600 font-bold text-lg">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 10h18M3 14h18m-9-4v8m-7 0h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z"></path></svg>
+                    <h3>Taula Resum: Fases de la Despesa i Documents Comptables Associats (C1 AMB)</h3>
+                </div>
+                <p class="text-xs text-gray-700 leading-relaxed">
+                    Esquema pràctic d'associació entre les fases de gestió pressupostària de la despesa, els documents comptables estàndard i la seva naturalesa jurídica per a les oposicions de l'AMB:
+                </p>
+                <div class="overflow-x-auto">
+                    <table class="w-full text-left text-xs border-collapse">
+                        <thead>
+                            <tr style="background-color: #000000; color: #ffffff;">
+                                <th class="p-3 border border-gray-700 font-bold">Fase de la Despesa</th>
+                                <th class="p-3 border border-gray-700 font-bold">Document Comptable</th>
+                                <th class="p-3 border border-gray-700 font-bold">Efecte Jurídic / Descripció per a l'AMB</th>
+                            </tr>
+                        </thead>
+                        <tbody class="bg-white text-gray-800">
+                            <tr class="border-b border-gray-200">
+                                <td class="p-3 border border-gray-200 font-bold">1. Autorització (A)</td>
+                                <td class="p-3 border border-gray-200">Document A</td>
+                                <td class="p-3 border border-gray-200">Reserva comptable de crèdit; aprova la realització de la despesa per import estimat o cert.</td>
+                            </tr>
+                            <tr class="border-b border-gray-200">
+                                <td class="p-3 border border-gray-200 font-bold">2. Disposició o Compromís (D)</td>
+                                <td class="p-3 border border-gray-200">Document D (o AD)</td>
+                                <td class="p-3 border border-gray-200">Naixement de la relació jurídica amb tercers (proveïdors/contractistes) per import cert.</td>
+                            </tr>
+                            <tr class="border-b border-gray-200">
+                                <td class="p-3 border border-gray-200 font-bold">3. Reconeixement de l'Obligació (O)</td>
+                                <td class="p-3 border border-gray-200">Document O (o ADO)</td>
+                                <td class="p-3 border border-gray-200">Aprovació de la factura o justificant; exigibilitat del deute contra l'AMB.</td>
+                            </tr>
+                            <tr>
+                                <td class="p-3 border border-gray-200 font-bold">4. Ordenació i Pagament (P / Pg)</td>
+                                <td class="p-3 border border-gray-200">Document P / K / Pg</td>
+                                <td class="p-3 border border-gray-200">Ordre de pagament a Tresoreria i sortida efectiva de fons per extingir l'obligació.</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+
+            <!-- TARJETA 5: APLICACIÓ PRÀCTICA AL WEB I GESTIÓ DE L'AMB (Destacat en verd) -->
+            <section class="bg-gray-50 border border-gray-200 rounded-xl p-6 shadow-sm space-y-4 hover:border-green-600 transition-colors md:col-span-2">
+                <div class="flex items-center gap-2 text-green-700 font-bold text-lg">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9"></path></svg>
+                    <h3>5. Gestió de Factures, Comptabilitat i Control a l'AMB (amb.cat)</h3>
+                </div>
+                
+                <!-- Bloc amb estil verd específic per a la informació extreta de la web de l'AMB -->
+                <div class="amb-web-highlight text-xs space-y-3">
+                    <p class="font-bold mb-2 text-green-900">🌐 TRAMITACIÓ ECONÒMICA I PUNTA DE FACTURACIÓ ELECTRÒNICA A L'AMB (amb.cat):</p>
+                    
+                    <div>
+                        <strong class="text-green-800">Punt General d'Entrada de Factures Electròniques (e-FAC):</strong>
+                        <ul class="list-disc pl-4 mt-1 space-y-1">
+                            <li>Tal com detalla l'espai de gestió econòmica i proveïdors de <span class="underline">amb.cat</span>, l'Àrea Metropolitana de Barcelona exigeix la tramitació telemàtica obligatòria de les factures a través de la plataforma de factura electrònica connectada amb els òrgans gestors i comptables interns per garantir la traçabilitat de les fases <strong>O</strong> (obligació) i <strong>P</strong> (pagament).</li>
+                        </ul>
+                    </div>
+
+                    <div>
+                        <strong class="text-green-800">Control de període mitjà de pagament a proveïdors (PMP):</strong>
+                        <ul class="list-disc pl-4 mt-1 space-y-1">
+                            <li>L'AMB publica periòdicament els indicadors de compliment de pagament i morositat, reflectint el rigor en la tramitació comptable dels expedients de despesa i l'execució estricta dels crèdits assignats per programes metropolitans.</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <!-- TARJETA 6: TRAMPES D'EXAMEN I PREGUNTES TIPUS TEST -->
+            <section class="bg-gray-50 border border-gray-200 rounded-xl p-6 shadow-sm space-y-4 hover:border-red-600 transition-colors md:col-span-2">
+                <div class="flex items-center gap-2 text-red-600 font-bold text-lg">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"></path></svg>
+                    <h3>6. Trampes i Preguntes Tipus Test Habituals</h3>
+                </div>
+                
+                <!-- Bloc amb estil pastel vermell especial per a trampes d'examen -->
+                <div class="highlight-box-custom text-xs space-y-3">
+                    <p class="font-bold mb-2">⚠ PREGUNTES TRAMPA D'EXAMEN SOBRE DESPESA PÚBLICA:</p>
+                    
+                    <div>
+                        <strong class="text-red-700">Conseqüència jurídica de l'absència de crèdit pressupostari:</strong>
+                        <ul class="list-disc pl-4 mt-1 space-y-1">
+                            <li>Vigila la trampa de test sobre què passa si s'assumeix una despesa sense consignació suficient. No és simplement una irregularitat subsanable: l'ordenament jurídic estableix clarament que qualsevol acord que assumeixi obligacions sense crèdit pressupostari és <strong>nul de ple dret</strong>.</li>
+                        </ul>
+                    </div>
+
+                    <div>
+                        <strong class="text-red-700">Identificació de la fase de compromís (D):</strong>
+                        <ul class="list-disc pl-4 mt-1 space-y-1">
+                            <li>Sovint es confon l'autorització (reserva de crèdit interna) amb la disposició o compromís (acte amb eficàcia externa front a tercers). Recorda que la relació jurídica amb el proveïdor o tercer neix pròpiament en la fase de <strong>disposició o compromís (D)</strong>.</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+        </article>
+
+    </main>
+
+    <footer class="w-full border-t border-gray-200 bg-gray-50 py-4 text-center text-xs text-gray-500">
+        <p>© 2026 OpoAMB | &copy; Creat per JOMP</p>
+    </footer>
+
+<script>
+    // Script funcional per al cercador a les pàgines d'apunts
+    const searchInput = document.getElementById('searchInput');
+    
+    if (searchInput) {
+        searchInput.addEventListener('input', function(e) {
+            const searchTerm = e.target.value.toLowerCase().trim();
+            const sections = document.querySelectorAll('main article section');
+
+            sections.forEach(section => {
+                const text = section.textContent.toLowerCase();
+                if (searchTerm === '' || text.includes(searchTerm)) {
+                    section.style.display = '';
+                } else {
+                    section.style.display = 'none';
+                }
+            });
+        });
+    }
+</script>
+</body>
+</html>

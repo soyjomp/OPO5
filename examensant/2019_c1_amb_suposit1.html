@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html lang="ca">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>C1 AMB - EXAMEN SUPOSIT1 de 2019 | OpoAMB</title>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg-body: #ffffff;
+      --bg-card: #f9fafb; 
+      --accent: #dc2626;  
+      --dark: #000000;
+      --gray-light: #f3f4f6;
+      --border-color: #e5e7eb;
+      --text-main: #1f2937;
+      --text-dim: #6b7280;
+    }
+
+    body {
+      background-color: var(--bg-body);
+      color: var(--text-main);
+      font-family: 'Outfit', sans-serif;
+      margin: 0; padding: 20px;
+    }
+
+    .container { max-width: 800px; margin: 80px auto 40px; }
+
+    /* ESTILO ESCRITORIO (Por defecto) */
+    #back-button, #reset-test-button {
+      position: fixed; top: 15px; z-index: 2000;
+      padding: 10px 20px; border-radius: 8px;
+      cursor: pointer; font-weight: 700; border: none;
+      color: white; font-family: 'Outfit', sans-serif;
+      text-transform: uppercase; font-size: 0.75rem;
+      transition: 0.3s;
+    }
+    #back-button { left: 20px; background: var(--dark); }
+    #reset-test-button { left: 180px; background: var(--accent); }
+    #back-button:hover, #reset-test-button:hover { opacity: 0.9; transform: translateY(-2px); }
+
+    h1 { text-align: center; font-weight: 800; font-size: 2rem; color: var(--dark); margin-bottom: 25px; }
+    h1 span { color: var(--accent); }
+
+    .sticky-container {
+      position: sticky; top: 0; background: var(--bg-body);
+      z-index: 1000; padding: 15px 0;
+      border-bottom: 1px solid var(--border-color); margin-bottom: 25px;
+    }
+
+    .stats-container { display: flex; justify-content: space-between; align-items: center; gap: 16px; margin-bottom: 12px; }
+    .left-group { display: flex; align-items: center; flex-grow: 1; gap: 20px; }
+    #response-counter { white-space: nowrap; font-weight: 800; font-size: 0.9rem; color: var(--dark); background: var(--gray-light); padding: 6px 14px; border-radius: 20px; }
+    #progress-bar { flex-grow: 1; height: 10px; background: var(--gray-light); border-radius: 10px; overflow: hidden; }
+    #progress { height: 100%; width: 0%; background: var(--dark); transition: 0.4s; }
+
+    .right-group { display: flex; gap: 8px; }
+    .stat-box { display: flex; align-items: center; gap: 8px; font-weight: 800; font-size: 0.9rem; padding: 6px 14px; border-radius: 20px; white-space: nowrap; }
+    .stat-correct { color: #ffffff; background: var(--dark); }
+    .stat-incorrect { color: #ffffff; background: var(--accent); }
+
+    .instructions {
+      background-color: var(--bg-card);
+      border: 1px solid var(--border-color);
+      border-left: 5px solid var(--accent);
+      padding: 15px 20px;
+      border-radius: 8px;
+      margin-bottom: 25px;
+      font-size: 0.95rem;
+    }
+
+    .exercise-block { 
+      background: var(--bg-card); 
+      border: 1px solid var(--border-color); 
+      padding: 25px; 
+      border-radius: 12px; 
+      margin-bottom: 25px; 
+      transition: 0.3s; 
+      box-shadow: 0 1px 3px rgba(0,0,0,0.05); 
+    }
+    .exercise-block h2 { font-size: 1.15rem; margin-top: 0; margin-bottom: 15px; color: var(--dark); border-bottom: 2px solid var(--border-color); padding-bottom: 10px; }
+    .exercise-block p { font-size: 0.95rem; line-height: 1.5; }
+
+    .doc-list {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+      gap: 10px;
+      margin-top: 15px;
+      margin-bottom: 20px;
+    }
+
+    .doc-card {
+      background: #ffffff;
+      border: 1px solid var(--border-color);
+      padding: 10px 14px;
+      border-radius: 8px;
+      font-size: 0.85rem;
+    }
+
+    .doc-card strong {
+      color: var(--accent);
+    }
+
+    textarea {
+      width: 100%;
+      height: 90px;
+      padding: 12px;
+      border: 1px solid var(--border-color);
+      border-radius: 8px;
+      resize: vertical;
+      font-family: 'Outfit', sans-serif;
+      box-sizing: border-box;
+      background: #ffffff;
+      font-size: 0.9rem;
+    }
+
+    input[type="text"] {
+      padding: 10px;
+      border: 1px solid var(--border-color);
+      border-radius: 8px;
+      width: 100%;
+      box-sizing: border-box;
+      text-align: center;
+      font-weight: bold;
+      text-transform: uppercase;
+      font-family: 'Outfit', sans-serif;
+      background: #ffffff;
+    }
+
+    .grid-order {
+      display: grid;
+      grid-template-columns: repeat(9, 1fr);
+      gap: 8px;
+      margin-top: 15px;
+      margin-bottom: 20px;
+    }
+    @media (max-width: 768px) {
+      .grid-order { grid-template-columns: repeat(6, 1fr); }
+    }
+    @media (max-width: 480px) {
+      .grid-order { grid-template-columns: repeat(3, 1fr); }
+    }
+
+    .order-box {
+      background: #ffffff;
+      border: 1px solid var(--border-color);
+      border-radius: 8px;
+      padding: 8px;
+      text-align: center;
+    }
+    .order-box label {
+      display: block;
+      font-size: 0.8rem;
+      font-weight: bold;
+      color: var(--dark);
+      margin-bottom: 6px;
+    }
+
+    /* Botons i accions */
+    .btn-action {
+      background-color: var(--dark);
+      color: white;
+      padding: 10px 18px;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      font-weight: 700;
+      font-size: 0.8rem;
+      font-family: 'Outfit', sans-serif;
+      text-transform: uppercase;
+      margin-top: 12px;
+      margin-right: 6px;
+      transition: 0.3s;
+    }
+    .btn-action:hover {
+      opacity: 0.9;
+      transform: translateY(-2px);
+    }
+    .btn-accent {
+      background-color: var(--accent);
+    }
+
+    .feedback-msg {
+      margin-top: 15px;
+      padding: 12px 16px;
+      border-radius: 8px;
+      font-size: 0.9rem;
+      font-weight: 600;
+      display: none;
+    }
+    .feedback-success {
+      background-color: #dcfce7;
+      color: #166534;
+      border: 1px solid #22c55e;
+    }
+    .feedback-error {
+      background-color: #fee2e2;
+      color: #991b1b;
+      border: 1px solid var(--accent);
+    }
+    .hint-box, .solution-reveal {
+      margin-top: 12px;
+      padding: 14px;
+      background-color: #fef9c3;
+      border: 1px solid #fde047;
+      color: #713f12;
+      border-radius: 8px;
+      font-size: 0.9rem;
+      display: none;
+    }
+    .solution-reveal {
+      background-color: #f0fdf4;
+      border-color: #bbf7d0;
+      color: #166534;
+    }
+
+    footer { text-align: center; margin-top: 60px; padding: 20px; color: var(--text-dim); }
+    .footer-text { font-weight: 600; color: #000; }
+    .footer-jomp { font-weight: 800; color: var(--accent); }
+
+    /* ADAPTACIÓ EXCLUSIVA PER A MÒVIL (Pantalles <= 768px) */
+    @media (max-width: 768px) {
+      body { padding: 10px; }
+      .container { margin-top: 130px; }
+
+      .sticky-container {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        background: var(--bg-body);
+        z-index: 1000;
+        padding: 10px 15px;
+        box-sizing: border-box;
+        box-shadow: 0 2px 6px rgba(0,0,0,0.04);
+        border-bottom: 1px solid var(--border-color);
+        margin-bottom: 0;
+        padding-top: 45px;
+      }
+
+      #back-button, #reset-test-button {
+        position: fixed !important;
+        top: 10px;
+        z-index: 2001;
+        width: calc(50% - 20px);
+        padding: 8px 10px;
+        font-size: 0.65rem;
+        text-align: center;
+      }
+      #back-button { left: 15px; }
+      #reset-test-button { left: auto; right: 15px; }
+
+      .stats-container { gap: 6px; margin-bottom: 0; }
+      .left-group { gap: 8px; }
+      #response-counter, .stat-box { font-size: 0.75rem; padding: 4px 8px; }
+      #progress-bar { height: 8px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <!-- Botons de navegació -->
+    <button id="back-button" onclick="window.location.href='../index.html'">⬅ Tornar</button>
+    <button id="reset-test-button" onclick="reiniciarTest()">🔄 Reset</button>
+
+    <h1>C1 AMB <br><span>EXAMEN SUPOSIT 1 - 2019</span></h1>
+    
+    <!-- Barra d'estadístiques -->
+    <div class="sticky-container">
+      <div class="stats-container">
+        <div class="left-group">
+          <div id="response-counter" class="stat-box">📄 Respostes: <span id="scorePending">0</span>/3</div>
+          <div id="progress-bar"><div id="progress"></div></div>
+        </div>
+        <div class="right-group">
+          <div id="correct-counter" class="stat-box stat-correct">✅ Encerts: <span id="scoreHits">0</span></div>
+          <div id="incorrect-counter" class="stat-box stat-incorrect">❌ Errors: <span id="scoreErrors">0</span></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="instructions">
+      <p><strong>Instruccions:</strong> Pots corregir cada exercici de forma independent quan el tinguis enllestit. Tens pistes i respostes directes disponibles si ho necessites.</p>
+    </div>
+
+    <!-- EXERCICI 1 -->
+    <div class="exercise-block" id="block1">
+      <h2>Exercici 1: Ordenació de documents i identificació</h2>
+      <p><strong>1.1.</strong> Ordena els documents d'aquest expedient (del 1 al 18) i identifica el document exclòs.</p>
+      
+      <p><em>Llistat de documents disponibles:</em></p>
+      <div class="doc-list">
+        <div class="doc-card"><strong>A:</strong> Proposta de despesa / Retenció crèdit</div>
+        <div class="doc-card"><strong>B:</strong> Sol·licitud de subvenció de l'entitat</div>
+        <div class="doc-card"><strong>C:</strong> Escriptura constitució i poders</div>
+        <div class="doc-card"><strong>D:</strong> Reconeixement obligació i pagament</div>
+        <div class="doc-card"><strong>E:</strong> NIF de l'entitat sol·licitant</div>
+        <div class="doc-card"><strong>F:</strong> Acta comissió valoració (esmena)</div>
+        <div class="doc-card"><strong>G:</strong> Resolució definitiva concessió</div>
+        <div class="doc-card"><strong>H:</strong> Certificat corrent obligacions</div>
+        <div class="doc-card"><strong>I:</strong> Decret/Resolució d'inici expedient</div>
+        <div class="doc-card"><strong>J:</strong> Acuse de rebut / registre d'entrada</div>
+        <div class="doc-card"><strong>K:</strong> Proposta resolució provisional</div>
+        <div class="doc-card"><strong>L:</strong> Comunicació esmena defectes</div>
+        <div class="doc-card"><strong>M:</strong> Factura aliena (Document extrany)</div>
+        <div class="doc-card"><strong>N:</strong> Memòria justificativa projecte</div>
+        <div class="doc-card"><strong>O:</strong> Informe jurídic de secretaria</div>
+        <div class="doc-card"><strong>P:</strong> Informe-proposta tècnic valoració</div>
+        <div class="doc-card"><strong>Q:</strong> Audiència / Acceptació subvenció</div>
+        <div class="doc-card"><strong>R:</strong> Publicació convocatòria BOPB</div>
+        <div class="doc-card"><strong>S:</strong> Llistat control registre (Checklist)</div>
+      </div>
+
+      <div class="grid-order" id="orderInputs">
+        <script>
+            for(let i=1; i<=18; i++) {
+                document.write(`<div class="order-box"><label>${i}</label><input type="text" maxlength="2" id="pos${i}"></div>`);
+            }
+        </script>
+      </div>
+      <p><strong>Document que NO forma part (Lletra):</strong> <input type="text" maxlength="2" id="docExcl" style="width: 100px; display: inline-block;"></p>
+      <p><strong>Argumentació (O i F):</strong></p>
+      <textarea id="argOF" placeholder="Explica la tipologia i valor dels documents O i F..."></textarea>
+
+      <button class="btn-action btn-accent" onclick="checkEx1()">Comprovar Exercici 1</button>
+      <button class="btn-action" onclick="showHint(1)">Pista</button>
+      <button class="btn-action" onclick="showSolution(1)">Veure Resposta Directa</button>
+
+      <div id="feedback1" class="feedback-msg"></div>
+      <div id="hint1" class="hint-box"><strong>Pista:</strong> Recorda que el procediment s'inicia sempre amb un decret (I), seguit immediatament del registre d'entrada (J) i el checklist (S). Els informes jurídics i tècnics van a la fase central.</div>
+      <div id="sol1" class="solution-reveal"><strong>Resposta correcta:</strong> Ordre: I, J, S, L, N, O, P, B, A, H, E, C, R, D, F, Q, K, G. Document exclòs: M. O = Informe jurídic previ de legalitat; F = Acta de comissió amb revisió i dret d'esmena.</div>
+    </div>
+
+    <!-- EXERCICI 2 -->
+    <div class="exercise-block" id="block2">
+      <h2>Exercici 2: Documents comptables</h2>
+      <p>Indica quins documents comptables trobes a faltar, en quina posició s'han d'anar (amb número <em>bis</em>) i explica el seu concepte.</p>
+      <textarea id="respEx2" placeholder="Exemple: Document A, posició 1.bis..."></textarea>
+
+      <button class="btn-action btn-accent" onclick="checkEx2()">Comprovar Exercici 2</button>
+      <button class="btn-action" onclick="showHint(2)">Pista</button>
+      <button class="btn-action" onclick="showSolution(2)">Veure Resposta Directa</button>
+
+      <div id="feedback2" class="feedback-msg"></div>
+      <div id="hint2" class="hint-box"><strong>Pista:</strong> Pensa en el moment d'inici del pressupost (retenció de crèdit) i en el moment previ al pagament (reconeixement d'obligació). Van associats a les lletres A i D.</div>
+      <div id="sol2" class="solution-reveal"><strong>Resposta correcta:</strong> Falta el document A (Retenció de crèdit / Proposta de despesa) a la posició 1.bis (entre el decret d'inici i la sol·licitud) i els documents D (Reconeixement d'obligació) abans del pagament final.</div>
+    </div>
+
+    <!-- EXERCICI 3 -->
+    <div class="exercise-block" id="block3">
+      <h2>Exercici 3: Presentació electrònica i suport paper</h2>
+      <p>Un sol·licitant porta el projecte tècnic en paper per excés de pes informàtic.</p>
+      <p><strong>a) Acceptaràs la documentació en paper? (SI / NO):</strong> <input type="text" id="resp3a" style="width: 100px; display: inline-block;"></p>
+      <p><strong>b) Redacta com ho faràs constar a l'expedient (esborrany de la diligència):</strong></p>
+      <textarea id="resp3b" placeholder="Redacta la diligència..."></textarea>
+
+      <button class="btn-action btn-accent" onclick="checkEx3()">Comprovar Exercici 3</button>
+      <button class="btn-action" onclick="showHint(3)">Pista</button>
+      <button class="btn-action" onclick="showSolution(3)">Veure Resposta Directa</button>
+
+      <div id="feedback3" class="feedback-msg"></div>
+      <div id="hint3" class="hint-box"><strong>Pista:</strong> Segons la Llei 39/2015, si hi ha limitacions tècniques al sistema per grandària de fitxer, s'accepta l'aportació física mitjançant una figura jurídica de constància interna.</div>
+      <div id="sol3" class="solution-reveal"><strong>Resposta correcta:</strong> a) SI. b) S'emet una diligència administrativa de constància de recepció en suport paper degut a la incidència tècnica de la plataforma telemàtica.</div>
+    </div>
+
+    <footer>
+      <span class="footer-text">© 2026 OpoAMB | Creat per</span> <span class="footer-jomp">JOMP</span>
+    </footer>
+  </div>
+
+  <script>
+    let stats = { hits: 0, errors: 0, evaluated: [false, false, false] };
+
+    function updateScoreBoard() {
+        let evaluatedCount = stats.evaluated.filter(Boolean).length;
+        document.getElementById('scoreHits').innerText = stats.hits;
+        document.getElementById('scoreErrors').innerText = stats.errors;
+        document.getElementById('scorePending').innerText = evaluatedCount;
+        
+        let percentage = (evaluatedCount / 3) * 100;
+        document.getElementById('progress').style.width = percentage + '%';
+    }
+
+    function markEvaluated(index, isCorrect) {
+        if (!stats.evaluated[index]) {
+            stats.evaluated[index] = true;
+            if (isCorrect) stats.hits++;
+            else stats.errors++;
+            updateScoreBoard();
+        }
+    }
+
+    function showHint(id) {
+        let box = document.getElementById('hint' + id);
+        box.style.display = box.style.display === 'block' ? 'none' : 'block';
+    }
+
+    function showSolution(id) {
+        let box = document.getElementById('sol' + id);
+        box.style.display = box.style.display === 'block' ? 'none' : 'block';
+    }
+
+    function checkEx1() {
+        const correctOrder = ['I', 'J', 'S', 'L', 'N', 'O', 'P', 'B', 'A', 'H', 'E', 'C', 'R', 'D', 'F', 'Q', 'K', 'G'];
+        let userCorrect = true;
+        
+        for(let i=1; i<=18; i++) {
+            let val = document.getElementById('pos' + i).value.trim().toUpperCase();
+            if(val !== correctOrder[i-1]) userCorrect = false;
+        }
+        let excl = document.getElementById('docExcl').value.trim().toUpperCase();
+        if(excl !== 'M') userCorrect = false;
+
+        let fb = document.getElementById('feedback1');
+        fb.style.display = 'block';
+        if(userCorrect) {
+            fb.className = 'feedback-msg feedback-success';
+            fb.innerText = 'Molt bé! Exercici 1 completament encertat.';
+            markEvaluated(0, true);
+        } else {
+            fb.className = 'feedback-msg feedback-error';
+            fb.innerText = 'Hi ha algun error en llocs o en el document exclòs. Revisa-ho o utilitza la pista.';
+            markEvaluated(0, false);
+        }
+    }
+
+    function checkEx2() {
+        let text = document.getElementById('respEx2').value.trim();
+        let fb = document.getElementById('feedback2');
+        fb.style.display = 'block';
+        if(text.length > 15 && (text.toUpperCase().includes('A') || text.toUpperCase().includes('D'))) {
+            fb.className = 'feedback-msg feedback-success';
+            fb.innerText = 'Resposta acceptada correctament com a vàlida.';
+            markEvaluated(1, true);
+        } else {
+            fb.className = 'feedback-msg feedback-error';
+            fb.innerText = 'Falta detallar millor els documents comptables (A i D) i la seva posició bis.';
+            markEvaluated(1, false);
+        }
+    }
+
+    function checkEx3() {
+        let a = document.getElementById('resp3a').value.trim().toUpperCase();
+        let b = document.getElementById('resp3b').value.trim();
+        let fb = document.getElementById('feedback3');
+        fb.style.display = 'block';
+        
+        if(a === 'SI' && b.length > 10) {
+            fb.className = 'feedback-msg feedback-success';
+            fb.innerText = 'Excel·lent! Resposta i esborrany de diligència correctes.';
+            markEvaluated(2, true);
+        } else {
+            fb.className = 'feedback-msg feedback-error';
+            fb.innerText = 'Revisa la resposta a l\'apartat a) (deu ser SI) o amplia l\'esborrany de la diligència.';
+            markEvaluated(2, false);
+        }
+    }
+
+    function reiniciarTest() {
+        if(confirm("Vols reiniciar tot el test?")) {
+            location.reload();
+        }
+    }
+  </script>
+</body>
+</html>
