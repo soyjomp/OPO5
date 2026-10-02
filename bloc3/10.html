@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="ca">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apunts - Tests Oposicions C1 AMB</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #ffffff;
+            color: #111111;
+        }
+        h1, h2, h3, h4, .font-arial-bold {
+            font-family: Arial, sans-serif;
+            font-weight: bold;
+        }
+        /* Estil per al quadre de restriccions/suspensions o aspectes clau amb fons vermell suau pastel, text negre i vora esquerra vermella */
+        .highlight-box-custom {
+            background-color: #fff5f5;
+            border: 1px solid #fca5a5;
+            border-left: 4px solid #cc0000;
+            padding: 15px;
+            border-radius: 10px;
+            margin: 10px 0;
+            color: #111111;
+        }
+        /* Estil específic per destacar referències i aplicacions pràctiques de la web i gestió de l'AMB */
+        .amb-web-highlight {
+            background-color: #f0fdf4;
+            border: 1px solid #bbf7d0;
+            border-left: 4px solid #16a34a;
+            padding: 15px;
+            border-radius: 10px;
+            margin: 10px 0;
+            color: #111111;
+        }
+    </style>
+</head>
+<body class="bg-white min-h-screen text-gray-900 flex flex-col justify-between">
+
+    <header class="w-full border-b border-gray-200 bg-white sticky top-0 z-50 shadow-sm">
+        <div class="max-w-7xl mx-auto px-4 py-4 flex flex-col sm:flex-row items-center justify-between gap-4">
+            
+            <div class="flex items-center gap-3 w-full sm:w-auto justify-between sm:justify-start">
+                <div class="flex items-center gap-3">
+                    <div class="flex items-center">
+                        <img src="../img/logo.png" alt="Logo AMB" class="h-10 w-auto object-contain" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+                        <span class="text-xs text-red-600 font-bold hidden text-center px-1">img/logo.png</span>
+                    </div>
+                    <h1 class="text-xl sm:text-2xl font-bold tracking-tight text-black">
+                        Oposicions C1 <span class="text-red-600">AMB</span>
+                    </h1>
+                </div>
+
+                <a href="index.html" class="sm:hidden inline-flex items-center gap-1.5 px-3 py-1.5 text-xs font-bold text-gray-700 bg-gray-50 border border-gray-300 hover:bg-red-600 hover:text-white hover:border-red-600 rounded-lg transition-colors">
+                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18"></path></svg>
+                    <span>Inici</span>
+                </a>
+            </div>
+
+            <div class="flex items-center gap-3 w-full sm:w-auto justify-between sm:justify-end">
+                <div class="w-full sm:w-80">
+                    <div class="relative">
+                        <span class="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none text-gray-400">
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg>
+                        </span>
+                        <input type="text" id="searchInput" placeholder="Cercar als apunts..." class="w-full pl-10 pr-4 py-2 bg-gray-50 border border-gray-300 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-red-600 focus:border-transparent transition-all">
+                    </div>
+                </div>
+
+                <a href="../index.html" class="hidden sm:inline-flex items-center gap-1.5 px-3.5 py-2 text-xs font-bold text-gray-700 bg-gray-50 border border-gray-300 hover:bg-red-600 hover:text-white hover:border-red-600 rounded-lg transition-colors shrink-0 shadow-sm">
+                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18"></path></svg>
+                    <span>Tornar a l'Inici</span>
+                </a>
+            </div>
+
+        </div>
+    </header>
+
+    <main class="max-w-6xl mx-auto px-4 py-8 w-full flex-grow space-y-8">
+        
+        <div class="flex items-center gap-2 text-xs font-bold text-gray-500 uppercase tracking-wider">
+            <span>Bloc I (Temari Específic)</span>
+            <span>/</span>
+            <span class="text-red-600">Tema 10</span>
+        </div>
+
+        <div class="border-b-2 border-red-600 pb-4">
+            <h2 class="text-2xl sm:text-3xl font-bold text-black tracking-tight">
+                Comunicacions de l'Administració amb la ciutadania: anuncis, edictes i notificacions.
+            </h2>
+        </div>
+
+        <!-- CONTENIDOR EN COLUMNES RESPONSIVE (FICHAS) -->
+        <article class="grid grid-cols-1 md:grid-cols-2 gap-6 items-start">
+            
+            <!-- TARJETA 1: EDICTES I ANUNCIS -->
+            <section class="bg-gray-50 border border-gray-200 rounded-xl p-6 shadow-sm space-y-4 hover:border-red-600 transition-colors">
+                <div class="flex items-center gap-2 text-red-600 font-bold text-lg">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z"></path></svg>
+                    <h3>1. Anuncis i Edictes</h3>
+                </div>
+                <p class="text-xs text-gray-700 leading-relaxed">
+                    Són instruments de comunicació de l'Administració destinats a la publicitat general i a fer saber determinades resolucions o tràmits a una pluralitat indeterminada de persones o a interessats concretats quan no s'ha pogut practicar la notificació personal.
+                </p>
+                <div class="bg-white p-3 rounded-lg border border-gray-200 space-y-2">
+                    <ul class="space-y-1.5 text-xs text-gray-700">
+                        <li class="flex items-start gap-1.5">
+                            <span class="text-red-600 font-bold">▪</span> <span><strong>Concepte d'edicte:</strong> Comunicació oficial emanada de l'autoritat administrativa que s'insereix en diaris oficials o tauler d'edictes (Seu Electrònica).</span>
+                        </li>
+                        <li class="flex items-start gap-1.5">
+                            <span class="text-red-600 font-bold">▪</span> <span><strong>Concepte d'anunci:</strong> Text informatiu de caràcter general o convocatòria pública (com contractacions, exposicions públiques o borses de treball).</span>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+
+            <!-- TARJETA 2: LES NOTIFICACIONS ADMINISTRATIVES -->
+            <section class="bg-gray-50 border border-gray-200 rounded-xl p-6 shadow-sm space-y-4 hover:border-red-600 transition-colors">
+                <div class="flex items-center gap-2 text-red-600 font-bold text-lg">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
+                    <h3>2. El Règim de les Notificacions (LPACAP)</h3>
+                </div>
+                <p class="text-xs text-gray-700 leading-relaxed">
+                    Acte formal mitjançant el qual l'Administració fa arribar una resolució o acte administratiu al seu destinatari individualitzat.
+                </p>
+                <div class="bg-white p-3 rounded-lg border border-gray-200 space-y-2">
+                    <ul class="space-y-1.5 text-xs text-gray-700">
+                        <li class="flex items-start gap-1.5">
+                            <span class="text-red-600 font-bold">▪</span> <span><strong>Termini legal:</strong> S'ha de practicar en el termini de <strong>10 dies</strong> a partir de la data en què l'acte hagi estat dictat.</span>
+                        </li>
+                        <li class="flex items-start gap-1.5">
+                            <span class="text-red-600 font-bold">▪</span> <span><strong>Contingut obligatori:</strong> Text íntegre de la resolució, indicació de si és o no definitiva en via administrativa, recursos que es poden interposar, òrgan davant el qual s'han de presentar i terminis.</span>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+
+            <!-- TARJETA 3: PRÀCTICA DE LA NOTIFICACIÓ (ELECTRÒNICA I EN PAPER) -->
+            <section class="bg-gray-50 border border-gray-200 rounded-xl p-6 shadow-sm space-y-4 hover:border-red-600 transition-colors">
+                <div class="flex items-center gap-2 text-red-600 font-bold text-lg">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path></svg>
+                    <h3>3. Modalitats de Notificació i Obligatorietat</h3>
+                </div>
+                <p class="text-xs text-gray-700 leading-relaxed">
+                    D'acord amb la Llei 39/2015 (LPACAP), la regla general en les relacions amb les administracions públiques és la via electrònica.
+                </p>
+                <div class="bg-white p-3 rounded-lg border border-gray-200 space-y-2">
+                    <ul class="space-y-1.5 text-xs text-gray-700">
+                        <li class="flex items-start gap-1.5">
+                            <span class="text-red-600 font-bold">▪</span> <span><strong>Notificació electrònica:</strong> Obligatòria per a persones jurídiques, col·legiats professionals, empleats públics i altres subjectes de l'art. 14 LPACAP. S'entén practicada quan es produeix l'accés al contingut.</span>
+                        </li>
+                        <li class="flex items-start gap-1.5">
+                            <span class="text-red-600 font-bold">▪</span> <span><strong>Caducitat per inacció:</strong> Transcorreguts <strong>10 dies naturals</strong> des de la posada a disposició de la notificació electrònica sense accedir-hi, s'entén que aquesta ha estat rebutjada.</span>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+
+            <!-- TARJETA 4: DEFECTES I SUBSANACIÓ EN LES NOTIFICACIONS -->
+            <section class="bg-gray-50 border border-gray-200 rounded-xl p-6 shadow-sm space-y-4 hover:border-red-600 transition-colors">
+                <div class="flex items-center gap-2 text-red-600 font-bold text-lg">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"></path></svg>
+                    <h3>4. Notificacions Defectuoses</h3>
+                </div>
+                <p class="text-xs text-gray-700 leading-relaxed">
+                    Efectes jurídics quan la notificació no compleix tots els requisits legals establerts per la normativa.
+                </p>
+                <div class="bg-white p-3 rounded-lg border border-gray-200 space-y-2">
+                    <ul class="space-y-1.5 text-xs text-gray-700">
+                        <li class="flex items-start gap-1.5">
+                            <span class="text-red-600 font-bold">▪</span> <span><strong>Efecte de la defectuositat:</strong> S'entén practicada a partir de la data en què l'interessat realitza una actuació que suposa el coneixement del contingut o interposa el recurs procedent.</span>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+
+            <!-- TAULA ADAPTADA AL TEMA (AMB fons negre i lletres blanques a la primera fila) -->
+            <section class="bg-gray-50 border border-gray-200 rounded-xl p-6 shadow-sm space-y-4 hover:border-red-600 transition-colors md:col-span-2">
+                <div class="flex items-center gap-2 text-red-600 font-bold text-lg">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 10h16M4 14h16M4 18h16"></path></svg>
+                    <h3>Quadre comparatiu: Instruments de Comunicació i Notificació</h3>
+                </div>
+                <p class="text-xs text-gray-700 leading-relaxed">
+                    Resum pràctic per a oposicions C1 de les modalitats de comunicació administrativa, terminis i efectes jurídics principals segons la LPACAP.
+                </p>
+                <div class="overflow-x-auto">
+                    <table class="w-full text-left text-xs border-collapse">
+                        <thead>
+                            <tr class="bg-black text-white">
+                                <th class="p-3 border border-gray-700 font-bold">Concepte / Modalitat</th>
+                                <th class="p-3 border border-gray-700 font-bold">Àmbit / Objecte</th>
+                                <th class="p-3 border border-gray-700 font-bold">Termini / Requisit clau</th>
+                                <th class="p-3 border border-gray-700 font-bold">Efectes jurídics / Conseqüència</th>
+                            </tr>
+                        </thead>
+                        <tbody class="bg-white text-gray-800">
+                            <tr class="border-b border-gray-200 hover:bg-gray-50">
+                                <td class="p-3 border border-gray-200 font-bold text-red-600">Notificació Administrativa</td>
+                                <td class="p-3 border border-gray-200">Destinatari individualitzat (resolucions i actes).</td>
+                                <td class="p-3 border border-gray-200">10 dies per practicar-la des que es dicta.</td>
+                                <td class="p-3 border border-gray-200">Permet iniciar el còmput de terminis per a recursos.</td>
+                            </tr>
+                            <tr class="border-b border-gray-200 hover:bg-gray-50">
+                                <td class="p-3 border border-gray-200 font-bold text-red-600">Notificació Electrònica</td>
+                                <td class="p-3 border border-gray-200">Obligatòria art. 14 LPACAP (persones jurídiques, empleats públics...).</td>
+                                <td class="p-3 border border-gray-200">Accés en 10 dies naturals des de posada a disposició.</td>
+                                <td class="p-3 border border-gray-200">Si no s'accedeix, s'entén rebutjada i continua el procediment.</td>
+                            </tr>
+                            <tr class="border-b border-gray-200 hover:bg-gray-50">
+                                <td class="p-3 border border-gray-200 font-bold text-red-600">Edicte</td>
+                                <td class="p-3 border border-gray-200">Pluralitat indeterminada de persones o interessats amb notificació frustrada.</td>
+                                <td class="p-3 border border-gray-200">Publicació en tauler d'edictes / diaris oficials.</td>
+                                <td class="p-3 border border-gray-200">Surteix efectes de notificació formal un cop publicat legalment.</td>
+                            </tr>
+                            <tr class="hover:bg-gray-50">
+                                <td class="p-3 border border-gray-200 font-bold text-red-600">Anunci</td>
+                                <td class="p-3 border border-gray-200">Informació general, convocatòries públiques, borses de treball i licitacions.</td>
+                                <td class="p-3 border border-gray-200">Segons bases específiques o normativa sectorial.</td>
+                                <td class="p-3 border border-gray-200">Publicitat general i obertura de terminis de concurrència.</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+
+            <!-- TARJETA 5: APLICACIÓ PRÀCTICA AL WEB I GESTIÓ DE L'AMB (Destacat en verd) -->
+            <section class="bg-gray-50 border border-gray-200 rounded-xl p-6 shadow-sm space-y-4 hover:border-green-600 transition-colors md:col-span-2">
+                <div class="flex items-center gap-2 text-green-700 font-bold text-lg">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9"></path></svg>
+                    <h3>5. Peculiaritats i Gestió de les Comunicacions a l'AMB (Segons amb.cat)</h3>
+                </div>
+                
+                <!-- Bloc amb estil verd específic per a la informació extreta de la web de l'AMB -->
+                <div class="amb-web-highlight text-xs space-y-3">
+                    <p class="font-bold mb-2 text-green-900">🌐 CANALS OFICIALS DE NOTIFICACIÓ I TAULER ELECTRÒNIC METROPOLITÀ:</p>
+                    
+                    <div>
+                        <strong class="text-green-800">Seu Electrònica i Tauler d'Edictes de l'AMB:</strong>
+                        <ul class="list-disc pl-4 mt-1 space-y-1">
+                            <li>A través del portal <code>amb.cat</code>, la Secció de Tauler d'Edictes i Anuncis publica formalment les convocatòries d'òrgans, acords d'urbanisme, expropiacions, taxes i preus públics metropolitans (com el tribut metropolità o tarifes de transport).</li>
+                        </ul>
+                    </div>
+
+                    <div>
+                        <strong class="text-green-800">El Servei de Notificacions Electròniques (e-NOTUM / AMB):</strong>
+                        <ul class="list-disc pl-4 mt-1 space-y-1">
+                            <li>L'AMB empra sistemes integrats de notificació electrònica per fer arribar de forma segura les resolucions de gerència i presidència als ciutadans i empreses adjudicatàries de serveis públics metropolitans.</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <!-- TARJETA 6: TRAMPES D'EXAMEN I PREGUNTES TIPUS TEST -->
+            <section class="bg-gray-50 border border-gray-200 rounded-xl p-6 shadow-sm space-y-4 hover:border-red-600 transition-colors md:col-span-2">
+                <div class="flex items-center gap-2 text-red-600 font-bold text-lg">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"></path></svg>
+                    <h3>6. Trampes i Preguntes Tipus Test Habituals</h3>
+                </div>
+                
+                <!-- Bloc amb estil pastel vermell especial per a trampes d'examen -->
+                <div class="highlight-box-custom text-xs space-y-3">
+                    <p class="font-bold mb-2">⚠ PREGUNTES TRAMPA D'EXAMEN SOBRE NOTIFICACIONS:</p>
+                    
+                    <div>
+                        <strong class="text-red-700">El còmput de dies en notificació electrònica:</strong>
+                        <ul class="list-disc pl-4 mt-1 space-y-1">
+                            <li>Vigila atentament si a l'examen confonen dies hàbils i naturals: per entendre rebutjada una notificació electrònica per passatge del temps sense accés, han de transcorrer <strong>10 dies naturals</strong> des de la posada a disposició.</li>
+                        </ul>
+                    </div>
+
+                    <div>
+                        <strong class="text-red-700">Termini per practicar la notificació:</strong>
+                        <ul class="list-disc pl-4 mt-1 space-y-1">
+                            <li>Recorda que l'Administració té l'obligació de cursar la notificació en el termini màxim de <strong>10 dies</strong> a partir de la data en què l'acte hagi estat dictat (no s'ha de confondre amb el termini que té el ciutadà per respondre o recórrer).</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+        </article>
+
+    </main>
+
+    <footer class="w-full border-t border-gray-200 bg-gray-50 py-4 text-center text-xs text-gray-500">
+        <p>© 2026 OpoAMB | &copy; Creat per JOMP</p>
+    </footer>
+
+<script>
+    // Script funcional per al cercador a les pàgines d'apunts
+    const searchInput = document.getElementById('searchInput');
+    
+    if (searchInput) {
+        searchInput.addEventListener('input', function(e) {
+            const searchTerm = e.target.value.toLowerCase().trim();
+            const sections = document.querySelectorAll('main article section');
+
+            sections.forEach(section => {
+                const text = section.textContent.toLowerCase();
+                if (searchTerm === '' || text.includes(searchTerm)) {
+                    section.style.display = '';
+                } else {
+                    section.style.display = 'none';
+                }
+            });
+        });
+    }
+</script>
+</body>
+</html>

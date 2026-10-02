@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="ca">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apunts - Tests Oposicions C1 AMB</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #ffffff;
+            color: #111111;
+        }
+        h1, h2, h3, h4, .font-arial-bold {
+            font-family: Arial, sans-serif;
+            font-weight: bold;
+        }
+        .highlight-box-custom {
+            background-color: #fff5f5;
+            border: 1px solid #fca5a5;
+            border-left: 4px solid #cc0000;
+            padding: 15px;
+            border-radius: 10px;
+            margin: 10px 0;
+            color: #111111;
+        }
+        .highlight-box-green {
+            background-color: #f0fdf4;
+            border: 1px solid #bbf7d0;
+            border-left: 4px solid #16a34a;
+            padding: 15px;
+            border-radius: 10px;
+            margin: 10px 0;
+            color: #111111;
+        }
+    </style>
+</head>
+<body class="bg-white min-h-screen text-gray-900 flex flex-col justify-between">
+
+    <header class="w-full border-b border-gray-200 bg-white sticky top-0 z-50 shadow-sm">
+        <div class="max-w-7xl mx-auto px-4 py-4 flex flex-col sm:flex-row items-center justify-between gap-4">
+            <div class="flex items-center gap-3 w-full sm:w-auto justify-between sm:justify-start">
+                <div class="flex items-center gap-3">
+                    <div class="flex items-center">
+                        <img src="../img/logo.png" alt="Logo AMB" class="h-10 w-auto object-contain" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+                        <span class="text-xs text-red-600 font-bold hidden text-center px-1">img/logo.png</span>
+                    </div>
+                    <h1 class="text-xl sm:text-2xl font-bold tracking-tight text-black">
+                        Oposicions C1 <span class="text-red-600">AMB</span>
+                    </h1>
+                </div>
+                <a href="index.html" class="sm:hidden inline-flex items-center gap-1.5 px-3 py-1.5 text-xs font-bold text-gray-700 bg-gray-50 border border-gray-300 hover:bg-red-600 hover:text-white hover:border-red-600 rounded-lg transition-colors">
+                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18"></path></svg>
+                    <span>Inici</span>
+                </a>
+            </div>
+
+            <div class="flex items-center gap-3 w-full sm:w-auto justify-between sm:justify-end">
+                <div class="w-full sm:w-80">
+                    <div class="relative">
+                        <span class="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none text-gray-400">
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg>
+                        </span>
+                        <input type="text" id="searchInput" placeholder="Cercar als apunts..." class="w-full pl-10 pr-4 py-2 bg-gray-50 border border-gray-300 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-red-600 focus:border-transparent transition-all">
+                    </div>
+                </div>
+                <a href="../index.html" class="hidden sm:inline-flex items-center gap-1.5 px-3.5 py-2 text-xs font-bold text-gray-700 bg-gray-50 border border-gray-300 hover:bg-red-600 hover:text-white hover:border-red-600 rounded-lg transition-colors shrink-0 shadow-sm">
+                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18"></path></svg>
+                    <span>Tornar a l'Inici</span>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <main class="max-w-6xl mx-auto px-4 py-8 w-full flex-grow space-y-8">
+        
+        <div class="flex items-center gap-2 text-xs font-bold text-gray-500 uppercase tracking-wider">
+            <span>Bloc II / Bloc Econòmic</span>
+            <span>/</span>
+            <span class="text-red-600">Temari General AMB</span>
+        </div>
+
+        <div class="border-b-2 border-red-600 pb-4">
+            <h2 class="text-2xl sm:text-3xl font-bold text-black tracking-tight">
+                Procediment Administratiu, Classes d'Actes i Gestió Pressupostària a l'AMB.
+            </h2>
+        </div>
+
+        <article class="grid grid-cols-1 md:grid-cols-2 gap-6 items-start">
+            
+            <!-- TARJETA 1: FASES DEL PROCEDIMENT ADMINISTRATIU -->
+            <section class="bg-gray-50 border border-gray-200 rounded-xl p-6 shadow-sm space-y-4 hover:border-red-600 transition-colors">
+                <div class="flex items-center gap-2 text-red-600 font-bold text-lg">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 5l7 7-7 7M5 5l7 7-7 7"></path></svg>
+                    <h3>1. Fases del Procediment Administratiu Comú (Llei 39/2015)</h3>
+                </div>
+                <p class="text-xs text-gray-700 leading-relaxed">
+                    Estructura iterativa del procediment des de l'inici fins a la seva resolució definitiva sota els principis de celeritat i eficàcia.
+                </p>
+                <div class="bg-white p-3 rounded-lg border border-gray-200 space-y-2">
+                    <ul class="space-y-1.5 text-xs text-gray-700">
+                        <li class="flex items-start gap-1.5">
+                            <span class="text-red-600 font-bold">▪</span> <span><strong>Iniciació (Arts. 54-67):</strong> D'ofici o a sol·licitud de persona interessada. Requisits de sol·licitud (Art. 66). Esmena en <strong>10 dies</strong> (Art. 68).</span>
+                        </li>
+                        <li class="flex items-start gap-1.5">
+                            <span class="text-red-600 font-bold">▪</span> <span><strong>Ordenació (Arts. 71-74):</strong> Impulsió d'ofici, celeritat i compliment general de tràmits d'interessats en <strong>10 dies</strong> (Art. 73). Acumulació d'expedients (Art. 72).</span>
+                        </li>
+                        <li class="flex items-start gap-1.5">
+                            <span class="text-red-600 font-bold">▪</span> <span><strong>Instrucció (Arts. 75-83):</strong> Prova (10 a 30 dies), informes (facultatius i no vinculants generalment; emissió en 10 dies, Art. 80), i tràmit d'audiència previ (10 a 15 dies, Art. 82).</span>
+                        </li>
+                        <li class="flex items-start gap-1.5">
+                            <span class="text-red-600 font-bold">▪</span> <span><strong>Finalització (Arts. 84-95):</strong> Resolució expressa obligatòria en termini màxim general de <strong>3 mesos</strong> (Art. 21), desistiment, renúncia i caducitat.</span>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+
+            <!-- TARJETA 2: CLASSIFICACIÓ I ININVALIDESA D'ACTES ADMINISTRATIUS -->
+            <section class="bg-gray-50 border border-gray-200 rounded-xl p-6 shadow-sm space-y-4 hover:border-red-600 transition-colors">
+                <div class="flex items-center gap-2 text-red-600 font-bold text-lg">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2"></path></svg>
+                    <h3>2. Classes d'Actes Administratius i Invalidesa</h3>
+                </div>
+                <p class="text-xs text-gray-700 leading-relaxed">
+                    Tipologies doctrinals i legals dels actes i règim jurídic de les seves infraccions[cite: 1].
+                </p>
+                <div class="bg-white p-3 rounded-lg border border-gray-200 space-y-2">
+                    <ul class="space-y-1.5 text-xs text-gray-700">
+                        <li class="flex items-start gap-1.5">
+                            <span class="text-red-600 font-bold">▪</span> <span><strong>Tipus d'actes:</strong> Expressos (orals, escrits, mímics), tàcits i presumptes (per silenci); resolutoris/definitius enfront de tràmit (qualificats o no); reglats i discrecionals (prohibició d'arbitrarietat i desviació de poder); favorables i de gravamen[cite: 1].</span>
+                        </li>
+                        <li class="flex items-start gap-1.5">
+                            <span class="text-red-600 font-bold">▪</span> <span><strong>Nul·litat de ple dret (Art. 62.1 LRJPAC):</strong> Vulneració de drets constitucionals (arts. 14-29 CE), incompetència manifesta per raó de matèria o territori, contingut impossible, infracció penal, omissió total i absoluta de procediment[cite: 1].</span>
+                        </li>
+                        <li class="flex items-start gap-1.5">
+                            <span class="text-red-600 font-bold">▪</span> <span><strong>Anul·labilitat (Art. 63):</strong> Qualsevol infracció notòria de l'ordenament jurídic, inclosa la desviació de poder i vicis de forma que provoquin indefensió[cite: 1].</span>
+                        </li>
+                        <li class="flex items-start gap-1.5">
+                            <span class="text-red-600 font-bold">▪</span> <span><strong>Tècniques de conservació:</strong> Validació d'actes anul·lables, incomunicació d'invalidesa i conversió d'actes viciats (arts. 64-67)[cite: 1].</span>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+
+            <!-- TARJETA 3: MARC PRESSUPOSTARI I ESTRUCTURA COMPTABLE -->
+            <section class="bg-gray-50 border border-gray-200 rounded-xl p-6 shadow-sm space-y-4 hover:border-red-600 transition-colors">
+                <div class="flex items-center gap-2 text-red-600 font-bold text-lg">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                    <h3>3. El Pressupost de l'AMB: Principis i Estructures</h3>
+                </div>
+                <p class="text-xs text-gray-700 leading-relaxed">
+                    L'AMB (constituïda pel Ple/Consell Metropolità el 21 de juliol de 2011 sota la Llei 31/2010) gestiona un pressupost anual limitatiu en despeses i estimatiu en ingressos[cite: 2].
+                </p>
+                <div class="bg-white p-3 rounded-lg border border-gray-200 space-y-2">
+                    <ul class="space-y-1.5 text-xs text-gray-700">
+                        <li class="flex items-start gap-1.5">
+                            <span class="text-red-600 font-bold">▪</span> <span><strong>Principis pressupostaris:</strong> Anualitat, unitat, universalitat, equilibri, especialitat (qualitativa i quantitativa) i no afectació[cite: 2].</span>
+                        </li>
+                        <li class="flex items-start gap-1.5">
+                            <span class="text-red-600 font-bold">▪</span> <span><strong>Estructura de Despeses:</strong> Classificació Orgànica (qui gasta), per Programes/Funcional (per a què es gasta - 3 dígits) i Econòmica (en què es gasta - 9 capítols: 1 a 5 corrents/financeres, 6-7 capital, 8-9 financeres)[cite: 2].</span>
+                        </li>
+                        <li class="flex items-start gap-1.5">
+                            <span class="text-red-600 font-bold">▪</span> <span><strong>Estructura d'Ingressos:</strong> Classificació Econòmica en 9 capítols (1. Impostos directes, 2. Impostos indirectes, 3. Taxes i preus públics, 4. Transferències corrents, 5. Ingressos patrimonials, 6. Alienació d'inversions reals, 7. Transferències de capital, 8. Variació d'actius financers, 9. Variació de passius financers)[cite: 2].</span>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+
+            <!-- TARJETA 4: POTESTAT TRIBUTÀRIA I FINANÇAMENT DE L'AMB -->
+            <section class="bg-gray-50 border border-gray-200 rounded-xl p-6 shadow-sm space-y-4 hover:border-red-600 transition-colors">
+                <div class="flex items-center gap-2 text-red-600 font-bold text-lg">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"></path></svg>
+                    <h3>4. Finançament i Particularitats de l'AMB</h3>
+                </div>
+                <p class="text-xs text-gray-700 leading-relaxed">
+                    Marc financer metropolità derivat de la Llei 31/2010 i el TRLRHL (Reial Decret Legislatiu 2/2004)[cite: 2].
+                </p>
+                <div class="bg-white p-3 rounded-lg border border-gray-200 space-y-2">
+                    <ul class="space-y-1.5 text-xs text-gray-700">
+                        <li class="flex items-start gap-1.5">
+                            <span class="text-red-600 font-bold">▪</span> <span><strong>Potestat Tributària i Ordenances:</strong> L'AMB pot aprovar ordenances fiscals per regular preus públics, tarifes, taxes per serveis i activitats[cite: 2].</span>
+                        </li>
+                        <li class="flex items-start gap-1.5">
+                            <span class="text-red-600 font-bold">▪</span> <span><strong>Recàrrec sobre l'IBI (Art. 41 Llei 31/2010):</strong> L'AMB pot establir un recàrrec metropolità sobre l'Impost sobre Béns Immobles amb un percentatge únic i màxim del <strong>0,2%</strong> sobre la base imposable (valor cadastral), recaptat de manera conjunta[cite: 2].</span>
+                        </li>
+                        <li class="flex items-start gap-1.5">
+                            <span class="text-red-600 font-bold">▪</span> <span><strong>Pròrroga pressupostària automàtica:</strong> Si el pressupost no s'aprova abans de l'1 de gener, es prorroguen automàticament els crèdits inicials de l'exercici anterior (Art. 169.6 TRLRHL)[cite: 2].</span>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+
+            <!-- TARJETA 5: TAULA RESUM DE FASES I TERMINIS CLAU -->
+            <section class="bg-gray-50 border border-gray-200 rounded-xl p-6 shadow-sm space-y-4 hover:border-red-600 transition-colors md:col-span-2">
+                <div class="flex items-center gap-2 text-red-600 font-bold text-lg">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 10h18M3 14h18m-9-4v8m-7 0h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z"></path></svg>
+                    <h3>Taula Resum: Fases, Tràmits i Terminis Principals</h3>
+                </div>
+                <div class="overflow-x-auto">
+                    <table class="w-full text-left text-xs border-collapse">
+                        <thead>
+                            <tr class="bg-black text-white">
+                                <th class="p-3 font-bold rounded-l-lg">Àmbit / Matèria</th>
+                                <th class="p-3 font-bold">Tràmit o Concepte Clau</th>
+                                <th class="p-3 font-bold rounded-r-lg">Termini / Límit / Percentatge</th>
+                            </tr>
+                        </thead>
+                        <tbody class="divide-y divide-gray-200 bg-white">
+                            <tr>
+                                <td class="p-3 font-semibold text-gray-900">Procediment (Llei 39/2015)</td>
+                                <td class="p-3 text-gray-700">Esmena de sol·licituds (Art. 68) / Tràmits d'interessats</td>
+                                <td class="p-3 text-gray-700"><strong>10 dies</strong> hàbils.</td>
+                            </tr>
+                            <tr>
+                                <td class="p-3 font-semibold text-gray-900">Procediment (Llei 39/2015)</td>
+                                <td class="p-3 text-gray-700">Període de prova (Art. 77)</td>
+                                <td class="p-3 text-gray-700">Entre <strong>10 i 30 dies</strong>.</td>
+                            </tr>
+                            <tr>
+                                <td class="p-3 font-semibold text-gray-900">Procediment (Llei 39/2015)</td>
+                                <td class="p-3 text-gray-700">Tràmit d'audiència (Art. 82)</td>
+                                <td class="p-3 text-gray-700">Entre <strong>10 i 15 dies</strong>.</td>
+                            </tr>
+                            <tr>
+                                <td class="p-3 font-semibold text-gray-900">Hisenda Local (AMB)</td>
+                                <td class="p-3 text-gray-700">Recàrrec metropolità sobre l'IBI</td>
+                                <td class="p-3 text-gray-700">Màxim del <strong>0,2%</strong> de la base imposable[cite: 2].</td>
+                            </tr>
+                            <tr>
+                                <td class="p-3 font-semibold text-gray-900">Pressupostos Locals</td>
+                                <td class="p-3 text-gray-700">Termini màxim de resolució ordinària / Pròrroga</td>
+                                <td class="p-3 text-gray-700"><strong>3 mesos</strong> per defecte / Automàtica a l'1 de gen.[cite: 2].</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+
+            <!-- TARJETA 6: APLICACIÓ PRÀCTICA AL COMPONENT DE L'ÀMBIT METROPOLITÀ DE BARCELONA (AMB) -->
+            <section class="bg-gray-50 border border-gray-200 rounded-xl p-6 shadow-sm space-y-4 hover:border-red-600 transition-colors md:col-span-2">
+                <div class="flex items-center gap-2 text-green-700 font-bold text-lg">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"></path></svg>
+                    <h3>Aplicació Pràctica a l'Àmbit de l'AMB</h3>
+                </div>
+                <div class="highlight-box-green text-xs space-y-3">
+                    <p class="font-bold mb-2 text-green-900">🏛 Gestió Integral de Fons, Expedients i Subvencions a l'Àrea Metropolitana de Barcelona:</p>
+                    <p class="leading-relaxed text-gray-800">
+                        En l'activitat diària de l'AMB, la tramitació dels expedients administratius i la gestió econòmica d'ajuts a la rehabilitació d'edificis o transport s'ajusten estrictament a la Llei 39/2015 i al TRLRHL[cite: 2]. 
+                    </p>
+                    <ul class="list-disc pl-4 mt-2 space-y-1.5 text-gray-800">
+                        <li><strong>Seu Electrònica i Celeritat:</strong> Les sol·licituds ciutadanes a l'AMB es processen telemàticament, aplicant rigorosament el termini de 10 dies d'esmena davant deficiències tècniques.</li>
+                        <li><strong>Especialitat del Pressupost de Despeses:</strong> Els crèdits assignats als programes metropolitans tenen caràcter limitatiu, essent nuls de ple dret els compromisos que excedeixin els nivells de vinculació fixats pel Consell Metropolità[cite: 2].</li>
+                    </ul>
+                </div>
+            </section>
+
+            <!-- TARJETA 7: TRAMPES D'EXAMEN I SILENCI ADMINISTRATIU -->
+            <section class="bg-gray-50 border border-gray-200 rounded-xl p-6 shadow-sm space-y-4 hover:border-red-600 transition-colors md:col-span-2">
+                <div class="flex items-center gap-2 text-red-600 font-bold text-lg">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"></path></svg>
+                    <h3>5. Silenci Administratiu i Trampes d'Examen (ATENCIÓ TEST)</h3>
+                </div>
+                <div class="highlight-box-custom text-xs space-y-3">
+                    <p class="font-bold mb-2">⚠ CONCEPTES CLAU I ERRORS FREQÜENTS EN OPOSICIONS:</p>
+                    <div>
+                        <strong class="text-red-700">Silenci en sol·licituds a instància de part (Art. 24):</strong>
+                        <ul class="list-disc pl-4 mt-1 space-y-1">
+                            <li>Caràcter <strong>POSITIU</strong> per regla general, excepte en medi ambient, domini públic o impugnacions. <span class="italic text-gray-600">Trampa: creure que tot silenci és negatiu.</span></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <strong class="text-red-700">Naturalesa dels crèdits pressupostaris:</strong>
+                        <ul class="list-disc pl-4 mt-1 space-y-1">
+                            <li>Els ingressos són meres previsions, mentre que les despeses tenen caràcter <strong>limitatiu i vinculant</strong>[cite: 2]. Superar-los provoca la nul·litat radical dels actes[cite: 2].</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+        </article>
+    </main>
+
+    <footer class="w-full border-t border-gray-200 bg-gray-50 py-4 text-center text-xs text-gray-500">
+        <p>© 2026 OpoAMB | &copy; Creat per JOMP</p>
+    </footer>
+
+<script>
+    const searchInput = document.getElementById('searchInput');
+    if (searchInput) {
+        searchInput.addEventListener('input', function(e) {
+            const searchTerm = e.target.value.toLowerCase().trim();
+            const sections = document.querySelectorAll('main article section');
+            sections.forEach(section => {
+                const text = section.textContent.toLowerCase();
+                if (searchTerm === '' || text.includes(searchTerm)) {
+                    section.style.display = '';
+                } else {
+                    section.style.display = 'none';
+                }
+            });
+        });
+    }
+</script>
+</body>
+</html>

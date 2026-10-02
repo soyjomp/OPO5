@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="ca">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apunts - Tests Oposicions C1 AMB</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #ffffff;
+            color: #111111;
+        }
+        h1, h2, h3, h4, .font-arial-bold {
+            font-family: Arial, sans-serif;
+            font-weight: bold;
+        }
+        /* Quadre de restriccions/suspensions o aspectes clau / trampes d'examen (vermell suau pastel) */
+        .highlight-box-custom {
+            background-color: #fff5f5;
+            border: 1px solid #fca5a5;
+            border-left: 4px solid #cc0000;
+            padding: 15px;
+            border-radius: 10px;
+            margin: 10px 0;
+            color: #111111;
+        }
+        /* Quadre de connexió pràctica amb l'AMB (fons verd suau) */
+        .amb-connection-box {
+            background-color: #f0fdf4;
+            border: 1px solid #bbf7d0;
+            border-left: 4px solid #16a34a;
+            padding: 15px;
+            border-radius: 10px;
+            margin: 10px 0;
+            color: #111111;
+        }
+    </style>
+</head>
+<body class="bg-white min-h-screen text-gray-900 flex flex-col justify-between">
+
+    <header class="w-full border-b border-gray-200 bg-white sticky top-0 z-50 shadow-sm">
+        <div class="max-w-7xl mx-auto px-4 py-4 flex flex-col sm:flex-row items-center justify-between gap-4">
+            
+            <div class="flex items-center gap-3 w-full sm:w-auto justify-between sm:justify-start">
+                <div class="flex items-center gap-3">
+                    <div class="flex items-center">
+                        <img src="../img/logo.png" alt="Logo AMB" class="h-10 w-auto object-contain" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+                        <span class="text-xs text-red-600 font-bold hidden text-center px-1">img/logo.png</span>
+                    </div>
+                    <h1 class="text-xl sm:text-2xl font-bold tracking-tight text-black">
+                        Oposicions C1 <span class="text-red-600">AMB</span>
+                    </h1>
+                </div>
+
+                <a href="index.html" class="sm:hidden inline-flex items-center gap-1.5 px-3 py-1.5 text-xs font-bold text-gray-700 bg-gray-50 border border-gray-300 hover:bg-red-600 hover:text-white hover:border-red-600 rounded-lg transition-colors">
+                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18"></path></svg>
+                    <span>Inici</span>
+                </a>
+            </div>
+
+            <div class="flex items-center gap-3 w-full sm:w-auto justify-between sm:justify-end">
+                <div class="w-full sm:w-80">
+                    <div class="relative">
+                        <span class="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none text-gray-400">
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg>
+                        </span>
+                        <input type="text" id="searchInput" placeholder="Cercar als apunts..." class="w-full pl-10 pr-4 py-2 bg-gray-50 border border-gray-300 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-red-600 focus:border-transparent transition-all">
+                    </div>
+                </div>
+
+                <a href="../index.html" class="hidden sm:inline-flex items-center gap-1.5 px-3.5 py-2 text-xs font-bold text-gray-700 bg-gray-50 border border-gray-300 hover:bg-red-600 hover:text-white hover:border-red-600 rounded-lg transition-colors shrink-0 shadow-sm">
+                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18"></path></svg>
+                    <span>Tornar a l'Inici</span>
+                </a>
+            </div>
+
+        </div>
+    </header>
+
+    <main class="max-w-6xl mx-auto px-4 py-8 w-full flex-grow space-y-8">
+        
+        <div class="flex items-center gap-2 text-xs font-bold text-gray-500 uppercase tracking-wider">
+            <span>Bloc I</span>
+            <span>/</span>
+            <span class="text-red-600">Tema 3</span>
+        </div>
+
+        <div class="border-b-2 border-red-600 pb-4">
+            <h2 class="text-2xl sm:text-3xl font-bold text-black tracking-tight">
+                L’Estatut d’autonomia de Catalunya: estructura, contingut essencial i principis generals.
+            </h2>
+        </div>
+
+        <!-- CONTENIDOR EN COLUMNES RESPONSIVE (FICHAS) -->
+        <article class="grid grid-cols-1 md:grid-cols-2 gap-6 items-start">
+            
+            <!-- TARJETA 1: NATURA I ESTRUCTURA GENERAL (AMB TAULA AMB CAPÇALERA NEGRA) -->
+            <section class="bg-gray-50 border border-gray-200 rounded-xl p-6 shadow-sm space-y-4 hover:border-red-600 transition-colors">
+                <div class="flex items-center gap-2 text-red-600 font-bold text-lg">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path></svg>
+                    <h3>1. Natura i Estructura (Llei Orgànica 6/2006)</h3>
+                </div>
+                <p class="text-xs text-gray-700 leading-relaxed">
+                    L'Estatut d'Autonomia de Catalunya (EAC) és la norma institucional bàsica de Catalunya, dins de la Constitució Espanyola que ampara l'autonomia.
+                </p>
+                
+                <!-- Taula amb capçalera negra i lletres blanques -->
+                <div class="overflow-x-auto rounded-lg border border-gray-200">
+                    <table class="w-full text-left border-collapse text-xs">
+                        <thead>
+                            <tr class="bg-black text-white">
+                                <th class="p-2.5 font-bold">Part / Títol</th>
+                                <th class="p-2.5 font-bold">Contingut Principal</th>
+                            </tr>
+                        </thead>
+                        <tbody class="divide-y divide-gray-200 bg-white">
+                            <tr>
+                                <td class="p-2.5 font-bold text-gray-900">Preàmbul</td>
+                                <td class="p-2.5 text-gray-700">Caràcter declaratiu i històric d'autogovern.</td>
+                            </tr>
+                            <tr class="bg-gray-50">
+                                <td class="p-2.5 font-bold text-gray-900">Títol Preliminar</td>
+                                <td class="p-2.5 text-gray-700">Principis generals, símbols, llengua i drets històrics.</td>
+                            </tr>
+                            <tr>
+                                <td class="p-2.5 font-bold text-gray-900">Títol I</td>
+                                <td class="p-2.5 text-gray-700">Drets, deures i principis rectors dels ciutadans.</td>
+                            </tr>
+                            <tr class="bg-gray-50">
+                                <td class="p-2.5 font-bold text-gray-900">Títol II</td>
+                                <td class="p-2.5 text-gray-700">Institucions de la Generalitat (Parlament, Govern...).</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+
+            <!-- TARJETA 2: PRINCIPIS GENERALS I SÍMBOLS -->
+            <section class="bg-gray-50 border border-gray-200 rounded-xl p-6 shadow-sm space-y-4 hover:border-red-600 transition-colors">
+                <div class="flex items-center gap-2 text-red-600 font-bold text-lg">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z"></path></svg>
+                    <h3>2. Principis Generals, Drets Històrics i Llengua</h3>
+                </div>
+                <p class="text-xs text-gray-700 leading-relaxed">
+                    Definició de l'autogovern, els elements identitaris i la cooficialitat lingüística.
+                </p>
+                <div class="bg-white p-3 rounded-lg border border-gray-200 space-y-2">
+                    <ul class="space-y-1.5 text-xs text-gray-700">
+                        <li class="flex items-start gap-1.5">
+                            <span class="text-red-600 font-bold">▪</span> <span><strong>Art. 1 (Catalunya com a nacionalitat):</strong> Catalunya, com a nacionalitat, exerceix el seu autogovern en forma de Comunitat Autònoma.</span>
+                        </li>
+                        <li class="flex items-start gap-1.5">
+                            <span class="text-red-600 font-bold">▪</span> <span><strong>Art. 6 (La Llengua):</strong> El català és la llengua pròpia de Catalunya i la llengua oficial, juntament amb el castellà. Els ciutadans tenen dret a usar-les.</span>
+                        </li>
+                        <li class="flex items-start gap-1.5">
+                            <span class="text-red-600 font-bold">▪</span> <span><strong>Art. 8 (Símbols):</strong> La bandera de Catalunya és la tradicional de quatre barres vermelles sobre fons groc. La diada nacional és l'Onze de Setembre. L'himne és "Els Segadors".</span>
+                        </li>
+                        <li class="flex items-start gap-1.5">
+                            <span class="text-red-600 font-bold">▪</span> <span><strong>Art. 5 (Drets històrics):</strong> L'autogovern es fonamenta també en els drets històrics del poble català, actualitzats per l'Estatut.</span>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+
+            <!-- TARJETA 3: INSTITUCIONS DE LA GENERALITAT (TÍTOL II) -->
+            <section class="bg-gray-50 border border-gray-200 rounded-xl p-6 shadow-sm space-y-4 hover:border-red-600 transition-colors">
+                <div class="flex items-center gap-2 text-red-600 font-bold text-lg">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"></path></svg>
+                    <h3>3. Les Institucions de la Generalitat (Arts. 55-94)</h3>
+                </div>
+                <p class="text-xs text-gray-700 leading-relaxed">
+                    Marc institucional bàsic a través del qual s'exerceixen els poders de la Generalitat.
+                </p>
+                <div class="bg-white p-3 rounded-lg border border-gray-200 space-y-2">
+                    <ul class="space-y-1.5 text-xs text-gray-700">
+                        <li class="flex items-start gap-1.5">
+                            <span class="text-red-600 font-bold">▪</span> <span><strong>El Parlament de Catalunya (Arts. 55-66):</strong> Cambra legislativa, aprova pressupostos i controla el Govern.</span>
+                        </li>
+                        <li class="flex items-start gap-1.5">
+                            <span class="text-red-600 font-bold">▪</span> <span><strong>El President de la Generalitat (Arts. 67-73):</strong> Ostenta la suprema representació de la Generalitat i l'ordinària de l'Estat a Catalunya.</span>
+                        </li>
+                        <li class="flex items-start gap-1.5">
+                            <span class="text-red-600 font-bold">▪</span> <span><strong>El Govern / Consell Executiu (Arts. 74-79):</strong> Òrgan col·legiat que dirigeix la política i l'administració.</span>
+                        </li>
+                        <li class="flex items-start gap-1.5">
+                            <span class="text-red-600 font-bold">▪</span> <span><strong>Altres òrgans estatutaris:</strong> Síndic de Greuges, Sindicatura de Comptes, Consell de Garanties Estatutàries i CAC.</span>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+
+            <!-- TARJETA 4: COMPETÈNCIES I CONNEXIÓN AMB L'ÀREA METROPOLITANA DE BARCELONA (AMB) -->
+            <section class="bg-gray-50 border border-gray-200 rounded-xl p-6 shadow-sm space-y-4 hover:border-red-600 transition-colors md:col-span-2">
+                <div class="flex items-center gap-2 text-red-600 font-bold text-lg">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4"></path></svg>
+                    <h3>4. El Règim de Competències i Administració Local</h3>
+                </div>
+                <p class="text-xs text-gray-700 leading-relaxed">
+                    Classificació competencial segons el grau d'atribució normativa i marc del govern local a Catalunya.
+                </p>
+                <div class="bg-white p-3 rounded-lg border border-gray-200 space-y-2">
+                    <ul class="space-y-1.5 text-xs text-gray-700">
+                        <li class="flex items-start gap-1.5">
+                            <span class="text-red-600 font-bold">▪</span> <span><strong>Competències Exclusives (Art. 110):</strong> Potestat legislativa, reglamentària i funció executiva pròpia de la Generalitat.</span>
+                        </li>
+                        <li class="flex items-start gap-1.5">
+                            <span class="text-red-600 font-bold">▪</span> <span><strong>Competències Compartides (Art. 111):</strong> Potestat legislativa i executiva en el marc de les bases de l'Estat.</span>
+                        </li>
+                        <li class="flex items-start gap-1.5">
+                            <span class="text-red-600 font-bold">▪</span> <span><strong>Competències Executives (Art. 112):</strong> Potestat reglamentària interna i funció executiva sobre matèries legislades per l'Estat.</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- QUADRE VERD: APLICACIÓ PRÀCTICA A L'AMB (SEGONS WEB OFICIAL I LLEI DE L'AMB) -->
+                <div class="amb-connection-box text-xs space-y-2 mt-4">
+                    <p class="font-bold text-green-800 text-sm flex items-center gap-1.5">
+                        <svg class="w-4 h-4 text-green-700" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"></path></svg>
+                        <span>Aplicació pràctica a l'Àrea Metropolitana de Barcelona (AMB):</span>
+                    </p>
+                    <p class="text-gray-700 leading-relaxed">
+                        Segons recull la web oficial de l'AMB i l'<strong>article 90 i 93 de l'Estatut d'Autonomia</strong> (d'acord amb el marc de govern local), la Generalitat de Catalunya té la competència exclusiva en matèria de règim local. 
+                    </p>
+                    <p class="text-gray-700 leading-relaxed">
+                        L'<strong>AMB neix en compliment directe del mandat de l'Estatut de Catalunya</strong> per gestionar amb eficàcia els serveis públics supramunicipals de 36 municipis, exercint competències pròpies en àrees vitals previstes per la legislació autonòmica: el transport públic metropolità, el cicle de l'aigua, el tractament de residus i la planificació urbanística territorial.
+                    </p>
+                </div>
+            </section>
+
+            <!-- TARJETA 5: REFORMA DE L'ESTATUT I TRAMPES D'EXAMEN (QUADRE VERMELL I TÍTOL VIII) -->
+            <section class="bg-gray-50 border border-gray-200 rounded-xl p-6 shadow-sm space-y-4 hover:border-red-600 transition-colors md:col-span-2">
+                <div class="flex items-center gap-2 text-red-600 font-bold text-lg">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"></path></svg>
+                    <h3>5. Procediment de Reforma de l'Estatut (Arts. 222-223) i Conceptes Clau</h3>
+                </div>
+                <p class="text-xs text-gray-700 leading-relaxed">
+                    Mecanismes essencials i majories exigides per a la modificació de la norma institucional bàsica de Catalunya.
+                </p>
+
+                <!-- Bloc amb estil pastel vermell de notes, requisits clau i trampes d'examen -->
+                <div class="highlight-box-custom text-xs space-y-2">
+                    <p class="font-bold text-red-900 text-sm">⚠️ Atenció a les trampes d'examen (Preguntes tipus test C1 AMB):</p>
+                    <p><strong>Art. 222 (Iniciativa):</strong> Recorda que la iniciativa de reforma correspon al Parlament de Catalunya (a proposta d'<em>un terç</em> dels diputats), al Govern, o a les Corts Generals. <em>Trampa habitual:</em> dir que la iniciativa popular pot iniciar directament la reforma de l'Estatut (fals, no està contemplat per a l'Estatut).</p>
+                    <p><strong>Art. 223 (Procediment general - Majories d'or):</strong> 
+                        <br>▪ Aprovació prèvia al <strong>Parlament de Catalunya</strong> per majoria de <strong>dos terços (2/3)</strong> dels diputats. <em>Trampa:</em> confondre-ho amb la majoria absoluta.
+                        <br>▪ Sometiment obligatori a <strong>referèndum consultiu</strong> previ dels ciutadans de Catalunya per a la seva ratificació definitiva abans de la tramitació final com a llei orgànica a les Corts Generals.
+                    </p>
+                </div>
+            </section>
+
+        </article>
+
+    </main>
+
+    <footer class="w-full border-t border-gray-200 bg-gray-50 py-4 text-center text-xs text-gray-500">
+        <p>© 2026 OpoAMB | &copy; Creat per JOMP</p>
+    </footer>
+
+<script>
+    // Script funcional per al cercador a les pàgines d'apunts
+    const searchInput = document.getElementById('searchInput');
+    
+    if (searchInput) {
+        searchInput.addEventListener('input', function(e) {
+            const searchTerm = e.target.value.toLowerCase().trim();
+            const sections = document.querySelectorAll('main article section');
+
+            sections.forEach(section => {
+                const text = section.textContent.toLowerCase();
+                if (searchTerm === '' || text.includes(searchTerm)) {
+                    section.style.display = '';
+                } else {
+                    section.style.display = 'none';
+                }
+            });
+        });
+    }
+</script>
+</body>
+</html>

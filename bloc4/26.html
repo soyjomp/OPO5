@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="ca">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apunts Tema 26 - Oposicions C1 AMB</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #ffffff;
+            color: #111111;
+        }
+        h1, h2, h3, h4, .font-arial-bold {
+            font-family: Arial, sans-serif;
+            font-weight: bold;
+        }
+        /* Estil per al quadre de trampes o aspectes clau amb fons vermell suau pastel, text negre i vora esquerra vermella */
+        .highlight-box-custom {
+            background-color: #fff5f5;
+            border: 1px solid #fca5a5;
+            border-left: 4px solid #cc0000;
+            padding: 15px;
+            border-radius: 10px;
+            margin: 10px 0;
+            color: #111111;
+        }
+        /* Estil específic per destacar referències i aplicacions pràctiques de la web i gestió de l'AMB */
+        .amb-web-highlight {
+            background-color: #f0fdf4;
+            border: 1px solid #bbf7d0;
+            border-left: 4px solid #16a34a;
+            padding: 15px;
+            border-radius: 10px;
+            margin: 10px 0;
+            color: #111111;
+        }
+    </style>
+</head>
+<body class="bg-white min-h-screen text-gray-900 flex flex-col justify-between">
+
+    <header class="w-full border-b border-gray-200 bg-white sticky top-0 z-50 shadow-sm">
+        <div class="max-w-7xl mx-auto px-4 py-4 flex flex-col sm:flex-row items-center justify-between gap-4">
+            
+            <div class="flex items-center gap-3 w-full sm:w-auto justify-between sm:justify-start">
+                <div class="flex items-center gap-3">
+                    <div class="flex items-center">
+                        <img src="../img/logo.png" alt="Logo AMB" class="h-10 w-auto object-contain" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+                        <span class="text-xs text-red-600 font-bold hidden text-center px-1">img/logo.png</span>
+                    </div>
+                    <h1 class="text-xl sm:text-2xl font-bold tracking-tight text-black">
+                        Oposicions C1 <span class="text-red-600">AMB</span>
+                    </h1>
+                </div>
+
+                <a href="index.html" class="sm:hidden inline-flex items-center gap-1.5 px-3 py-1.5 text-xs font-bold text-gray-700 bg-gray-50 border border-gray-300 hover:bg-red-600 hover:text-white hover:border-red-600 rounded-lg transition-colors">
+                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18"></path></svg>
+                    <span>Inici</span>
+                </a>
+            </div>
+
+            <div class="flex items-center gap-3 w-full sm:w-auto justify-between sm:justify-end">
+                <div class="w-full sm:w-80">
+                    <div class="relative">
+                        <span class="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none text-gray-400">
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg>
+                        </span>
+                        <input type="text" id="searchInput" placeholder="Cercar als apunts..." class="w-full pl-10 pr-4 py-2 bg-gray-50 border border-gray-300 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-red-600 focus:border-transparent transition-all">
+                    </div>
+                </div>
+
+                <a href="../index.html" class="hidden sm:inline-flex items-center gap-1.5 px-3.5 py-2 text-xs font-bold text-gray-700 bg-gray-50 border border-gray-300 hover:bg-red-600 hover:text-white hover:border-red-600 rounded-lg transition-colors shrink-0 shadow-sm">
+                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18"></path></svg>
+                    <span>Tornar a l'Inici</span>
+                </a>
+            </div>
+
+        </div>
+    </header>
+
+    <main class="max-w-6xl mx-auto px-4 py-8 w-full flex-grow space-y-8">
+        
+        <div class="flex items-center gap-2 text-xs font-bold text-gray-500 uppercase tracking-wider">
+            <span>Bloc IV (Temari Específic)</span>
+            <span>/</span>
+            <span class="text-red-600">Tema 26</span>
+        </div>
+
+        <div class="border-b-2 border-red-600 pb-4">
+            <h2 class="text-2xl sm:text-3xl font-bold text-black tracking-tight">
+                Recursos administratius: Principis generals. Actes susceptibles de recurs administratiu. Classes de recursos. Reclamacions judicials contra l’administració.
+            </h2>
+        </div>
+
+        <!-- CONTENIDOR EN COLUMNES RESPONSIVE (FICHAS) -->
+        <article class="grid grid-cols-1 md:grid-cols-2 gap-6 items-start">
+            
+            <!-- TARJETA 1: PRINCIPIS GENERALS DELS RECURSOS ADMINISTRATIUS -->
+            <section class="bg-gray-50 border border-gray-200 rounded-xl p-6 shadow-sm space-y-4 hover:border-red-600 transition-colors">
+                <div class="flex items-center gap-2 text-red-600 font-bold text-lg">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"></path></svg>
+                    <h3>1. Principis Generals dels Recursos Administratius</h3>
+                </div>
+                <p class="text-xs text-gray-700 leading-relaxed">
+                    Els recursos administratius són els instruments que l'ordenament jurídic posa a disposició dels ciutadans per impugnar els actes i resolucions de les administracions públiques (regulat a la Llei 39/2015 i normativa concordant). Els actes administratius es presumeixen vàlids (principi de presumpció de validesa), basats en la confiança del legislador en la seva conformitat a dret[cite: 1].
+                </p>
+                <div class="bg-white p-3 rounded-lg border border-gray-200 space-y-2">
+                    <ul class="space-y-1.5 text-xs text-gray-700">
+                        <li class="flex items-start gap-1.5">
+                            <span class="text-red-600 font-bold">▪</span> <span><strong>Objectiu:</strong> Control de legalitat i tutela dels drets dels administrats davant actuacions irregulars o contràries a l'ordenament jurídic[cite: 1].</span>
+                        </li>
+                        <li class="flex items-start gap-1.5">
+                            <span class="text-red-600 font-bold">▪</span> <span><strong>Principi d'interdicció de la indefensió:</strong> Garantia que qualsevol persona afectada pugui defensar els seus interessos legítims evitant vicis invalidants.</span>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+
+            <!-- TARJETA 2: ACTES SUSCEPTIBLES DE RECURS I INVALIDESA -->
+            <section class="bg-gray-50 border border-gray-200 rounded-xl p-6 shadow-sm space-y-4 hover:border-red-600 transition-colors">
+                <div class="flex items-center gap-2 text-red-600 font-bold text-lg">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path></svg>
+                    <h3>2. Actes Susceptibles de Recurs i Invalidesa</h3>
+                </div>
+                <p class="text-xs text-gray-700 leading-relaxed">
+                    No tots els actes administratius es poden recórrer de la mateixa manera; cal distingir entre resolucions definitives i actes de tràmit[cite: 1].
+                </p>
+                <div class="bg-white p-3 rounded-lg border border-gray-200 space-y-2">
+                    <ul class="space-y-1.5 text-xs text-gray-700">
+                        <li class="flex items-start gap-1.5">
+                            <span class="text-red-600 font-bold">▪</span> <span><strong>Resolucions i actes de tràmit qualificats:</strong> Són recurribles les resolucions definitives i els actes de tràmit si decideixen directament o indirectament el fons de l'assumpte, determinen la impossibilitat de continuar el procediment, o produeixen indefensió o perjudici irreparable (art. 112 Llei 39/2015 i art. 25.1 LJCA)[cite: 1].</span>
+                        </li>
+                        <li class="flex items-start gap-1.5">
+                            <span class="text-red-600 font-bold">▪</span> <span><strong>Invalidesa (Nul·litat de ple dret i Anul·labilitat):</strong> Els actes poden patir de nul·litat absoluta (art. 47 Llei 39/2015) per defectes greus com la lesió de drets constitucionals o incompetència manifesta, o d'anul·labilitat (infracció de l'ordenament o desviació de poder)[cite: 1].</span>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+
+            <!-- TARJETA 3: CLASSES DE RECURSOS ADMINISTRATIUS -->
+            <section class="bg-gray-50 border border-gray-200 rounded-xl p-6 shadow-sm space-y-4 hover:border-red-600 transition-colors">
+                <div class="flex items-center gap-2 text-red-600 font-bold text-lg">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7h12m0 0l-4-4m4 4l-4 4m0 6H4m0 0l4 4m-4-4l4-4"></path></svg>
+                    <h3>3. Classes de Recursos Administratius</h3>
+                </div>
+                <p class="text-xs text-gray-700 leading-relaxed">
+                    La normativa reguladora preveu diversos tipus de recursos en via administrativa contra les resolucions i actes de tràmit qualificats.
+                </p>
+                <div class="bg-white p-3 rounded-lg border border-gray-200 space-y-2">
+                    <ul class="space-y-1.5 text-xs text-gray-700">
+                        <li class="flex items-start gap-1.5">
+                            <span class="text-red-600 font-bold">▪</span> <span><strong>Recurs d'alçada:</strong> S'interposa contra actes que no posen fi a la via administrativa, davant de l'òrgan superior jeràrquic del que va dictar l'acte.</span>
+                        </li>
+                        <li class="flex items-start gap-1.5">
+                            <span class="text-red-600 font-bold">▪</span> <span><strong>Recurs potestatiu de reposició:</strong> Es pot interposar contra actes que posin fi a la via administrativa, davant del mateix òrgan que els ha dictat.</span>
+                        </li>
+                        <li class="flex items-start gap-1.5">
+                            <span class="text-red-600 font-bold">▪</span> <span><strong>Recurs extraordinari de revisió:</strong> S'interposa davant el mateix òrgan en supòsits taxats (errors de fet, aparició de documents essencials, etc.).</span>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+
+            <!-- TARJETA 4: RECLAMACIONS JUDICIALS CONTRA L'ADMINISTRACIÓ -->
+            <section class="bg-gray-50 border border-gray-200 rounded-xl p-6 shadow-sm space-y-4 hover:border-red-600 transition-colors">
+                <div class="flex items-center gap-2 text-red-600 font-bold text-lg">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 6l3 1m0 0l-3 9a5.002 5.002 0 006.001 0M6 7l3 9M6 7l6-2m6 2l3-1m-3 1l-3 9a5.002 5.002 0 006.001 0M18 7l3 9m-3-9l-6-2m0-2v2m0 16V5m0 16H9m3 0h3"></path></svg>
+                    <h3>4. Reclamacions Judicials contra l'Administració</h3>
+                </div>
+                <p class="text-xs text-gray-700 leading-relaxed">
+                    Un cop esgotada la via administrativa (o interposat el recurs procedent), s'obre la via judicial contenciosa-administrativa[cite: 1].
+                </p>
+                <div class="bg-white p-3 rounded-lg border border-gray-200 space-y-2">
+                    <ul class="space-y-1.5 text-xs text-gray-700">
+                        <li class="flex items-start gap-1.5">
+                            <span class="text-red-600 font-bold">▪</span> <span><strong>Jurisdicció Contenciosa-Administrativa:</strong> Regulada per la Llei 29/1998 (LJCA). S'adreça contra l'actuació de les administracions públiques subjecta al dret administratiu[cite: 1].</span>
+                        </li>
+                        <li class="flex items-start gap-1.5">
+                            <span class="text-red-600 font-bold">▪</span> <span><strong>Impugnació local:</strong> En l'àmbit de les entitats locals i de l'AMB, un cop exhaurida la via administrativa, les reclamacions judicials es formalitzen directament davant els jutjats contenciosos-administratius[cite: 1, 2].</span>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+
+            <!-- TAULA ADAPTADA AL TEMA (AMB TITOLS DE COLUMNES AMB FONS NEGRE I LLETRES BLANQUES) -->
+            <section class="bg-gray-50 border border-gray-200 rounded-xl p-6 shadow-sm space-y-4 hover:border-red-600 transition-colors md:col-span-2">
+                <div class="flex items-center gap-2 text-black font-bold text-lg">
+                    <svg class="w-5 h-5 text-red-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 10h18M3 14h18m-9-4v8m-7 0h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z"></path></svg>
+                    <h3>Quadre comparatiu: Classes de Recursos Administratius</h3>
+                </div>
+                <div class="overflow-x-auto">
+                    <table class="w-full text-xs text-left text-gray-700 border border-gray-300 rounded-lg overflow-hidden">
+                        <thead>
+                            <tr class="bg-black text-white">
+                                <th class="px-4 py-3 font-bold uppercase tracking-wider">Tipus de Recurs</th>
+                                <th class="px-4 py-3 font-bold uppercase tracking-wider">Acte Impugnable</th>
+                                <th class="px-4 py-3 font-bold uppercase tracking-wider">Òrgan competent per resoldre</th>
+                                <th class="px-4 py-3 font-bold uppercase tracking-wider">Termini General</th>
+                            </tr>
+                        </thead>
+                        <tbody class="divide-y divide-gray-200 bg-white">
+                            <tr class="hover:bg-gray-50">
+                                <td class="px-4 py-2.5 font-bold text-black">Recurs d'Alçada</td>
+                                <td class="px-4 py-2.5">Actes que no posen fi a la via administrativa</td>
+                                <td class="px-4 py-2.5">Òrgan superior jeràrquic del que va dictar l'acte</td>
+                                <td class="px-4 py-2.5">1 mes (exprés) / Des del dia següent al silenci</td>
+                            </tr>
+                            <tr class="hover:bg-gray-50">
+                                <td class="px-4 py-2.5 font-bold text-black">Recurs de Reposició</td>
+                                <td class="px-4 py-2.5">Actes que posen fi a la via administrativa (potestatiu)</td>
+                                <td class="px-4 py-2.5">El mateix òrgan que va dictar l'acte</td>
+                                <td class="px-4 py-2.5">1 mes (exprés) / Des del dia següent al silenci</td>
+                            </tr>
+                            <tr class="hover:bg-gray-50">
+                                <td class="px-4 py-2.5 font-bold text-black">Recurs Extraordinari de Revisió</td>
+                                <td class="px-4 py-2.5">Actes ferms en via administrativa (supòsits taxats)</td>
+                                <td class="px-4 py-2.5">El mateix òrgan que va dictar l'acte</td>
+                                <td class="px-4 py-2.5">Variable segons causa (3 mesos o 4 anys)</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+
+            <!-- TARJETA 5: APLICACIÓ PRÀCTICA AL WEB I GESTIÓ DE L'AMB (Destacat en verd) -->
+            <section class="bg-gray-50 border border-gray-200 rounded-xl p-6 shadow-sm space-y-4 hover:border-green-600 transition-colors md:col-span-2">
+                <div class="flex items-center gap-2 text-green-700 font-bold text-lg">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9"></path></svg>
+                    <h3>5. Interposició de Recursos i Via Administrativa al Consell Metropolità de l'AMB (amb.cat)</h3>
+                </div>
+                
+                <!-- Bloc amb estil verd específic per a la informació extreta de la web de l'AMB -->
+                <div class="amb-web-highlight text-xs space-y-3">
+                    <p class="font-bold mb-2 text-green-900">🌐 RESOLUCIONS DEL CONSELL METROPOLITÀ I RECURSOS TELEMATICS A L'AMB (amb.cat):</p>
+                    
+                    <div>
+                        <strong class="text-green-800">Fi de la via administrativa a l'AMB:</strong>
+                        <ul class="list-disc pl-4 mt-1 space-y-1">
+                            <li>Les resolucions del Consell Metropolità, de la Presidència i de la Junta de Govern de l'AMB exhaureixen la via administrativa[cite: 2]. Per tant, contra aquests actes es pot interposar directament el recurs potestatiu de reposició o bé acudir directament a la jurisdicció contenciosa-administrativa[cite: 1, 2].</li>
+                        </ul>
+                    </div>
+
+                    <div>
+                        <strong class="text-green-800">Presentació telemàtica de recursos a la Seu Electrònica:</strong>
+                        <ul class="list-disc pl-4 mt-1 space-y-1">
+                            <li>A través del Registre Electrònic de l'AMB (disponible a amb.cat), la ciutadania i les persones jurídiques obligades poden presentar escrits de recurs o al·legacions adjuntant la documentació justificativa amb signatura electrònica vàlida.</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <!-- TARJETA 6: TRAMPES D'EXAMEN I PREGUNTES TIPUS TEST -->
+            <section class="bg-gray-50 border border-gray-200 rounded-xl p-6 shadow-sm space-y-4 hover:border-red-600 transition-colors md:col-span-2">
+                <div class="flex items-center gap-2 text-red-600 font-bold text-lg">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"></path></svg>
+                    <h3>6. Trampes i Preguntes Tipus Test Habituals (Orientat C1 AMB)</h3>
+                </div>
+                
+                <!-- Bloc amb estil pastel vermell especial per a trampes d'examen -->
+                <div class="highlight-box-custom text-xs space-y-3">
+                    <p class="font-bold mb-2">⚠ PREGUNTES TRAMPA D'EXAMEN SOBRE RECURSOS ADMINISTRATIUS:</p>
+                    
+                    <div>
+                        <strong class="text-red-700">Caràcter obligatori del recurs de reposició:</strong>
+                        <ul class="list-disc pl-4 mt-1 space-y-1">
+                            <li>Vigila la trampa d'examen que afirma que el recurs potestatiu de reposició s'ha de presentar obligatòriament abans d'anar al jutjat contenciós-administratiu[cite: 1]. <strong>És completament facultatiu (potestatiu)</strong>; l'interessat pot triar entre interposar aquest recurs o impugnar directament l'acte davant la jurisdicció contenciosa-administrativa[cite: 1].</li>
+                        </ul>
+                    </div>
+
+                    <div>
+                        <strong class="text-red-700">Terminis d'interposició d'alçada i reposició:</strong>
+                        <ul class="list-disc pl-4 mt-1 space-y-1">
+                            <li>Recorda no confondre els terminis generals de la Llei 39/2015: si l'acte és exprés, el termini per interposar el recurs d'alçada o de reposició és de <strong>1 mes</strong>, mentre que si no és exprés (silenci administratiu), el recurs es pot interposar en qualsevol moment a partir de l'endemà del dia en què es produeixin els efectes del silenci.</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+        </article>
+
+    </main>
+
+    <footer class="w-full border-t border-gray-200 bg-gray-50 py-4 text-center text-xs text-gray-500">
+        <p>© 2026 OpoAMB | &copy; Creat per JOMP</p>
+    </footer>
+
+<script>
+    // Script funcional per al cercador a les pàgines d'apunts
+    const searchInput = document.getElementById('searchInput');
+    
+    if (searchInput) {
+        searchInput.addEventListener('input', function(e) {
+            const searchTerm = e.target.value.toLowerCase().trim();
+            const sections = document.querySelectorAll('main article section');
+
+            sections.forEach(section => {
+                const text = section.textContent.toLowerCase();
+                if (searchTerm === '' || text.includes(searchTerm)) {
+                    section.style.display = '';
+                } else {
+                    section.style.display = 'none';
+                }
+            });
+        });
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="ca">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apunts - Tests Oposicions C1 AMB</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #ffffff;
+            color: #111111;
+        }
+        h1, h2, h3, h4, .font-arial-bold {
+            font-family: Arial, sans-serif;
+            font-weight: bold;
+        }
+        /* Estil per al quadre de restriccions/suspensions o aspectes clau amb fons vermell suau pastel, text negre i vora esquerra vermella */
+        .highlight-box-custom {
+            background-color: #fff5f5;
+            border: 1px solid #fca5a5;
+            border-left: 4px solid #cc0000;
+            padding: 15px;
+            border-radius: 10px;
+            margin: 10px 0;
+            color: #111111;
+        }
+        /* Estil per al bloc verd d'informació web extra */
+        .highlight-box-web {
+            background-color: #f0fdf4;
+            border: 1px solid #bbf7d0;
+            border-left: 4px solid #16a34a;
+            padding: 15px;
+            border-radius: 10px;
+            margin: 10px 0;
+            color: #111111;
+        }
+    </style>
+</head>
+<body class="bg-white min-h-screen text-gray-900 flex flex-col justify-between">
+
+    <header class="w-full border-b border-gray-200 bg-white sticky top-0 z-50 shadow-sm">
+        <div class="max-w-7xl mx-auto px-4 py-4 flex flex-col sm:flex-row items-center justify-between gap-4">
+            
+            <div class="flex items-center gap-3 w-full sm:w-auto justify-between sm:justify-start">
+                <div class="flex items-center gap-3">
+                    <div class="flex items-center">
+                        <img src="../img/logo.png" alt="Logo AMB" class="h-10 w-auto object-contain" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+                        <span class="text-xs text-red-600 font-bold hidden text-center px-1">img/logo.png</span>
+                    </div>
+                    <h1 class="text-xl sm:text-2xl font-bold tracking-tight text-black">
+                        Oposicions C1 <span class="text-red-600">AMB</span>
+                    </h1>
+                </div>
+
+                <a href="index.html" class="sm:hidden inline-flex items-center gap-1.5 px-3 py-1.5 text-xs font-bold text-gray-700 bg-gray-50 border border-gray-300 hover:bg-red-600 hover:text-white hover:border-red-600 rounded-lg transition-colors">
+                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18"></path></svg>
+                    <span>Inici</span>
+                </a>
+            </div>
+
+            <div class="flex items-center gap-3 w-full sm:w-auto justify-between sm:justify-end">
+                <div class="w-full sm:w-80">
+                    <div class="relative">
+                        <span class="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none text-gray-400">
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg>
+                        </span>
+                        <input type="text" id="searchInput" placeholder="Cercar als apunts..." class="w-full pl-10 pr-4 py-2 bg-gray-50 border border-gray-300 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-red-600 focus:border-transparent transition-all">
+                    </div>
+                </div>
+
+                <a href="../index.html" class="hidden sm:inline-flex items-center gap-1.5 px-3.5 py-2 text-xs font-bold text-gray-700 bg-gray-50 border border-gray-300 hover:bg-red-600 hover:text-white hover:border-red-600 rounded-lg transition-colors shrink-0 shadow-sm">
+                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18"></path></svg>
+                    <span>Tornar a l'Inici</span>
+                </a>
+            </div>
+
+        </div>
+    </header>
+
+    <main class="max-w-6xl mx-auto px-4 py-8 w-full flex-grow space-y-8">
+        
+        <div class="flex items-center gap-2 text-xs font-bold text-gray-500 uppercase tracking-wider">
+            <span>Bloc III</span>
+            <span>/</span>
+            <span class="text-red-600">Tema 6</span>
+        </div>
+
+        <div class="border-b-2 border-red-600 pb-4">
+            <h2 class="text-2xl sm:text-3xl font-bold text-black tracking-tight">
+                Els tributs locals: concepte i classes (RDLeg 2/2004 - TRLRHL).
+            </h2>
+        </div>
+
+        <!-- CONTENIDOR EN COLUMNES RESPONSIVE (FICHAS) -->
+        <article class="grid grid-cols-1 md:grid-cols-2 gap-6 items-start">
+            
+            <!-- TARJETA 1: MARC LEGAL I CONCEPTE DE TRIBUT LOCAL -->
+            <section class="bg-gray-50 border border-gray-200 rounded-xl p-6 shadow-sm space-y-4 hover:border-red-600 transition-colors">
+                <div class="flex items-center gap-2 text-red-600 font-bold text-lg">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                    <h3>1. Marc Legal i Concepte (TRLRHL)</h3>
+                </div>
+                <p class="text-xs text-gray-700 leading-relaxed">
+                    El règim jurídic bàsic dels tributs locals a l'Estat espanyol es troba regulat pel <strong>Reial Decret Legislatiu 2/2004</strong>, pel qual s'aprova el text refós de la Llei reguladora de les hisendes locals (TRLRHL).
+                </p>
+                <div class="bg-white p-3 rounded-lg border border-gray-200 space-y-2">
+                    <ul class="space-y-1.5 text-xs text-gray-700">
+                        <li class="flex items-start gap-1.5">
+                            <span class="text-red-600 font-bold">▪</span> <span><strong>Concepte:</strong> Els tributs locals són ingressos de dret públic de caràcter coactiu exigits per les entitats locals (municipis, províncies, AMB) per finançar les seves despeses i serveis públics.</span>
+                        </li>
+                        <li class="flex items-start gap-1.5">
+                            <span class="text-red-600 font-bold">▪</span> <span><strong>Autonomia financera:</strong> Les entitats locals tenen potestat tributària per establir i gestionar tributs propis d'acord amb la Constitució i les lleis.</span>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+
+            <!-- TARJETA 2: CLASSIFICACIÓ GENERAL DELS TRIBUTS LOCALS -->
+            <section class="bg-gray-50 border border-gray-200 rounded-xl p-6 shadow-sm space-y-4 hover:border-red-600 transition-colors">
+                <div class="flex items-center gap-2 text-red-600 font-bold text-lg">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"></path></svg>
+                    <h3>2. Classes de Tributs Locals (Art. 2 TRLRHL)</h3>
+                </div>
+                <p class="text-xs text-gray-700 leading-relaxed">
+                    Dins dels ingressos tributaris de les entitats locals es distingeixen tres categories principals:
+                </p>
+                <div class="bg-white p-3 rounded-lg border border-gray-200 space-y-2">
+                    <ul class="space-y-1.5 text-xs text-gray-700">
+                        <li class="flex items-start gap-1.5">
+                            <span class="text-red-600 font-bold">▪</span> <span><strong>Taxes:</strong> Tributs pel benefici o utilització privativa del domini públic, o per la prestació de serveis públics / activitats administratives de sol·licitud o recepció obligatòria.</span>
+                        </li>
+                        <li class="flex items-start gap-1.5">
+                            <span class="text-red-600 font-bold">▪</span> <span><strong>Contribucions especials:</strong> Tributs pel benefici especial o augment de valor de béns derivat de la realització d'obres públiques o establiment/ampliació de serveis públics.</span>
+                        </li>
+                        <li class="flex items-start gap-1.5">
+                            <span class="text-red-600 font-bold">▪</span> <span><strong>Impostos:</strong> Tributs exigits sense contraprestació, el fet imposable del qual està constituït per negocis, actes o fets que posen de manifest la capacitat econòmica.</span>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+
+            <!-- TARJETA 3: ELS IMPOSTOS MUNICIPALS OBLIGATORIS I VOLUNTARIS -->
+            <section class="bg-gray-50 border border-gray-200 rounded-xl p-6 shadow-sm space-y-4 hover:border-red-600 transition-colors">
+                <div class="flex items-center gap-2 text-red-600 font-bold text-lg">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                    <h3>3. Els Impostos Municipals (Arts. 59-60)</h3>
+                </div>
+                <p class="text-xs text-gray-700 leading-relaxed">
+                    Els ajuntaments exigeixen impostos de caràcter obligatori i poden establir altres de voluntaris.
+                </p>
+                <div class="bg-white p-3 rounded-lg border border-gray-200 space-y-2">
+                    <ul class="space-y-1.5 text-xs text-gray-700">
+                        <li class="flex items-start gap-1.5">
+                            <span class="text-red-600 font-bold">▪</span> <span><strong>Impostos obligatoris (Han d'establir-los tots els municipis):</strong>
+                                <br>- IBI (Impost sobre Béns Immobles).
+                                <br>- IAE (Impost sobre Activitats Econòmiques).
+                                <br>- IVTM (Impost sobre Vehicles de Tracció Mecànica).
+                            </span>
+                        </li>
+                        <li class="flex items-start gap-1.5">
+                            <span class="text-red-600 font-bold">▪</span> <span><strong>Impostos voluntaris (Els municipis poden decidir si els aproven o no):</strong>
+                                <br>- ICIO (Impost sobre Construccions, Instal·lacions i Obres).
+                                <br>- IIVTNU (Impost sobre l'Increment de Valor dels Terrenys de Naturalesa Urbana - Plusvàlua).
+                            </span>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+
+            <!-- TARJETA 4: PECULIARITATS TRIBUTÀRIES DE L'AMB -->
+            <section class="bg-gray-50 border border-gray-200 rounded-xl p-6 shadow-sm space-y-4 hover:border-red-600 transition-colors">
+                <div class="flex items-center gap-2 text-red-600 font-bold text-lg">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"></path></svg>
+                    <h3>4. Recursos i Tributs propis de l'AMB</h3>
+                </div>
+                <p class="text-xs text-gray-700 leading-relaxed">
+                    D'acord amb la Llei 31/2010, l'Àrea Metropolitana de Barcelona disposa de capacitat tributària específica per finançar els seus serveis metropolitans[cite: 2].
+                </p>
+                <div class="bg-white p-3 rounded-lg border border-gray-200 space-y-2">
+                    <ul class="space-y-1.5 text-xs text-gray-700">
+                        <li class="flex items-start gap-1.5">
+                            <span class="text-red-600 font-bold">▪</span> <span><strong>Taxes i preus públics metropolitans:</strong> Destinats a finançar serveis com el transport públic metropolità o el tractament i valorització de residus[cite: 2].</span>
+                        </li>
+                        <li class="flex items-start gap-1.5">
+                            <span class="text-red-600 font-bold">▪</span> <span><strong>Recàrrecs sobre impostos estatals o autonòmics:</strong> Com el recàrrec metropolità sobre l'IBI (fins al 0,2% de la base imposable segons l'art. 153.1.a del TRLRHL i art. 41 de la Llei 31/2010)[cite: 2].</span>
+                        </li>
+                        <li class="flex items-start gap-1.5">
+                            <span class="text-red-600 font-bold">▪</span> <span><strong>Transferències i aportacions:</strong> Participació en els tributs i aportacions dels 36 municipis integrants[cite: 2].</span>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+
+            <!-- TAULA ADAPTADA AL TEMA -->
+            <section class="bg-gray-50 border border-gray-200 rounded-xl p-6 shadow-sm space-y-4 hover:border-red-600 transition-colors md:col-span-2">
+                <div class="flex items-center gap-2 text-red-600 font-bold text-lg">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 10h18M3 14h18m-9-4v8m-7 0h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z"></path></svg>
+                    <h3>Quadre Comparatiu: Classificació dels Tributs Locals i Recursos AMB</h3>
+                </div>
+                <div class="overflow-x-auto">
+                    <table class="w-full text-xs text-left text-gray-700 border border-gray-200 rounded-lg overflow-hidden">
+                        <thead class="bg-black text-white uppercase font-bold">
+                            <tr>
+                                <th class="p-3">Categoria / Tipus</th>
+                                <th class="p-3">Concepte jurídic / Característiques</th>
+                                <th class="p-3">Exemples / Aplicació C1 AMB</th>
+                            </tr>
+                        </thead>
+                        <tbody class="divide-y divide-gray-200 bg-white">
+                            <tr class="hover:bg-gray-50">
+                                <td class="p-3 font-bold text-black">Impostos Obligatoris</td>
+                                <td class="p-3">Tributs exigits sense contraprestació que tots els municipis han d'establir per llei.</td>
+                                <td class="p-3">IBI, IAE, IVTM (Art. 59 TRLRHL).</td>
+                            </tr>
+                            <tr class="hover:bg-gray-50">
+                                <td class="p-3 font-bold text-black">Impostos Voluntaris</td>
+                                <td class="p-3">Tributs que l'ajuntament pot decidir aplicar o no mitjançant ordenança fiscal.</td>
+                                <td class="p-3">ICIO, IIVTNU (Plusvàlua) (Art. 60 TRLRHL).</td>
+                            </tr>
+                            <tr class="hover:bg-gray-50">
+                                <td class="p-3 font-bold text-black">Taxes Locals / Metropolitanes</td>
+                                <td class="p-3">Per ús privatiu de domini públic o serveis de sol·licitud/recepcio obligatòria.</td>
+                                <td class="p-3">Residus, guals, serveis de transport AMB[cite: 2].</td>
+                            </tr>
+                            <tr class="hover:bg-gray-50">
+                                <td class="p-3 font-bold text-black">Recàrrecs AMB</td>
+                                <td class="p-3">Recàrrecs sobre tributs municipals o estatals per finançar l'ens metropolità (Llei 31/2010).</td>
+                                <td class="p-3">Recàrrec metropolità sobre l'IBI (màxim 0,2%)[cite: 2].</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+
+            <!-- BLOC VERD: INFORMACIÓ EXTRAïDA DE LA WEB ESTRICTAMENT RELACIONADA -->
+            <section class="bg-gray-50 border border-gray-200 rounded-xl p-6 shadow-sm space-y-4 hover:border-red-600 transition-colors md:col-span-2">
+                <div class="flex items-center gap-2 text-green-700 font-bold text-lg">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                    <h3>Informació Extraïda de la Web Oficial de l'AMB i Ordenances Fiscals</h3>
+                </div>
+                
+                <div class="highlight-box-web text-xs space-y-3">
+                    <p class="font-bold mb-2">🌿 GESTIÓ I TRAMITACIÓ DE LES ORDENANCES FISCALS A L'ÀREA METROPOLITANA DE BARCELONA:</p>
+                    <ul class="list-disc pl-4 mt-1 space-y-1.5">
+                        <li>D'acord amb la web oficial de l'AMB (Portal de Govern Metropolità - Economia i Finances), l'establiment de taxes, preus públics i recàrrecs metropolitans requereix l'aprovació d'ordenances fiscals específiques[cite: 2].</li>
+                        <li><strong>Estudi de costos:</strong> Per a l'establiment o modificació de taxes i preus públics per la prestació de serveis (com el tractament de residus o gestió del cicle de l'aigua), és obligatori incorporar un estudi econòmico-financer previ que justifici el cost del servei[cite: 2].</li>
+                        <li><strong>Publicació i entrada en vigor:</strong> Les ordenances fiscals aprovades inicialment pel Consell Metropolità s'exposen al públic i, un cop resoltes les al·legacions, s'han de publicar íntegrament al Butlletí Oficial de la Província (BOP) abans del 31 de desembre per poder ser aplicades l'1 de gener de l'exercici següent[cite: 2].</li>
+                    </ul>
+                </div>
+            </section>
+
+            <!-- BLOC VERMELL: TRAMPES D'EXAMEN I PREGUNTES TIPUS TEST HABITUALS (C1 AMB) -->
+            <section class="bg-gray-50 border border-gray-200 rounded-xl p-6 shadow-sm space-y-4 hover:border-red-600 transition-colors md:col-span-2">
+                <div class="flex items-center gap-2 text-red-600 font-bold text-lg">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"></path></svg>
+                    <h3>5. Trampes i Preguntes Tipus Test Habituals per a C1 Administratiu (AMB)</h3>
+                </div>
+                
+                <div class="highlight-box-custom text-xs space-y-3">
+                    <p class="font-bold mb-2">⚠ PREGUNTES TRAMPA D'EXAMEN SOBRE TRIBUTS LOCALS I L'AMB:</p>
+                    
+                    <div>
+                        <strong class="text-red-700">La trampa dels impostos obligatoris vs. facultatius:</strong>
+                        <ul class="list-disc pl-4 mt-1 space-y-1">
+                            <li>Recorda l'acrònim clau dels <strong>OBLIGATORIS</strong>: <strong>IBI, IAE i IVTM</strong>. Si a l'examen et diuen que l'ICIO o la Plusvàlua (IIVTNU) són obligatoris per a *tots* els municipis, és un <strong>FALS</strong> total (són de recaptació potestativa/voluntària per part de l'ajuntament).</li>
+                        </ul>
+                    </div>
+
+                    <div>
+                        <strong class="text-red-700">Diferència conceptual entre Taxa i Preu Públic:</strong>
+                        <ul class="list-disc pl-4 mt-1 space-y-1">
+                            <li>Les <strong>Taxes</strong> s'exigeixen per serveis de sol·licitud o recepció <em>obligatòria</em> (o per ús privatiu de domini públic).</li>
+                            <li>Els <strong>Preus Públics</strong> (que no són tributs estrictament segons l'art. 2) s'exigeixen per serveis o activitats on la sol·licitud és <em>voluntària</em> o hi ha concurrència amb el sector privat.</li>
+                        </ul>
+                    </div>
+
+                    <div>
+                        <strong class="text-red-700">Pregunta trampa específica de l'AMB (Llei 31/2010):</strong>
+                        <ul class="list-disc pl-4 mt-1 space-y-1">
+                            <li>Atenció a la fal·làcia de pensar que l'AMB pot crear qualsevol impost lliurement. L'AMB té potestat tributària reconeguda per establir taxes, preus públics, contribucions especials i recàrrecs (com el recàrrec sobre l'IBI fins al 0,2%), però no pot inventar-se impostos nous no previstos a la legislació d'hisendes locals o a la seva llei de creació[cite: 2].</li>
+                        </ul>
+                    </div>
+
+                    <div>
+                        <strong class="text-red-700">Les Ordenances Fiscals:</strong>
+                        <ul class="list-disc pl-4 mt-1 space-y-1">
+                            <li>Els tributs locals s'exigeixen d'acord amb les respectives Ordenances Fiscals aprovades pel Ple de la corporació local (Ajuntament o AMB), les quals s'han de publicar íntegrament al BOP abans del 31 de desembre[cite: 2]. Si només es publica un resum o es publica fora de termini, no es pot aplicar per a l'exercici següent!</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+        </article>
+
+    </main>
+
+    <footer class="w-full border-t border-gray-200 bg-gray-50 py-4 text-center text-xs text-gray-500">
+        <p>© 2026 OpoAMB | &copy; Creat per JOMP</p>
+    </footer>
+
+<script>
+    // Script funcional per al cercador a les pàgines d'apunts
+    const searchInput = document.getElementById('searchInput');
+    
+    if (searchInput) {
+        searchInput.addEventListener('input', function(e) {
+            const searchTerm = e.target.value.toLowerCase().trim();
+            const sections = document.querySelectorAll('main article section');
+
+            sections.forEach(section => {
+                const text = section.textContent.toLowerCase();
+                if (searchTerm === '' || text.includes(searchTerm)) {
+                    section.style.display = '';
+                } else {
+                    section.style.display = 'none';
+                }
+            });
+        });
+    }
+</script>
+</body>
+</html>

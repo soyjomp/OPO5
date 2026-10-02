@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="ca">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apunts Tema 23 - Oposicions C1 AMB</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #ffffff;
+            color: #111111;
+        }
+        h1, h2, h3, h4, .font-arial-bold {
+            font-family: Arial, sans-serif;
+            font-weight: bold;
+        }
+        /* Estil per al quadre de trampes o aspectes clau amb fons vermell suau pastel, text negre i vora esquerra vermella */
+        .highlight-box-custom {
+            background-color: #fff5f5;
+            border: 1px solid #fca5a5;
+            border-left: 4px solid #cc0000;
+            padding: 15px;
+            border-radius: 10px;
+            margin: 10px 0;
+            color: #111111;
+        }
+        /* Estil específic per destacar referències i aplicacions pràctiques de la web i gestió de l'AMB */
+        .amb-web-highlight {
+            background-color: #f0fdf4;
+            border: 1px solid #bbf7d0;
+            border-left: 4px solid #16a34a;
+            padding: 15px;
+            border-radius: 10px;
+            margin: 10px 0;
+            color: #111111;
+        }
+    </style>
+</head>
+<body class="bg-white min-h-screen text-gray-900 flex flex-col justify-between">
+
+    <header class="w-full border-b border-gray-200 bg-white sticky top-0 z-50 shadow-sm">
+        <div class="max-w-7xl mx-auto px-4 py-4 flex flex-col sm:flex-row items-center justify-between gap-4">
+            
+            <div class="flex items-center gap-3 w-full sm:w-auto justify-between sm:justify-start">
+                <div class="flex items-center gap-3">
+                    <div class="flex items-center">
+                        <img src="../img/logo.png" alt="Logo AMB" class="h-10 w-auto object-contain" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+                        <span class="text-xs text-red-600 font-bold hidden text-center px-1">img/logo.png</span>
+                    </div>
+                    <h1 class="text-xl sm:text-2xl font-bold tracking-tight text-black">
+                        Oposicions C1 <span class="text-red-600">AMB</span>
+                    </h1>
+                </div>
+
+                <a href="index.html" class="sm:hidden inline-flex items-center gap-1.5 px-3 py-1.5 text-xs font-bold text-gray-700 bg-gray-50 border border-gray-300 hover:bg-red-600 hover:text-white hover:border-red-600 rounded-lg transition-colors">
+                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18"></path></svg>
+                    <span>Inici</span>
+                </a>
+            </div>
+
+            <div class="flex items-center gap-3 w-full sm:w-auto justify-between sm:justify-end">
+                <div class="w-full sm:w-80">
+                    <div class="relative">
+                        <span class="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none text-gray-400">
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg>
+                        </span>
+                        <input type="text" id="searchInput" placeholder="Cercar als apunts..." class="w-full pl-10 pr-4 py-2 bg-gray-50 border border-gray-300 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-red-600 focus:border-transparent transition-all">
+                    </div>
+                </div>
+
+                <a href="../index.html" class="hidden sm:inline-flex items-center gap-1.5 px-3.5 py-2 text-xs font-bold text-gray-700 bg-gray-50 border border-gray-300 hover:bg-red-600 hover:text-white hover:border-red-600 rounded-lg transition-colors shrink-0 shadow-sm">
+                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18"></path></svg>
+                    <span>Tornar a l'Inici</span>
+                </a>
+            </div>
+
+        </div>
+    </header>
+
+    <main class="max-w-6xl mx-auto px-4 py-8 w-full flex-grow space-y-8">
+        
+        <div class="flex items-center gap-2 text-xs font-bold text-gray-500 uppercase tracking-wider">
+            <span>Bloc IV (Temari Específic)</span>
+            <span>/</span>
+            <span class="text-red-600">Tema 23</span>
+        </div>
+
+        <div class="border-b-2 border-red-600 pb-4">
+            <h2 class="text-2xl sm:text-3xl font-bold text-black tracking-tight">
+                L’acte administratiu. L’executivitat dels actes administratius. La invalidesa de l’acte administratiu: actes nuls i actes anul·lables.
+            </h2>
+        </div>
+
+        <!-- CONTENIDOR EN COLUMNES RESPONSIVE (FICHAS) -->
+        <article class="grid grid-cols-1 md:grid-cols-2 gap-6 items-start">
+            
+            <!-- TARJETA 1: L'ACTE ADMINISTRATIU -->
+            <section class="bg-gray-50 border border-gray-200 rounded-xl p-6 shadow-sm space-y-4 hover:border-red-600 transition-colors">
+                <div class="flex items-center gap-2 text-red-600 font-bold text-lg">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path></svg>
+                    <h3>1. Concepte i Elements de l'Acte Administratiu</h3>
+                </div>
+                <p class="text-xs text-gray-700 leading-relaxed">
+                    L'acte administratiu és tota declaració de voluntat, de judici, de coneixement o de desig realitzada per l'administració pública en l'exercici d'una potestat administrativa, diferent del reglament.
+                </p>
+                <div class="bg-white p-3 rounded-lg border border-gray-200 space-y-2">
+                    <ul class="space-y-1.5 text-xs text-gray-700">
+                        <li class="flex items-start gap-1.5">
+                            <span class="text-red-600 font-bold">▪</span> <span><strong>Elements subjectius:</strong> Emès per un òrgan competent de l'Administració (com l'AMB o els seus ens instrumentals) en l'exercici de les seves funcions públiques.</span>
+                        </li>
+                        <li class="flex items-start gap-1.5">
+                            <span class="text-red-600 font-bold">▪</span> <span><strong>Elements objectius:</strong> El contingut s'ha de ajustar a l'ordenament jurídic, ser lícit, possible, determinat i adequat a la fi perseguida per l'interès públic.</span>
+                        </li>
+                        <li class="flex items-start gap-1.5">
+                            <span class="text-red-600 font-bold">▪</span> <span><strong>Elements formals:</strong> Producció mitjançant el procediment establert, amb la deguda motivació quan correspongui (arts. 35 i ss. de la Llei 39/2015).</span>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+
+            <!-- TARJETA 2: L'EXECUTIVITAT I LA VIGÈNCIA DELS ACTES -->
+            <section class="bg-gray-50 border border-gray-200 rounded-xl p-6 shadow-sm space-y-4 hover:border-red-600 transition-colors">
+                <div class="flex items-center gap-2 text-red-600 font-bold text-lg">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+                    <h3>2. L'Executivitat i l'Execució Forzosa</h3>
+                </div>
+                <p class="text-xs text-gray-700 leading-relaxed">
+                    Els actes de les administracions públiques subjectes al dret administratiu es presumeixen vàlids i produeixen efectes des de la data en què es dicten, tret que s'hi disposi altrament (principi d'autotutela declarativa i executiva).
+                </p>
+                <div class="bg-white p-3 rounded-lg border border-gray-200 space-y-2">
+                    <ul class="space-y-1.5 text-xs text-gray-700">
+                        <li class="flex items-start gap-1.5">
+                            <span class="text-red-600 font-bold">▪</span> <span><strong>Executivitat (art. 38 Llei 39/2015):</strong> Obligació de compliment immediat per part dels destinataris des del moment en què es dicten, llevat de suspensió o supòsits legals especials.</span>
+                        </li>
+                        <li class="flex items-start gap-1.5">
+                            <span class="text-red-600 font-bold">▪</span> <span><strong>Mitjans d'execució forzosa (art. 100 Llei 39/2015):</strong> Si l'administrat no compleix voluntàriament, l'administració pot utilitzar: constrenyiment sobre el patrimoni, multa coercitiva, execució subsidiària i compulsió sobre les persones.</span>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+
+            <!-- TARJETA 3: CLASSIFICACIÓ DETALLADA DELS ACTES ADMINISTRATIUS (TAULA REquerida) -->
+            <section class="bg-gray-50 border border-gray-200 rounded-xl p-6 shadow-sm space-y-4 hover:border-red-600 transition-colors md:col-span-2">
+                <div class="flex items-center gap-2 text-red-600 font-bold text-lg">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 10h18M3 14h18m-9-4v8m-7 0h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z"></path></svg>
+                    <h3>Classificació Principal dels Actes Administratius (Oposicions C1 AMB)</h3>
+                </div>
+                <p class="text-xs text-gray-700 leading-relaxed">
+                    Segons el temari específic i per a la seva correcta aplicació en la pràctica de l'administració metropolitana, els actes administratius es classifiquen en diverses categories fonamentals que tot opositor ha de dominar:
+                </p>
+                <div class="overflow-x-auto">
+                    <table class="w-full text-left border-collapse text-xs">
+                        <thead>
+                            <tr class="bg-black text-white">
+                                <th class="p-2.5 font-bold border border-gray-700">Tipus de Classificació</th>
+                                <th class="p-2.5 font-bold border border-gray-700">Categories / Modalitats</th>
+                                <th class="p-2.5 font-bold border border-gray-700">Concepte / Efectes Clau</th>
+                            </tr>
+                        </thead>
+                        <tbody class="bg-white text-gray-800">
+                            <tr class="border-b border-gray-200">
+                                <td class="p-2.5 font-bold border border-gray-200">Per la seva exteriorització</td>
+                                <td class="p-2.5 border border-gray-200">Exprés, Tàcit i Presumpte (Silenci)</td>
+                                <td class="p-2.5 border border-gray-200">L'exprés pot ser oral, escrit o mímic[cite: 1]. El tàcit es dedueix de la conducta administrativa[cite: 1]. El presumpte ve determinat pel silenci administratiu[cite: 1].</td>
+                            </tr>
+                            <tr class="border-b border-gray-200 bg-gray-50">
+                                <td class="p-2.5 font-bold border border-gray-200">Segons el procediment</td>
+                                <td class="p-2.5 border border-gray-200">Definitius (Resolutoris) vs. De Tràmits</td>
+                                <td class="p-2.5 border border-gray-200">Els definitius resolen el fons[cite: 1]. Els de tràmit són instruments previs[cite: 1]; només els qualificats (que causen indefensió o impedeixen continuar) són impugnables per separat[cite: 1].</td>
+                            </tr>
+                            <tr class="border-b border-gray-200">
+                                <td class="p-2.5 font-bold border border-gray-200">Segons la llibertat d'actuació</td>
+                                <td class="p-2.5 border border-gray-200">Reglats vs. Discrecionals</td>
+                                <td class="p-2.5 border border-gray-200">Els reglats no admeten marge d'interpretació[cite: 1]. Els discrecionals permeten opcions però exigeixen respectar la finalitat legal per evitar la desviació de poder[cite: 1].</td>
+                            </tr>
+                            <tr class="border-b border-gray-200 bg-gray-50">
+                                <td class="p-2.5 font-bold border border-gray-200">Segons la via administrativa</td>
+                                <td class="p-2.5 border border-gray-200">Que posen fi a la via / Que no l'exhaureixen</td>
+                                <td class="p-2.5 border border-gray-200">Els que exhaureixen la via van directament a contenciós o recurs de reposició[cite: 1]. Els que no, s'han de recórrer prèviament en alçada davant el superior jeràrquic[cite: 1].</td>
+                            </tr>
+                            <tr class="border-b border-gray-200">
+                                <td class="p-2.5 font-bold border border-gray-200">Segons el contingut patrimonial</td>
+                                <td class="p-2.5 border border-gray-200">Favorables (Drets) vs. De Gravamen</td>
+                                <td class="p-2.5 border border-gray-200">Els favorables amplien el patrimoni jurídic i no necessiten motivació general[cite: 1]. Els de gravamen restringeixen drets i requereixen motivació expressa obligatòria[cite: 1].</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+
+            <!-- TARJETA 4: LA INVALIDESA: ACTES NULS DE DRET PLENARI -->
+            <section class="bg-gray-50 border border-gray-200 rounded-xl p-6 shadow-sm space-y-4 hover:border-red-600 transition-colors">
+                <div class="flex items-center gap-2 text-red-600 font-bold text-lg">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M18.364 18.364A9 9 0 005.636 5.636m12.728 12.728A9 9 0 015.636 5.636m12.728 12.728L5.636 5.636"></path></svg>
+                    <h3>4. La Invalidesa: Actes Nuls de Ple Dret (Nul·litat Radical)</h3>
+                </div>
+                <p class="text-xs text-gray-700 leading-relaxed">
+                    La nul·litat de ple dret és el grau màxim d'invalidesa d'un acte administratiu (art. 47 de la Llei 39/2015), afectant vicis extremadament greus i insubsanables[cite: 1].
+                </p>
+                <div class="bg-white p-3 rounded-lg border border-gray-200 space-y-2">
+                    <ul class="space-y-1.5 text-xs text-gray-700">
+                        <li class="flex items-start gap-1.5">
+                            <span class="text-red-600 font-bold">▪</span> <span><strong>Supòsits clau (art. 47.1):</strong> Lesions als drets i llibertats constitucionals (arts. 14 a 29 CE); dictats per òrgan manifestament incompetent per raó de la matèria o del territori; contingut impossible; actes constitutius d'infecció penal o dictats prescindint totalment i absoluta del procediment legal[cite: 1].</span>
+                        </li>
+                        <li class="flex items-start gap-1.5">
+                            <span class="text-red-600 font-bold">▪</span> <span><strong>Règim jurídic:</strong> No es poden convalidar mai, els efectes s'estenen ex tunc (retroactivament des de l'origen) i es pot declarar la revisió d'ofici en qualsevol moment per l'administració[cite: 1].</span>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+
+            <!-- TARJETA 5: LA INVALIDESA: ACTES ANUL·LABLES -->
+            <section class="bg-gray-50 border border-gray-200 rounded-xl p-6 shadow-sm space-y-4 hover:border-red-600 transition-colors">
+                <div class="flex items-center gap-2 text-red-600 font-bold text-lg">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                    <h3>5. La Invalidesa: Actes Anul·lables (Invalidesa Relativa)</h3>
+                </div>
+                <p class="text-xs text-gray-700 leading-relaxed">
+                    Són actes anul·lables aquells que incorren en qualsevol altra infracció de l'ordenament jurídic, fins i tot la desviació de poder (art. 48 de la Llei 39/2015). Constitueixen la regla general de la invalidesa administrativa[cite: 1].
+                </p>
+                <div class="bg-white p-3 rounded-lg border border-gray-200 space-y-2">
+                    <ul class="space-y-1.5 text-xs text-gray-700">
+                        <li class="flex items-start gap-1.5">
+                            <span class="text-red-600 font-bold">▪</span> <span><strong>Característiques:</strong> Poden ser convalidats per l'administració subsanant els vicis de què adoleixen; produeixen efectes mentre no s'anul·lin; la seva revisió està subjecta a terminis de caducitat o prescripció per a la interposició de recursos[cite: 1].</span>
+                        </li>
+                        <li class="flex items-start gap-1.5">
+                            <span class="text-red-600 font-bold">▪</span> <span><strong>Defectes de forma i irregularitats no invalidants:</strong> Només determinen l'anul·labilitat quan el defecte impedeixi aconseguir la seva fi o doni lloc a la indefensió dels interessats[cite: 1]. Altres petits defectes formals queden en simples irregularitats no invalidants[cite: 1].</span>
+                        </li>
+                        <li class="flex items-start gap-1.5">
+                            <span class="text-red-600 font-bold">▪</span> <span><strong>Tècniques de conservació:</strong> S'apliquen la validació, la incomunicació d'invalidesa i la conversió d'actes per mantenir l'eficàcia administrativa sempre que sigui possible[cite: 1].</span>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+
+            <!-- TARJETA 6: APLICACIÓ PRÀCTICA AL WEB I GESTIÓ DE L'AMB (Destacat en verd) -->
+            <section class="bg-gray-50 border border-gray-200 rounded-xl p-6 shadow-sm space-y-4 hover:border-green-600 transition-colors md:col-span-2">
+                <div class="flex items-center gap-2 text-green-700 font-bold text-lg">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9"></path></svg>
+                    <h3>6. Aplicació Pràctica en la Gestió d'Actes i Notificacions a l'AMB (amb.cat)</h3>
+                </div>
+                
+                <!-- Bloc amb estil verd específic per a la informació extreta de la web de l'AMB -->
+                <div class="amb-web-highlight text-xs space-y-3">
+                    <p class="font-bold mb-2 text-green-900">🌐 TRAMITACIÓ ELECTRÒNICA I TAULER D'EDICTES DE L'AMB (amb.cat):</p>
+                    
+                    <div>
+                        <strong class="text-green-800">Seu Electrònica i notificacions d'actes metropolitans:</strong>
+                        <ul class="list-disc pl-4 mt-1 space-y-1">
+                            <li>D'acord amb els procediments de la Seu Electrònica de l'AMB, les resolucions de gerència, acords de la Junta de Govern i decrets de presidència es notifiquen electrònicament, essent clau per al còmput de terminis d'impugnació (recursos d'alçada o contenciosos-administratius) que l'acte compleixi amb els requisits de notificació de l'art. 40 de la Llei 39/2015.</li>
+                        </ul>
+                    </div>
+
+                    <div>
+                        <strong class="text-green-800">Tauler d'edictes oficials i publicacions urbanístiques:</strong>
+                        <ul class="list-disc pl-4 mt-1 space-y-1">
+                            <li>En matèria de planejament urbanístic metropolità i expropiacions, la publicació d'actes normatius o acords del Consell Metropolità al Butlletí Oficial de la Província (BOPB) i al tauler electrònic de l'AMB garanteix l'eficàcia i executivitat general davant de tercers.</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <!-- TARJETA 7: TRAMPES D'EXAMEN I PREGUNTES TIPUS TEST -->
+            <section class="bg-gray-50 border border-gray-200 rounded-xl p-6 shadow-sm space-y-4 hover:border-red-600 transition-colors md:col-span-2">
+                <div class="flex items-center gap-2 text-red-600 font-bold text-lg">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"></path></svg>
+                    <h3>7. Trampes i Preguntes Tipus Test Habituals</h3>
+                </div>
+                
+                <!-- Bloc amb estil pastel vermell especial per a trampes d'examen -->
+                <div class="highlight-box-custom text-xs space-y-3">
+                    <p class="font-bold mb-2">⚠ PREGUNTES TRAMPA D'EXAMEN SOBRE NUL·LITAT I ANUL·LABILITAT:</p>
+                    
+                    <div>
+                        <strong class="text-red-700">La regla general de la invalidesa:</strong>
+                        <ul class="list-disc pl-4 mt-1 space-y-1">
+                            <li>Vigila la trampa de considerar que qualsevol error o infracció menor d'una norma produeix la nul·litat de ple dret. <strong>La regla general a l'ordenament espanyol (art. 48 Llei 39/2015) és l'anul·labilitat</strong>; la nul·litat de ple dret és excepcional i només s'aplica als supòsits taxats de l'article 47.1.</li>
+                        </ul>
+                    </div>
+
+                    <div>
+                        <strong class="text-red-700">Convalidació d'actes nuls vs. anul·lables:</strong>
+                        <ul class="list-disc pl-4 mt-1 space-y-1">
+                            <li>Una altra trampa típica d'examen és afirmar que els actes nuls de ple dret poden ser convalidats per l'Administració amb el pas del temps. <strong>Els actes nuls SÓN INSUBSANABLES I IMPRESCRIPTIBLES</strong> pel que fa a la seva revisió, mentre que els anul·lables sí que admeten la convalidació.</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+        </article>
+
+    </main>
+
+    <footer class="w-full border-t border-gray-200 bg-gray-50 py-4 text-center text-xs text-gray-500">
+        <p>© 2026 OpoAMB | &copy; Creat per JOMP</p>
+    </footer>
+
+<script>
+    // Script funcional per al cercador a les pàgines d'apunts
+    const searchInput = document.getElementById('searchInput');
+    
+    if (searchInput) {
+        searchInput.addEventListener('input', function(e) {
+            const searchTerm = e.target.value.toLowerCase().trim();
+            const sections = document.querySelectorAll('main article section');
+
+            sections.forEach(section => {
+                const text = section.textContent.toLowerCase();
+                if (searchTerm === '' || text.includes(searchTerm)) {
+                    section.style.display = '';
+                } else {
+                    section.style.display = 'none';
+                }
+            });
+        });
+    }
+</script>
+</body>
+</html>

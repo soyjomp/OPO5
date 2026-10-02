@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="ca">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apunts Tema 14 - Oposicions C1 AMB</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #ffffff;
+            color: #111111;
+        }
+        h1, h2, h3, h4, .font-arial-bold {
+            font-family: Arial, sans-serif;
+            font-weight: bold;
+        }
+        /* Estil per al quadre de trampes o aspectes clau amb fons vermell suau pastel, text negre i vora esquerra vermella */
+        .highlight-box-custom {
+            background-color: #fff5f5;
+            border: 1px solid #fca5a5;
+            border-left: 4px solid #cc0000;
+            padding: 15px;
+            border-radius: 10px;
+            margin: 10px 0;
+            color: #111111;
+        }
+        /* Estil específic per destacar referències i aplicacions pràctiques de la web i gestió de l'AMB */
+        .amb-web-highlight {
+            background-color: #f0fdf4;
+            border: 1px solid #bbf7d0;
+            border-left: 4px solid #16a34a;
+            padding: 15px;
+            border-radius: 10px;
+            margin: 10px 0;
+            color: #111111;
+        }
+    </style>
+</head>
+<body class="bg-white min-h-screen text-gray-900 flex flex-col justify-between">
+
+    <header class="w-full border-b border-gray-200 bg-white sticky top-0 z-50 shadow-sm">
+        <div class="max-w-7xl mx-auto px-4 py-4 flex flex-col sm:flex-row items-center justify-between gap-4">
+            
+            <div class="flex items-center gap-3 w-full sm:w-auto justify-between sm:justify-start">
+                <div class="flex items-center gap-3">
+                    <div class="flex items-center">
+                        <img src="../img/logo.png" alt="Logo AMB" class="h-10 w-auto object-contain" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+                        <span class="text-xs text-red-600 font-bold hidden text-center px-1">img/logo.png</span>
+                    </div>
+                    <h1 class="text-xl sm:text-2xl font-bold tracking-tight text-black">
+                        Oposicions C1 <span class="text-red-600">AMB</span>
+                    </h1>
+                </div>
+
+                <a href="index.html" class="sm:hidden inline-flex items-center gap-1.5 px-3 py-1.5 text-xs font-bold text-gray-700 bg-gray-50 border border-gray-300 hover:bg-red-600 hover:text-white hover:border-red-600 rounded-lg transition-colors">
+                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18"></path></svg>
+                    <span>Inici</span>
+                </a>
+            </div>
+
+            <div class="flex items-center gap-3 w-full sm:w-auto justify-between sm:justify-end">
+                <div class="w-full sm:w-80">
+                    <div class="relative">
+                        <span class="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none text-gray-400">
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg>
+                        </span>
+                        <input type="text" id="searchInput" placeholder="Cercar als apunts..." class="w-full pl-10 pr-4 py-2 bg-gray-50 border border-gray-300 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-red-600 focus:border-transparent transition-all">
+                    </div>
+                </div>
+
+                <a href="../index.html" class="hidden sm:inline-flex items-center gap-1.5 px-3.5 py-2 text-xs font-bold text-gray-700 bg-gray-50 border border-gray-300 hover:bg-red-600 hover:text-white hover:border-red-600 rounded-lg transition-colors shrink-0 shadow-sm">
+                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18"></path></svg>
+                    <span>Tornar a l'Inici</span>
+                </a>
+            </div>
+
+        </div>
+    </header>
+
+    <main class="max-w-6xl mx-auto px-4 py-8 w-full flex-grow space-y-8">
+        
+        <div class="flex items-center gap-2 text-xs font-bold text-gray-500 uppercase tracking-wider">
+            <span>Bloc III (Temari Específic)</span>
+            <span>/</span>
+            <span class="text-red-600">Tema 14</span>
+        </div>
+
+        <div class="border-b-2 border-red-600 pb-4">
+            <h2 class="text-2xl sm:text-3xl font-bold text-black tracking-tight">
+                Organització dels documents administratius. Arxivament, conservació, eliminació i gestió de documents electrònics.
+            </h2>
+        </div>
+
+        <!-- CONTENIDOR EN COLUMNES RESPONSIVE (FICHAS) -->
+        <article class="grid grid-cols-1 md:grid-cols-2 gap-6 items-start">
+            
+            <!-- TARJETA 1: ORGANITZACIÓ I EL SISTEMA D'ARXIVAMENT -->
+            <section class="bg-gray-50 border border-gray-200 rounded-xl p-6 shadow-sm space-y-4 hover:border-red-600 transition-colors">
+                <div class="flex items-center gap-2 text-red-600 font-bold text-lg">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 8h14M5 8a2 2 0 110-4h14a2 2 0 110 4M5 8v10a2 2 0 002 2h10a2 2 0 002-2V8m-9 4h4"></path></svg>
+                    <h3>1. El Sistema d'Arxius i les Fases de l'Arxivament</h3>
+                </div>
+                <p class="text-xs text-gray-700 leading-relaxed">
+                    L'arxiu administratiu és el conjunt organitzat de documents produïts o rebuts per les administracions públiques en l'exercici de les seves funcions. El cicle vital dels documents determina el pas per diferents tipus d'arxius.
+                </p>
+                <div class="bg-white p-3 rounded-lg border border-gray-200 space-y-2">
+                    <ul class="space-y-1.5 text-xs text-gray-700">
+                        <li class="flex items-start gap-1.5">
+                            <span class="text-red-600 font-bold">▪</span> <span><strong>Arxiu d'Oficina o de Gestió:</strong> Documents en tramitació o d'ús freqüent per les unitats administratives productores.</span>
+                        </li>
+                        <li class="flex items-start gap-1.5">
+                            <span class="text-red-600 font-bold">▪</span> <span><strong>Arxiu Intermedi:</strong> Documents la vigència administrativa dels quals ha finalitzat però continuen sent requerits per a consultes o possibles recursos.</span>
+                        </li>
+                        <li class="flex items-start gap-1.5">
+                            <span class="text-red-600 font-bold">▪</span> <span><strong>Arxiu Històric:</strong> Documents de conservació permanent per al seu valor cultural, informatiu o de recerca històrica.</span>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+
+            <!-- TARJETA 2: CONSERVACIÓ, AVALUACIÓ I ELIMINACIÓ -->
+            <section class="bg-gray-50 border border-gray-200 rounded-xl p-6 shadow-sm space-y-4 hover:border-red-600 transition-colors">
+                <div class="flex items-center gap-2 text-red-600 font-bold text-lg">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16"></path></svg>
+                    <h3>2. Avaluació, Tria i Eliminació de Documents</h3>
+                </div>
+                <p class="text-xs text-gray-700 leading-relaxed">
+                    La destrucció de documents públics no és lliure; està sotmesa a estrictes processos d'avaluació per part d'òrgans qualificats (com la Comissió Nacional d'Accés, Avaluació i Tria Documental a Catalunya).
+                </p>
+                <div class="bg-white p-3 rounded-lg border border-gray-200 space-y-2">
+                    <ul class="space-y-1.5 text-xs text-gray-700">
+                        <li class="flex items-start gap-1.5">
+                            <span class="text-red-600 font-bold">▪</span> <span><strong>Tabulats i calendaris de conservació:</strong> Instruments que defineixen quant de temps s'ha de guardar cada sèrie documental i si cal eliminar-la o conservar-la permanentment.</span>
+                        </li>
+                        <li class="flex items-start gap-1.5">
+                            <span class="text-red-600 font-bold">▪</span> <span><strong>Prohibició d'eliminació arbitrària:</strong> Cap document de l'administració pot ser destruït sense un dictamen previ favorable de l'òrgan competent en matèria d'avaluació de documents.</span>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+
+            <!-- TARJETA 3: GESTIÓ DELS DOCUMENTS ELECTRÒNICS I L'ENI -->
+            <section class="bg-gray-50 border border-gray-200 rounded-xl p-6 shadow-sm space-y-4 hover:border-red-600 transition-colors">
+                <div class="flex items-center gap-2 text-red-600 font-bold text-lg">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 3v2m6-2v2M9 19v2m6-2v2M5 9H3m2 6H3m18-6h-2m2 6h-2M7 19h10a2 2 0 002-2V7a2 2 0 00-2-2H7a2 2 0 00-2 2v10a2 2 0 002 2zM9 9h6v6H9V9z"></path></svg>
+                    <h3>3. Gestió de Documents Electrònics i Arxiu Electrònic</h3>
+                </div>
+                <p class="text-xs text-gray-700 leading-relaxed">
+                    Segons la Llei 39/2015 i l'Esquema Nacional d'Interoperabilitat (ENI), cada administració ha de disposar d'un arxiu electrònic únic que asseguri la integritat, autenticitat, confidencialitat i conservació dels expedients electrònics.
+                </p>
+                <div class="bg-white p-3 rounded-lg border border-gray-200 space-y-2">
+                    <ul class="space-y-1.5 text-xs text-gray-700">
+                        <li class="flex items-start gap-1.5">
+                            <span class="text-red-600 font-bold">▪</span> <span><strong>Metadades i formats:</strong> Els documents electrònics s'han d'emmagatzemar amb metadades obligatòries d'associació i en formats estàndard oberts per evitar l'obsolescència tecnològica.</span>
+                        </li>
+                        <li class="flex items-start gap-1.5">
+                            <span class="text-red-600 font-bold">▪</span> <span><strong>Conservació a llarg termini:</strong> Mesures de preservació digital per garantir que els fitxers puguin ser llegits i verificats al llarg del temps amb signatures i segells de temps vàlids.</span>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+
+            <!-- TARJETA 4: SEGURETAT I ACCÉS A LA DOCUMENTACIÓ -->
+            <section class="bg-gray-50 border border-gray-200 rounded-xl p-6 shadow-sm space-y-4 hover:border-red-600 transition-colors">
+                <div class="flex items-center gap-2 text-red-600 font-bold text-lg">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"></path></svg>
+                    <h3>4. Seguretat, Custòdia i Accés als Arxius</h3>
+                </div>
+                <p class="text-xs text-gray-700 leading-relaxed">
+                    La gestió arxivística s'ha de compaginar amb el dret d'accés de la ciutadania als arxius i registres públics, sota el marc de la transparència i la protecció de dades personals.
+                </p>
+                <div class="bg-white p-3 rounded-lg border border-gray-200 space-y-2">
+                    <ul class="space-y-1.5 text-xs text-gray-700">
+                        <li class="flex items-start gap-1.5">
+                            <span class="text-red-600 font-bold">▪</span> <span><strong>Esquema Nacional de Seguretat (ENS):</strong> Assoleix els nivells de protecció necessaris per evitar accessos no autoritzats, pèrdues de dades o alteracions del fons documental.</span>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+
+            <!-- TAULA ADAPTADA AL TEMA (Fons negre i lletres blanques a la primera fila) -->
+            <section class="bg-gray-50 border border-gray-200 rounded-xl p-6 shadow-sm space-y-4 hover:border-red-600 transition-colors md:col-span-2">
+                <div class="flex items-center gap-2 text-red-600 font-bold text-lg">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 10h18M3 14h18m-9-4v8m-7 0h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z"></path></svg>
+                    <h3>Comparativa de les Fases del Sistema d'Arxius i Gestió Documental a l'AMB</h3>
+                </div>
+                <div class="overflow-x-auto">
+                    <table class="w-full text-left border-collapse text-xs">
+                        <thead>
+                            <tr class="bg-black text-white">
+                                <th class="p-3 border border-gray-700">Fase / Tipus d'Arxiu</th>
+                                <th class="p-3 border border-gray-700">Ubicació / Responsable</th>
+                                <th class="p-3 border border-gray-700">Finalitat Principal</th>
+                                <th class="p-3 border border-gray-700">Aplicació pràctica a l'AMB</th>
+                            </tr>
+                        </thead>
+                        <tbody class="bg-white text-gray-800">
+                            <tr class="border-b border-gray-200 hover:bg-gray-50">
+                                <td class="p-3 border border-gray-200 font-bold">Arxiu de Gestió (Oficina)</td>
+                                <td class="p-3 border border-gray-200">Unitats administratives i departaments productors</td>
+                                <td class="p-3 border border-gray-200">Tramitació d'expedients i consulta freqüent</td>
+                                <td class="p-3 border border-gray-200">Gestió diària d'expedients de subvencions, llicències i contractació.</td>
+                            </tr>
+                            <tr class="border-b border-gray-200 hover:bg-gray-50">
+                                <td class="p-3 border border-gray-200 font-bold">Arxiu Intermedi</td>
+                                <td class="p-3 border border-gray-200">Servei d'Arxiu Centralitzat / Intermedi</td>
+                                <td class="p-3 border border-gray-200">Custòdia temporal un coup finalitzada la via administrativa</td>
+                                <td class="p-3 border border-gray-200">Conservació d'expedients tancats pendents de terminis de recurs o tria.</td>
+                            </tr>
+                            <tr class="hover:bg-gray-50">
+                                <td class="p-3 border border-gray-200 font-bold">Arxiu Històric</td>
+                                <td class="p-3 border border-gray-200">Arxiu Històric / Supramunicipal</td>
+                                <td class="p-3 border border-gray-200">Conservació permanent per valor cultural i històric</td>
+                                <td class="p-3 border border-gray-200">Fons històric de la conurbació i evolució urbanística dels 36 municipis.</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+
+            <!-- TARJETA 5: APLICACIÓ PRÀCTICA AL WEB I GESTIÓ DE L'AMB (Destacat en verd) -->
+            <section class="bg-gray-50 border border-gray-200 rounded-xl p-6 shadow-sm space-y-4 hover:border-green-600 transition-colors md:col-span-2">
+                <div class="flex items-center gap-2 text-green-700 font-bold text-lg">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9"></path></svg>
+                    <h3>5. L'Arxiu Metropolità i la Gestió Documental Electrònica a l'AMB (Segons amb.cat)</h3>
+                </div>
+                
+                <!-- Bloc amb estil verd específic per a la informació extreta de la web de l'AMB -->
+                <div class="amb-web-highlight text-xs space-y-3">
+                    <p class="font-bold mb-2 text-green-900">🌐 GESTIÓ DOCUMENTAL I ARXIU ELECTRÒNIC A L'ÀREA METROPOLITANA DE BARCELONA:</p>
+                    
+                    <div>
+                        <strong class="text-green-800">L'Arxiu General de l'AMB:</strong>
+                        <ul class="list-disc pl-4 mt-1 space-y-1">
+                            <li>L'AMB compta amb un servei d'arxiu i gestió documental encarregat de custodiar, ordenar i preservar el patrimoni documental generat per l'ens supramunicipal en l'exercici de les seves competències (urbanisme, transport, medi ambient, habitatge).</li>
+                            <li>A través del model d'administració electrònica i gestors d'expedients, l'AMB integra l'<strong>arxiu electrònic</strong>, garantint que tant els expedients de contractació pública com les llicències o plans urbanístics compleixin amb les normes d'interoperabilitat (ENI) i conservació digital a llarg termini.</li>
+                        </ul>
+                    </div>
+
+                    <div>
+                        <strong class="text-green-800">Accés a la informació pública i transparència:</strong>
+                        <ul class="list-disc pl-4 mt-1 space-y-1">
+                            <li>El portal de transparència de l'AMB (accessible des de <code>amb.cat</code>) s'alimenta directament dels fons documentals organitzats, facilitant l'accés ciutadà a acords de Junta de Govern, Consell Metropolità i normatives metropolitanes d'acord amb la legislació de transparència.</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <!-- TARJETA 6: TRAMPES D'EXAMEN I PREGUNTES TIPUS TEST (Destacat en vermell) -->
+            <section class="bg-gray-50 border border-gray-200 rounded-xl p-6 shadow-sm space-y-4 hover:border-red-600 transition-colors md:col-span-2">
+                <div class="flex items-center gap-2 text-red-600 font-bold text-lg">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"></path></svg>
+                    <h3>6. Trampes i Preguntes Tipus Test Habituals</h3>
+                </div>
+                
+                <!-- Bloc amb estil pastel vermell especial per a trampes d'examen -->
+                <div class="highlight-box-custom text-xs space-y-3">
+                    <p class="font-bold mb-2">⚠ PREGUNTES TRAMPA D'EXAMEN PER A OPOSICIONS C1 ADMINISTRATIU AMB:</p>
+                    
+                    <div>
+                        <strong class="text-red-700">Eliminació lliure de documents antics:</strong>
+                        <ul class="list-disc pl-4 mt-1 space-y-1">
+                            <li>Vigila la trampa de creure que un departament o arxiu de l'AMB pot destruir documents antics pel seu propi compte quan ja no tenen utilitat pràctica: qualsevol eliminació de documents públics requereix un procediment reglamentari i un dictamen favorable de l'òrgan competent en valoració i tria documental (Comissió Nacional d'Accés, Avaluació i Tria Documental).</li>
+                        </ul>
+                    </div>
+
+                    <div>
+                        <strong class="text-red-700">Fases del cicle vital dels arxius:</strong>
+                        <ul class="list-disc pl-4 mt-1 space-y-1">
+                            <li>Recorda l'ordre correcte del cicle dels arxius: <strong>Arxiu de Gestió (o oficina)</strong> ➔ <strong>Arxiu Intermedi</strong> ➔ <strong>Arxiu Històric</strong>. No es pot saltar directament de l'oficina a l'històric sense passar pel període d'arxiu intermedi si el document manté valors administratius secundaris.</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+        </article>
+
+    </main>
+
+    <footer class="w-full border-t border-gray-200 bg-gray-50 py-4 text-center text-xs text-gray-500">
+        <p>© 2026 OpoAMB | &copy; Creat per JOMP</p>
+    </footer>
+
+<script>
+    // Script funcional per al cercador a les pàgines d'apunts
+    const searchInput = document.getElementById('searchInput');
+    
+    if (searchInput) {
+        searchInput.addEventListener('input', function(e) {
+            const searchTerm = e.target.value.toLowerCase().trim();
+            const sections = document.querySelectorAll('main article section');
+
+            sections.forEach(section => {
+                const text = section.textContent.toLowerCase();
+                if (searchTerm === '' || text.includes(searchTerm)) {
+                    section.style.display = '';
+                } else {
+                    section.style.display = 'none';
+                }
+            });
+        });
+    }
+</script>
+</body>
+</html>

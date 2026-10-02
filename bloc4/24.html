@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="ca">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apunts Tema 24 - Oposicions C1 AMB</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #ffffff;
+            color: #111111;
+        }
+        h1, h2, h3, h4, .font-arial-bold {
+            font-family: Arial, sans-serif;
+            font-weight: bold;
+        }
+        .highlight-box-custom {
+            background-color: #fff5f5;
+            border: 1px solid #fca5a5;
+            border-left: 4px solid #cc0000;
+            padding: 15px;
+            border-radius: 10px;
+            margin: 10px 0;
+            color: #111111;
+        }
+        .amb-web-highlight {
+            background-color: #f0fdf4;
+            border: 1px solid #bbf7d0;
+            border-left: 4px solid #16a34a;
+            padding: 15px;
+            border-radius: 10px;
+            margin: 10px 0;
+            color: #111111;
+        }
+    </style>
+</head>
+<body class="bg-white min-h-screen text-gray-900 flex flex-col justify-between">
+
+    <header class="w-full border-b border-gray-200 bg-white sticky top-0 z-50 shadow-sm">
+        <div class="max-w-7xl mx-auto px-4 py-4 flex flex-col sm:flex-row items-center justify-between gap-4">
+            
+            <div class="flex items-center gap-3 w-full sm:w-auto justify-between sm:justify-start">
+                <div class="flex items-center gap-3">
+                    <div class="flex items-center">
+                        <img src="../img/logo.png" alt="Logo AMB" class="h-10 w-auto object-contain" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+                        <span class="text-xs text-red-600 font-bold hidden text-center px-1">img/logo.png</span>
+                    </div>
+                    <h1 class="text-xl sm:text-2xl font-bold tracking-tight text-black">
+                        Oposicions C1 <span class="text-red-600">AMB</span>
+                    </h1>
+                </div>
+
+                <a href="index.html" class="sm:hidden inline-flex items-center gap-1.5 px-3 py-1.5 text-xs font-bold text-gray-700 bg-gray-50 border border-gray-300 hover:bg-red-600 hover:text-white hover:border-red-600 rounded-lg transition-colors">
+                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18"></path></svg>
+                    <span>Inici</span>
+                </a>
+            </div>
+
+            <div class="flex items-center gap-3 w-full sm:w-auto justify-between sm:justify-end">
+                <div class="w-full sm:w-80">
+                    <div class="relative">
+                        <span class="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none text-gray-400">
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg>
+                        </span>
+                        <input type="text" id="searchInput" placeholder="Cercar als apunts..." class="w-full pl-10 pr-4 py-2 bg-gray-50 border border-gray-300 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-red-600 focus:border-transparent transition-all">
+                    </div>
+                </div>
+
+                <a href="../index.html" class="hidden sm:inline-flex items-center gap-1.5 px-3.5 py-2 text-xs font-bold text-gray-700 bg-gray-50 border border-gray-300 hover:bg-red-600 hover:text-white hover:border-red-600 rounded-lg transition-colors shrink-0 shadow-sm">
+                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18"></path></svg>
+                    <span>Tornar a l'Inici</span>
+                </a>
+            </div>
+
+        </div>
+    </header>
+
+    <main class="max-w-6xl mx-auto px-4 py-8 w-full flex-grow space-y-8">
+        
+        <div class="flex items-center gap-2 text-xs font-bold text-gray-500 uppercase tracking-wider">
+            <span>Bloc IV (Temari Específic)</span>
+            <span>/</span>
+            <span class="text-red-600">Tema 24</span>
+        </div>
+
+        <div class="border-b-2 border-red-600 pb-4">
+            <h2 class="text-2xl sm:text-3xl font-bold text-black tracking-tight">
+                Disposicions generals i potestat reguladora de les administracions locals. Reglaments. Ordenances. Ordenances fiscals.
+            </h2>
+        </div>
+
+        <!-- CONTENIDOR EN COLUMNES RESPONSIVE (FICHAS) -->
+        <article class="grid grid-cols-1 md:grid-cols-2 gap-6 items-start">
+            
+            <!-- TARJETA 1: LA POTESTAT REGULADORA LOCAL -->
+            <section class="bg-gray-50 border border-gray-200 rounded-xl p-6 shadow-sm space-y-4 hover:border-red-600 transition-colors">
+                <div class="flex items-center gap-2 text-red-600 font-bold text-lg">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"></path></svg>
+                    <h3>1. Potestat Reguladora de les Administracions Locals</h3>
+                </div>
+                <p class="text-xs text-gray-700 leading-relaxed">
+                    La potestat reguladora és la prerrogativa reconeguda constitucionalment (art. 140 i 137 CE) i desenvolupada per la LBRL (art. 4) que permet als ens locals aprovar disposicions de caràcter general dins de l'àmbit de les seves competències.
+                </p>
+                <div class="bg-white p-3 rounded-lg border border-gray-200 space-y-2">
+                    <ul class="space-y-1.5 text-xs text-gray-700">
+                        <li class="flex items-start gap-1.5">
+                            <span class="text-red-600 font-bold">▪</span> <span><strong>Fonament constitucional:</strong> S'exercita en allò relatiu als interessos públics de la seva competència, subordinada sempre a les lleis de l'Estat i de la Generalitat de Catalunya.</span>
+                        </li>
+                        <li class="flex items-start gap-1.5">
+                            <span class="text-red-600 font-bold">▪</span> <span><strong>Límit material:</strong> No poden tipificar infraccions penals ni faltes, ni establir penes o sancions privatives de llibertat, quedant limitades a les multes previstes per llei.</span>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+
+            <!-- TARJETA 2: REGLAMENTS I ORDENANCES -->
+            <section class="bg-gray-50 border border-gray-200 rounded-xl p-6 shadow-sm space-y-4 hover:border-red-600 transition-colors">
+                <div class="flex items-center gap-2 text-red-600 font-bold text-lg">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path></svg>
+                    <h3>2. Reglaments i Ordenances Locals</h3>
+                </div>
+                <p class="text-xs text-gray-700 leading-relaxed">
+                    Les normes locals s'estructuren jeràrquicament en reglaments (organitzatius o interns) i ordenances (normes de conducta general o d'obligatori compliment per a la ciutadania).
+                </p>
+                <div class="bg-white p-3 rounded-lg border border-gray-200 space-y-2">
+                    <ul class="space-y-1.5 text-xs text-gray-700">
+                        <li class="flex items-start gap-1.5">
+                            <span class="text-red-600 font-bold">▪</span> <span><strong>Reglaments orgànics:</strong> Regulen l'estructura interna de l'ens (com el Reglament Orgànic de l'AMB), el funcionament dels òrgans de govern i el règim jurídic dels seus serveis.</span>
+                        </li>
+                        <li class="flex items-start gap-1.5">
+                            <span class="text-red-600 font-bold">▪</span> <span><strong>Ordenances:</strong> Regulen aspectes relatius a la convivència, serveis públics supramunicipals, medi ambient, mobilitat o urbanisme dins de l'àmbit territorial de l'ens.</span>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+
+            <!-- TARJETA 3: ORDENANCES FISCALS -->
+            <section class="bg-gray-50 border border-gray-200 rounded-xl p-6 shadow-sm space-y-4 hover:border-red-600 transition-colors">
+                <div class="flex items-center gap-2 text-red-600 font-bold text-lg">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 7h6m0 10v-3m-3 3h.01M9 17h.01M9 14h.01M12 14h.01M15 11h.01M12 11h.01M9 11h.01M7 21h10a2 2 0 002-2V5a2 2 0 00-2-2H7a2 2 0 00-2 2v14a2 2 0 002 2z"></path></svg>
+                    <h3>3. Ordenances Fiscals i Règim Tributari</h3>
+                </div>
+                <p class="text-xs text-gray-700 leading-relaxed">
+                    Les ordenances fiscals són les disposicions de caràcter general a través de les quals l'ens local estableix i regula els seus tributs propis (taxes, contribucions especials i preus públics), d'acord amb la Llei Reguladora de les Hisendes Locals (LRHL).
+                </p>
+                <div class="bg-white p-3 rounded-lg border border-gray-200 space-y-2">
+                    <ul class="space-y-1.5 text-xs text-gray-700">
+                        <li class="flex items-start gap-1.5">
+                            <span class="text-red-600 font-bold">▪</span> <span><strong>Contingut obligatori:</strong> Han de fixar expressament el fet imponible, subjectes passius, bases, tipus de gravamen, beneficis fiscals i període impositiu.</span>
+                        </li>
+                        <li class="flex items-start gap-1.5">
+                            <span class="text-red-600 font-bold">▪</span> <span><strong>Aprovació:</strong> Requereixen una tramitació específica amb informació pública i exposició prèvia abans de la seva aprovació definitiva pel Ple o òrgan competent.</span>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+
+            <!-- TARJETA 4: PROCEDIMENT D'APROVACIÓ DE LES DISPOSICIONS -->
+            <section class="bg-gray-50 border border-gray-200 rounded-xl p-6 shadow-sm space-y-4 hover:border-red-600 transition-colors">
+                <div class="flex items-center gap-2 text-red-600 font-bold text-lg">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4"></path></svg>
+                    <h3>4. Procediment d'Elaboració i Aprovació</h3>
+                </div>
+                <p class="text-xs text-gray-700 leading-relaxed">
+                    El procediment d'aprovació d'ordenances i reglaments locals està subjecte a garanties de transparència i participació ciutadana segons l'article 49 de la LBRL.
+                </p>
+                <div class="bg-white p-3 rounded-lg border border-gray-200 space-y-2">
+                    <ul class="space-y-1.5 text-xs text-gray-700">
+                        <li class="flex items-start gap-1.5">
+                            <span class="text-red-600 font-bold">▪</span> <span><strong>Fases essencials:</strong> Aprovació inicial pel Ple; informació pública i audiència als interessats durant un termini mínim de 30 dies per a la formulació de reclamacions; resolució d'al·legacions i aprovació definitiva.</span>
+                        </li>
+                        <li class="flex items-start gap-1.5">
+                            <span class="text-red-600 font-bold">▪</span> <span><strong>Publicació:</strong> L'entrada en vigor requereix la publicació íntegra del text al Butlletí Oficial de la Província (BOPB), sense que s'iniciïn els efectes fins que hagi transcorregut el termini legal.</span>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+
+            <!-- TAULA ADAPTADA AL TEMA (AMB LA PRIMERA FILA AMB FONS NEGRE I LLETRES BLANQUES) -->
+            <section class="bg-gray-50 border border-gray-200 rounded-xl p-6 shadow-sm space-y-4 hover:border-red-600 transition-colors md:col-span-2">
+                <div class="flex items-center gap-2 text-black font-bold text-lg">
+                    <svg class="w-5 h-5 text-red-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 10h18M3 14h18m-9-4v8m-7 0h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z"></path></svg>
+                    <h3>Quadre Comparatiu: Tipus de Normes i Disposicions Locals a l'AMB</h3>
+                </div>
+                <div class="overflow-x-auto">
+                    <table class="w-full text-xs text-left text-gray-700 border border-gray-300 rounded-lg overflow-hidden">
+                        <thead class="bg-black text-white uppercase font-bold">
+                            <tr>
+                                <th class="px-4 py-3">Tipus de Norma</th>
+                                <th class="px-4 py-3">Àmbit / Objecte</th>
+                                <th class="px-4 py-3">Òrgan Competent</th>
+                                <th class="px-4 py-3">Publicació i Vigència</th>
+                            </tr>
+                        </thead>
+                        <tbody class="divide-y divide-gray-200 bg-white">
+                            <tr class="hover:bg-gray-50">
+                                <td class="px-4 py-3 font-bold text-black">Reglaments Orgànics</td>
+                                <td class="px-4 py-3">Regulen l'estructura interna i el funcionament dels òrgans de govern (p.ex. ROM de l'AMB).</td>
+                                <td class="px-4 py-3">Ple / Consell Metropolità</td>
+                                <td class="px-4 py-3">BOPB / Text íntegre</td>
+                            </tr>
+                            <tr class="hover:bg-gray-50">
+                                <td class="px-4 py-3 font-bold text-black">Ordenances Locals</td>
+                                <td class="px-4 py-3">Normes de conducta general, convivència, medi ambient i serveis supramunicipals.</td>
+                                <td class="px-4 py-3">Ple / Consell Metropolità</td>
+                                <td class="px-4 py-3">BOPB (30 dies informació pública)</td>
+                            </tr>
+                            <tr class="hover:bg-gray-50">
+                                <td class="px-4 py-3 font-bold text-black">Ordenances Fiscals</td>
+                                <td class="px-4 py-3">Establiment i regulació de tributs propis (taxes, preus públics i recàrrecs com l'IBI).</td>
+                                <td class="px-4 py-3">Ple / Consell Metropolità</td>
+                                <td class="px-4 py-3">Publicació abans del 31 de desembre per a l'any següent.</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+
+            <!-- TARJETA 5: APLICACIÓ PRÀCTICA AL WEB I GESTIÓ DE L'AMB (Destacat en verd) -->
+            <section class="bg-gray-50 border border-gray-200 rounded-xl p-6 shadow-sm space-y-4 hover:border-green-600 transition-colors md:col-span-2">
+                <div class="flex items-center gap-2 text-green-700 font-bold text-lg">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9"></path></svg>
+                    <h3>5. Normativa, Ordenances Fiscals i Seu Electrònica de l'AMB (amb.cat)</h3>
+                </div>
+                
+                <div class="amb-web-highlight text-xs space-y-3">
+                    <p class="font-bold mb-2 text-green-900">🌐 NORMATIVA SUPRAMUNICIPAL I TRIBUTS METROPOLITANS (amb.cat):</p>
+                    
+                    <div>
+                        <strong class="text-green-800">Ordenances Fiscals Metropolitanes i taxes de serveis:</strong>
+                        <ul class="list-disc pl-4 mt-1 space-y-1">
+                            <li>L'AMB aprova anualment les seves ordenances fiscals i preus públics per a la gestió dels serveis de transport públic col·lectiu, tractament de residus (taxa metropolitana de residus - TMR) i subministrament d'aigua, les quals es publiquen i actualitzen al portal corporatiu de l'AMB.</li>
+                        </ul>
+                    </div>
+
+                    <div>
+                        <strong class="text-green-800">Participació i consulta prèvia al web de l'AMB:</strong>
+                        <ul class="list-disc pl-4 mt-1 space-y-1">
+                            <li>D'acord amb la legislació de transparència, la Seu Electrònica de l'AMB disposa d'un espai de consulta pública prèvia i tauler d'anuncis on s'ofereixen els projectes d'ordenances i reglaments metropolitans abans de la seva aprovació definitiva pel Consell Metropolità.</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <!-- TARJETA 6: TRAMPES D'EXAMEN I PREGUNTES TIPUS TEST (Destacat en vermell) -->
+            <section class="bg-gray-50 border border-gray-200 rounded-xl p-6 shadow-sm space-y-4 hover:border-red-600 transition-colors md:col-span-2">
+                <div class="flex items-center gap-2 text-red-600 font-bold text-lg">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"></path></svg>
+                    <h3>6. Trampes i Preguntes Tipus Test Habituals</h3>
+                </div>
+                
+                <div class="highlight-box-custom text-xs space-y-3">
+                    <p class="font-bold mb-2">⚠ PREGUNTES TRAMPA D'EXAMEN SOBRE POTESTAT REGULADORA:</p>
+                    
+                    <div>
+                        <strong class="text-red-700">Termini d'informació pública en ordenances:</strong>
+                        <ul class="list-disc pl-4 mt-1 space-y-1">
+                            <li>Vigila la trampa amb el termini d'exposició pública per a reclamacions en l'aprovació d'ordenances locals: recorda que el termini mínim establert per la LBRL (art. 49.b) és de <strong>30 dies</strong>, i no pas de 15 o 20 dies com s'acostuma a confondre amb altres tràmits administratius generals.</li>
+                        </ul>
+                    </div>
+
+                    <div>
+                        <strong class="text-red-700">Abast de les sancions en ordenances locals:</strong>
+                        <ul class="list-disc pl-4 mt-1 space-y-1">
+                            <li>Una altra trampa clàssica d'examen afirma que les ordenances locals poden crear penes de presó o privatives de llibertat si ho aprova el Ple. <strong>Les ordenances locals NO poden tipificar delictes ni establir sancions privatives de llibertat</strong> sota cap concepte; només poden preveure multes dins dels límits fixats per les lleis estatals.</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+        </article>
+
+    </main>
+
+    <footer class="w-full border-t border-gray-200 bg-gray-50 py-4 text-center text-xs text-gray-500">
+        <p>© 2026 OpoAMB | &copy; Creat per JOMP</p>
+    </footer>
+
+<script>
+    const searchInput = document.getElementById('searchInput');
+    
+    if (searchInput) {
+        searchInput.addEventListener('input', function(e) {
+            const searchTerm = e.target.value.toLowerCase().trim();
+            const sections = document.querySelectorAll('main article section');
+
+            sections.forEach(section => {
+                const text = section.textContent.toLowerCase();
+                if (searchTerm === '' || text.includes(searchTerm)) {
+                    section.style.display = '';
+                } else {
+                    section.style.display = 'none';
+                }
+            });
+        });
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="ca">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apunts Tema 25 - Oposicions C1 AMB</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #ffffff;
+            color: #111111;
+        }
+        h1, h2, h3, h4, .font-arial-bold {
+            font-family: Arial, sans-serif;
+            font-weight: bold;
+        }
+        /* Estil per al quadre de trampes o aspectes clau amb fons vermell suau pastel, text negre i vora esquerra vermella */
+        .highlight-box-custom {
+            background-color: #fff5f5;
+            border: 1px solid #fca5a5;
+            border-left: 4px solid #cc0000;
+            padding: 15px;
+            border-radius: 10px;
+            margin: 10px 0;
+            color: #111111;
+        }
+        /* Estil específic per destacar referències i aplicacions pràctiques de la web i gestió de l'AMB */
+        .amb-web-highlight {
+            background-color: #f0fdf4;
+            border: 1px solid #bbf7d0;
+            border-left: 4px solid #16a34a;
+            padding: 15px;
+            border-radius: 10px;
+            margin: 10px 0;
+            color: #111111;
+        }
+    </style>
+</head>
+<body class="bg-white min-h-screen text-gray-900 flex flex-col justify-between">
+
+    <header class="w-full border-b border-gray-200 bg-white sticky top-0 z-50 shadow-sm">
+        <div class="max-w-7xl mx-auto px-4 py-4 flex flex-col sm:flex-row items-center justify-between gap-4">
+            
+            <div class="flex items-center gap-3 w-full sm:w-auto justify-between sm:justify-start">
+                <div class="flex items-center gap-3">
+                    <div class="flex items-center">
+                        <img src="../img/logo.png" alt="Logo AMB" class="h-10 w-auto object-contain" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+                        <span class="text-xs text-red-600 font-bold hidden text-center px-1">img/logo.png</span>
+                    </div>
+                    <h1 class="text-xl sm:text-2xl font-bold tracking-tight text-black">
+                        Oposicions C1 <span class="text-red-600">AMB</span>
+                    </h1>
+                </div>
+
+                <a href="index.html" class="sm:hidden inline-flex items-center gap-1.5 px-3 py-1.5 text-xs font-bold text-gray-700 bg-gray-50 border border-gray-300 hover:bg-red-600 hover:text-white hover:border-red-600 rounded-lg transition-colors">
+                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18"></path></svg>
+                    <span>Inici</span>
+                </a>
+            </div>
+
+            <div class="flex items-center gap-3 w-full sm:w-auto justify-between sm:justify-end">
+                <div class="w-full sm:w-80">
+                    <div class="relative">
+                        <span class="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none text-gray-400">
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg>
+                        </span>
+                        <input type="text" id="searchInput" placeholder="Cercar als apunts..." class="w-full pl-10 pr-4 py-2 bg-gray-50 border border-gray-300 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-red-600 focus:border-transparent transition-all">
+                    </div>
+                </div>
+
+                <a href="../index.html" class="hidden sm:inline-flex items-center gap-1.5 px-3.5 py-2 text-xs font-bold text-gray-700 bg-gray-50 border border-gray-300 hover:bg-red-600 hover:text-white hover:border-red-600 rounded-lg transition-colors shrink-0 shadow-sm">
+                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18"></path></svg>
+                    <span>Tornar a l'Inici</span>
+                </a>
+            </div>
+
+        </div>
+    </header>
+
+    <main class="max-w-6xl mx-auto px-4 py-8 w-full flex-grow space-y-8">
+        
+        <div class="flex items-center gap-2 text-xs font-bold text-gray-500 uppercase tracking-wider">
+            <span>Bloc IV (Temari Específic)</span>
+            <span>/</span>
+            <span class="text-red-600">Tema 25</span>
+        </div>
+
+        <div class="border-b-2 border-red-600 pb-4">
+            <h2 class="text-2xl sm:text-3xl font-bold text-black tracking-tight">
+                El Procediment administratiu comú. Relació dels ciutadans amb l’Administració. Còmput i compliment de terminis.
+            </h2>
+        </div>
+
+        <!-- CONTENIDOR EN COLUMNES RESPONSIVE (FICHAS) -->
+        <article class="grid grid-cols-1 md:grid-cols-2 gap-6 items-start">
+            
+            <!-- TARJETA 1: EL PROCEDIMENT ADMINISTRATIU COMÚ I CLASSES D'ACTES -->
+            <section class="bg-gray-50 border border-gray-200 rounded-xl p-6 shadow-sm space-y-4 hover:border-red-600 transition-colors">
+                <div class="flex items-center gap-2 text-red-600 font-bold text-lg">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4"></path></svg>
+                    <h3>1. Concepte, Fases i Classes d'Actes Administratius</h3>
+                </div>
+                <p class="text-xs text-gray-700 leading-relaxed">
+                    El procediment administratiu comú (regulat bàsicament per la Llei 39/2015) és el conjunt de tràmits i actes sequenciats que duu a terme l'Administració].
+                </p>
+                <div class="bg-white p-3 rounded-lg border border-gray-200 space-y-2">
+                    <ul class="space-y-1.5 text-xs text-gray-700">
+                        <li class="flex items-start gap-1.5">
+                            <span class="text-red-600 font-bold">▪</span> <span><strong>Fases:</strong> Iniciació (dofici o a sol·licitud), Ordenació i Instrucció (al·legacions, proves, informes) i Terminació (resolució, desistiment, renúncia, caducitat).</span>
+                        </li>
+                        <li class="flex items-start gap-1.5">
+                            <span class="text-red-600 font-bold">▪</span> <span><strong>Actes expressos, tàcits o presumptes:</strong> Els expressos exterioritzen clarament la voluntat (orals, escrits o mímics); els tàcits es dedueixen de la conducta administrativa; els presumptes deriven del silenci administratiu.</span>
+                        </li>
+                        <li class="flex items-start gap-1.5">
+                            <span class="text-red-600 font-bold">▪</span> <span><strong>Definitius i de tràmit:</strong> Els resolutoris o definitius decideixen el fons de l'assumpte. Els de tràmit són instrumentals previs; només s'impugnen els qualificats que causen indefensió o impedeixen continuar.</span>
+                        </li>
+                        <li class="flex items-start gap-1.5">
+                            <span class="text-red-600 font-bold">▪</span> <span><strong>Reglats i discrecionals:</strong> Els reglats estan predeterminats per la norma; els discrecionals permeten marges d'actuació però exigeixen respectar els fins legals per evitar la desviació de poder.</span>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+
+            <!-- TARJETA 2: RELACIÓ DELS CIUTADANS AMB L'ADMINISTRACIÓ I VIA ADMINISTRATIVA -->
+            <section class="bg-gray-50 border border-gray-200 rounded-xl p-6 shadow-sm space-y-4 hover:border-red-600 transition-colors">
+                <div class="flex items-center gap-2 text-red-600 font-bold text-lg">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"></path></svg>
+                    <h3>2. Drets dels Ciutadans i Via Administrativa</h3>
+                </div>
+                <p class="text-xs text-gray-700 leading-relaxed">
+                    Els articles 13 i 14 de la Llei 39/2015 defineixen els drets dels ciutadans i les obligacions d'interaccionar electrònicament segons col·lectius.
+                </p>
+                <div class="bg-white p-3 rounded-lg border border-gray-200 space-y-2">
+                    <ul class="space-y-1.5 text-xs text-gray-700">
+                        <li class="flex items-start gap-1.5">
+                            <span class="text-red-600 font-bold">▪</span> <span><strong>Drets generals (art. 13):</strong> Comunicar-se mitjançant punts d'accés generals electrònics, ser atesos en la llengua oficial triada, utilitzar mitjans electrònics i obtenir còpia segellada de documents.</span>
+                        </li>
+                        <li class="flex items-start gap-1.5">
+                            <span class="text-red-600 font-bold">▪</span> <span><strong>Obligació de relació electrònica (art. 14.2):</strong> Persones jurídiques, entitats sense personalitat jurídica, professionals col·legiats i empleats públics han de relacionar-se obligatòriament per mitjans electrònics amb l'Administració.</span>
+                        </li>
+                        <li class="flex items-start gap-1.5">
+                            <span class="text-red-600 font-bold">▪</span> <span><strong>Fi de la via administrativa:</strong> Actes que exhaureixen la via gubernativa (com acords del Ple local) i només recullen recursos de reposició, revisió o contenciós-administratiu.</span>
+                        </li>
+                        <li class="flex items-start gap-1.5">
+                            <span class="text-red-600 font-bold">▪</span> <span><strong>Actes ferms i favorables/gravamen:</strong> Els ferms no poden ser recorreguts (excepte nul·litat de ple dret). Els de gravamen exigeixen motivació obligatòria.</span>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+
+            <!-- TARJETA 3: INVALIDESA DELS ACTES ADMINISTRATIUS -->
+            <section class="bg-gray-50 border border-gray-200 rounded-xl p-6 shadow-sm space-y-4 hover:border-red-600 transition-colors">
+                <div class="flex items-center gap-2 text-red-600 font-bold text-lg">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M18.364 18.364A9 9 0 005.636 5.636m12.728 12.728A9 9 0 015.636 5.636m12.728 12.728L5.636 5.636"></path></svg>
+                    <h3>3. Invalidesa: Nul·litat de Ple Dret i Anul·labilitat</h3>
+                </div>
+                <p class="text-xs text-gray-700 leading-relaxed">
+                    Els actes es presumeixen vàlids, però la contravenció de l'ordenament genera vicis de nul·litat o anul·labilitat.
+                </p>
+                <div class="bg-white p-3 rounded-lg border border-gray-200 space-y-2">
+                    <ul class="space-y-1.5 text-xs text-gray-700">
+                        <li class="flex items-start gap-1.5">
+                            <span class="text-red-600 font-bold">▪</span> <span><strong>Nul·litat de ple dret (art. 62.1):</strong> Lesió de drets constitucionals (art. 14-29 CE), incompetència manifesta per raó de matèria/territori, contingut impossible, infracció penal, omissió total i absoluta del procediment o adquisició de drets sense requisits essencials.</span>
+                        </li>
+                        <li class="flex items-start gap-1.5">
+                            <span class="text-red-600 font-bold">▪</span> <span><strong>Anul·labilitat (art. 63):</strong> Qualsevol altra infracció de l'ordenament incloent desviació de poder. Els defectes de forma només l'anul·len si generen indefensió o incompleixen el seu fi.</span>
+                        </li>
+                        <li class="flex items-start gap-1.5">
+                            <span class="text-red-600 font-bold">▪</span> <span><strong>Tècniques de conservació:</strong> Validació d'actes anul·lables per l'òrgan competent, incomunicació d'invalidesa i conversió d'actes nuls.</span>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+
+            <!-- TARJETA 4: CÒMPPUT DE TERMINIS -->
+            <section class="bg-gray-50 border border-gray-200 rounded-xl p-6 shadow-sm space-y-4 hover:border-red-600 transition-colors">
+                <div class="flex items-center gap-2 text-red-600 font-bold text-lg">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                    <h3>4. Còmput i Compliment de Terminis (Llei 39/2015, art. 30)</h3>
+                </div>
+                <p class="text-xs text-gray-700 leading-relaxed">
+                    El còmput de terminis és un pilar fonamental del dret administratiu per evitar la indefensió o la caducitat de drets.
+                </p>
+                <div class="bg-white p-3 rounded-lg border border-gray-200 space-y-2">
+                    <ul class="space-y-1.5 text-xs text-gray-700">
+                        <li class="flex items-start gap-1.5">
+                            <span class="text-red-600 font-bold">▪</span> <span><strong>Terminis en hores:</strong> S'entenen hores hàbils (totes les hores d'un dia hàbil). Es compten de hora en hora des de l'endemà de la notificació.</span>
+                        </li>
+                        <li class="flex items-start gap-1.5">
+                            <span class="text-red-600 font-bold">▪</span> <span><strong>Terminis en dies:</strong> S'entenen dies hàbils (s'exclouen dissabtes, diumenges i festius). Si es fixen en dies naturals, s'ha de fer constar expressament. El dia de la notificació no compta (comença l'endemà hàbil).</span>
+                        </li>
+                        <li class="flex items-start gap-1.5">
+                            <span class="text-red-600 font-bold">▪</span> <span><strong>Terminis en mesos o anys:</strong> Es computen de data a data. Si al mes de venciment no hi ha dia equivalent (ex. 31 de febrer), s'entén que el termini expira l'últim dia del mes.</span>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+
+            <!-- TAULA ADAPTADA AL TEMA (Requisit obligatori: Primera fila fons negre i lletres blanques) -->
+            <section class="bg-gray-50 border border-gray-200 rounded-xl p-6 shadow-sm space-y-4 hover:border-red-600 transition-colors md:col-span-2">
+                <div class="flex items-center gap-2 text-red-600 font-bold text-lg">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 10h18M3 14h18m-9-4v8m-7 0h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z"></path></svg>
+                    <h3>5. Quadre Resum: Comparativa de Vicis d'Invalidesa i Còmput de Terminis</h3>
+                </div>
+                <div class="overflow-x-auto">
+                    <table class="w-full text-left text-xs border-collapse">
+                        <thead>
+                            <tr class="bg-black text-white">
+                                <th class="p-3 border border-gray-700">Concepte / Tipologia</th>
+                                <th class="p-3 border border-gray-700">Règim Jurídic / Base legal</th>
+                                <th class="p-3 border border-gray-700">Efectes principals i característiques</th>
+                            </tr>
+                        </thead>
+                        <tbody class="bg-white text-gray-800">
+                            <tr class="border-b border-gray-200 hover:bg-gray-50">
+                                <td class="p-3 border border-gray-200 font-bold text-red-600">Nul·litat de ple dret</td>
+                                <td class="p-3 border border-gray-200">Art. 62.1 Llei 39/2015</td>
+                                <td class="p-3 border border-gray-200">Vici molt greu. no convalidable, no pot adquirir fermesa. No produeix efectes vàlids.</td>
+                            </tr>
+                            <tr class="border-b border-gray-200 hover:bg-gray-50">
+                                <td class="p-3 border border-gray-200 font-bold text-orange-600">Anul·labilitat</td>
+                                <td class="p-3 border border-gray-200">Art. 63 Llei 39/2015</td>
+                                <td class="p-3 border border-gray-200">Infracció general o desviació de poder. L'acte produeix efectes mentre no s'anul·li dins de termini. Pot ser convalidat.</td>
+                            </tr>
+                            <tr class="border-b border-gray-200 hover:bg-gray-50">
+                                <td class="p-3 border border-gray-200 font-bold text-blue-600">Còmput en Dies Hàbils</td>
+                                <td class="p-3 border border-gray-200">Art. 30 Llei 39/2015</td>
+                                <td class="p-3 border border-gray-200">S'exclouen diumenges, festius i <strong>dissabtes</strong>. S'inicia l'endemà hàbil de la notificació.</td>
+                            </tr>
+                            <tr class="hover:bg-gray-50">
+                                <td class="p-3 border border-gray-200 font-bold text-green-600">Còmput en Mesos / Anys</td>
+                                <td class="p-3 border border-gray-200">Art. 30 Llei 39/2015</td>
+                                <td class="p-3 border border-gray-200">De data a data. Si al mes de venciment no hi ha dia equivalent, venç l'últim dia del mes.</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+
+            <!-- TARJETA 6: APLICACIÓ PRÀCTICA AL WEB I GESTIÓ DE L'AMB (Destacat en verd) -->
+            <section class="bg-gray-50 border border-gray-200 rounded-xl p-6 shadow-sm space-y-4 hover:border-green-600 transition-colors md:col-span-2">
+                <div class="flex items-center gap-2 text-green-700 font-bold text-lg">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9"></path></svg>
+                    <h3>6. Seu Electrònica i Registre General de l'AMB en la Tramitació (amb.cat)</h3>
+                </div>
+                
+                <!-- Bloc amb estil verd específic per a la informació extreta de la web de l'AMB -->
+                <div class="amb-web-highlight text-xs space-y-3">
+                    <p class="font-bold mb-2 text-green-900">🌐 TRAMITACIÓ DIGITAL I CALENDARI DE DIES HÀBILS A L'AMB (amb.cat):</p>
+                    
+                    <div>
+                        <strong class="text-green-800">Seu Electrònica de l'AMB i Registre Electrònic:</strong>
+                        <ul class="list-disc pl-4 mt-1 space-y-1">
+                            <li>El Registre Electrònic de l'AMB està operatiu les 24 hores de tots els dies de l'any. No obstant això, a efectes de còmput de terminis, la presentació en un dia inhàbil s'entén realitzada a la primera hora del primer dia hàbil següent, tal com preveu la normativa de procediment administratiu comú.</li>
+                        </ul>
+                    </div>
+
+                    <div>
+                        <strong class="text-green-800">Calendari de dies inhàbils municipals i metropolitans:</strong>
+                        <ul class="list-disc pl-4 mt-1 space-y-1">
+                            <li>L'AMB publica anualment al seu portal corporatiu el calendari oficial de dies inhàbils a efectes de còmput de terminis en els procediments de la seva competència, coordinant els festius laborals de Barcelona i dels 36 municipis de la metròpolis.</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <!-- TARJETA 7: TRAMPES D'EXAMEN I PREGUNTES TIPUS TEST (Destacat en vermell) -->
+            <section class="bg-gray-50 border border-gray-200 rounded-xl p-6 shadow-sm space-y-4 hover:border-red-600 transition-colors md:col-span-2">
+                <div class="flex items-center gap-2 text-red-600 font-bold text-lg">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"></path></svg>
+                    <h3>7. Trampes i Preguntes Tipus Test Habituals per a C1 AMB</h3>
+                </div>
+                
+                <!-- Bloc amb estil pastel vermell especial per a trampes d'examen -->
+                <div class="highlight-box-custom text-xs space-y-3">
+                    <p class="font-bold mb-2">⚠ PREGUNTES TRAMPA D'EXAMEN EN OPOSICIONS A LA AMB:</p>
+                    
+                    <div>
+                        <strong class="text-red-700">Consideració dels dissabtes com a dies hàbils:</strong>
+                        <ul class="list-disc pl-4 mt-1 space-y-1">
+                            <li>Vigila la trampa clàssica d'examen que afirma que els dissabtes són dies hàbils administratius perquè moltes oficines o registres estan oberts. <strong>Des de la Llei 39/2015, els dissabtes són expressament considerats dies inhàbils</strong> a efectes de còmput de terminis (igual que diumenges i festius).</li>
+                        </ul>
+                    </div>
+
+                    <div>
+                        <strong class="text-red-700">Inici del còmput per dies:</strong>
+                        <ul class="list-disc pl-4 mt-1 space-y-1">
+                            <li>Una altra trampa típica és començar a comptar el termini el mateix dia en què es rep la notificació. <strong>El dia de la notificació mai no compta</strong>; el còmput en dies hàbils s'inicia sempre a partir del <em>següent dia hàbil</em>.</li>
+                        </ul>
+                    </div>
+
+                    <div>
+                        <strong class="text-red-700">Fermesa dels actes nuls de ple dret:</strong>
+                        <ul class="list-disc pl-4 mt-1 space-y-1">
+                            <li>Pregunta trampa: <em>"Pot un acte nul de ple dret esdevenir ferm si transcorre el termini de recurs?"</em> <strong>Fals.</strong> La jurisprudència i la doctrina reiteren que els actes nuls de ple dret no adquireixen mai fermesa pel transcurs del temps, podent ser declarats nuls en qualsevol moment.</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+        </article>
+
+    </main>
+
+    <footer class="w-full border-t border-gray-200 bg-gray-50 py-4 text-center text-xs text-gray-500">
+        <p>© 2026 OpoAMB | &copy; Creat per JOMP</p>
+    </footer>
+
+<script>
+    // Script funcional per al cercador a les pàgines d'apunts
+    const searchInput = document.getElementById('searchInput');
+    
+    if (searchInput) {
+        searchInput.addEventListener('input', function(e) {
+            const searchTerm = e.target.value.toLowerCase().trim();
+            const sections = document.querySelectorAll('main article section');
+
+            sections.forEach(section => {
+                const text = section.textContent.toLowerCase();
+                if (searchTerm === '' || text.includes(searchTerm)) {
+                    section.style.display = '';
+                } else {
+                    section.style.display = 'none';
+                }
+            });
+        });
+    }
+</script>
+</body>
+</html>

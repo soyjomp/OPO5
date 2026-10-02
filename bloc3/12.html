@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="ca">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apunts Tema 12 - Oposicions C1 AMB</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #ffffff;
+            color: #111111;
+        }
+        h1, h2, h3, h4, .font-arial-bold {
+            font-family: Arial, sans-serif;
+            font-weight: bold;
+        }
+        /* Estil per al quadre de trampes o aspectes clau amb fons vermell suau pastel, text negre i vora esquerra vermella */
+        .highlight-box-custom {
+            background-color: #fff5f5;
+            border: 1px solid #fca5a5;
+            border-left: 4px solid #cc0000;
+            padding: 15px;
+            border-radius: 10px;
+            margin: 10px 0;
+            color: #111111;
+        }
+        /* Estil específic per destacar referències i aplicacions pràctiques de la web i gestió de l'AMB */
+        .amb-web-highlight {
+            background-color: #f0fdf4;
+            border: 1px solid #bbf7d0;
+            border-left: 4px solid #16a34a;
+            padding: 15px;
+            border-radius: 10px;
+            margin: 10px 0;
+            color: #111111;
+        }
+    </style>
+</head>
+<body class="bg-white min-h-screen text-gray-900 flex flex-col justify-between">
+
+    <header class="w-full border-b border-gray-200 bg-white sticky top-0 z-50 shadow-sm">
+        <div class="max-w-7xl mx-auto px-4 py-4 flex flex-col sm:flex-row items-center justify-between gap-4">
+            
+            <div class="flex items-center gap-3 w-full sm:w-auto justify-between sm:justify-start">
+                <div class="flex items-center gap-3">
+                    <div class="flex items-center">
+                        <img src="../img/logo.png" alt="Logo AMB" class="h-10 w-auto object-contain" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+                        <span class="text-xs text-red-600 font-bold hidden text-center px-1">img/logo.png</span>
+                    </div>
+                    <h1 class="text-xl sm:text-2xl font-bold tracking-tight text-black">
+                        Oposicions C1 <span class="text-red-600">AMB</span>
+                    </h1>
+                </div>
+
+                <a href="index.html" class="sm:hidden inline-flex items-center gap-1.5 px-3 py-1.5 text-xs font-bold text-gray-700 bg-gray-50 border border-gray-300 hover:bg-red-600 hover:text-white hover:border-red-600 rounded-lg transition-colors">
+                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18"></path></svg>
+                    <span>Inici</span>
+                </a>
+            </div>
+
+            <div class="flex items-center gap-3 w-full sm:w-auto justify-between sm:justify-end">
+                <div class="w-full sm:w-80">
+                    <div class="relative">
+                        <span class="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none text-gray-400">
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg>
+                        </span>
+                        <input type="text" id="searchInput" placeholder="Cercar als apunts..." class="w-full pl-10 pr-4 py-2 bg-gray-50 border border-gray-300 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-red-600 focus:border-transparent transition-all">
+                    </div>
+                </div>
+
+                <a href="../index.html" class="hidden sm:inline-flex items-center gap-1.5 px-3.5 py-2 text-xs font-bold text-gray-700 bg-gray-50 border border-gray-300 hover:bg-red-600 hover:text-white hover:border-red-600 rounded-lg transition-colors shrink-0 shadow-sm">
+                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18"></path></svg>
+                    <span>Tornar a l'Inici</span>
+                </a>
+            </div>
+
+        </div>
+    </header>
+
+    <main class="max-w-6xl mx-auto px-4 py-8 w-full flex-grow space-y-8">
+        
+        <div class="flex items-center gap-2 text-xs font-bold text-gray-500 uppercase tracking-wider">
+            <span>Bloc III (Temari Específic)</span>
+            <span>/</span>
+            <span class="text-red-600">Tema 12</span>
+        </div>
+
+        <div class="border-b-2 border-red-600 pb-4">
+            <h2 class="text-2xl sm:text-3xl font-bold text-black tracking-tight">
+                Comunicacions entre Administracions Públiques.
+            </h2>
+        </div>
+
+        <!-- CONTENIDOR EN COLUMNES RESPONSIVE (FICHAS) -->
+        <article class="grid grid-cols-1 md:grid-cols-2 gap-6 items-start">
+            
+            <!-- TARJETA 1: MARC GENERAL I PRINCIPIS DE RELACIÓ -->
+            <section class="bg-gray-50 border border-gray-200 rounded-xl p-6 shadow-sm space-y-4 hover:border-red-600 transition-colors">
+                <div class="flex items-center gap-2 text-red-600 font-bold text-lg">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"></path></svg>
+                    <h3>1. Marc General i Principis de Relació Interadministrativa</h3>
+                </div>
+                <p class="text-xs text-gray-700 leading-relaxed">
+                    Les relacions entre les diferents administracions públiques (estatal, autonòmica i local) es regeixen pels principis de lleialtat institucional, cooperació, col·laboració i coordinació, recollits a la Llei 40/2015 (LRJSP) i a la Llei 26/2010 de règim jurídic i de procediment de les administracions públiques de Catalunya.
+                </p>
+                <div class="bg-white p-3 rounded-lg border border-gray-200 space-y-2">
+                    <ul class="space-y-1.5 text-xs text-gray-700">
+                        <li class="flex items-start gap-1.5">
+                            <span class="text-red-600 font-bold">▪</span> <span><strong>Lleialtat institucional:</strong> Deure de ponderar, en l'exercici de competències pròpies, la totalitat dels interessos públics implicats i prestar la assistència activa necessària.</span>
+                        </li>
+                        <li class="flex items-start gap-1.5">
+                            <span class="text-red-600 font-bold">▪</span> <span><strong>Obligació de comunicar:</strong> Els òrgans administratius han de dirigir les comunicacions als altres òrgans per mitjans electrònics, garantint la interoperabilitat.</span>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+
+            <!-- TARJETA 2: MITJANS DE COOPERACIÓ I COL·LABORACIÓ -->
+            <section class="bg-gray-50 border border-gray-200 rounded-xl p-6 shadow-sm space-y-4 hover:border-red-600 transition-colors">
+                <div class="flex items-center gap-2 text-red-600 font-bold text-lg">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"></path></svg>
+                    <h3>2. Instruments de Comunicació i Cooperació</h3>
+                </div>
+                <p class="text-xs text-gray-700 leading-relaxed">
+                    La interacció formal s'instrumenta a través de diverses figures jurídiques i tècniques previstes a la legislació de règim jurídic.
+                </p>
+                <div class="bg-white p-3 rounded-lg border border-gray-200 space-y-2">
+                    <ul class="space-y-1.5 text-xs text-gray-700">
+                        <li class="flex items-start gap-1.5">
+                            <span class="text-red-600 font-bold">▪</span> <span><strong>Conferències Sectorials i Comissions:</strong> Òrgans col·legiats de cooperació de composició multilateral (amb presència de l'Estat, comunitats autònomes i ens locals).</span>
+                        </li>
+                        <li class="flex items-start gap-1.5">
+                            <span class="text-red-600 font-bold">▪</span> <span><strong>Convenis i Acords de col·laboració:</strong> Instruments formals d'actuació conjunta per a la realització d'obres, prestació de serveis o compartició de dades i recursos.</span>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+
+            <!-- TARJETA 3: INTEROPERABILITAT I COMUNICACIÓ ELECTRÒNICA -->
+            <section class="bg-gray-50 border border-gray-200 rounded-xl p-6 shadow-sm space-y-4 hover:border-red-600 transition-colors">
+                <div class="flex items-center gap-2 text-red-600 font-bold text-lg">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 3v2m6-2v2M9 19v2m6-2v2M5 9H3m2 6H3m18-6h-2m2 6h-2M7 19h10a2 2 0 002-2V7a2 2 0 00-2-2H7a2 2 0 00-2 2v10a2 2 0 002 2zM9 9h6v6H9V9z"></path></svg>
+                    <h3>3. Interoperabilitat i Transmissió de Dades (ENI / ESI)</h3>
+                </div>
+                <p class="text-xs text-gray-700 leading-relaxed">
+                    Segons la Llei 39/2015 i el RD 4/2010 (Esquema Nacional d'Interoperabilitat), les administracions no poden exigir als ciutadans dades o documents que ja estiguin en poder de qualsevol altra administració.
+                </p>
+                <div class="bg-white p-3 rounded-lg border border-gray-200 space-y-2">
+                    <ul class="space-y-1.5 text-xs text-gray-700">
+                        <li class="flex items-start gap-1.5">
+                            <span class="text-red-600 font-bold">▪</span> <span><strong>Plataformes d'intermediació de dades:</strong> Sistemes electrònics segurs (com SCSP en l'àmbit català o INTEROPERABILIDAD a nivell estatal) que permeten consultar dades d'identitat, residència, cadastre o tributs sense aportar paper.</span>
+                        </li>
+                        <li class="flex items-start gap-1.5">
+                            <span class="text-red-600 font-bold">▪</span> <span><strong>Registre Electrònic de Apoderaments (REA) i SIR:</strong> El Sistema d'Interconnexió de Registres (SIR) permet l'intercanvi segellat de seients registrals entre diferents administracions de l'Estat, CCAA i ens locals.</span>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+
+            <!-- TARJETA 4: DEURE D'INFORMAR I AUXILI -->
+            <section class="bg-gray-50 border border-gray-200 rounded-xl p-6 shadow-sm space-y-4 hover:border-red-600 transition-colors">
+                <div class="flex items-center gap-2 text-red-600 font-bold text-lg">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                    <h3>4. Deure d'Auxili, Informació i Col·laboració</h3>
+                </div>
+                <p class="text-xs text-gray-700 leading-relaxed">
+                    Les administracions públiques han de prestar-se mútua assistència i auxili en el compliment de les seves funcions i obligacions legals.
+                </p>
+                <div class="bg-white p-3 rounded-lg border border-gray-200 space-y-2">
+                    <ul class="space-y-1.5 text-xs text-gray-700">
+                        <li class="flex items-start gap-1.5">
+                            <span class="text-red-600 font-bold">▪</span> <span><strong>Petició d'auxili:</strong> Un òrgan pot sol·licitar a un altre d'una administració diferent la pràctica d'actuacions que exigeixin coneixements tècnics o mitjans de què no disposi.</span>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+
+            <!-- TAULA ADAPTADA AL TEMA (AMB fons negre i lletres blanques a la capçalera) -->
+            <section class="bg-gray-50 border border-gray-200 rounded-xl p-6 shadow-sm space-y-4 hover:border-red-600 transition-colors md:col-span-2">
+                <div class="flex items-center gap-2 text-red-600 font-bold text-lg">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 7v10c0 2.21 3.582 4 8 4s8-1.79 8-4V7M4 7c0 2.21 3.582 4 8 4s8-1.79 8-4M4 7c0-2.21 3.582-4 8-4s8 1.79 8 4m0 5c0 2.21-3.582 4-8 4s-8-1.79-8-4"></path></svg>
+                    <h3>Quadre Comparatiu: Instruments i Mitjans de Relació Interadministrativa</h3>
+                </div>
+                <div class="overflow-x-auto">
+                    <table class="w-full text-xs text-left border-collapse border border-gray-300">
+                        <thead>
+                            <tr class="bg-black text-white">
+                                <th class="border border-gray-300 p-2.5">Instrument / Mecanisme</th>
+                                <th class="border border-gray-300 p-2.5">Àmbit / Concepte Jurídic</th>
+                                <th class="border border-gray-300 p-2.5">Aplicació Pràctica a l'AMB</th>
+                            </tr>
+                        </thead>
+                        <tbody class="bg-white text-gray-800">
+                            <tr class="border-b border-gray-200 hover:bg-gray-50">
+                                <td class="border border-gray-300 p-2.5 font-bold">Conferències Sectorials</td>
+                                <td class="border border-gray-300 p-2.5">Òrgans de cooperació multilaterals Estat-CCAA-Ens Locals.</td>
+                                <td class="border border-gray-300 p-2.5">Coordinació de polítiques supramunicipals i plans d'inversió.</td>
+                            </tr>
+                            <tr class="border-b border-gray-200 hover:bg-gray-50">
+                                <td class="border border-gray-300 p-2.5 font-bold">Convenis de Col·laboració</td>
+                                <td class="border border-gray-300 p-2.5">Acords formals per a la realització conjunta d'obres i serveis.</td>
+                                <td class="border border-gray-300 p-2.5">Convenis entre l'AMB i els 36 ajuntaments metropolitans per a la gestió de serveis.</td>
+                            </tr>
+                            <tr class="border-b border-gray-200 hover:bg-gray-50">
+                                <td class="border border-gray-300 p-2.5 font-bold">Interoperabilitat (SIR / SCSP)</td>
+                                <td class="border border-gray-300 p-2.5">Intercanvi electrònic de seients registrals i dades entre administracions.</td>
+                                <td class="border border-gray-300 p-2.5">Consulta directa de certificats i dades d'ajuntaments, Generalitat i Estat sense paper.</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+
+            <!-- TARJETA 5: APLICACIÓ PRÀCTICA AL WEB I GESTIÓ DE L'AMB (Destacat en verd) -->
+            <section class="bg-gray-50 border border-gray-200 rounded-xl p-6 shadow-sm space-y-4 hover:border-green-600 transition-colors md:col-span-2">
+                <div class="flex items-center gap-2 text-green-700 font-bold text-lg">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9"></path></svg>
+                    <h3>5. Relació de l'AMB amb els Ajuntaments Metropolitans i la Generalitat (Segons amb.cat)</h3>
+                </div>
+                
+                <!-- Bloc amb estil verd específic per a la informació extreta de la web de l'AMB -->
+                <div class="amb-web-highlight text-xs space-y-3">
+                    <p class="font-bold mb-2 text-green-900">🌐 COOPERACIÓ I INTEGRACIÓ INTERADMINISTRATIVA A L'ÀREA METROPOLITANA DE BARCELONA:</p>
+                    
+                    <div>
+                        <strong class="text-green-800">Cooperació amb els 36 municipis metropolitans:</strong>
+                        <ul class="list-disc pl-4 mt-1 space-y-1">
+                            <li>L'AMB exerceix competències supramunicipals coordinant-se estretament amb els ajuntaments de la seva conurbació (Barcelona, l'Hospitalet, Badalona, Cornellà, etc.) a través de convenis de cooperació en matèria de planejament urbanístic, transport públic (TMB), gestió de residus i cicle de l'aigua.</li>
+                            <li>La Seu Electrònica de l'AMB s'integra amb passarel·les de comunicació corporativa i xarxes d'intercanvi de registres per tramitar expedients compartits amb la Generalitat de Catalunya i l'Administració General de l'Estat.</li>
+                        </ul>
+                    </div>
+
+                    <div>
+                        <strong class="text-green-800">Consorcis i Entitats Metropolitanes:</strong>
+                        <ul class="list-disc pl-4 mt-1 space-y-1">
+                            <li>Com a ens supramunicipal de naturalesa territorial, l'AMB utilitza la figura del consorci i els acords interadministratius per cofinançar i gestionar serveis públics de caràcter metropolità.</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <!-- TARJETA 6: TRAMPES D'EXAMEN I PREGUNTES TIPUS TEST (Destacat en vermell) -->
+            <section class="bg-gray-50 border border-gray-200 rounded-xl p-6 shadow-sm space-y-4 hover:border-red-600 transition-colors md:col-span-2">
+                <div class="flex items-center gap-2 text-red-600 font-bold text-lg">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"></path></svg>
+                    <h3>6. Trampes i Preguntes Tipus Test Habituals</h3>
+                </div>
+                
+                <!-- Bloc amb estil pastel vermell especial per a trampes d'examen -->
+                <div class="highlight-box-custom text-xs space-y-3">
+                    <p class="font-bold mb-2">⚠ PREGUNTES TRAMPA D'EXAMEN SOBRE COMUNICACIONS INTERADMINISTRATIVES:</p>
+                    
+                    <div>
+                        <strong class="text-red-700">Obligatorietat de les comunicacions electròniques entre administracions:</strong>
+                        <ul class="list-disc pl-4 mt-1 space-y-1">
+                            <li>Cuidado amb la falsacreença que les administracions es poden comunicar per correu postal ordinari o mitjans no segurs: segons la normativa de procediment, les comunicacions entre òrgans administratius s'han de fer <strong>necessàriament per mitjans electrònics</strong>, garantint la interoperabilitat i seguretat.</li>
+                        </ul>
+                    </div>
+
+                    <div>
+                        <strong class="text-red-700">Aportació de documents de l'administració:</strong>
+                        <ul class="list-disc pl-4 mt-1 space-y-1">
+                            <li>Recorda que les administracions no poden demanar als ciutadans documents que ja hagin estat elaborats per qualsevol altra administració, essent un deure de consulta interadministrativa permès per la interoperabilitat.</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+        </article>
+
+    </main>
+
+    <footer class="w-full border-t border-gray-200 bg-gray-50 py-4 text-center text-xs text-gray-500">
+        <p>© 2026 OpoAMB | &copy; Creat per JOMP</p>
+    </footer>
+
+<script>
+    // Script funcional per al cercador a les pàgines d'apunts
+    const searchInput = document.getElementById('searchInput');
+    
+    if (searchInput) {
+        searchInput.addEventListener('input', function(e) {
+            const searchTerm = e.target.value.toLowerCase().trim();
+            const sections = document.querySelectorAll('main article section');
+
+            sections.forEach(section => {
+                const text = section.textContent.toLowerCase();
+                if (searchTerm === '' || text.includes(searchTerm)) {
+                    section.style.display = '';
+                } else {
+                    section.style.display = 'none';
+                }
+            });
+        });
+    }
+</script>
+</body>
+</html>

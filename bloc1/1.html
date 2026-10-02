@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="ca">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apunts - Tests Oposicions C1 AMB</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #ffffff;
+            color: #111111;
+        }
+        h1, h2, h3, h4, .font-arial-bold {
+            font-family: Arial, sans-serif;
+            font-weight: bold;
+        }
+        /* Estil per al quadre de restriccions/suspensions o aspectes clau amb fons vermell suau pastel */
+        .highlight-box-custom {
+            background-color: #fff5f5;
+            border: 1px solid #fca5a5;
+            border-left: 4px solid #cc0000;
+            padding: 15px;
+            border-radius: 10px;
+            margin: 10px 0;
+            color: #111111;
+        }
+        /* Estil específic per a informació extreta de la web o l'enfocament institucional de l'AMB (verd suau) */
+        .highlight-box-amb {
+            background-color: #f0fdf4;
+            border: 1px solid #bbf7d0;
+            border-left: 4px solid #16a34a;
+            padding: 15px;
+            border-radius: 10px;
+            margin: 10px 0;
+            color: #111111;
+        }
+    </style>
+</head>
+<body class="bg-white min-h-screen text-gray-900 flex flex-col justify-between">
+
+    <header class="w-full border-b border-gray-200 bg-white sticky top-0 z-50 shadow-sm">
+        <div class="max-w-7xl mx-auto px-4 py-4 flex flex-col sm:flex-row items-center justify-between gap-4">
+            
+            <div class="flex items-center gap-3 w-full sm:w-auto justify-between sm:justify-start">
+                <div class="flex items-center gap-3">
+                    <div class="flex items-center">
+                        <img src="../img/logo.png" alt="Logo AMB" class="h-10 w-auto object-contain" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+                        <span class="text-xs text-red-600 font-bold hidden text-center px-1">img/logo.png</span>
+                    </div>
+                    <h1 class="text-xl sm:text-2xl font-bold tracking-tight text-black">
+                        Oposicions C1 <span class="text-red-600">AMB</span>
+                    </h1>
+                </div>
+
+                <a href="index.html" class="sm:hidden inline-flex items-center gap-1.5 px-3 py-1.5 text-xs font-bold text-gray-700 bg-gray-50 border border-gray-300 hover:bg-red-600 hover:text-white hover:border-red-600 rounded-lg transition-colors">
+                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18"></path></svg>
+                    <span>Inici</span>
+                </a>
+            </div>
+
+            <div class="flex items-center gap-3 w-full sm:w-auto justify-between sm:justify-end">
+                <div class="w-full sm:w-80">
+                    <div class="relative">
+                        <span class="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none text-gray-400">
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg>
+                        </span>
+                        <input type="text" id="searchInput" placeholder="Cercar als apunts..." class="w-full pl-10 pr-4 py-2 bg-gray-50 border border-gray-300 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-red-600 focus:border-transparent transition-all">
+                    </div>
+                </div>
+
+                <a href="../index.html" class="hidden sm:inline-flex items-center gap-1.5 px-3.5 py-2 text-xs font-bold text-gray-700 bg-gray-50 border border-gray-300 hover:bg-red-600 hover:text-white hover:border-red-600 rounded-lg transition-colors shrink-0 shadow-sm">
+                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18"></path></svg>
+                    <span>Tornar a l'Inici</span>
+                </a>
+            </div>
+
+        </div>
+    </header>
+
+    <main class="max-w-6xl mx-auto px-4 py-8 w-full flex-grow space-y-8">
+        
+        <div class="flex items-center gap-2 text-xs font-bold text-gray-500 uppercase tracking-wider">
+            <span>Bloc I</span>
+            <span>/</span>
+            <span class="text-red-600">Tema 1</span>
+        </div>
+
+        <div class="border-b-2 border-red-600 pb-4">
+            <h2 class="text-2xl sm:text-3xl font-bold text-black tracking-tight">
+                La Constitució Espanyola de 1978: estructura, contingut i principis generals. Drets i deures fonamentals.
+            </h2>
+        </div>
+
+        <!-- CONTENIDOR EN COLUMNES RESPONSIVE (FICHAS) -->
+        <article class="grid grid-cols-1 md:grid-cols-2 gap-6 items-start">
+            
+            <!-- TARJETA 1: ESTRUCTURA I DATES CLAU -->
+            <section class="bg-gray-50 border border-gray-200 rounded-xl p-6 shadow-sm space-y-4 hover:border-red-600 transition-colors">
+                <div class="flex items-center gap-2 text-red-600 font-bold text-lg">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"></path></svg>
+                    <h3>1. Estructura i Contingut de la CE</h3>
+                </div>
+                <p class="text-xs text-gray-700 leading-relaxed">
+                    Consta de <strong class="text-black">169 articles</strong> estructurats de la següent forma:
+                </p>
+                <div class="bg-white p-3 rounded-lg border border-gray-200 space-y-2">
+                    <span class="text-xs font-bold uppercase tracking-wider text-red-600">Dates i Fites Clau:</span>
+                    <ul class="space-y-1.5 text-xs text-gray-700">
+                        <li class="flex items-start gap-1.5">
+                            <span class="text-red-600 font-bold">▪</span> <span><strong>31 oct 1978:</strong> Aprovació per les Corts Generals (Congrés i Senat).</span>
+                        </li>
+                        <li class="flex items-start gap-1.5">
+                            <span class="text-red-600 font-bold">▪</span> <span><strong>6 des 1978:</strong> Ratificació per referèndum popular.</span>
+                        </li>
+                        <li class="flex items-start gap-1.5">
+                            <span class="text-red-600 font-bold">▪</span> <span><strong>27 des 1978:</strong> Sanció i promulgació pel Rei Joan Carles I.</span>
+                        </li>
+                        <li class="flex items-start gap-1.5">
+                            <span class="text-red-600 font-bold">▪</span> <span><strong>29 des 1978:</strong> Publicació al BOE i entrada en vigor.</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="bg-white p-3 rounded-lg border border-gray-200 space-y-1 text-xs text-gray-700">
+                    <p><strong>Preàmbul:</strong> Sense força jurídica ni caràcter normatiu (merament declaratiu).</p>
+                    <p><strong>Títols principals:</strong> Títol Preliminar (1-9), Títol I (10-55), Títols II-IX (Institucions i Poders), Títol X Reforma (166-169).</p>
+                    <p><strong>Part Final:</strong> 4 Disposicions Addicionals, 9 Transitòries, 1 Derogatòria i 1 Final.</p>
+                </div>
+            </section>
+
+            <!-- TARJETA 2: PRINCIPIS GENERALS -->
+            <section class="bg-gray-50 border border-gray-200 rounded-xl p-6 shadow-sm space-y-4 hover:border-red-600 transition-colors">
+                <div class="flex items-center gap-2 text-red-600 font-bold text-lg">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 6l3 1m0 0l-3 9a5.002 5.002 0 006.001 0M6 7l3 9M6 7l6-2m6 2l3-1m-3 1l-3 9a5.002 5.002 0 006.001 0M18 7l3 9m-3-9l-6-2m0-2v2m0 16V5m0 16H9m3 0h3"></path></svg>
+                    <h3>2. Títol Preliminar (Articles Clau desmembrats)</h3>
+                </div>
+                <p class="text-xs text-gray-700 leading-relaxed">
+                    Detall article per article dels principis fonamentals de l'Estat:
+                </p>
+                <div class="bg-white p-3 rounded-lg border border-gray-200 space-y-2">
+                    <ul class="space-y-1.5 text-xs text-gray-700">
+                        <li class="flex items-start gap-1.5">
+                            <span class="text-red-600 font-bold">▪</span> <span><strong>Art. 1.1:</strong> Espanya es constitueix en un Estat <strong>social i democràtic de Dret</strong>. Valors superiors: llibertat, justícia, igualtat i pluralisme polític.</span>
+                        </li>
+                        <li class="flex items-start gap-1.5">
+                            <span class="text-red-600 font-bold">▪</span> <span><strong>Art. 1.2:</strong> La sobirania nacional resideix en el <strong>poble espanyol</strong>, del qual emanen els poders de l'Estat.</span>
+                        </li>
+                        <li class="flex items-start gap-1.5">
+                            <span class="text-red-600 font-bold">▪</span> <span><strong>Art. 1.3:</strong> La forma política de l'Estat espanyol és la <strong>Monarquia parlamentària</strong>.</span>
+                        </li>
+                        <li class="flex items-start gap-1.5">
+                            <span class="text-red-600 font-bold">▪</span> <span><strong>Art. 2:</strong> Indissoluble unitat de la Nació espanyola i dret a l'autonomia de les nacionalitats i regions.</span>
+                        </li>
+                        <li class="flex items-start gap-1.5">
+                            <span class="text-red-600 font-bold">▪</span> <span><strong>Art. 3.1 & 3.2:</strong> El castellà és la llengua oficial de l'Estat; les altres llengües espanyoles seran també oficials a les respectives CCAA.</span>
+                        </li>
+                        <li class="flex items-start gap-1.5">
+                            <span class="text-red-600 font-bold">▪</span> <span><strong>Art. 9.3:</strong> Garanteix el principi de legalitat, jerarquia normativa, publicitat, irretroactivitat de disposicions no favorables, seguretat jurídica, responsabilitat i interdicció de l'arbitrarietat.</span>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+
+            <!-- TARJETA 3: DRETS I DEURES FONAMENTALS -->
+            <section class="bg-gray-50 border border-gray-200 rounded-xl p-6 shadow-sm space-y-4 hover:border-red-600 transition-colors md:col-span-2">
+                <div class="flex items-center gap-2 text-red-600 font-bold text-lg">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z"></path></svg>
+                    <h3>3. Títol I: Drets i Deures Fonamentals (Arts. 10-55 Desmembrats)</h3>
+                </div>
+                <p class="text-xs text-gray-700 leading-relaxed">
+                    L'<strong>Art. 10</strong> actua com a pòrtic (dignitat de la persona i drets inherents). Estructuració detallada i nivells de protecció de cada capítol:
+                </p>
+                
+                <div class="bg-white p-3 rounded-lg border border-gray-200 space-y-2 mb-4">
+                    <span class="text-xs font-bold uppercase tracking-wider text-red-600">Articles específics destacats:</span>
+                    <ul class="space-y-1.5 text-xs text-gray-700">
+                        <li class="flex items-start gap-1.5">
+                            <span class="text-red-600 font-bold">▪</span> <span><strong>Art. 11:</strong> Regulació de la nacionalitat espanyola (cap espanyol d'origen pot ser privat de la seva nacionalitat).</span>
+                        </li>
+                        <li class="flex items-start gap-1.5">
+                            <span class="text-red-600 font-bold">▪</span> <span><strong>Art. 12:</strong> La majoria d'edat dels espanyols s'estableix als <strong>18 anys</strong>.</span>
+                        </li>
+                        <li class="flex items-start gap-1.5">
+                            <span class="text-red-600 font-bold">▪</span> <span><strong>Art. 13:</strong> Drets dels estrangers (extradició, dret d'asil, sufragi passiu a municipals).</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Taula integrada amb els nivells de garantia i protecció -->
+                <div class="overflow-x-auto rounded-lg border border-gray-200">
+                    <table class="w-full border-collapse text-xs bg-white">
+                        <thead>
+                            <tr class="bg-gray-900 text-white font-bold">
+                                <th class="p-3 text-left">Capítol / Secció</th>
+                                <th class="p-3 text-left">Articles</th>
+                                <th class="p-3 text-left">Nivell de Garantia i Protecció</th>
+                            </tr>
+                        </thead>
+                        <tbody class="divide-y divide-gray-200 text-gray-700">
+                            <tr>
+                                <td class="p-3"><strong>Capítol II, Secció 1a</strong><br><span class="text-[11px] text-gray-500">(Drets Fonamentals i Llibertats Públiques)</span></td>
+                                <td class="p-3 font-bold">15 a 29</td>
+                                <td class="p-3"><strong>Màxima protecció:</strong> Vinculen tots els poders públics. Regulació només per <strong>Llei Orgànica</strong> (respectant el seu contingut essencial). Protecció judicial mitjançant el procediment basat en els principis de <strong>preferència i sumari</strong>, i tutelables en darrera instància via <strong>Recurs d'Empara</strong> davant el Tribunal Constitucional.</td>
+                            </tr>
+                            <tr>
+                                <td class="p-3"><strong>Principi d'Igualtat</strong><br><span class="text-[11px] text-gray-500">(Pòrtic del Capítol II)</span></td>
+                                <td class="p-3 font-bold">14</td>
+                                <td class="p-3"><strong>Protecció alta:</strong> No requereix Llei Orgànica per al seu desenvolupament, però sí gaudeix de tutela judicial pel <strong>procediment preferent i sumari</strong> i és totalment apte per al <strong>Recurs d'Empara</strong>.</td>
+                            </tr>
+                            <tr>
+                                <td class="p-3"><strong>Capítol II, Secció 2a</strong><br><span class="text-[11px] text-gray-500">(Drets i deures dels ciutadans)</span></td>
+                                <td class="p-3 font-bold">30 a 38</td>
+                                <td class="p-3"><strong>Protecció mitjana:</strong> Vinculen directament, però es regulen per <strong>Llei Ordinària</strong> (amb reserva de llei salvaguardant el contingut essencial). No disposen de procediment preferent/sumari ni de Recurs d'Empara (a excepció de l'objecció de consciència de l'art. 30).</td>
+                            </tr>
+                            <tr>
+                                <td class="p-3"><strong>Capítol III</strong><br><span class="text-[11px] text-gray-500">(Principis Rectors de la Política Social)</span></td>
+                                <td class="p-3 font-bold">39 a 52</td>
+                                <td class="p-3"><strong>Protecció ordinària:</strong> No són drets directament al·legables davant els tribunals, sinó que han d'informar la legislació positiva, la pràctica judicial i l'actuació dels poders públics. Només podran ser al·legats d'acord amb el que disposin les lleis que els desenvolupin.</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+
+            <!-- TARJETA 4: GARANTIES I SUSPENSIÓ DE DRETS -->
+            <section class="bg-gray-50 border border-gray-200 rounded-xl p-6 shadow-sm space-y-4 hover:border-red-600 transition-colors">
+                <div class="flex items-center gap-2 text-red-600 font-bold text-lg">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path></svg>
+                    <h3>4. Garanties i Suspensió (Arts. 53-55)</h3>
+                </div>
+                
+                <!-- Bloc amb estil pastel vermell de restriccions/suspensions -->
+                <div class="highlight-box-custom text-xs space-y-2">
+                    <p><strong>Art. 53.1:</strong> Vinculació de tots els poders públics als drets del Capítol II. Reserva de llei per al seu respectiu contingut essencial.</p>
+                    <p><strong>Art. 53.2:</strong> Protecció judicial mitjançant procediment basat en els principis de <strong>preferència i sumari</strong>, i recurs d'empara al TC.</p>
+                    <p><strong>Art. 54:</strong> El <strong>Defensor del Poble</strong> com a alt comissionat de les Corts Generals.</p>
+                    <p><strong>Art. 55.1 (Suspensió col·lectiva):</strong> Sota estats d'<strong>excepció o setge</strong> (afecta arts. 17, 18.2, 18.3, 19, 20.1.a/d, 20.5, 21, 28.2 i 37.2).</p>
+                    <p><strong>Art. 55.2 (Suspensió individual):</strong> Per a investigacions de <strong>bandes armades o terroristes</strong>, afectant específicament els articles <strong>17.2</strong>, <strong>18.2</strong> i <strong>18.3</strong>.</p>
+                </div>
+            </section>
+
+            <!-- TARJETA 5: REFORMA CONSTITUCIONAL -->
+            <section class="bg-gray-50 border border-gray-200 rounded-xl p-6 shadow-sm space-y-4 hover:border-red-600 transition-colors">
+                <div class="flex items-center gap-2 text-red-600 font-bold text-lg">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"></path></svg>
+                    <h3>5. Reforma Constitucional (Títol X - Arts. 166-169)</h3>
+                </div>
+                <div class="bg-white p-3 rounded-lg border border-gray-200 space-y-2 text-xs text-gray-700">
+                    <p><strong>Art. 166:</strong> Iniciativa de reforma regulada segons els tràmits del projecte de llei ordinària/constitucional (Govern, Congrés, Senat i CCAA).</p>
+                    <p><strong>Art. 167 (Reforma Ordinària):</strong> Aprovació per <strong>3/5</strong> de cada Cambra. Si no hi ha acord, comissió paritària i votació al Congrés per <strong>2/3</strong> amb Senat per majoria absoluta. Referèndum només si el sol·liciten 1/10 part dels membres de qualsevol cambra.</p>
+                    <p><strong>Art. 168 (Reforma Agravada):</strong> Per a revisió total, Títol Preliminar, Secció 1a del Capítol II del Títol I, o Títol II. Requereix votació favorable de <strong>2/3</strong> de cada Cambra, <strong>dissolució immediata</strong>, eleccions generals, ratificació per <strong>2/3</strong> de les noves cambres i <strong>referèndum obligatori</strong>.</p>
+                    <p><strong>Art. 169:</strong> No es pot iniciar cap reforma constitucional en temps de guerra o d'estats d'alarma, excepció o setge.</p>
+                </div>
+            </section>
+
+            <!-- TARJETA 6: ENFOCAMENT INSTITUCIONAL I VINCULACIÓ AMB L'ADMINISTRACIÓ LOCAL (AMB) -->
+            <section class="bg-gray-50 border border-gray-200 rounded-xl p-6 shadow-sm space-y-4 hover:border-red-600 transition-colors md:col-span-2">
+                <div class="flex items-center gap-2 text-green-600 font-bold text-lg">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"></path></svg>
+                    <h3>6. Marc Constitucional de l'Administració Local i l'AMB (Focus Opo AMB)</h3>
+                </div>
+                
+                <!-- Bloc amb estil verd suau per a la informació institucional / web de l'AMB -->
+                <div class="highlight-box-amb text-xs space-y-3">
+                    <p class="font-bold mb-2">🌿 APLICACIÓ PRÀCTICA I PREGUNTES DE TEST EN ENTS SUPRAMUNICIPALS:</p>
+                    
+                    <div>
+                        <strong class="text-green-800">El marc de l'autonomia local (Art. 137 i 140 CE):</strong>
+                        <ul class="list-disc pl-4 mt-1 space-y-1">
+                            <li>L'Estat s'organitza territorialment en municipis, províncies i en les comunitats autònomes que es constitueixen. Totes aquestes entitats gaudeixen d'<strong>autonomia</strong> per a la gestió dels seus interessos (Art. 137 CE).</li>
+                            <li>L'Àrea Metropolitana de Barcelona (AMB), creada sota l'empara de la legislació de règim local català en desplegament del marc constitucional, es configura com una <strong>entitat local d'àmbit supramunicipal</strong> amb personalitat jurídica pròpia.</li>
+                        </ul>
+                    </div>
+
+                    <div>
+                        <strong class="text-green-800">Principis d'actuació pública i servei a la ciutadania (Art. 103.1 CE):</strong>
+                        <ul class="list-disc pl-4 mt-1 space-y-1">
+                            <li>L'Administració pública serveix amb objectivitat els interessos generals i actua d'acord amb els principis d'<strong>eficàcia, jerarquia, desentralització, desconcentració i coordinació</strong>, amb submissió plena a la llei i al Dret.</li>
+                            <li>Aquests principis fonamenten directament la manera com l'AMB coordina els 36 municipis metropolitans en matèries com transport, medi ambient i urbanisme.</li>
+                        </ul>
+                    </div>
+
+                    <div>
+                        <strong class="text-green-800">El principi d'igualtat en l'accés a l'ocupació pública (Art. 23.2 i 103.3 CE):</strong>
+                        <ul class="list-disc pl-4 mt-1 space-y-1">
+                            <li>Els ciutadans tenen dret a accedir en condicions d'igualtat a les funcions i càrrecs públics, amb els requisits que assenyalin les lleis. La llei ha de garantir el mèrit i la capacitat en l'accés a la funció pública (com en els processos selectius d'oposicions C1 de l'AMB).</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+        </article>
+
+    </main>
+
+    <footer class="w-full border-t border-gray-200 bg-gray-50 py-4 text-center text-xs text-gray-500">
+        <p>© 2026 OpoAMB | &copy; Creat per JOMP</p>
+    </footer>
+
+<script>
+    // Script funcional per al cercador a les pàgines d'apunts
+    const searchInput = document.getElementById('searchInput');
+    
+    if (searchInput) {
+        searchInput.addEventListener('input', function(e) {
+            const searchTerm = e.target.value.toLowerCase().trim();
+            const sections = document.querySelectorAll('main article section');
+
+            sections.forEach(section => {
+                const text = section.textContent.toLowerCase();
+                if (searchTerm === '' || text.includes(searchTerm)) {
+                    section.style.display = '';
+                } else {
+                    section.style.display = 'none';
+                }
+            });
+        });
+    }
+</script>
+</body>
+</html>

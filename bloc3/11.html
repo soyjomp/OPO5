@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="ca">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apunts - Tests Oposicions C1 AMB</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #ffffff;
+            color: #111111;
+        }
+        h1, h2, h3, h4, .font-arial-bold {
+            font-family: Arial, sans-serif;
+            font-weight: bold;
+        }
+        /* Estil per al quadre de restriccions/suspensions o aspectes clau amb fons vermell suau pastel, text negre i vora esquerra vermella */
+        .highlight-box-custom {
+            background-color: #fff5f5;
+            border: 1px solid #fca5a5;
+            border-left: 4px solid #cc0000;
+            padding: 15px;
+            border-radius: 10px;
+            margin: 10px 0;
+            color: #111111;
+        }
+        /* Estil específic per destacar referències i aplicacions pràctiques de la web i gestió de l'AMB */
+        .amb-web-highlight {
+            background-color: #f0fdf4;
+            border: 1px solid #bbf7d0;
+            border-left: 4px solid #16a34a;
+            padding: 15px;
+            border-radius: 10px;
+            margin: 10px 0;
+            color: #111111;
+        }
+    </style>
+</head>
+<body class="bg-white min-h-screen text-gray-900 flex flex-col justify-between">
+
+    <header class="w-full border-b border-gray-200 bg-white sticky top-0 z-50 shadow-sm">
+        <div class="max-w-7xl mx-auto px-4 py-4 flex flex-col sm:flex-row items-center justify-between gap-4">
+            
+            <div class="flex items-center gap-3 w-full sm:w-auto justify-between sm:justify-start">
+                <div class="flex items-center gap-3">
+                    <div class="flex items-center">
+                        <img src="../img/logo.png" alt="Logo AMB" class="h-10 w-auto object-contain" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+                        <span class="text-xs text-red-600 font-bold hidden text-center px-1">img/logo.png</span>
+                    </div>
+                    <h1 class="text-xl sm:text-2xl font-bold tracking-tight text-black">
+                        Oposicions C1 <span class="text-red-600">AMB</span>
+                    </h1>
+                </div>
+
+                <a href="index.html" class="sm:hidden inline-flex items-center gap-1.5 px-3 py-1.5 text-xs font-bold text-gray-700 bg-gray-50 border border-gray-300 hover:bg-red-600 hover:text-white hover:border-red-600 rounded-lg transition-colors">
+                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18"></path></svg>
+                    <span>Inici</span>
+                </a>
+            </div>
+
+            <div class="flex items-center gap-3 w-full sm:w-auto justify-between sm:justify-end">
+                <div class="w-full sm:w-80">
+                    <div class="relative">
+                        <span class="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none text-gray-400">
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg>
+                        </span>
+                        <input type="text" id="searchInput" placeholder="Cercar als apunts..." class="w-full pl-10 pr-4 py-2 bg-gray-50 border border-gray-300 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-red-600 focus:border-transparent transition-all">
+                    </div>
+                </div>
+
+                <a href="../index.html" class="hidden sm:inline-flex items-center gap-1.5 px-3.5 py-2 text-xs font-bold text-gray-700 bg-gray-50 border border-gray-300 hover:bg-red-600 hover:text-white hover:border-red-600 rounded-lg transition-colors shrink-0 shadow-sm">
+                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18"></path></svg>
+                    <span>Tornar a l'Inici</span>
+                </a>
+            </div>
+
+        </div>
+    </header>
+
+    <main class="max-w-6xl mx-auto px-4 py-8 w-full flex-grow space-y-8">
+        
+        <div class="flex items-center gap-2 text-xs font-bold text-gray-500 uppercase tracking-wider">
+            <span>Bloc III (Temari Específic)</span>
+            <span>/</span>
+            <span class="text-red-600">Tema 11</span>
+        </div>
+
+        <div class="border-b-2 border-red-600 pb-4">
+            <h2 class="text-2xl sm:text-3xl font-bold text-black tracking-tight">
+                Comunicacions de la ciutadania amb l'Administració: La instància i altres mecanismes.
+            </h2>
+        </div>
+
+        <!-- CONTENIDOR EN COLUMNES RESPONSIVE (FICHAS) -->
+        <article class="grid grid-cols-1 md:grid-cols-2 gap-6 items-start">
+            
+            <!-- TARJETA 1: LA SOL·LICITUD O INSTÀNCIA -->
+            <section class="bg-gray-50 border border-gray-200 rounded-xl p-6 shadow-sm space-y-4 hover:border-red-600 transition-colors">
+                <div class="flex items-center gap-2 text-red-600 font-bold text-lg">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path></svg>
+                    <h3>1. La Instància o Sol·licitud</h3>
+                </div>
+                <p class="text-xs text-gray-700 leading-relaxed">
+                    Document bàsic mitjançant el qual qualsevol persona física o jurídica s'adreça a l'Administració per iniciar un procediment, formular una petició o exercir un dret d'acord amb la Llei 39/2015 del Procediment Administratiu Comú de les Administracions Públiques (LPACAP).
+                </p>
+                <div class="bg-white p-3 rounded-lg border border-gray-200 space-y-2">
+                    <ul class="space-y-1.5 text-xs text-gray-700">
+                        <li class="flex items-start gap-1.5">
+                            <span class="text-red-600 font-bold">▪</span> <span><strong>Elements essencials (art. 66 LPACAP):</strong> Nom i cognoms de l'interessat (i identificació del mitjà electrònic o adreça a efectes de notificació), fets, raons i petició clara, lloc, data i signatura de l'òrgan al qual s'adreça.</span>
+                        </li>
+                        <li class="flex items-start gap-1.5">
+                            <span class="text-red-600 font-bold">▪</span> <span><strong>Esmena de deficiències:</strong> Si la sol·licitud no reuneix els requisits, es requerirà a l'interessat perquè en un termini de <strong>10 dies</strong> esmeni la falta o acompanyi els documents preceptius, amb indicació que, si no ho fes, se li tindrà per desistir de la seva petició, prèvia resolució dictada en els termes de l'article 21.</span>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+
+            <!-- TARJETA 2: ALTRES MECANISMES DE COMUNICACIÓ -->
+            <section class="bg-gray-50 border border-gray-200 rounded-xl p-6 shadow-sm space-y-4 hover:border-red-600 transition-colors">
+                <div class="flex items-center gap-2 text-red-600 font-bold text-lg">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"></path></svg>
+                    <h3>2. Altres Mecanismes de Comunicació de Tercers</h3>
+                </div>
+                <p class="text-xs text-gray-700 leading-relaxed">
+                    A banda de la sol·licitud o instància ordinària, la normativa preveu diverses vies de comunicació ciutadana i d'exercici de drets.
+                </p>
+                <div class="bg-white p-3 rounded-lg border border-gray-200 space-y-2">
+                    <ul class="space-y-1.5 text-xs text-gray-700">
+                        <li class="flex items-start gap-1.5">
+                            <span class="text-red-600 font-bold">▪</span> <span><strong>Declaració responsable i Comunicació prèvia (art. 69 LPACAP):</strong> Documents on el ciutadà manifesta sota la seva responsabilitat complir els requisits exigits per la normativa vigent per exercir un dret o iniciar una activitat, habilitant l'actuació des del moment de la seva presentació quan correspongui.</span>
+                        </li>
+                        <li class="flex items-start gap-1.5">
+                            <span class="text-red-600 font-bold">▪</span> <span><strong>Queixes, suggeriments i reclamacions:</strong> Canals orientats a avaluar la qualitat dels serveis públics i millorar l'atenció ciutadana, sense tenir en cap cas la naturalesa jurídica d'un recurs administratiu ni suspendre terminis.</span>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+
+            <!-- TARJETA 3: PRESENTACIÓ DE DOCUMENTS I REGISTRE -->
+            <section class="bg-gray-50 border border-gray-200 rounded-xl p-6 shadow-sm space-y-4 hover:border-red-600 transition-colors">
+                <div class="flex items-center gap-2 text-red-600 font-bold text-lg">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"></path></svg>
+                    <h3>3. Llocs de Presentació i Registre Electrònic</h3>
+                </div>
+                <p class="text-xs text-gray-700 leading-relaxed">
+                    On i com es poden presentar les sol·licituds adreçades a l'Administració d'acord amb l'article 16 de la Llei 39/2015.
+                </p>
+                <div class="bg-white p-3 rounded-lg border border-gray-200 space-y-2">
+                    <ul class="space-y-1.5 text-xs text-gray-700">
+                        <li class="flex items-start gap-1.5">
+                            <span class="text-red-600 font-bold">▪</span> <span><strong>Llocs de presentació:</strong> A través del registre electrònic de l'administració destinatària, oficines de correus (en la forma reglamentària), representacions diplomàtiques o oficines d'assistència en matèria de registres.</span>
+                        </li>
+                        <li class="flex items-start gap-1.5">
+                            <span class="text-red-600 font-bold">▪</span> <span><strong>Funcionament del Registre:</strong> El registre electrònic emet una recepció automàtica amb el segell de temps i número d'entrada/sortida per garantir la integritat i validesa temporal de la presentació.</span>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+
+            <!-- TARJETA 4: REPRESENTACIÓ I IDENTIFICACIÓ -->
+            <section class="bg-gray-50 border border-gray-200 rounded-xl p-6 shadow-sm space-y-4 hover:border-red-600 transition-colors">
+                <div class="flex items-center gap-2 text-red-600 font-bold text-lg">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"></path></svg>
+                    <h3>4. Representació i Signatura</h3>
+                </div>
+                <p class="text-xs text-gray-700 leading-relaxed">
+                    Els interessats amb capacitat d'obrar poden actuar per mitjà de representant i utilitzar sistemes de signatura electrònica reconeguts.
+                </p>
+                <div class="bg-white p-3 rounded-lg border border-gray-200 space-y-2">
+                    <ul class="space-y-1.5 text-xs text-gray-700">
+                        <li class="flex items-start gap-1.5">
+                            <span class="text-red-600 font-bold">▪</span> <span><strong>Acreditar la representació:</strong> Es pot fer mitjançant apoderament <em>apud acta</em> (efectuat per compareixença presencial o electrònica), document públic o mitjançant l'acreditació de la inscripció en el registre electrònic d'apoderaments de l'administració pública corresponent.</span>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+
+            <!-- TARJETA 5: TAULA COMPARATIVA DE MECANISMES DE COMUNICACIÓ (Ampliada) -->
+            <section class="bg-gray-50 border border-gray-200 rounded-xl p-6 shadow-sm space-y-4 hover:border-red-600 transition-colors md:col-span-2">
+                <div class="flex items-center gap-2 text-red-600 font-bold text-lg">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 10h18M3 14h18m-9-4v8m-7 0h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z"></path></svg>
+                    <h3>Quadre resum comparatiu: Mecanismes de Comunicació i Relació amb l'Administració</h3>
+                </div>
+                <div class="overflow-x-auto">
+                    <table class="w-full text-xs text-left border border-gray-200 rounded-lg overflow-hidden">
+                        <thead class="bg-black text-white font-bold">
+                            <tr>
+                                <th class="p-3">Mecanisme / Document</th>
+                                <th class="p-3">Marc Legal / Concepte</th>
+                                <th class="p-3">Efectes Principals</th>
+                                <th class="p-3">Règim d'Obligatorietat</th>
+                            </tr>
+                        </thead>
+                        <tbody class="divide-y divide-gray-200 bg-white">
+                            <tr class="hover:bg-gray-50">
+                                <td class="p-3 font-bold text-gray-900">Sol·licitud / Instància Genèrica</td>
+                                <td class="p-3 text-gray-700">Art. 66 LPACAP. Inici de procediments a instància de part.</td>
+                                <td class="p-3 text-gray-700">Obliga l'Administració a instruir i resoldre expressament.</td>
+                                <td class="p-3 text-gray-700">Electrònica per a persones jurídiques; opcional per a persones físiques.</td>
+                            </tr>
+                            <tr class="hover:bg-gray-50">
+                                <td class="p-3 font-bold text-gray-900">Declaració Responsable</td>
+                                <td class="p-3 text-gray-700">Art. 69 LPACAP. Manifestació de compliment de requisits.</td>
+                                <td class="p-3 text-gray-700">Habilita l'exercici de l'activitat des de la presentació.</td>
+                                <td class="p-3 text-gray-700">Subjecte a comprovació posterior per part de l'Administració.</td>
+                            </tr>
+                            <tr class="hover:bg-gray-50">
+                                <td class="p-3 font-bold text-gray-900">Comunicació Prèvia</td>
+                                <td class="p-3 text-gray-700">Art. 69 LPACAP. Lliurament de dades requerides prèvies.</td>
+                                <td class="p-3 text-gray-700">Permet l'inici d'actuacions sota control posterior.</td>
+                                <td class="p-3 text-gray-700">Imprescindible aportació prèvia de documentació vàlida.</td>
+                            </tr>
+                            <tr class="hover:bg-gray-50">
+                                <td class="p-3 font-bold text-gray-900">Queixes i Suggeriments</td>
+                                <td class="p-3 text-gray-700">Títol VI LPACAP / Normativa interna de qualitat.</td>
+                                <td class="p-3 text-gray-700">Millora de serveis; no constitueixen recursos administratius.</td>
+                                <td class="p-3 text-gray-700">Canals oberts sense efectes suspensius de procediments.</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+
+            <!-- TARJETA 6: APLICACIÓ PRÀCTICA AL WEB I GESTIÓ DE L'AMB (Destacat en verd) -->
+            <section class="bg-gray-50 border border-gray-200 rounded-xl p-6 shadow-sm space-y-4 hover:border-green-600 transition-colors md:col-span-2">
+                <div class="flex items-center gap-2 text-green-700 font-bold text-lg">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9"></path></svg>
+                    <h3>5. Instància Genèrica i Canals de Comunicació Ciutadana a l'AMB (Segons amb.cat)</h3>
+                </div>
+                
+                <!-- Bloc amb estil verd específic per a la informació extreta de la web de l'AMB -->
+                <div class="amb-web-highlight text-xs space-y-3">
+                    <p class="font-bold mb-2 text-green-900">🌐 TRÀMITS EN LÍNIA I INSTÀNCIA GENÈRICA METROPOLITANA:</p>
+                    
+                    <div>
+                        <strong class="text-green-800">La Instància Genèrica de la Seu Electrònica de l'AMB:</strong>
+                        <ul class="list-disc pl-4 mt-1 space-y-1">
+                            <li>A través del web oficial <code>amb.cat</code>, el portal de tràmits permet a la ciutadania presentar la <strong>instància genèrica</strong> i sol·licituds específiques (relatives a transport, mobilitat, habitatge, medi ambient o tributs metropolitans) les 24 hores del dia, mitjançant identificació digital reconeguda (idCAT, Cl@ve, certificat digital).</li>
+                        </ul>
+                    </div>
+
+                    <div>
+                        <strong class="text-green-800">Bústia de Suggeriments i Reclamacions metropolitanes:</strong>
+                        <ul class="list-disc pl-4 mt-1 space-y-1">
+                            <li>L'AMB disposa de canals directes d'atenció ciutadana per recollir incidències sobre serveis públics metropolitans (com autobusos TMB, platges, parcs metropolitans o cicle de l'aigua), garantint una resposta orientada a l'eficiència administrativa i la qualitat de servei als 36 municipis integrants.</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <!-- TARJETA 7: TRAMPES D'EXAMEN I PREGUNTES TIPUS TEST (Destacat en vermell) -->
+            <section class="bg-gray-50 border border-gray-200 rounded-xl p-6 shadow-sm space-y-4 hover:border-red-600 transition-colors md:col-span-2">
+                <div class="flex items-center gap-2 text-red-600 font-bold text-lg">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"></path></svg>
+                    <h3>6. Trampes i Preguntes Tipus Test Habituals</h3>
+                </div>
+                
+                <!-- Bloc amb estil pastel vermell especial per a trampes d'examen -->
+                <div class="highlight-box-custom text-xs space-y-3">
+                    <p class="font-bold mb-2">⚠ PREGUNTES TRAMPA D'EXAMEN SOBRE SOL·LICITUDS I INSTÀNCIES (ENFOCAMENT C1 AMB):</p>
+                    
+                    <div>
+                        <strong class="text-red-700">Termini d'esmena en la instància:</strong>
+                        <ul class="list-disc pl-4 mt-1 space-y-1">
+                            <li>Vigila si a l'examen confonen el termini d'esmena: el termini legal general de la LPACAP per esmenar la sol·licitud o aportar documents és de <strong>10 dies</strong> (ampliable de forma motivada fins a 5 dies més a petició prèvia o d'ofici quan tingui caràcter col·lectiu).</li>
+                        </ul>
+                    </div>
+
+                    <div>
+                        <strong class="text-red-700">Obligatorietat de mitjans electrònics per a persones físiques:</strong>
+                        <ul class="list-disc pl-4 mt-1 space-y-1">
+                            <li>Recorda que les persones físiques <em>poden triar</em> en tot moment si comuniquen amb l'Administració per mitjans electrònics o en paper, a diferència de les persones jurídiques o col·legiats professionals, per als quals l'ús de mitjans electrònics és obligatori en tot cas.</li>
+                        </ul>
+                    </div>
+
+                    <div>
+                        <strong class="text-red-700">Naturalesa de les queixes en relació amb els recursos:</strong>
+                        <ul class="list-disc pl-4 mt-1 space-y-1">
+                            <li>Atenció a les preguntes trampa que indiquen que presentar una queixa o suggeriment interromp els terminis per interposar un recurs administratiu: <strong>Fals</strong>, les queixes no tenen efectes suspensius ni constitueixen recursos.</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+        </article>
+
+    </main>
+
+    <footer class="w-full border-t border-gray-200 bg-gray-50 py-4 text-center text-xs text-gray-500">
+        <p>© 2026 OpoAMB | &copy; Creat per JOMP</p>
+    </footer>
+
+<script>
+    // Script funcional per al cercador a les pàgines d'apunts
+    const searchInput = document.getElementById('searchInput');
+    
+    if (searchInput) {
+        searchInput.addEventListener('input', function(e) {
+            const searchTerm = e.target.value.toLowerCase().trim();
+            const sections = document.querySelectorAll('main article section');
+
+            sections.forEach(section => {
+                const text = section.textContent.toLowerCase();
+                if (searchTerm === '' || text.includes(searchTerm)) {
+                    section.style.display = '';
+                } else {
+                    section.style.display = 'none';
+                }
+            });
+        });
+    }
+</script>
+</body>
+</html>
