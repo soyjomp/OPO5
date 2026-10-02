@@ -1,0 +1,559 @@
+<!DOCTYPE html>
+<html lang="ca">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>C1 AMB - TEST DINÀMIC: Pressupost i Execució de Despesa | OpoAMB</title>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg-body: #ffffff;
+      --bg-card: #f9fafb; 
+      --accent: #dc2626;  
+      --dark: #000000;
+      --gray-light: #f3f4f6;
+      --border-color: #e5e7eb;
+      --text-main: #1f2937;
+      --text-dim: #6b7280;
+    }
+
+    body {
+      background-color: var(--bg-body);
+      color: var(--text-main);
+      font-family: 'Outfit', sans-serif;
+      margin: 0; padding: 20px;
+    }
+
+    .container { max-width: 800px; margin: 80px auto 40px; }
+
+    #back-button, #reset-test-button {
+      position: fixed; top: 15px; z-index: 2000;
+      padding: 10px 20px; border-radius: 8px;
+      cursor: pointer; font-weight: 700; border: none;
+      color: white; font-family: 'Outfit', sans-serif;
+      text-transform: uppercase; font-size: 0.75rem;
+      transition: 0.3s;
+    }
+    #back-button { left: 20px; background: var(--dark); }
+    #reset-test-button { left: 180px; background: var(--accent); }
+    #back-button:hover, #reset-test-button:hover { opacity: 0.9; transform: translateY(-2px); }
+
+    h1 { text-align: center; font-weight: 800; font-size: 2rem; color: var(--dark); margin-bottom: 25px; }
+    h1 span { color: var(--accent); }
+
+    .sticky-container {
+      position: sticky; top: 0; background: var(--bg-body);
+      z-index: 1000; padding: 15px 0;
+      border-bottom: 1px solid var(--border-color); margin-bottom: 25px;
+    }
+
+    .stats-container { display: flex; justify-content: space-between; align-items: center; gap: 16px; margin-bottom: 12px; }
+    .left-group { display: flex; align-items: center; flex-grow: 1; gap: 20px; }
+    #response-counter { white-space: nowrap; font-weight: 800; font-size: 0.9rem; color: var(--dark); background: var(--gray-light); padding: 6px 14px; border-radius: 20px; }
+    #progress-bar { flex-grow: 1; height: 10px; background: var(--gray-light); border-radius: 10px; overflow: hidden; }
+    #progress { height: 100%; width: 0%; background: var(--dark); transition: 0.4s; }
+
+    .right-group { display: flex; gap: 8px; }
+    .stat-box { display: flex; align-items: center; gap: 8px; font-weight: 800; font-size: 0.9rem; padding: 6px 14px; border-radius: 20px; white-space: nowrap; }
+    .stat-correct { color: #ffffff; background: var(--dark); }
+    .stat-incorrect { color: #ffffff; background: var(--accent); }
+
+    .instructions {
+      background-color: var(--bg-card);
+      border: 1px solid var(--border-color);
+      border-left: 5px solid var(--accent);
+      padding: 15px 20px;
+      border-radius: 8px;
+      margin-bottom: 25px;
+      font-size: 0.95rem;
+    }
+
+    .exercise-block { 
+      background: var(--bg-card); 
+      border: 1px solid var(--border-color); 
+      padding: 25px; 
+      border-radius: 12px; 
+      margin-bottom: 25px; 
+      transition: 0.3s; 
+      box-shadow: 0 1px 3px rgba(0,0,0,0.05); 
+    }
+    .exercise-block h2 { font-size: 1.15rem; margin-top: 0; margin-bottom: 15px; color: var(--dark); border-bottom: 2px solid var(--border-color); padding-bottom: 10px; }
+    .exercise-block p { font-size: 0.95rem; line-height: 1.5; }
+
+    .options-list {
+      list-style: none;
+      padding: 0;
+      margin: 15px 0;
+    }
+    .options-list li {
+      margin-bottom: 10px;
+    }
+    .options-list label {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      background: #ffffff;
+      border: 1px solid var(--border-color);
+      padding: 10px 14px;
+      border-radius: 8px;
+      cursor: pointer;
+      font-size: 0.9rem;
+      transition: 0.2s;
+    }
+    .options-list label:hover {
+      border-color: var(--dark);
+    }
+    input[type="radio"] {
+      margin-top: 3px;
+    }
+
+    textarea {
+      width: 100%;
+      height: 90px;
+      padding: 12px;
+      border: 1px solid var(--border-color);
+      border-radius: 8px;
+      resize: vertical;
+      font-family: 'Outfit', sans-serif;
+      box-sizing: border-box;
+      background: #ffffff;
+      font-size: 0.9rem;
+    }
+
+    .btn-action {
+      background-color: var(--dark);
+      color: white;
+      padding: 10px 18px;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      font-weight: 700;
+      font-size: 0.8rem;
+      font-family: 'Outfit', sans-serif;
+      text-transform: uppercase;
+      margin-top: 12px;
+      margin-right: 6px;
+      transition: 0.3s;
+    }
+    .btn-action:hover {
+      opacity: 0.9;
+      transform: translateY(-2px);
+    }
+    .btn-accent {
+      background-color: var(--accent);
+    }
+
+    .feedback-msg {
+      margin-top: 15px;
+      padding: 12px 16px;
+      border-radius: 8px;
+      font-size: 0.9rem;
+      font-weight: 600;
+      display: none;
+    }
+    .feedback-success {
+      background-color: #dcfce7;
+      color: #166534;
+      border: 1px solid #22c55e;
+    }
+    .feedback-error {
+      background-color: #fee2e2;
+      color: #991b1b;
+      border: 1px solid var(--accent);
+    }
+    .hint-box, .solution-reveal {
+      margin-top: 12px;
+      padding: 14px;
+      background-color: #fef9c3;
+      border: 1px solid #fde047;
+      color: #713f12;
+      border-radius: 8px;
+      font-size: 0.9rem;
+      display: none;
+    }
+    .solution-reveal {
+      background-color: #f0fdf4;
+      border-color: #bbf7d0;
+      color: #166534;
+    }
+
+    footer { text-align: center; margin-top: 60px; padding: 20px; color: var(--text-dim); }
+    .footer-text { font-weight: 600; color: #000; }
+    .footer-jomp { font-weight: 800; color: var(--accent); }
+
+    @media (max-width: 768px) {
+      body { padding: 10px; }
+      .container { margin-top: 130px; }
+
+      .sticky-container {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        background: var(--bg-body);
+        z-index: 1000;
+        padding: 10px 15px;
+        box-sizing: border-box;
+        box-shadow: 0 2px 6px rgba(0,0,0,0.04);
+        border-bottom: 1px solid var(--border-color);
+        margin-bottom: 0;
+        padding-top: 45px;
+      }
+
+      #back-button, #reset-test-button {
+        position: fixed !important;
+        top: 10px;
+        z-index: 2001;
+        width: calc(50% - 20px);
+        padding: 8px 10px;
+        font-size: 0.65rem;
+        text-align: center;
+      }
+      #back-button { left: 15px; }
+      #reset-test-button { left: auto; right: 15px; }
+
+      .stats-container { gap: 6px; margin-bottom: 0; }
+      .left-group { gap: 8px; }
+      #response-counter, .stat-box { font-size: 0.75rem; padding: 4px 8px; }
+      #progress-bar { height: 8px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <button id="back-button" onclick="window.location.href='../index.html'">⬅ Tornar</button>
+    <button id="reset-test-button" onclick="reiniciarTest()">🔄 Reset</button>
+
+    <h1>C1 AMB <br><span>TEST DINÀMIC - PRESSUPOSTOS I GASTOS</span></h1>
+    
+    <div class="sticky-container">
+      <div class="stats-container">
+        <div class="left-group">
+          <div id="response-counter" class="stat-box">📄 Respostes: <span id="scorePending">0</span></div>
+          <div id="progress-bar"><div id="progress"></div></div>
+        </div>
+        <div class="right-group">
+          <div id="correct-counter" class="stat-box stat-correct">✅ Encerts: <span id="scoreHits">0</span></div>
+          <div id="incorrect-counter" class="stat-box stat-incorrect">❌ Errors: <span id="scoreErrors">0</span></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="instructions">
+      <p><strong>Instruccions:</strong> Les preguntes i les opcions de resposta canvien d'ordre de manera aleatòria cada vegada que carregues o reinicies la pàgina. Pots comprovar cada bloc de forma independent.</p>
+    </div>
+
+    <div id="quiz-container"></div>
+
+    <footer>
+      <span class="footer-text">© 2026 OpoAMB | Creat per</span> <span class="footer-jomp">JOMP</span>
+    </footer>
+  </div>
+
+  <script>
+    let stats = { 
+      hits: 0, 
+      errors: 0, 
+      evaluated: [] 
+    };
+
+    const quizData = [
+      {
+        "type": "test",
+        "id": 0,
+        "title": "Pregunta Tipus Test: Fases de gestió de la despesa (RC)",
+        "question": "Quina de les següents afirmacions relatives a la Reserva de crèdit (RC) i les fases pressupostàries és correctament certa segons els apunts de l'AMB?",
+        "options": [
+          { "text": "La reserva de crèdit (RC) constitueix per si sola la primera fase d'execució formal del pressupost de despeses.", "correct": false },
+          { "text": "La reserva (RC) no és pròpiament una fase d'execució del gasto; és una retenció de crèdit per assegurar la disponibilitat.", "correct": true },
+          { "text": "Les fases pressupostàries ordinàries es cursen sempre en l'ordre invers: P, O, D, A.", "correct": false },
+          { "text": "El document ADRO exclou completament la fase de compromís de despesa.", "correct": false }
+        ],
+        "hint": "Recorda la distinció clau: la reserva (RC) serveix per assegurar que existeix crèdit, però s'indica clarament que no és una fase d'execució pròpiament dita.",
+        "solution": "La resposta correcta és aquella que indica que la reserva (RC) no és pròpiament una fase d'execució del gasto, sinó una retenció de crèdit."
+      },
+      {
+        "type": "test",
+        "id": 1,
+        "title": "Pregunta Tipus Test: Classificació per capítols (Serveis corrents)",
+        "question": "Si l'AMB tramita el pagament d'una factura destinada a sufragar un servei corrent de manteniment d'instal·lacions, a quin capítol pressupostari de despesa pertany normalment?",
+        "options": [
+          { "text": "Capítol 1: Despeses de personal.", "correct": false },
+          { "text": "Capítol 2: Despeses corrents en béns i serveis.", "correct": true },
+          { "text": "Capítol 6: Inversions reals.", "correct": false },
+          { "text": "Capítol 4: Transferències corrents.", "correct": false }
+        ],
+        "hint": "Revisa la taula de capítols. Els subministraments, lloguers i contractes de serveis corrents cauen sota un mateix epígraf clau.",
+        "solution": "La resposta correcta és el Capítol 2: Despeses corrents en béns i serveis."
+      },
+      {
+        "type": "suposit",
+        "id": 2,
+        "title": "Supòsit Pràctic: Interpretació de l'acumulació ADRO",
+        "question": "En la tramitació d'un expedient menor de serveis, el sistema comptable de l'AMB genera un document acumulat anomenat ADRO per un import de 15.000 €. Explica breument quines quatre fases s'estan acumulant simultàniament en aquest acte administratiu.",
+        "placeholder": "Detalla les quatre lletres i el seu significat...",
+        "hint": "Desglossa l'acrònim: A (Autorització), D (Disposició), R (Reconeixement de l'obligació), O (Ordenació del pagament).",
+        "solution": "S'acumulen: A (Autorització del gasto i reserva de crèdit), D (Disposició o compromís amb el proveïdor), R (Reconeixement de l'obligació de pagament) i O (Ordenació del pagament)."
+      },
+      {
+        "type": "suposit",
+        "id": 3,
+        "title": "Supòsit Pràctic: Identificació de capítols en subvencions",
+        "question": "L'AMB atorga dos tipus de subvencions: una destinada a finançar les activitats ordinàries d'una entitat cultural (subvenció corrent) i una altra destinada a la construcció d'una infraestructura municipal (subvenció d'inversió/capital). Indica a quin capítol pressupostari correspon cadascuna.",
+        "placeholder": "Indica el capítol de la subvenció corrent i el de capital...",
+        "hint": "Fixa't en els exemples dels apunts: la subvenció corrent sol anar al capítol 4, mentre que allò destinat a finançar inversions va al capítol 7.",
+        "solution": "La subvenció corrent correspon al Capítol 4 (Transferències corrents) i la subvenció destinada a finançar inversions correspon al Capítol 7 (Transferències de capital)."
+      },
+      {
+        "type": "suposit",
+        "id": 4,
+        "title": "Supòsit Pràctic: Pagaments i Tresoreria",
+        "question": "Un cop s'ha executat la fase O (Ordenació del pagament) d'un contracte de serveis, s'entra pròpiament en la fase de pagament material efectiu per part de la Tresoreria de l'AMB. Quina eina normativa de l'AMB regula específicament com s'ordenen i prioritzen aquests pagaments de les obligacions pendents?",
+        "placeholder": "Escriu el nom de l'instrument o pla regulador...",
+        "hint": "Es menciona al començament i al final del text base: es tracta del Pla de... que regula els fons i pagaments.",
+        "solution": "El Pla de disposició de fons de l'AMB, que regula com s'ordenen els pagaments de les obligacions pendents, tant pressupostàries com no pressupostàries."
+      },
+      {
+        "type": "test",
+        "id": 5,
+        "title": "Pregunta Tipus Test: Diferència entre Inversions i Passius Financers",
+        "question": "Dins de l'estructura pressupostària de l'AMB, quin capítol correspon exactament a l'amortització de deute (passius financers) i quin a les obres o adquisicions de béns de capital (inversions reals)?",
+        "options": [
+          { "text": "Capítol 9 per a passius financers i Capítol 6 per a inversions reals.", "correct": true },
+          { "text": "Capítol 3 per a passius financers i Capítol 4 per a inversions reals.", "correct": false },
+          { "text": "Capítol 8 per a passius financers i Capítol 7 per a inversions reals.", "correct": false },
+          { "text": "Capítol 5 per a passius financers i Capítol 6 per a inversions reals.", "correct": false }
+        ],
+        "hint": "Consulta l'últim tram de la taula de capítols: les inversions en obres van al 6 i el deute finalitza al capítol 9.",
+        "solution": "La resposta correcta assigna el Capítol 9 a passius financers (amortització de deute) i el Capítol 6 a inversions reals (obres i adquisicions)."
+      },
+      {
+        "type": "test",
+        "id": 6,
+        "title": "Pregunta Tipus Test: Capítols 1, 2 i 3 (Despeses corrents i financeres)",
+        "question": "Si analitzem els primers capítols del pressupost de despesa de l'AMB, quin ordre i equivalència de conceptes és el correcte?",
+        "options": [
+          { "text": "Capítol 1: Despeses de personal | Capítol 2: Despeses corrents en béns i serveis | Capítol 3: Despeses financeres", "correct": true },
+          { "text": "Capítol 1: Despeses financeres | Capítol 2: Despeses de personal | Capítol 3: Despeses corrents en béns i serveis", "correct": false },
+          { "text": "Capítol 1: Inversions reals | Capítol 2: Transferències corrents | Capítol 3: Passius financers", "correct": false },
+          { "text": "Capítol 1: Despeses corrents | Capítol 2: Despeses de personal | Capítol 3: Fons de contingència", "correct": false }
+        ],
+        "hint": "Pensa en l'ordre lògic: primer personal (1), després béns i serveis corrents (2) i finalment interessos i despeses financeres (3).",
+        "solution": "L'ordre correcte és: Capítol 1 (Personal), Capítol 2 (Corrents en béns i serveis) i Capítol 3 (Financeres)."
+      },
+      {
+        "type": "test",
+        "id": 7,
+        "title": "Pregunta Tipus Test: Capítols 4, 5 i 6 (Transferències, Contingència i Inversions)",
+        "question": "Quin grup de capítols pressupostaris recull ordenadament les subvencions/transferències corrents, el fons per a imprevistos i les inversions reals?",
+        "options": [
+          { "text": "Capítol 4: Transferències corrents | Capítol 5: Fons de contingència i altres imprevistos | Capítol 6: Inversions reals", "correct": true },
+          { "text": "Capítol 4: Inversions reals | Capítol 5: Transferències de capital | Capítol 6: Actius financers", "correct": false },
+          { "text": "Capítol 4: Despeses de personal | Capítol 5: Passius financers | Capítol 6: Transferències corrents", "correct": false },
+          { "text": "Capítol 4: Fons de contingència | Capítol 5: Inversions reals | Capítol 6: Transferències de capital", "correct": false }
+        ],
+        "hint": "Recorda: el 4 són transferències corrents, el 5 el fons de contingència, i el 6 les inversions reals en obres o béns.",
+        "solution": "L'ordenació correcta és Capítol 4 (Transferències corrents), Capítol 5 (Fons de contingència) i Capítol 6 (Inversions reals)."
+      },
+      {
+        "type": "test",
+        "id": 8,
+        "title": "Pregunta Tipus Test: Capítols 7, 8 i 9 (Capital i Financers)",
+        "question": "Assenyala quina opció descriu correctament i en ordre els darrers tres capítols pressupostaris de despesa (del 7 al 9):",
+        "options": [
+          { "text": "Capítol 7: Transferències de capital | Capítol 8: Actius financers | Capítol 9: Passius financers", "correct": true },
+          { "text": "Capítol 7: Inversions reals | Capítol 8: Passius financers | Capítol 9: Actius financers", "correct": false },
+          { "text": "Capítol 7: Despeses financeres | Capítol 8: Transferències de capital | Capítol 9: Fons de contingència", "correct": false },
+          { "text": "Capítol 7: Actius financers | Capítol 8: Passius financers | Capítol 9: Inversions reals", "correct": false }
+        ],
+        "hint": "El 7 tanca les transferències de capital, el 8 tracta d'actius i el 9 tanca el pressupost amb l'amortització de deute (passius financers).",
+        "solution": "L'ordre és: Capítol 7 (Transferències de capital), Capítol 8 (Actius financers) i Capítol 9 (Passius financers / Amortització de deute)."
+      },
+      {
+        "type": "suposit",
+        "id": 9,
+        "title": "Supòsit Pràctic: Identificació de l'acumulació en fases",
+        "question": "En determinats expedients menors o factures d'import menor, el sistema comptable de l'AMB pot acumular fases de l'expedient. Explica breument en què consisteix la fase 'R' (o reconeixement de l'obligació) dins del circuit i quin efecte produeix sobre l'empresa o proveïdor.",
+        "placeholder": "Explica la fase de Reconeixement de l'obligació...",
+        "hint": "Pensa en quin moment s'aprova formalment que el servei s'ha rebut i que hi ha una obligació de pagament meritada.",
+        "solution": "La fase R (Reconeixement de l'obligació) és l'acte mitjançant el qual s'aprova i s'acredita que s'ha complert la prestació o compromís, quedant la corporació obligada al pagament davant el tercer."
+      },
+      {
+        "type": "test",
+        "id": 10,
+        "title": "Pregunta Tipus Test: L'ordre i significat de les fases ADRO",
+        "question": "Segons l'estructura de gestió pressupostària de l'AMB, quin és l'ordre cronològic i el significat correcte de les fases que integren l'acrònim ADRO?",
+        "options": [
+          { "text": "Autorització (A), Disposició o compromís (D), Reconeixement de l'obligació (R) i Ordenació del pagament (O).", "correct": true },
+          { "text": "Aprovació prèvia (A), Desenvolupament (D), Resolució (R) i Pagament (O).", "correct": false },
+          { "text": "Autorització (A), Documentació (D), Reintegrament (R) i Operació de tresoreria (O).", "correct": false },
+          { "text": "Adjudicació (A), Disposició (D), Obligació (O) i Recaptació (R).", "correct": false }
+        ],
+        "hint": "Recorda el significat exacte de les lletres: A autoritza, D compromet (disposició), R reconeix l'obligació i O ordena el pagament.",
+        "solution": "L'ordre i significat correcte és: Autorització (A), Disposició o compromís (D), Reconeixement de l'obligació (R) i Ordenació del pagament (O)."
+      },
+      {
+        "type": "test",
+        "id": 11,
+        "title": "Pregunta Tipus Test: Ordenació cronològica i lògica dels capítols pressupostaris de despesa",
+        "question": "Ordena correctament de l'1 al 9 els següents capítols pressupostaris de despesa segons l'estructura de l'AMB: Despeses de personal (1), Despeses corrents en béns i serveis (2), Despeses financeres (3), Transferències corrents (4), Fons de contingència (5), Inversions reals (6), Transferències de capital (7), Actius financers (8) i Passius financers (9). Quin bloc reflecteix fidelment aquest ordre?",
+        "options": [
+          { "text": "1. Personal, 2. Corrents en béns i serveis, 3. Financeres, 4. Transferències corrents, 5. Fons de contingència, 6. Inversions reals, 7. Transferències de capital, 8. Actius financers, 9. Passius financers.", "correct": true },
+          { "text": "1. Inversions reals, 2. Personal, 3. Corrents, 4. Financeres, 5. Transferències de capital, 6. Fons de contingència, 7. Actius, 8. Passius, 9. Transferències corrents.", "correct": false },
+          { "text": "1. Transferències corrents, 2. Personal, 3. Inversions reals, 4. Corrents, 5. Financeres, 6. Passius financers, 7. Actius financers, 8. Fons de contingència, 9. Transferències de capital.", "correct": false },
+          { "text": "1. Personal, 2. Inversions reals, 3. Transferències de capital, 4. Corrents, 5. Financeres, 6. Fons de contingència, 7. Actius, 8. Passius, 9. Transferències corrents.", "correct": false }
+        ],
+        "hint": "Recorda l'esquema d'inici amb personal, béns/serveis i interessos, passant pel bloc central de transferències i inversions, fins a tancar amb actius i passius financers.",
+        "solution": "L'opció correcta respecta estrictament l'ordre numerat del Capítol 1 al Capítol 9 descrit per la normativa pressupostària."
+      },
+      {
+        "type": "suposit",
+        "id": 12,
+        "title": "Supòsit Pràctic: Desglossament detallat del circuit ADRO",
+        "question": "Durant la tramitació d'un expedient de despesa a l'AMB, el procediment s'estructura sota el circuit comptable i administratiu conegut com a ADRO. Explica detalladament què significa cadascuna de les quatre sigles que el componen (A, D, R i O) en el marc de la gestió pressupostària.",
+        "placeholder": "Explica pas a pas el significat de cada lletra de l'ADRO...",
+        "hint": "Pensa en les quatre fases essencials: autoritzar l'operació, comprometre amb el tercer, reconèixer l'obligació i ordenar el pagament.",
+        "solution": "A: Autorització (fase inicial d'aprovació de la despesa i reserva de crèdit); D: Disposició o compromís (acte pel qual s'acorda amb un terç la realització de la prestació); R: Reconeixement de l'obligació (aprovació de la factura o servei realitzat que genera el deute ferm); O: Ordenació del pagament (ordre tramesa a Tresoreria per fer efectiu el desemborsament)."
+      }
+    ];
+
+    let shuffledQuiz = [];
+
+    function shuffleArray(array) {
+      let arr = [...array];
+      for (let i = arr.length - 1; i > 0; i--) {
+        let j = Math.floor(Math.random() * (i + 1));
+        [arr[i], arr[j]] = [arr[j], arr[i]];
+      }
+      return arr;
+    }
+
+    function renderQuiz() {
+      const container = document.getElementById('quiz-container');
+      container.innerHTML = '';
+
+      shuffledQuiz = shuffleArray(quizData);
+      stats.evaluated = new Array(shuffledQuiz.length).fill(false);
+
+      shuffledQuiz.forEach((item, index) => {
+        let blockDiv = document.createElement('div');
+        blockDiv.className = 'exercise-block';
+        blockDiv.id = `block${item.id}`;
+
+        let html = `<h2>${index + 1}. ${item.title}</h2><p>${item.question}</p>`;
+
+        if (item.type === 'test') {
+          html += `<ul class="options-list">`;
+          let shuffledOptions = shuffleArray(item.options);
+          shuffledOptions.forEach(opt => {
+            html += `<li><label><input type="radio" name="q${item.id}" value="${opt.correct}"> ${opt.text}</label></li>`;
+          });
+          html += `</ul>`;
+          html += `<button class="btn-action btn-accent" onclick="checkTest(${item.id})">Comprovar</button>`;
+        } else {
+          html += `<textarea id="respEx${item.id}" placeholder="${item.placeholder}"></textarea>`;
+          html += `<button class="btn-action btn-accent" onclick="checkSuposit(${item.id})">Comprovar</button>`;
+        }
+
+        html += `
+          <button class="btn-action" onclick="showHint(${item.id})">Pista</button>
+          <button class="btn-action" onclick="showSolution(${item.id})">Veure Resposta</button>
+          <div id="feedback${item.id}" class="feedback-msg"></div>
+          <div id="hint${item.id}" class="hint-box"><strong>Pista:</strong> ${item.hint}</div>
+          <div id="sol${item.id}" class="solution-reveal"><strong>Resposta correcta:</strong> ${item.solution}</div>
+        `;
+
+        blockDiv.innerHTML = html;
+        container.appendChild(blockDiv);
+      });
+      
+      updateScoreBoard();
+    }
+
+    function updateScoreBoard() {
+        let evaluatedCount = stats.evaluated.filter(Boolean).length;
+        let totalCount = quizData.length;
+        
+        document.getElementById('scoreHits').innerText = stats.hits;
+        document.getElementById('scoreErrors').innerText = stats.errors;
+        document.getElementById('scorePending').innerText = evaluatedCount + '/' + totalCount;
+        
+        let percentage = (evaluatedCount / totalCount) * 100;
+        document.getElementById('progress').style.width = percentage + '%';
+    }
+
+    function markEvaluated(id, isCorrect) {
+        let index = shuffledQuiz.findIndex(q => q.id === id);
+        if (index !== -1 && !stats.evaluated[index]) {
+            stats.evaluated[index] = true;
+            if (isCorrect) stats.hits++;
+            else stats.errors++;
+            updateScoreBoard();
+        }
+    }
+
+    function showHint(id) {
+        let box = document.getElementById('hint' + id);
+        box.style.display = box.style.display === 'block' ? 'none' : 'block';
+    }
+
+    function showSolution(id) {
+        let box = document.getElementById('sol' + id);
+        box.style.display = box.style.display === 'block' ? 'none' : 'block';
+    }
+
+    function checkTest(id) {
+        let selected = document.querySelector(`input[name="q${id}"]:checked`);
+        let fb = document.getElementById('feedback' + id);
+        fb.style.display = 'block';
+
+        if (!selected) {
+            fb.className = 'feedback-msg feedback-error';
+            fb.innerText = 'Selecciona una opció abans de comprovar.';
+            return;
+        }
+
+        let isCorrect = selected.value === 'true';
+
+        if (isCorrect) {
+            fb.className = 'feedback-msg feedback-success';
+            fb.innerText = 'Correcte! Has encertat la pregunta.';
+            markEvaluated(id, true);
+        } else {
+            fb.className = 'feedback-msg feedback-error';
+            fb.innerText = 'Incorrecte. Revisa els apunts o utilitza la pista.';
+            markEvaluated(id, false);
+        }
+    }
+
+    function checkSuposit(id) {
+        let text = document.getElementById('respEx' + id).value.trim();
+        let fb = document.getElementById('feedback' + id);
+        fb.style.display = 'block';
+
+        let isValid = false;
+        if (text.length > 5) {
+            isValid = true;
+        }
+
+        if (isValid) {
+            fb.className = 'feedback-msg feedback-success';
+            fb.innerText = 'Molt bé! Resposta vàlida i ben argumentada.';
+            markEvaluated(id, true);
+        } else {
+            fb.className = 'feedback-msg feedback-error';
+            fb.innerText = 'Falta detallar millor la resposta o assegurar els conceptes clau.';
+            markEvaluated(id, false);
+        }
+    }
+
+    function reiniciarTest() {
+        if(confirm("Vols reiniciar i barrejar de nou tot el test?")) {
+            location.reload();
+        }
+    }
+
+    window.onload = renderQuiz;
+  </script>
+</body>
+</html>
