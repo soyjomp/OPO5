@@ -1,0 +1,1276 @@
+<!DOCTYPE html>
+<html lang="ca">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tests Oposicions C1 AMB</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #ffffff;
+            color: #111111;
+        }
+        h1, h2, h3, .font-arial-bold {
+            font-family: Arial, sans-serif;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body class="bg-white min-h-screen text-gray-900 flex flex-col justify-between">
+
+    <header class="w-full border-b border-gray-200 bg-white sticky top-0 z-50 shadow-sm">
+        <div class="max-w-7xl mx-auto px-4 py-4 flex flex-col sm:flex-row items-center justify-between gap-4">
+            
+            <div class="flex items-center gap-3">
+                <div class="flex items-center">
+                    <img src="img/logo.png" alt="Logo AMB" class="h-10 w-auto object-contain" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+                    <span class="text-xs text-red-600 font-bold hidden text-center px-1">img/logo.png</span>
+                </div>
+                <h1 class="text-2xl sm:text-3xl font-bold tracking-tight text-black">
+                    Oposicions C1 <span class="text-red-600">AMB</span>
+                </h1>
+            </div>
+
+            <div class="w-full sm:w-80">
+                <div class="relative">
+                    <span class="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none text-gray-400">
+                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg>
+                    </span>
+                    <input type="text" id="searchInput" placeholder="Cercar tema o examen..." class="w-full pl-10 pr-4 py-2 bg-gray-50 border border-gray-300 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-red-600 focus:border-transparent transition-all">
+                </div>
+            </div>
+
+        </div>
+    </header>
+
+    <main class="max-w-7xl mx-auto px-4 py-8 w-full flex-grow space-y-6">
+
+       <section class="mb-8">
+            <div class="border-b-2 border-red-600 pb-2 mb-6">
+                <h2 class="text-xl sm:text-2xl font-bold text-black uppercase tracking-wide">Temari General</h2>
+            </div>
+
+            <div class="space-y-4">
+                <!-- Bloc I -->
+                <div class="main-block border border-gray-200 rounded-xl shadow-sm bg-white overflow-hidden" data-block="gen-bloc-1">
+                    <button onclick="toggleMainBlock('gen-bloc-1')" class="w-full text-left p-4 bg-gray-50 hover:bg-gray-100 flex items-center justify-between gap-4 focus:outline-none transition-colors">
+                        <div class="flex items-center gap-3">
+                            <span class="bg-red-600 text-white text-xs font-bold px-2.5 py-1 rounded">Bloc I</span>
+                            <h3 class="text-base font-bold text-black">Dret Constitucional i Organització (Temes 1 al 4)</h3>
+                        </div>
+                        <svg class="w-5 h-5 text-gray-500 transform transition-transform duration-200 shrink-0 main-arrow" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                    </button>
+                    <div class="main-block-content hidden p-4 bg-white border-t border-gray-200">
+                        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+                            
+                            <!-- Tema 1 -->
+                            <div class="theme-card bg-white border border-gray-200 rounded-xl shadow-sm hover:border-red-600 transition-all duration-200 overflow-hidden flex flex-col justify-between p-4" data-id="gen-1">
+                                <div>
+                                    <span class="text-xs font-bold text-red-600 uppercase tracking-wider">Tema 1</span>
+                                    <h4 class="text-sm font-bold text-black mt-1 line-clamp-3">La Constitució Espanyola de 1978: estructura, contingut i principis generals. Drets i deures fonamentals.</h4>
+                                </div>
+                                <div class="flex items-center justify-between mt-4 pt-3 border-t border-gray-100">
+                                    <span class="text-xs font-semibold px-2 py-0.5 bg-white border border-gray-200 text-gray-700 rounded">Pendent</span>
+                                    <div class="flex items-center gap-1.5">
+                                        <a href="bloc1/1.html" class="px-2.5 py-1 text-xs font-bold text-gray-700 bg-white border border-gray-200 hover:bg-red-600 hover:text-white hover:border-red-600 rounded transition-colors">Apunts</a>
+                                        <a href="bloc1/1test.html" class="px-2.5 py-1 text-xs font-bold text-white bg-red-600 hover:bg-black rounded transition-colors shadow-sm">Test</a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Tema 2 -->
+                            <div class="theme-card bg-white border border-gray-200 rounded-xl shadow-sm hover:border-red-600 transition-all duration-200 overflow-hidden flex flex-col justify-between p-4" data-id="gen-2">
+                                <div>
+                                    <span class="text-xs font-bold text-red-600 uppercase tracking-wider">Tema 2</span>
+                                    <h4 class="text-sm font-bold text-black mt-1 line-clamp-3">La Constitució Espanyola de 1978: organització de l’Estat.</h4>
+                                </div>
+                                <div class="flex items-center justify-between mt-4 pt-3 border-t border-gray-100">
+                                    <span class="text-xs font-semibold px-2 py-0.5 bg-white border border-gray-200 text-gray-700 rounded">Pendent</span>
+                                    <div class="flex items-center gap-1.5">
+                                        <a href="bloc1/2.html" class="px-2.5 py-1 text-xs font-bold text-gray-700 bg-white border border-gray-200 hover:bg-red-600 hover:text-white hover:border-red-600 rounded transition-colors">Apunts</a>
+                                        <a href="bloc1/2test.html" class="px-2.5 py-1 text-xs font-bold text-white bg-red-600 hover:bg-black rounded transition-colors shadow-sm">Test</a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Tema 3 -->
+                            <div class="theme-card bg-white border border-gray-200 rounded-xl shadow-sm hover:border-red-600 transition-all duration-200 overflow-hidden flex flex-col justify-between p-4" data-id="gen-3">
+                                <div>
+                                    <span class="text-xs font-bold text-red-600 uppercase tracking-wider">Tema 3</span>
+                                    <h4 class="text-sm font-bold text-black mt-1 line-clamp-3">L’Estatut d’autonomia de Catalunya: estructura, contingut essencial i principis fonamentals.</h4>
+                                </div>
+                                <div class="flex items-center justify-between mt-4 pt-3 border-t border-gray-100">
+                                    <span class="text-xs font-semibold px-2 py-0.5 bg-white border border-gray-200 text-gray-700 rounded">Pendent</span>
+                                    <div class="flex items-center gap-1.5">
+                                        <a href="bloc1/3.html" class="px-2.5 py-1 text-xs font-bold text-gray-700 bg-white border border-gray-200 hover:bg-red-600 hover:text-white hover:border-red-600 rounded transition-colors">Apunts</a>
+                                        <a href="bloc1/3test.html" class="px-2.5 py-1 text-xs font-bold text-white bg-red-600 hover:bg-black rounded transition-colors shadow-sm">Test</a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Tema 4 -->
+                            <div class="theme-card bg-white border border-gray-200 rounded-xl shadow-sm hover:border-red-600 transition-all duration-200 overflow-hidden flex flex-col justify-between p-4" data-id="gen-4">
+                                <div>
+                                    <span class="text-xs font-bold text-red-600 uppercase tracking-wider">Tema 4</span>
+                                    <h4 class="text-sm font-bold text-black mt-1 line-clamp-3">L’Àrea metropolitana de Barcelona: règim jurídic, òrgans de govern i competències.</h4>
+                                </div>
+                                <div class="flex items-center justify-between mt-4 pt-3 border-t border-gray-100">
+                                    <span class="text-xs font-semibold px-2 py-0.5 bg-white border border-gray-200 text-gray-700 rounded">Pendent</span>
+                                    <div class="flex items-center gap-1.5">
+                                        <a href="bloc1/4.html" class="px-2.5 py-1 text-xs font-bold text-gray-700 bg-white border border-gray-200 hover:bg-red-600 hover:text-white hover:border-red-600 rounded transition-colors">Apunts</a>
+                                        <a href="bloc1/4test.html" class="px-2.5 py-1 text-xs font-bold text-white bg-red-600 hover:bg-black rounded transition-colors shadow-sm">Test</a>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Bloc II -->
+                <div class="main-block border border-gray-200 rounded-xl shadow-sm bg-white overflow-hidden" data-block="gen-bloc-2">
+                    <button onclick="toggleMainBlock('gen-bloc-2')" class="w-full text-left p-4 bg-gray-50 hover:bg-gray-100 flex items-center justify-between gap-4 focus:outline-none transition-colors">
+                        <div class="flex items-center gap-3">
+                            <span class="bg-red-600 text-white text-xs font-bold px-2.5 py-1 rounded">Bloc II</span>
+                            <h3 class="text-base font-bold text-black">Administració, Hisenda i Drets (Temes 5 al 8)</h3>
+                        </div>
+                        <svg class="w-5 h-5 text-gray-500 transform transition-transform duration-200 shrink-0 main-arrow" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                    </button>
+                    <div class="main-block-content hidden p-4 bg-white border-t border-gray-200">
+                        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+                            
+                            <!-- Tema 5 -->
+                            <div class="theme-card bg-white border border-gray-200 rounded-xl shadow-sm hover:border-red-600 transition-all duration-200 overflow-hidden flex flex-col justify-between p-4" data-id="gen-5">
+                                <div>
+                                    <span class="text-xs font-bold text-red-600 uppercase tracking-wider">Tema 5</span>
+                                    <h4 class="text-sm font-bold text-black mt-1 line-clamp-3">Fases del procediment administratiu comú.</h4>
+                                </div>
+                                <div class="flex items-center justify-between mt-4 pt-3 border-t border-gray-100">
+                                    <span class="text-xs font-semibold px-2 py-0.5 bg-white border border-gray-200 text-gray-700 rounded">Pendent</span>
+                                    <div class="flex items-center gap-1.5">
+                                        <a href="bloc2/5.html" class="px-2.5 py-1 text-xs font-bold text-gray-700 bg-white border border-gray-200 hover:bg-red-600 hover:text-white hover:border-red-600 rounded transition-colors">Apunts</a>
+                                        <a href="bloc2/5test.html" class="px-2.5 py-1 text-xs font-bold text-white bg-red-600 hover:bg-black rounded transition-colors shadow-sm">Test</a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Tema 6 -->
+                            <div class="theme-card bg-white border border-gray-200 rounded-xl shadow-sm hover:border-red-600 transition-all duration-200 overflow-hidden flex flex-col justify-between p-4" data-id="gen-6">
+                                <div>
+                                    <span class="text-xs font-bold text-red-600 uppercase tracking-wider">Tema 6</span>
+                                    <h4 class="text-sm font-bold text-black mt-1 line-clamp-3">Els tributs locals: concepte i classes.</h4>
+                                </div>
+                                <div class="flex items-center justify-between mt-4 pt-3 border-t border-gray-100">
+                                    <span class="text-xs font-semibold px-2 py-0.5 bg-white border border-gray-200 text-gray-700 rounded">Pendent</span>
+                                    <div class="flex items-center gap-1.5">
+                                        <a href="bloc2/6.html" class="px-2.5 py-1 text-xs font-bold text-gray-700 bg-white border border-gray-200 hover:bg-red-600 hover:text-white hover:border-red-600 rounded transition-colors">Apunts</a>
+                                        <a href="bloc2/6test.html" class="px-2.5 py-1 text-xs font-bold text-white bg-red-600 hover:bg-black rounded transition-colors shadow-sm">Test</a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Tema 7 -->
+                            <div class="theme-card bg-white border border-gray-200 rounded-xl shadow-sm hover:border-red-600 transition-all duration-200 overflow-hidden flex flex-col justify-between p-4" data-id="gen-7">
+                                <div>
+                                    <span class="text-xs font-bold text-red-600 uppercase tracking-wider">Tema 7</span>
+                                    <h4 class="text-sm font-bold text-black mt-1 line-clamp-3">La protecció de dades de caràcter personal: principis, drets dels titulars de les dades, i deures del responsable del tractament.</h4>
+                                </div>
+                                <div class="flex items-center justify-between mt-4 pt-3 border-t border-gray-100">
+                                    <span class="text-xs font-semibold px-2 py-0.5 bg-white border border-gray-200 text-gray-700 rounded">Pendent</span>
+                                    <div class="flex items-center gap-1.5">
+                                        <a href="bloc2/7.html" class="px-2.5 py-1 text-xs font-bold text-gray-700 bg-white border border-gray-200 hover:bg-red-600 hover:text-white hover:border-red-600 rounded transition-colors">Apunts</a>
+                                        <a href="bloc2/7test.html" class="px-2.5 py-1 text-xs font-bold text-white bg-red-600 hover:bg-black rounded transition-colors shadow-sm">Test</a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Tema 8 -->
+                            <div class="theme-card bg-white border border-gray-200 rounded-xl shadow-sm hover:border-red-600 transition-all duration-200 overflow-hidden flex flex-col justify-between p-4" data-id="gen-8">
+                                <div>
+                                    <span class="text-xs font-bold text-red-600 uppercase tracking-wider">Tema 8</span>
+                                    <h4 class="text-sm font-bold text-black mt-1 line-clamp-3">La Llei 17/2015, del 21 de juliol, d'igualtat efectiva de dones i homes: funcions dels ens locals de Catalunya en matèria de polítiques d’igualtat de gènere.</h4>
+                                </div>
+                                <div class="flex items-center justify-between mt-4 pt-3 border-t border-gray-100">
+                                    <span class="text-xs font-semibold px-2 py-0.5 bg-white border border-gray-200 text-gray-700 rounded">Pendent</span>
+                                    <div class="flex items-center gap-1.5">
+                                        <a href="bloc2/8.html" class="px-2.5 py-1 text-xs font-bold text-gray-700 bg-white border border-gray-200 hover:bg-red-600 hover:text-white hover:border-red-600 rounded transition-colors">Apunts</a>
+                                        <a href="bloc2/8test.html" class="px-2.5 py-1 text-xs font-bold text-white bg-red-600 hover:bg-black rounded transition-colors shadow-sm">Test</a>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="mb-8">
+            <div class="border-b-2 border-red-600 pb-2 mb-6">
+                <h2 class="text-xl sm:text-2xl font-bold text-black uppercase tracking-wide">Temari Específic</h2>
+            </div>
+
+            <div class="space-y-4">
+                <div class="main-block border border-gray-200 rounded-xl shadow-sm bg-white overflow-hidden" data-block="esp-bloc-1">
+                    <button onclick="toggleMainBlock('esp-bloc-1')" class="w-full text-left p-4 bg-gray-50 hover:bg-gray-100 flex items-center justify-between gap-4 focus:outline-none transition-colors">
+                        <div class="flex items-center gap-3">
+                            <span class="bg-red-600 text-white text-xs font-bold px-2.5 py-1 rounded">Bloc III</span>
+                            <h3 class="text-base font-bold text-black">Documents, Registre i Comunicació (Temes 9 al 15)</h3>
+                        </div>
+                        <svg class="w-5 h-5 text-gray-500 transform transition-transform duration-200 shrink-0 main-arrow" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                    </button>
+                    <div class="main-block-content hidden p-4 bg-white border-t border-gray-200">
+                        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+                            
+                            <div class="theme-card bg-white border border-gray-200 rounded-xl shadow-sm hover:border-red-600 transition-all duration-200 overflow-hidden flex flex-col justify-between" data-id="esp-1">
+                                <button onclick="toggleAccordion('esp-1')" class="w-full text-left p-4 flex items-center justify-between gap-2 focus:outline-none">
+                                    <div>
+                                        <span class="text-xs font-bold text-red-600 uppercase tracking-wider">Tema 9</span>
+                                        <h4 class="text-sm font-bold text-black mt-1 line-clamp-3">Tipologia de documents administratius. Documents generats a l’Administració: trets característics de resolucions, acords, certificats, informes i diligències.</h4>
+                                    </div>
+                                    <svg class="w-4 h-4 text-gray-500 transform transition-transform duration-200 shrink-0 arrow-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                                </button>
+                                <div class="accordion-content hidden px-4 pb-4 pt-2 border-t border-gray-100 bg-gray-50 flex items-center justify-between mt-auto">
+                                    <span class="text-xs font-semibold px-2 py-0.5 bg-white border border-gray-200 text-gray-700 rounded">Pendent</span>
+                                    <div class="flex items-center gap-1.5">
+                                        <a href="bloc3/9.html" onclick="saveAccordionState('esp-1')" class="px-2.5 py-1 text-xs font-bold text-gray-700 bg-white border border-gray-200 hover:bg-red-600 hover:text-white hover:border-red-600 rounded transition-colors">Apunts</a>
+                                        <a href="bloc3/9test.html" onclick="saveAccordionState('esp-1')" class="px-2.5 py-1 text-xs font-bold text-white bg-red-600 hover:bg-red-700 rounded transition-colors shadow-sm">Test</a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="theme-card bg-white border border-gray-200 rounded-xl shadow-sm hover:border-red-600 transition-all duration-200 overflow-hidden flex flex-col justify-between" data-id="esp-2">
+                                <button onclick="toggleAccordion('esp-2')" class="w-full text-left p-4 flex items-center justify-between gap-2 focus:outline-none">
+                                    <div>
+                                        <span class="text-xs font-bold text-red-600 uppercase tracking-wider">Tema 10</span>
+                                        <h4 class="text-sm font-bold text-black mt-1 line-clamp-3">Comunicacions de l’Administració amb la ciutadania: anuncis, edictes i notificacions.</h4>
+                                    </div>
+                                    <svg class="w-4 h-4 text-gray-500 transform transition-transform duration-200 shrink-0 arrow-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                                </button>
+                                <div class="accordion-content hidden px-4 pb-4 pt-2 border-t border-gray-100 bg-gray-50 flex items-center justify-between mt-auto">
+                                    <span class="text-xs font-semibold px-2 py-0.5 bg-white border border-gray-200 text-gray-700 rounded">Pendent</span>
+                                    <div class="flex items-center gap-1.5">
+                                        <a href="bloc3/10.html" onclick="saveAccordionState('esp-2')" class="px-2.5 py-1 text-xs font-bold text-gray-700 bg-white border border-gray-200 hover:bg-red-600 hover:text-white hover:border-red-600 rounded transition-colors">Apunts</a>
+                                        <a href="bloc3/10test.html onclick="saveAccordionState('esp-2')" class="px-2.5 py-1 text-xs font-bold text-white bg-red-600 hover:bg-red-700 rounded transition-colors shadow-sm">Test</a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="theme-card bg-white border border-gray-200 rounded-xl shadow-sm hover:border-red-600 transition-all duration-200 overflow-hidden flex flex-col justify-between" data-id="esp-3">
+                                <button onclick="toggleAccordion('esp-3')" class="w-full text-left p-4 flex items-center justify-between gap-2 focus:outline-none">
+                                    <div>
+                                        <span class="text-xs font-bold text-red-600 uppercase tracking-wider">Tema 11</span>
+                                        <h4 class="text-sm font-bold text-black mt-1 line-clamp-3">Comunicacions de la ciutadania amb l’Administració. La instància. Altres mecanismes de comunicació de tercers amb l’Administració.</h4>
+                                    </div>
+                                    <svg class="w-4 h-4 text-gray-500 transform transition-transform duration-200 shrink-0 arrow-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                                </button>
+                                <div class="accordion-content hidden px-4 pb-4 pt-2 border-t border-gray-100 bg-gray-50 flex items-center justify-between mt-auto">
+                                    <span class="text-xs font-semibold px-2 py-0.5 bg-white border border-gray-200 text-gray-700 rounded">Pendent</span>
+                                    <div class="flex items-center gap-1.5">
+                                        <a href="bloc3/11.html" onclick="saveAccordionState('esp-3')" class="px-2.5 py-1 text-xs font-bold text-gray-700 bg-white border border-gray-200 hover:bg-red-600 hover:text-white hover:border-red-600 rounded transition-colors">Apunts</a>
+                                        <a href="bloc3/11test.html" onclick="saveAccordionState('esp-3')" class="px-2.5 py-1 text-xs font-bold text-white bg-red-600 hover:bg-red-700 rounded transition-colors shadow-sm">Test</a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="theme-card bg-white border border-gray-200 rounded-xl shadow-sm hover:border-red-600 transition-all duration-200 overflow-hidden flex flex-col justify-between" data-id="esp-4">
+                                <button onclick="toggleAccordion('esp-4')" class="w-full text-left p-4 flex items-center justify-between gap-2 focus:outline-none">
+                                    <div>
+                                        <span class="text-xs font-bold text-red-600 uppercase tracking-wider">Tema 12</span>
+                                        <h4 class="text-sm font-bold text-black mt-1 line-clamp-3">Comunicacions entre administracions.</h4>
+                                    </div>
+                                    <svg class="w-4 h-4 text-gray-500 transform transition-transform duration-200 shrink-0 arrow-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                                </button>
+                                <div class="accordion-content hidden px-4 pb-4 pt-2 border-t border-gray-100 bg-gray-50 flex items-center justify-between mt-auto">
+                                    <span class="text-xs font-semibold px-2 py-0.5 bg-white border border-gray-200 text-gray-700 rounded">Pendent</span>
+                                    <div class="flex items-center gap-1.5">
+                                        <a href="bloc3/12.html" onclick="saveAccordionState('esp-4')" class="px-2.5 py-1 text-xs font-bold text-gray-700 bg-white border border-gray-200 hover:bg-red-600 hover:text-white hover:border-red-600 rounded transition-colors">Apunts</a>
+                                        <a href="bloc3/12test.html" onclick="saveAccordionState('esp-4')" class="px-2.5 py-1 text-xs font-bold text-white bg-red-600 hover:bg-red-700 rounded transition-colors shadow-sm">Test</a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="theme-card bg-white border border-gray-200 rounded-xl shadow-sm hover:border-red-600 transition-all duration-200 overflow-hidden flex flex-col justify-between" data-id="esp-5">
+                                <button onclick="toggleAccordion('esp-5')" class="w-full text-left p-4 flex items-center justify-between gap-2 focus:outline-none">
+                                    <div>
+                                        <span class="text-xs font-bold text-red-600 uppercase tracking-wider">Tema 13</span>
+                                        <h4 class="text-sm font-bold text-black mt-1 line-clamp-3">El Registre General. Registre d’entrada i Registre de sortida de documents.</h4>
+                                    </div>
+                                    <svg class="w-4 h-4 text-gray-500 transform transition-transform duration-200 shrink-0 arrow-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                                </button>
+                                <div class="accordion-content hidden px-4 pb-4 pt-2 border-t border-gray-100 bg-gray-50 flex items-center justify-between mt-auto">
+                                    <span class="text-xs font-semibold px-2 py-0.5 bg-white border border-gray-200 text-gray-700 rounded">Pendent</span>
+                                    <div class="flex items-center gap-1.5">
+                                        <a href="bloc3/13.html" onclick="saveAccordionState('esp-5')" class="px-2.5 py-1 text-xs font-bold text-gray-700 bg-white border border-gray-200 hover:bg-red-600 hover:text-white hover:border-red-600 rounded transition-colors">Apunts</a>
+                                        <a href="bloc3/13test.html" onclick="saveAccordionState('esp-5')" class="px-2.5 py-1 text-xs font-bold text-white bg-red-600 hover:bg-red-700 rounded transition-colors shadow-sm">Test</a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="theme-card bg-white border border-gray-200 rounded-xl shadow-sm hover:border-red-600 transition-all duration-200 overflow-hidden flex flex-col justify-between" data-id="esp-6">
+                                <button onclick="toggleAccordion('esp-6')" class="w-full text-left p-4 flex items-center justify-between gap-2 focus:outline-none">
+                                    <div>
+                                        <span class="text-xs font-bold text-red-600 uppercase tracking-wider">Tema 14</span>
+                                        <h4 class="text-sm font-bold text-black mt-1 line-clamp-3">Organització dels documents administratius. Arxivament de documents. Conservació i eliminació de documents: avaluació i tria. Gestió dels documents electrònics.</h4>
+                                    </div>
+                                    <svg class="w-4 h-4 text-gray-500 transform transition-transform duration-200 shrink-0 arrow-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                                </button>
+                                <div class="accordion-content hidden px-4 pb-4 pt-2 border-t border-gray-100 bg-gray-50 flex items-center justify-between mt-auto">
+                                    <span class="text-xs font-semibold px-2 py-0.5 bg-white border border-gray-200 text-gray-700 rounded">Pendent</span>
+                                    <div class="flex items-center gap-1.5">
+                                        <a href="bloc3/14.html" onclick="saveAccordionState('esp-6')" class="px-2.5 py-1 text-xs font-bold text-gray-700 bg-white border border-gray-200 hover:bg-red-600 hover:text-white hover:border-red-600 rounded transition-colors">Apunts</a>
+                                        <a href="bloc3/14test.html" onclick="saveAccordionState('esp-6')" class="px-2.5 py-1 text-xs font-bold text-white bg-red-600 hover:bg-red-700 rounded transition-colors shadow-sm">Test</a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="theme-card bg-white border border-gray-200 rounded-xl shadow-sm hover:border-red-600 transition-all duration-200 overflow-hidden flex flex-col justify-between" data-id="esp-7">
+                                <button onclick="toggleAccordion('esp-7')" class="w-full text-left p-4 flex items-center justify-between gap-2 focus:outline-none">
+                                    <div>
+                                        <span class="text-xs font-bold text-red-600 uppercase tracking-wider">Tema 15</span>
+                                        <h4 class="text-sm font-bold text-black mt-1 line-clamp-3">L’Oficina d’Atenció al ciutadà.</h4>
+                                    </div>
+                                    <svg class="w-4 h-4 text-gray-500 transform transition-transform duration-200 shrink-0 arrow-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                                </button>
+                                <div class="accordion-content hidden px-4 pb-4 pt-2 border-t border-gray-100 bg-gray-50 flex items-center justify-between mt-auto">
+                                    <span class="text-xs font-semibold px-2 py-0.5 bg-white border border-gray-200 text-gray-700 rounded">Pendent</span>
+                                    <div class="flex items-center gap-1.5">
+                                        <a href="bloc3/15.html" onclick="saveAccordionState('esp-7')" class="px-2.5 py-1 text-xs font-bold text-gray-700 bg-white border border-gray-200 hover:bg-red-600 hover:text-white hover:border-red-600 rounded transition-colors">Apunts</a>
+                                        <a href="bloc3/15test.html" onclick="saveAccordionState('esp-7')" class="px-2.5 py-1 text-xs font-bold text-white bg-red-600 hover:bg-red-700 rounded transition-colors shadow-sm">Test</a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            
+
+                        </div>
+                    </div>
+                </div>
+
+                <div class="main-block border border-gray-200 rounded-xl shadow-sm bg-white overflow-hidden" data-block="esp-bloc-2">
+                    <button onclick="toggleMainBlock('esp-bloc-2')" class="w-full text-left p-4 bg-gray-50 hover:bg-gray-100 flex items-center justify-between gap-4 focus:outline-none transition-colors">
+                        <div class="flex items-center gap-3">
+                            <span class="bg-red-600 text-white text-xs font-bold px-2.5 py-1 rounded">Bloc IV</span>
+                            <h3 class="text-base font-bold text-black">Procediment, Òrgans de Govern i Relacions (Temes 16 al 26)</h3>
+                        </div>
+                        <svg class="w-5 h-5 text-gray-500 transform transition-transform duration-200 shrink-0 main-arrow" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                    </button>
+                    <div class="main-block-content hidden p-4 bg-white border-t border-gray-200">
+                        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+                            <div class="theme-card bg-white border border-gray-200 rounded-xl shadow-sm hover:border-red-600 transition-all duration-200 overflow-hidden flex flex-col justify-between" data-id="esp-8">
+                                <button onclick="toggleAccordion('esp-8')" class="w-full text-left p-4 flex items-center justify-between gap-2 focus:outline-none">
+                                    <div>
+                                        <span class="text-xs font-bold text-red-600 uppercase tracking-wider">Tema 16</span>
+                                        <h4 class="text-sm font-bold text-black mt-1 line-clamp-3">Procediment administratius, acte administratiu i expedient administratiu: conceptes i trets essencials.</h4>
+                                    </div>
+                                    <svg class="w-4 h-4 text-gray-500 transform transition-transform duration-200 shrink-0 arrow-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                                </button>
+                                <div class="accordion-content hidden px-4 pb-4 pt-2 border-t border-gray-100 bg-gray-50 flex items-center justify-between mt-auto">
+                                    <span class="text-xs font-semibold px-2 py-0.5 bg-white border border-gray-200 text-gray-700 rounded">Pendent</span>
+                                    <div class="flex items-center gap-1.5">
+                                        <a href="bloc4/16.html" onclick="saveAccordionState('esp-8')" class="px-2.5 py-1 text-xs font-bold text-gray-700 bg-white border border-gray-200 hover:bg-red-600 hover:text-white hover:border-red-600 rounded transition-colors">Apunts</a>
+                                        <a href="bloc4/16test.html" onclick="saveAccordionState('esp-8')" class="px-2.5 py-1 text-xs font-bold text-white bg-red-600 hover:bg-red-700 rounded transition-colors shadow-sm">Test</a>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            
+                            
+                            
+                            
+                            <div class="theme-card bg-white border border-gray-200 rounded-xl shadow-sm hover:border-red-600 transition-all duration-200 overflow-hidden flex flex-col justify-between" data-id="esp-9">
+                                <button onclick="toggleAccordion('esp-9')" class="w-full text-left p-4 flex items-center justify-between gap-2 focus:outline-none">
+                                    <div>
+                                        <span class="text-xs font-bold text-red-600 uppercase tracking-wider">Tema 17</span>
+                                        <h4 class="text-sm font-bold text-black mt-1 line-clamp-3">Disconformitat de la ciutadania amb l’activitat de les administracions públiques: queixes, al·legacions, recursos administratius, recursos judicials i denúncies.</h4>
+                                    </div>
+                                    <svg class="w-4 h-4 text-gray-500 transform transition-transform duration-200 shrink-0 arrow-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                                </button>
+                                <div class="accordion-content hidden px-4 pb-4 pt-2 border-t border-gray-100 bg-gray-50 flex items-center justify-between mt-auto">
+                                    <span class="text-xs font-semibold px-2 py-0.5 bg-white border border-gray-200 text-gray-700 rounded">Pendent</span>
+                                    <div class="flex items-center gap-1.5">
+                                        <a href="bloc4/17.html" onclick="saveAccordionState('esp-9')" class="px-2.5 py-1 text-xs font-bold text-gray-700 bg-white border border-gray-200 hover:bg-red-600 hover:text-white hover:border-red-600 rounded transition-colors">Apunts</a>
+                                        <a href="bloc4/17test.html" onclick="saveAccordionState('esp-9')" class="px-2.5 py-1 text-xs font-bold text-white bg-red-600 hover:bg-red-700 rounded transition-colors shadow-sm">Test</a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="theme-card bg-white border border-gray-200 rounded-xl shadow-sm hover:border-red-600 transition-all duration-200 overflow-hidden flex flex-col justify-between" data-id="esp-10">
+                                <button onclick="toggleAccordion('esp-10')" class="w-full text-left p-4 flex items-center justify-between gap-2 focus:outline-none">
+                                    <div>
+                                        <span class="text-xs font-bold text-red-600 uppercase tracking-wider">Tema 18</span>
+                                        <h4 class="text-sm font-bold text-black mt-1 line-clamp-3">Relació entre administracions. Els convenis de col·laboració. La delegació de competències. Les encomanes de gestió.</h4>
+                                    </div>
+                                    <svg class="w-4 h-4 text-gray-500 transform transition-transform duration-200 shrink-0 arrow-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                                </button>
+                                <div class="accordion-content hidden px-4 pb-4 pt-2 border-t border-gray-100 bg-gray-50 flex items-center justify-between mt-auto">
+                                    <span class="text-xs font-semibold px-2 py-0.5 bg-white border border-gray-200 text-gray-700 rounded">Pendent</span>
+                                    <div class="flex items-center gap-1.5">
+                                        <a href="bloc4/18.html" onclick="saveAccordionState('esp-10')" class="px-2.5 py-1 text-xs font-bold text-gray-700 bg-white border border-gray-200 hover:bg-red-600 hover:text-white hover:border-red-600 rounded transition-colors">Apunts</a>
+                                        <a href="bloc4/18test.html" onclick="saveAccordionState('esp-10')" class="px-2.5 py-1 text-xs font-bold text-white bg-red-600 hover:bg-red-700 rounded transition-colors shadow-sm">Test</a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="theme-card bg-white border border-gray-200 rounded-xl shadow-sm hover:border-red-600 transition-all duration-200 overflow-hidden flex flex-col justify-between" data-id="esp-11">
+                                <button onclick="toggleAccordion('esp-11')" class="w-full text-left p-4 flex items-center justify-between gap-2 focus:outline-none">
+                                    <div>
+                                        <span class="text-xs font-bold text-red-600 uppercase tracking-wider">Tema 19</span>
+                                        <h4 class="text-sm font-bold text-black mt-1 line-clamp-3">Funcionament dels òrgans de govern de les administracions. Òrgans unipersonals i òrgans col·legiats.</h4>
+                                    </div>
+                                    <svg class="w-4 h-4 text-gray-500 transform transition-transform duration-200 shrink-0 arrow-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                                </button>
+                                <div class="accordion-content hidden px-4 pb-4 pt-2 border-t border-gray-100 bg-gray-50 flex items-center justify-between mt-auto">
+                                    <span class="text-xs font-semibold px-2 py-0.5 bg-white border border-gray-200 text-gray-700 rounded">Pendent</span>
+                                    <div class="flex items-center gap-1.5">
+                                        <a href="bloc4/19.html" onclick="saveAccordionState('esp-11')" class="px-2.5 py-1 text-xs font-bold text-gray-700 bg-white border border-gray-200 hover:bg-red-600 hover:text-white hover:border-red-600 rounded transition-colors">Apunts</a>
+                                        <a href="bloc4/19test.html" onclick="saveAccordionState('esp-11')" class="px-2.5 py-1 text-xs font-bold text-white bg-red-600 hover:bg-red-700 rounded transition-colors shadow-sm">Test</a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="theme-card bg-white border border-gray-200 rounded-xl shadow-sm hover:border-red-600 transition-all duration-200 overflow-hidden flex flex-col justify-between" data-id="esp-12">
+                                <button onclick="toggleAccordion('esp-12')" class="w-full text-left p-4 flex items-center justify-between gap-2 focus:outline-none">
+                                    <div>
+                                        <span class="text-xs font-bold text-red-600 uppercase tracking-wider">Tema 20</span>
+                                        <h4 class="text-sm font-bold text-black mt-1 line-clamp-3">L’adopció d’acords per part dels òrgans de govern unipersonals.</h4>
+                                    </div>
+                                    <svg class="w-4 h-4 text-gray-500 transform transition-transform duration-200 shrink-0 arrow-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                                </button>
+                                <div class="accordion-content hidden px-4 pb-4 pt-2 border-t border-gray-100 bg-gray-50 flex items-center justify-between mt-auto">
+                                    <span class="text-xs font-semibold px-2 py-0.5 bg-white border border-gray-200 text-gray-700 rounded">Pendent</span>
+                                    <div class="flex items-center gap-1.5">
+                                        <a href="bloc4/20.html" onclick="saveAccordionState('esp-12')" class="px-2.5 py-1 text-xs font-bold text-gray-700 bg-white border border-gray-200 hover:bg-red-600 hover:text-white hover:border-red-600 rounded transition-colors">Apunts</a>
+                                        <a href="bloc4/20test.html" onclick="saveAccordionState('esp-12')" class="px-2.5 py-1 text-xs font-bold text-white bg-red-600 hover:bg-red-700 rounded transition-colors shadow-sm">Test</a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="theme-card bg-white border border-gray-200 rounded-xl shadow-sm hover:border-red-600 transition-all duration-200 overflow-hidden flex flex-col justify-between" data-id="esp-13">
+                                <button onclick="toggleAccordion('esp-13')" class="w-full text-left p-4 flex items-center justify-between gap-2 focus:outline-none">
+                                    <div>
+                                        <span class="text-xs font-bold text-red-600 uppercase tracking-wider">Tema 21</span>
+                                        <h4 class="text-sm font-bold text-black mt-1 line-clamp-3">L’adopció d’acords per part dels òrgans de govern col·legiats.</h4>
+                                    </div>
+                                    <svg class="w-4 h-4 text-gray-500 transform transition-transform duration-200 shrink-0 arrow-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                                </button>
+                                <div class="accordion-content hidden px-4 pb-4 pt-2 border-t border-gray-100 bg-gray-50 flex items-center justify-between mt-auto">
+                                    <span class="text-xs font-semibold px-2 py-0.5 bg-white border border-gray-200 text-gray-700 rounded">Pendent</span>
+                                    <div class="flex items-center gap-1.5">
+                                        <a href="bloc4/21.html" onclick="saveAccordionState('esp-13')" class="px-2.5 py-1 text-xs font-bold text-gray-700 bg-white border border-gray-200 hover:bg-red-600 hover:text-white hover:border-red-600 rounded transition-colors">Apunts</a>
+                                        <a href="bloc4/21test.html" onclick="saveAccordionState('esp-13')" class="px-2.5 py-1 text-xs font-bold text-white bg-red-600 hover:bg-red-700 rounded transition-colors shadow-sm">Test</a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="theme-card bg-white border border-gray-200 rounded-xl shadow-sm hover:border-red-600 transition-all duration-200 overflow-hidden flex flex-col justify-between" data-id="esp-14">
+                                <button onclick="toggleAccordion('esp-14')" class="w-full text-left p-4 flex items-center justify-between gap-2 focus:outline-none">
+                                    <div>
+                                        <span class="text-xs font-bold text-red-600 uppercase tracking-wider">Tema 22</span>
+                                        <h4 class="text-sm font-bold text-black mt-1 line-clamp-3">Òrgans de govern de l’Àrea Metropolitana de Barcelona. La presidència. El Consell Metropolità. La Junta de Govern. La gerència. Altres òrgans.</h4>
+                                    </div>
+                                    <svg class="w-4 h-4 text-gray-500 transform transition-transform duration-200 shrink-0 arrow-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                                </button>
+                                <div class="accordion-content hidden px-4 pb-4 pt-2 border-t border-gray-100 bg-gray-50 flex items-center justify-between mt-auto">
+                                    <span class="text-xs font-semibold px-2 py-0.5 bg-white border border-gray-200 text-gray-700 rounded">Pendent</span>
+                                    <div class="flex items-center gap-1.5">
+                                        <a href="bloc4/22.html" onclick="saveAccordionState('esp-14')" class="px-2.5 py-1 text-xs font-bold text-gray-700 bg-white border border-gray-200 hover:bg-red-600 hover:text-white hover:border-red-600 rounded transition-colors">Apunts</a>
+                                        <a href="bloc4/22test.html" onclick="saveAccordionState('esp-14')" class="px-2.5 py-1 text-xs font-bold text-white bg-red-600 hover:bg-red-700 rounded transition-colors shadow-sm">Test</a>
+                                    </div>
+                                </div>
+                            </div>
+                          
+
+                            <div class="theme-card bg-white border border-gray-200 rounded-xl shadow-sm hover:border-red-600 transition-all duration-200 overflow-hidden flex flex-col justify-between" data-id="esp-16">
+                                <button onclick="toggleAccordion('esp-16')" class="w-full text-left p-4 flex items-center justify-between gap-2 focus:outline-none">
+                                    <div>
+                                        <span class="text-xs font-bold text-red-600 uppercase tracking-wider">Tema 23</span>
+                                        <h4 class="text-sm font-bold text-black mt-1 line-clamp-3">L’acte administratiu. L’executivitat dels actes administratius. La invalidesa de l’acte administratiu: actes nuls i actes anul·lables.</h4>
+                                    </div>
+                                    <svg class="w-4 h-4 text-gray-500 transform transition-transform duration-200 shrink-0 arrow-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                                </button>
+                                <div class="accordion-content hidden px-4 pb-4 pt-2 border-t border-gray-100 bg-gray-50 flex items-center justify-between mt-auto">
+                                    <span class="text-xs font-semibold px-2 py-0.5 bg-white border border-gray-200 text-gray-700 rounded">Pendent</span>
+                                    <div class="flex items-center gap-1.5">
+                                        <a href="bloc4/23.html" onclick="saveAccordionState('esp-16')" class="px-2.5 py-1 text-xs font-bold text-gray-700 bg-white border border-gray-200 hover:bg-red-600 hover:text-white hover:border-red-600 rounded transition-colors">Apunts</a>
+                                        <a href="bloc4/23test.html" onclick="saveAccordionState('esp-16')" class="px-2.5 py-1 text-xs font-bold text-white bg-red-600 hover:bg-red-700 rounded transition-colors shadow-sm">Test</a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="theme-card bg-white border border-gray-200 rounded-xl shadow-sm hover:border-red-600 transition-all duration-200 overflow-hidden flex flex-col justify-between" data-id="esp-17">
+                                <button onclick="toggleAccordion('esp-17')" class="w-full text-left p-4 flex items-center justify-between gap-2 focus:outline-none">
+                                    <div>
+                                        <span class="text-xs font-bold text-red-600 uppercase tracking-wider">Tema 24</span>
+                                        <h4 class="text-sm font-bold text-black mt-1 line-clamp-3">Disposicions generals i potestat reguladora de les administracions locals. Reglaments. Ordenances. Ordenances fiscals.</h4>
+                                    </div>
+                                    <svg class="w-4 h-4 text-gray-500 transform transition-transform duration-200 shrink-0 arrow-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                                </button>
+                                <div class="accordion-content hidden px-4 pb-4 pt-2 border-t border-gray-100 bg-gray-50 flex items-center justify-between mt-auto">
+                                    <span class="text-xs font-semibold px-2 py-0.5 bg-white border border-gray-200 text-gray-700 rounded">Pendent</span>
+                                    <div class="flex items-center gap-1.5">
+                                        <a href="bloc4/24.html" onclick="saveAccordionState('esp-17')" class="px-2.5 py-1 text-xs font-bold text-gray-700 bg-white border border-gray-200 hover:bg-red-600 hover:text-white hover:border-red-600 rounded transition-colors">Apunts</a>
+                                        <a href="bloc4/24test.html" onclick="saveAccordionState('esp-17')" class="px-2.5 py-1 text-xs font-bold text-white bg-red-600 hover:bg-red-700 rounded transition-colors shadow-sm">Test</a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="theme-card bg-white border border-gray-200 rounded-xl shadow-sm hover:border-red-600 transition-all duration-200 overflow-hidden flex flex-col justify-between" data-id="esp-18">
+                                <button onclick="toggleAccordion('esp-18')" class="w-full text-left p-4 flex items-center justify-between gap-2 focus:outline-none">
+                                    <div>
+                                        <span class="text-xs font-bold text-red-600 uppercase tracking-wider">Tema 25</span>
+                                        <h4 class="text-sm font-bold text-black mt-1 line-clamp-3">El Procediment administratiu comú. Relació dels ciutadans amb l’Administració. Còmput i compliment de terminis.</h4>
+                                    </div>
+                                    <svg class="w-4 h-4 text-gray-500 transform transition-transform duration-200 shrink-0 arrow-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                                </button>
+                                <div class="accordion-content hidden px-4 pb-4 pt-2 border-t border-gray-100 bg-gray-50 flex items-center justify-between mt-auto">
+                                    <span class="text-xs font-semibold px-2 py-0.5 bg-white border border-gray-200 text-gray-700 rounded">Pendent</span>
+                                    <div class="flex items-center gap-1.5">
+                                        <a href="bloc4/25.html" onclick="saveAccordionState('esp-18')" class="px-2.5 py-1 text-xs font-bold text-gray-700 bg-white border border-gray-200 hover:bg-red-600 hover:text-white hover:border-red-600 rounded transition-colors">Apunts</a>
+                                        <a href="bloc4/25test.html" onclick="saveAccordionState('esp-18')" class="px-2.5 py-1 text-xs font-bold text-white bg-red-600 hover:bg-red-700 rounded transition-colors shadow-sm">Test</a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="theme-card bg-white border border-gray-200 rounded-xl shadow-sm hover:border-red-600 transition-all duration-200 overflow-hidden flex flex-col justify-between" data-id="esp-19">
+                                <button onclick="toggleAccordion('esp-19')" class="w-full text-left p-4 flex items-center justify-between gap-2 focus:outline-none">
+                                    <div>
+                                        <span class="text-xs font-bold text-red-600 uppercase tracking-wider">Tema 26</span>
+                                        <h4 class="text-sm font-bold text-black mt-1 line-clamp-3">Recursos administratius: Principis generals. Actes susceptibles de recurs administratiu. Classes de recursos. Reclamacions judicials contra l’administració</h4>
+                                    </div>
+                                    <svg class="w-4 h-4 text-gray-500 transform transition-transform duration-200 shrink-0 arrow-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                                </button>
+                                <div class="accordion-content hidden px-4 pb-4 pt-2 border-t border-gray-100 bg-gray-50 flex items-center justify-between mt-auto">
+                                    <span class="text-xs font-semibold px-2 py-0.5 bg-white border border-gray-200 text-gray-700 rounded">Pendent</span>
+                                    <div class="flex items-center gap-1.5">
+                                        <a href="bloc4/26.html" onclick="saveAccordionState('esp-19')" class="px-2.5 py-1 text-xs font-bold text-gray-700 bg-white border border-gray-200 hover:bg-red-600 hover:text-white hover:border-red-600 rounded transition-colors">Apunts</a>
+                                        <a href="bloc4/26test.html" onclick="saveAccordionState('esp-19')" class="px-2.5 py-1 text-xs font-bold text-white bg-red-600 hover:bg-red-700 rounded transition-colors shadow-sm">Test</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="main-block border border-gray-200 rounded-xl shadow-sm bg-white overflow-hidden" data-block="esp-bloc-3">
+                    <button onclick="toggleMainBlock('esp-bloc-3')" class="w-full text-left p-4 bg-gray-50 hover:bg-gray-100 flex items-center justify-between gap-4 focus:outline-none transition-colors">
+                        <div class="flex items-center gap-3">
+                            <span class="bg-red-600 text-white text-xs font-bold px-2.5 py-1 rounded">Bloc V</span>
+                            <h3 class="text-base font-bold text-black">Personal, Actes, Contractació i Serveis (Temes 27 al 31)</h3>
+                        </div>
+                        <svg class="w-5 h-5 text-gray-500 transform transition-transform duration-200 shrink-0 main-arrow" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                    </button>
+                    <div class="main-block-content hidden p-4 bg-white border-t border-gray-200">
+                        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+                            
+                              <div class="theme-card bg-white border border-gray-200 rounded-xl shadow-sm hover:border-red-600 transition-all duration-200 overflow-hidden flex flex-col justify-between" data-id="esp-15">
+                                <button onclick="toggleAccordion('esp-15')" class="w-full text-left p-4 flex items-center justify-between gap-2 focus:outline-none">
+                                    <div>
+                                        <span class="text-xs font-bold text-red-600 uppercase tracking-wider">Tema 27</span>
+                                        <h4 class="text-sm font-bold text-black mt-1 line-clamp-3">La funció pública local i la seva organització. Selecció i provisió de llocs. Situacions administratives del personal al servei de l’administració pública. Drets i deures del personal al servei de l’administració pública.</h4>
+                                    </div>
+                                    <svg class="w-4 h-4 text-gray-500 transform transition-transform duration-200 shrink-0 arrow-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                                </button>
+                                <div class="accordion-content hidden px-4 pb-4 pt-2 border-t border-gray-100 bg-gray-50 flex items-center justify-between mt-auto">
+                                    <span class="text-xs font-semibold px-2 py-0.5 bg-white border border-gray-200 text-gray-700 rounded">Pendent</span>
+                                    <div class="flex items-center gap-1.5">
+                                        <a href="bloc5/27.html" onclick="saveAccordionState('esp-15')" class="px-2.5 py-1 text-xs font-bold text-gray-700 bg-white border border-gray-200 hover:bg-red-600 hover:text-white hover:border-red-600 rounded transition-colors">Apunts</a>
+                                        <a href="bloc5/27test.html" onclick="saveAccordionState('esp-15')" class="px-2.5 py-1 text-xs font-bold text-white bg-red-600 hover:bg-red-700 rounded transition-colors shadow-sm">Test</a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="theme-card bg-white border border-gray-200 rounded-xl shadow-sm hover:border-red-600 transition-all duration-200 overflow-hidden flex flex-col justify-between" data-id="esp-20">
+                                <button onclick="toggleAccordion('esp-20')" class="w-full text-left p-4 flex items-center justify-between gap-2 focus:outline-none">
+                                    <div>
+                                        <span class="text-xs font-bold text-red-600 uppercase tracking-wider">Tema 28</span>
+                                        <h4 class="text-sm font-bold text-black mt-1 line-clamp-3">La contractació administrativa en l'esfera local. Classes de contractes. Drets i deures del contractista i de l’Administració.</h4>
+                                    </div>
+                                    <svg class="w-4 h-4 text-gray-500 transform transition-transform duration-200 shrink-0 arrow-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                                </button>
+                                <div class="accordion-content hidden px-4 pb-4 pt-2 border-t border-gray-100 bg-gray-50 flex items-center justify-between mt-auto">
+                                    <span class="text-xs font-semibold px-2 py-0.5 bg-white border border-gray-200 text-gray-700 rounded">Pendent</span>
+                                    <div class="flex items-center gap-1.5">
+                                        <a href="bloc5/28.html" onclick="saveAccordionState('esp-20')" class="px-2.5 py-1 text-xs font-bold text-gray-700 bg-white border border-gray-200 hover:bg-red-600 hover:text-white hover:border-red-600 rounded transition-colors">Apunts</a>
+                                        <a href="bloc5/28test.html" onclick="saveAccordionState('esp-20')" class="px-2.5 py-1 text-xs font-bold text-white bg-red-600 hover:bg-red-700 rounded transition-colors shadow-sm">Test</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="theme-card bg-white border border-gray-200 rounded-xl shadow-sm hover:border-red-600 transition-all duration-200 overflow-hidden flex flex-col justify-between" data-id="esp-21">
+                                <button onclick="toggleAccordion('esp-21')" class="w-full text-left p-4 flex items-center justify-between gap-2 focus:outline-none">
+                                    <div>
+                                        <span class="text-xs font-bold text-red-600 uppercase tracking-wider">Tema 29</span>
+                                        <h4 class="text-sm font-bold text-black mt-1 line-clamp-3">Competències i serveis metropolitans. El Pla d’Actuació Metropolità vigent.</h4>
+                                    </div>
+                                    <svg class="w-4 h-4 text-gray-500 transform transition-transform duration-200 shrink-0 arrow-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                                </button>
+                                <div class="accordion-content hidden px-4 pb-4 pt-2 border-t border-gray-100 bg-gray-50 flex items-center justify-between mt-auto">
+                                    <span class="text-xs font-semibold px-2 py-0.5 bg-white border border-gray-200 text-gray-700 rounded">Pendent</span>
+                                    <div class="flex items-center gap-1.5">
+                                        <a href="bloc5/29.html" onclick="saveAccordionState('esp-21')" class="px-2.5 py-1 text-xs font-bold text-gray-700 bg-white border border-gray-200 hover:bg-red-600 hover:text-white hover:border-red-600 rounded transition-colors">Apunts</a>
+                                        <a href="bloc5/29test.html" onclick="saveAccordionState('esp-21')" class="px-2.5 py-1 text-xs font-bold text-white bg-red-600 hover:bg-red-700 rounded transition-colors shadow-sm">Test</a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="theme-card bg-white border border-gray-200 rounded-xl shadow-sm hover:border-red-600 transition-all duration-200 overflow-hidden flex flex-col justify-between" data-id="esp-22">
+                                <button onclick="toggleAccordion('esp-22')" class="w-full text-left p-4 flex items-center justify-between gap-2 focus:outline-none">
+                                    <div>
+                                        <span class="text-xs font-bold text-red-600 uppercase tracking-wider">Tema 30</span>
+                                        <h4 class="text-sm font-bold text-black mt-1 line-clamp-3">La figura del contracte menor. Els contractes verbals a l’administració.</h4>
+                                    </div>
+                                    <svg class="w-4 h-4 text-gray-500 transform transition-transform duration-200 shrink-0 arrow-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                                </button>
+                                <div class="accordion-content hidden px-4 pb-4 pt-2 border-t border-gray-100 bg-gray-50 flex items-center justify-between mt-auto">
+                                    <span class="text-xs font-semibold px-2 py-0.5 bg-white border border-gray-200 text-gray-700 rounded">Pendent</span>
+                                    <div class="flex items-center gap-1.5">
+                                        <a href="bloc5/30.html" onclick="saveAccordionState('esp-22')" class="px-2.5 py-1 text-xs font-bold text-gray-700 bg-white border border-gray-200 hover:bg-red-600 hover:text-white hover:border-red-600 rounded transition-colors">Apunts</a>
+                                        <a href="bloc5/30test.html" onclick="saveAccordionState('esp-22')" class="px-2.5 py-1 text-xs font-bold text-white bg-red-600 hover:bg-red-700 rounded transition-colors shadow-sm">Test</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="theme-card bg-white border border-gray-200 rounded-xl shadow-sm hover:border-red-600 transition-all duration-200 overflow-hidden flex flex-col justify-between" data-id="esp-28">
+                                <button onclick="toggleAccordion('esp-28')" class="w-full text-left p-4 flex items-center justify-between gap-2 focus:outline-none">
+                                    <div>
+                                        <span class="text-xs font-bold text-red-600 uppercase tracking-wider">Tema 31</span>
+                                        <h4 class="text-sm font-bold text-black mt-1 line-clamp-3">El servei públic. Formes de gestió del servei públic.</h4>
+                                    </div>
+                                    <svg class="w-4 h-4 text-gray-500 transform transition-transform duration-200 shrink-0 arrow-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                                </button>
+                                <div class="accordion-content hidden px-4 pb-4 pt-2 border-t border-gray-100 bg-gray-50 flex items-center justify-between mt-auto">
+                                    <span class="text-xs font-semibold px-2 py-0.5 bg-white border border-gray-200 text-gray-700 rounded">Pendent</span>
+                                    <div class="flex items-center gap-1.5">
+                                        <a href="bloc5/31.html" onclick="saveAccordionState('esp-28')" class="px-2.5 py-1 text-xs font-bold text-gray-700 bg-white border border-gray-200 hover:bg-red-600 hover:text-white hover:border-red-600 rounded transition-colors">Apunts</a>
+                                        <a href="bloc5/31test.html" onclick="saveAccordionState('esp-28')" class="px-2.5 py-1 text-xs font-bold text-white bg-red-600 hover:bg-red-700 rounded transition-colors shadow-sm">Test</a>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+                <div class="main-block border border-gray-200 rounded-xl shadow-sm bg-white overflow-hidden" data-block="esp-bloc-4">
+                    <button onclick="toggleMainBlock('esp-bloc-4')" class="w-full text-left p-4 bg-gray-50 hover:bg-gray-100 flex items-center justify-between gap-4 focus:outline-none transition-colors">
+                        <div class="flex items-center gap-3">
+                            <span class="bg-red-600 text-white text-xs font-bold px-2.5 py-1 rounded">Bloc VI</span>
+                            <h3 class="text-base font-bold text-black">Economia, Hisenda i Serveis Metropolitans (Temes 32 al 35)</h3>
+                        </div>
+                        <svg class="w-5 h-5 text-gray-500 transform transition-transform duration-200 shrink-0 main-arrow" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                    </button>
+                    <div class="main-block-content hidden p-4 bg-white border-t border-gray-200">
+                        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+                            
+                            
+
+                            <div class="theme-card bg-white border border-gray-200 rounded-xl shadow-sm hover:border-red-600 transition-all duration-200 overflow-hidden flex flex-col justify-between" data-id="esp-23">
+                                <button onclick="toggleAccordion('esp-23')" class="w-full text-left p-4 flex items-center justify-between gap-2 focus:outline-none">
+                                    <div>
+                                        <span class="text-xs font-bold text-red-600 uppercase tracking-wider">Tema 32</span>
+                                        <h4 class="text-sm font-bold text-black mt-1 line-clamp-3">Pressupostos de les administracions públiques. Estructura pressupostària. Execució del Pressupost.</h4>
+                                    </div>
+                                    <svg class="w-4 h-4 text-gray-500 transform transition-transform duration-200 shrink-0 arrow-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                                </button>
+                                <div class="accordion-content hidden px-4 pb-4 pt-2 border-t border-gray-100 bg-gray-50 flex items-center justify-between mt-auto">
+                                    <span class="text-xs font-semibold px-2 py-0.5 bg-white border border-gray-200 text-gray-700 rounded">Pendent</span>
+                                    <div class="flex items-center gap-1.5">
+                                        <a href="bloc6/32.html" onclick="saveAccordionState('esp-23')" class="px-2.5 py-1 text-xs font-bold text-gray-700 bg-white border border-gray-200 hover:bg-red-600 hover:text-white hover:border-red-600 rounded transition-colors">Apunts</a>
+                                        <a href="bloc6/32test.html" onclick="saveAccordionState('esp-23')" class="px-2.5 py-1 text-xs font-bold text-white bg-red-600 hover:bg-red-700 rounded transition-colors shadow-sm">Test</a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="theme-card bg-white border border-gray-200 rounded-xl shadow-sm hover:border-red-600 transition-all duration-200 overflow-hidden flex flex-col justify-between" data-id="esp-24">
+                                <button onclick="toggleAccordion('esp-24')" class="w-full text-left p-4 flex items-center justify-between gap-2 focus:outline-none">
+                                    <div>
+                                        <span class="text-xs font-bold text-red-600 uppercase tracking-wider">Tema 33</span>
+                                        <h4 class="text-sm font-bold text-black mt-1 line-clamp-3">Règim de la despesa pública local: autorització, disposició, obligació i pagament. Documents comptables. Despeses sense consignació pressupostària,</h4>
+                                    </div>
+                                    <svg class="w-4 h-4 text-gray-500 transform transition-transform duration-200 shrink-0 arrow-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                                </button>
+                                <div class="accordion-content hidden px-4 pb-4 pt-2 border-t border-gray-100 bg-gray-50 flex items-center justify-between mt-auto">
+                                    <span class="text-xs font-semibold px-2 py-0.5 bg-white border border-gray-200 text-gray-700 rounded">Pendent</span>
+                                    <div class="flex items-center gap-1.5">
+                                        <a href="bloc6/33.html" onclick="saveAccordionState('esp-24')" class="px-2.5 py-1 text-xs font-bold text-gray-700 bg-white border border-gray-200 hover:bg-red-600 hover:text-white hover:border-red-600 rounded transition-colors">Apunts</a>
+                                        <a href="bloc6/33test.html" onclick="saveAccordionState('esp-24')" class="px-2.5 py-1 text-xs font-bold text-white bg-red-600 hover:bg-red-700 rounded transition-colors shadow-sm">Test</a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="theme-card bg-white border border-gray-200 rounded-xl shadow-sm hover:border-red-600 transition-all duration-200 overflow-hidden flex flex-col justify-between" data-id="esp-25">
+                                <button onclick="toggleAccordion('esp-25')" class="w-full text-left p-4 flex items-center justify-between gap-2 focus:outline-none">
+                                    <div>
+                                        <span class="text-xs font-bold text-red-600 uppercase tracking-wider">Tema 34</span>
+                                        <h4 class="text-sm font-bold text-black mt-1 line-clamp-3">Els ingressos de l’administració. Ingressos no previstos en el pressupost inicial.</h4>
+                                    </div>
+                                    <svg class="w-4 h-4 text-gray-500 transform transition-transform duration-200 shrink-0 arrow-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                                </button>
+                                <div class="accordion-content hidden px-4 pb-4 pt-2 border-t border-gray-100 bg-gray-50 flex items-center justify-between mt-auto">
+                                    <span class="text-xs font-semibold px-2 py-0.5 bg-white border border-gray-200 text-gray-700 rounded">Pendent</span>
+                                    <div class="flex items-center gap-1.5">
+                                        <a href="bloc6/34.html" onclick="saveAccordionState('esp-25')" class="px-2.5 py-1 text-xs font-bold text-gray-700 bg-white border border-gray-200 hover:bg-red-600 hover:text-white hover:border-red-600 rounded transition-colors">Apunts</a>
+                                        <a href="bloc6/34test.html" onclick="saveAccordionState('esp-25')" class="px-2.5 py-1 text-xs font-bold text-white bg-red-600 hover:bg-red-700 rounded transition-colors shadow-sm">Test</a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="theme-card bg-white border border-gray-200 rounded-xl shadow-sm hover:border-red-600 transition-all duration-200 overflow-hidden flex flex-col justify-between" data-id="esp-26">
+                                <button onclick="toggleAccordion('esp-26')" class="w-full text-left p-4 flex items-center justify-between gap-2 focus:outline-none">
+                                    <div>
+                                        <span class="text-xs font-bold text-red-600 uppercase tracking-wider">Tema 35</span>
+                                        <h4 class="text-sm font-bold text-black mt-1 line-clamp-3">Ingressos de naturalesa tributària: impostos, tributs i taxes. Altres ingressos de les administracions: preus públics i preus privats.</h4>
+                                    </div>
+                                    <svg class="w-4 h-4 text-gray-500 transform transition-transform duration-200 shrink-0 arrow-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                                </button>
+                                <div class="accordion-content hidden px-4 pb-4 pt-2 border-t border-gray-100 bg-gray-50 flex items-center justify-between mt-auto">
+                                    <span class="text-xs font-semibold px-2 py-0.5 bg-white border border-gray-200 text-gray-700 rounded">Pendent</span>
+                                    <div class="flex items-center gap-1.5">
+                                        <a href="bloc6/35.html" onclick="saveAccordionState('esp-26')" class="px-2.5 py-1 text-xs font-bold text-gray-700 bg-white border border-gray-200 hover:bg-red-600 hover:text-white hover:border-red-600 rounded transition-colors">Apunts</a>
+                                        <a href="bloc6/35test.html" onclick="saveAccordionState('esp-26')" class="px-2.5 py-1 text-xs font-bold text-white bg-red-600 hover:bg-red-700 rounded transition-colors shadow-sm">Test</a>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+                <div class="main-block border border-gray-200 rounded-xl shadow-sm bg-white overflow-hidden" data-block="esp-bloc-5">
+                    <button onclick="toggleMainBlock('esp-bloc-5')" class="w-full text-left p-4 bg-gray-50 hover:bg-gray-100 flex items-center justify-between gap-4 focus:outline-none transition-colors">
+                        <div class="flex items-center gap-3">
+                            <span class="bg-red-600 text-white text-xs font-bold px-2.5 py-1 rounded">Bloc VII</span>
+                            <h3 class="text-base font-bold text-black">Patrimoni, Responsabilitat, Transparència i Subvencions (Temes 36 al 40)</h3>
+                        </div>
+                        <svg class="w-5 h-5 text-gray-500 transform transition-transform duration-200 shrink-0 main-arrow" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                    </button>
+                    <div class="main-block-content hidden p-4 bg-white border-t border-gray-200">
+                        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+                            
+                            <div class="theme-card bg-white border border-gray-200 rounded-xl shadow-sm hover:border-red-600 transition-all duration-200 overflow-hidden flex flex-col justify-between" data-id="esp-27">
+                                <button onclick="toggleAccordion('esp-27')" class="w-full text-left p-4 flex items-center justify-between gap-2 focus:outline-none">
+                                    <div>
+                                        <span class="text-xs font-bold text-red-600 uppercase tracking-wider">Tema 36</span>
+                                        <h4 class="text-sm font-bold text-black mt-1 line-clamp-3">La gestió del patrimoni públic, tipus de béns, registre d’inventaris i transparència.</h4>
+                                    </div>
+                                    <svg class="w-4 h-4 text-gray-500 transform transition-transform duration-200 shrink-0 arrow-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                                </button>
+                                <div class="accordion-content hidden px-4 pb-4 pt-2 border-t border-gray-100 bg-gray-50 flex items-center justify-between mt-auto">
+                                    <span class="text-xs font-semibold px-2 py-0.5 bg-white border border-gray-200 text-gray-700 rounded">Pendent</span>
+                                    <div class="flex items-center gap-1.5">
+                                        <a href="bloc7/36.html" onclick="saveAccordionState('esp-27')" class="px-2.5 py-1 text-xs font-bold text-gray-700 bg-white border border-gray-200 hover:bg-red-600 hover:text-white hover:border-red-600 rounded transition-colors">Apunts</a>
+                                        <a href="bloc7/36test.html" onclick="saveAccordionState('esp-27')" class="px-2.5 py-1 text-xs font-bold text-white bg-red-600 hover:bg-red-700 rounded transition-colors shadow-sm">Test</a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            
+
+                            <div class="theme-card bg-white border border-gray-200 rounded-xl shadow-sm hover:border-red-600 transition-all duration-200 overflow-hidden flex flex-col justify-between" data-id="esp-29">
+                                <button onclick="toggleAccordion('esp-29')" class="w-full text-left p-4 flex items-center justify-between gap-2 focus:outline-none">
+                                    <div>
+                                        <span class="text-xs font-bold text-red-600 uppercase tracking-wider">Tema 37</span>
+                                        <h4 class="text-sm font-bold text-black mt-1 line-clamp-3">Aspectes bàsics de la responsabilitat patrimonial de les Administracions Públiques</h4>
+                                    </div>
+                                    <svg class="w-4 h-4 text-gray-500 transform transition-transform duration-200 shrink-0 arrow-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                                </button>
+                                <div class="accordion-content hidden px-4 pb-4 pt-2 border-t border-gray-100 bg-gray-50 flex items-center justify-between mt-auto">
+                                    <span class="text-xs font-semibold px-2 py-0.5 bg-white border border-gray-200 text-gray-700 rounded">Pendent</span>
+                                    <div class="flex items-center gap-1.5">
+                                        <a href="bloc7/37.html" onclick="saveAccordionState('esp-29')" class="px-2.5 py-1 text-xs font-bold text-gray-700 bg-white border border-gray-200 hover:bg-red-600 hover:text-white hover:border-red-600 rounded transition-colors">Apunts</a>
+                                        <a href="bloc7/37test.html" onclick="saveAccordionState('esp-29')" class="px-2.5 py-1 text-xs font-bold text-white bg-red-600 hover:bg-red-700 rounded transition-colors shadow-sm">Test</a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="theme-card bg-white border border-gray-200 rounded-xl shadow-sm hover:border-red-600 transition-all duration-200 overflow-hidden flex flex-col justify-between" data-id="esp-30">
+                                <button onclick="toggleAccordion('esp-30')" class="w-full text-left p-4 flex items-center justify-between gap-2 focus:outline-none">
+                                    <div>
+                                        <span class="text-xs font-bold text-red-600 uppercase tracking-wider">Tema 38</span>
+                                        <h4 class="text-sm font-bold text-black mt-1 line-clamp-3">La protecció de dades de caràcter personal. Règim jurídic.</h4>
+                                    </div>
+                                    <svg class="w-4 h-4 text-gray-500 transform transition-transform duration-200 shrink-0 arrow-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                                </button>
+                                <div class="accordion-content hidden px-4 pb-4 pt-2 border-t border-gray-100 bg-gray-50 flex items-center justify-between mt-auto">
+                                    <span class="text-xs font-semibold px-2 py-0.5 bg-white border border-gray-200 text-gray-700 rounded">Pendent</span>
+                                    <div class="flex items-center gap-1.5">
+                                        <a href="bloc7/38.html" onclick="saveAccordionState('esp-30')" class="px-2.5 py-1 text-xs font-bold text-gray-700 bg-white border border-gray-200 hover:bg-red-600 hover:text-white hover:border-red-600 rounded transition-colors">Apunts</a>
+                                        <a href="bloc7/38test.html" onclick="saveAccordionState('esp-30')" class="px-2.5 py-1 text-xs font-bold text-white bg-red-600 hover:bg-red-700 rounded transition-colors shadow-sm">Test</a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="theme-card bg-white border border-gray-200 rounded-xl shadow-sm hover:border-red-600 transition-all duration-200 overflow-hidden flex flex-col justify-between" data-id="esp-31">
+                                <button onclick="toggleAccordion('esp-31')" class="w-full text-left p-4 flex items-center justify-between gap-2 focus:outline-none">
+                                    <div>
+                                        <span class="text-xs font-bold text-red-600 uppercase tracking-wider">Tema 39</span>
+                                        <h4 class="text-sm font-bold text-black mt-1 line-clamp-3">Obligacions de publicitat derivades de la Llei estatal 19/2013 i de la Llei catalana 19/2014, de transparència, accés a la informació pública i bon govern.</h4>
+                                    </div>
+                                    <svg class="w-4 h-4 text-gray-500 transform transition-transform duration-200 shrink-0 arrow-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                                </button>
+                                <div class="accordion-content hidden px-4 pb-4 pt-2 border-t border-gray-100 bg-gray-50 flex items-center justify-between mt-auto">
+                                    <span class="text-xs font-semibold px-2 py-0.5 bg-white border border-gray-200 text-gray-700 rounded">Pendent</span>
+                                    <div class="flex items-center gap-1.5">
+                                        <a href="bloc7/39.html" onclick="saveAccordionState('esp-31')" class="px-2.5 py-1 text-xs font-bold text-gray-700 bg-white border border-gray-200 hover:bg-red-600 hover:text-white hover:border-red-600 rounded transition-colors">Apunts</a>
+                                        <a href="bloc7/39test.html" onclick="saveAccordionState('esp-31')" class="px-2.5 py-1 text-xs font-bold text-white bg-red-600 hover:bg-red-700 rounded transition-colors shadow-sm">Test</a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="theme-card bg-white border border-gray-200 rounded-xl shadow-sm hover:border-red-600 transition-all duration-200 overflow-hidden flex flex-col justify-between" data-id="esp-32">
+                                <button onclick="toggleAccordion('esp-32')" class="w-full text-left p-4 flex items-center justify-between gap-2 focus:outline-none">
+                                    <div>
+                                        <span class="text-xs font-bold text-red-600 uppercase tracking-wider">Tema 40</span>
+                                        <h4 class="text-sm font-bold text-black mt-1 line-clamp-3">Subvencions en el sector públic. Atorgament de subvencions. Petició i recepció de subvencions. Fases del procediment de gestió de subvencions: convocatòria, petició dels ajuts, resolució, execució de les activitats subvencionades, justificació.</h4>
+                                    </div>
+                                    <svg class="w-4 h-4 text-gray-500 transform transition-transform duration-200 shrink-0 arrow-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                                </button>
+                                <div class="accordion-content hidden px-4 pb-4 pt-2 border-t border-gray-100 bg-gray-50 flex items-center justify-between mt-auto">
+                                    <span class="text-xs font-semibold px-2 py-0.5 bg-white border border-gray-200 text-gray-700 rounded">Pendent</span>
+                                    <div class="flex items-center gap-1.5">
+                                        <a href="bloc7/40.html" onclick="saveAccordionState('esp-32')" class="px-2.5 py-1 text-xs font-bold text-gray-700 bg-white border border-gray-200 hover:bg-red-600 hover:text-white hover:border-red-600 rounded transition-colors">Apunts</a>
+                                        <a href="bloc7/40test.html" onclick="saveAccordionState('esp-32')" class="px-2.5 py-1 text-xs font-bold text-white bg-red-600 hover:bg-red-700 rounded transition-colors shadow-sm">Test</a>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+ <!-- =====================================================
+             NOVA SECCIÓ: RECOPILATORIS PER BLOCS (PLEGABLE)
+             ===================================================== -->
+        <section class="mb-8" data-block="recopilatoris-blocs">
+            <div class="border-b-2 border-rose-500 pb-2 mb-6">
+                <h2 class="text-xl sm:text-2xl font-bold text-black uppercase tracking-wide">Recopilatoris per Blocs</h2>
+            </div>
+
+            <div class="space-y-4">
+                <div class="border border-rose-200 rounded-xl shadow-sm bg-rose-50/50 overflow-hidden">
+                    <button onclick="toggleMainBlock('recopilatoris-blocs')" class="w-full text-left p-4 bg-rose-100/70 flex items-center justify-between gap-4 focus:outline-none">
+                        <div class="flex items-center gap-3">
+                            <span class="bg-rose-600 text-white text-xs font-bold px-2.5 py-1 rounded">Recopilació</span>
+                            <h3 class="text-base font-bold text-rose-950">Exàmens per blocs de temari</h3>
+                        </div>
+                        <svg class="w-5 h-5 text-rose-700 transform transition-transform duration-200 shrink-0 main-arrow" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                    </button>
+                    <!-- Afegit 'hidden' perquè comenci plegat -->
+                    <div class="main-block-content hidden p-4 bg-rose-50/30 border-t border-rose-200">
+                        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+
+                            <!-- Bloc 1 -->
+                            <div class="theme-card bg-white border border-rose-200 rounded-xl shadow-sm hover:border-rose-500 transition-all duration-200 overflow-hidden flex flex-col justify-between" data-id="rec-bloc-1">
+                                <div class="w-full text-left p-4 flex items-center justify-between gap-2">
+                                    <div>
+                                        <span class="text-xs font-bold text-rose-600 uppercase tracking-wider">Bloc 1</span>
+                                        <h4 class="text-sm font-bold text-black mt-1 line-clamp-3">Dret Constitucional i Organització (Temes 1 al 4)</h4>
+                                    </div>
+                                </div>
+                                <div class="px-4 pb-4 pt-2 border-t border-rose-100 bg-rose-50/50 flex items-center justify-between mt-auto">
+                                    <span class="text-xs font-semibold px-2 py-0.5 bg-white border border-rose-200 text-rose-700 rounded">Disponible</span>
+                                    <div class="flex items-center gap-1.5">
+                                        <a href="recop/recop1.html" class="px-2.5 py-1 text-xs font-bold text-white bg-rose-600 hover:bg-rose-700 rounded transition-colors shadow-sm">Test</a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Bloc 2 -->
+                            <div class="theme-card bg-white border border-rose-200 rounded-xl shadow-sm hover:border-rose-500 transition-all duration-200 overflow-hidden flex flex-col justify-between" data-id="rec-bloc-2">
+                                <div class="w-full text-left p-4 flex items-center justify-between gap-2">
+                                    <div>
+                                        <span class="text-xs font-bold text-rose-600 uppercase tracking-wider">Bloc 2</span>
+                                        <h4 class="text-sm font-bold text-black mt-1 line-clamp-3">Administració, Hisenda i Drets (Temes 5 al 8)</h4>
+                                    </div>
+                                </div>
+                                <div class="px-4 pb-4 pt-2 border-t border-rose-100 bg-rose-50/50 flex items-center justify-between mt-auto">
+                                    <span class="text-xs font-semibold px-2 py-0.5 bg-white border border-rose-200 text-rose-700 rounded">Disponible</span>
+                                    <div class="flex items-center gap-1.5">
+                                        <a href="recop/recop2.html" class="px-2.5 py-1 text-xs font-bold text-white bg-rose-600 hover:bg-rose-700 rounded transition-colors shadow-sm">Test</a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Bloc 3 -->
+                            <div class="theme-card bg-white border border-rose-200 rounded-xl shadow-sm hover:border-rose-500 transition-all duration-200 overflow-hidden flex flex-col justify-between" data-id="rec-bloc-3">
+                                <div class="w-full text-left p-4 flex items-center justify-between gap-2">
+                                    <div>
+                                        <span class="text-xs font-bold text-rose-600 uppercase tracking-wider">Bloc 3</span>
+                                        <h4 class="text-sm font-bold text-black mt-1 line-clamp-3">Documents, Registre i Comunicació (Temes 9 al 15)</h4>
+                                    </div>
+                                </div>
+                                <div class="px-4 pb-4 pt-2 border-t border-rose-100 bg-rose-50/50 flex items-center justify-between mt-auto">
+                                    <span class="text-xs font-semibold px-2 py-0.5 bg-white border border-rose-200 text-rose-700 rounded">Disponible</span>
+                                    <div class="flex items-center gap-1.5">
+                                        <a href="recop/recop3.html" class="px-2.5 py-1 text-xs font-bold text-white bg-rose-600 hover:bg-rose-700 rounded transition-colors shadow-sm">Test</a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Bloc 4 -->
+                            <div class="theme-card bg-white border border-rose-200 rounded-xl shadow-sm hover:border-rose-500 transition-all duration-200 overflow-hidden flex flex-col justify-between" data-id="rec-bloc-4">
+                                <div class="w-full text-left p-4 flex items-center justify-between gap-2">
+                                    <div>
+                                        <span class="text-xs font-bold text-rose-600 uppercase tracking-wider">Bloc 4</span>
+                                        <h4 class="text-sm font-bold text-black mt-1 line-clamp-3">Procediment, Òrgans de Govern i Relacions (Temes 16 al 26)</h4>
+                                    </div>
+                                </div>
+                                <div class="px-4 pb-4 pt-2 border-t border-rose-100 bg-rose-50/50 flex items-center justify-between mt-auto">
+                                    <span class="text-xs font-semibold px-2 py-0.5 bg-white border border-rose-200 text-rose-700 rounded">Disponible</span>
+                                    <div class="flex items-center gap-1.5">
+                                        <a href="recop/recop4.html" class="px-2.5 py-1 text-xs font-bold text-white bg-rose-600 hover:bg-rose-700 rounded transition-colors shadow-sm">Test</a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Bloc 5 -->
+                            <div class="theme-card bg-white border border-rose-200 rounded-xl shadow-sm hover:border-rose-500 transition-all duration-200 overflow-hidden flex flex-col justify-between" data-id="rec-bloc-5">
+                                <div class="w-full text-left p-4 flex items-center justify-between gap-2">
+                                    <div>
+                                        <span class="text-xs font-bold text-rose-600 uppercase tracking-wider">Bloc 5</span>
+                                        <h4 class="text-sm font-bold text-black mt-1 line-clamp-3">Personal, Actes, Contractació i Serveis (Temes 27 al 31)</h4>
+                                    </div>
+                                </div>
+                                <div class="px-4 pb-4 pt-2 border-t border-rose-100 bg-rose-50/50 flex items-center justify-between mt-auto">
+                                    <span class="text-xs font-semibold px-2 py-0.5 bg-white border border-rose-200 text-rose-700 rounded">Disponible</span>
+                                    <div class="flex items-center gap-1.5">
+                                        <a href="recop/recop5.html" class="px-2.5 py-1 text-xs font-bold text-white bg-rose-600 hover:bg-rose-700 rounded transition-colors shadow-sm">Test</a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Bloc 6 -->
+                            <div class="theme-card bg-white border border-rose-200 rounded-xl shadow-sm hover:border-rose-500 transition-all duration-200 overflow-hidden flex flex-col justify-between" data-id="rec-bloc-6">
+                                <div class="w-full text-left p-4 flex items-center justify-between gap-2">
+                                    <div>
+                                        <span class="text-xs font-bold text-rose-600 uppercase tracking-wider">Bloc 6</span>
+                                        <h4 class="text-sm font-bold text-black mt-1 line-clamp-3">Economia, Hisenda i Serveis Metropolitans (Temes 32 al 35)</h4>
+                                    </div>
+                                </div>
+                                <div class="px-4 pb-4 pt-2 border-t border-rose-100 bg-rose-50/50 flex items-center justify-between mt-auto">
+                                    <span class="text-xs font-semibold px-2 py-0.5 bg-white border border-rose-200 text-rose-700 rounded">Disponible</span>
+                                    <div class="flex items-center gap-1.5">
+                                        <a href="recop/recop6.html" class="px-2.5 py-1 text-xs font-bold text-white bg-rose-600 hover:bg-rose-700 rounded transition-colors shadow-sm">Test</a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Bloc 7 -->
+                            <div class="theme-card bg-white border border-rose-200 rounded-xl shadow-sm hover:border-rose-500 transition-all duration-200 overflow-hidden flex flex-col justify-between" data-id="rec-bloc-7">
+                                <div class="w-full text-left p-4 flex items-center justify-between gap-2">
+                                    <div>
+                                        <span class="text-xs font-bold text-rose-600 uppercase tracking-wider">Bloc 7</span>
+                                        <h4 class="text-sm font-bold text-black mt-1 line-clamp-3">Patrimoni, Responsabilitat, Transparència i Subvencions (Temes 36 al 40)</h4>
+                                    </div>
+                                </div>
+                                <div class="px-4 pb-4 pt-2 border-t border-rose-100 bg-rose-50/50 flex items-center justify-between mt-auto">
+                                    <span class="text-xs font-semibold px-2 py-0.5 bg-white border border-rose-200 text-rose-700 rounded">Disponible</span>
+                                    <div class="flex items-center gap-1.5">
+                                        <a href="recop/recop7.html" class="px-2.5 py-1 text-xs font-bold text-white bg-rose-600 hover:bg-rose-700 rounded transition-colors shadow-sm">Test</a>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- =omod / FI NOVA SECCIÓ -->
+
+        <section class="mb-8">
+            <div class="border-b-2 border-red-600 pb-2 mb-6">
+                <h2 class="text-xl sm:text-2xl font-bold text-black uppercase tracking-wide">Exàmens Anteriors</h2>
+            </div>
+
+            <div class="space-y-4">
+                <div class="border border-blue-200 rounded-xl shadow-sm bg-blue-50 overflow-hidden">
+                    <div class="w-full text-left p-4 bg-blue-100 flex items-center justify-between gap-4">
+                        <div class="flex items-center gap-3">
+                            <span class="bg-blue-600 text-white text-xs font-bold px-2.5 py-1 rounded">Arxiu</span>
+                            <h3 class="text-base font-bold text-blue-900">Proves selectives d'anys anteriors</h3>
+                        </div>
+                    </div>
+                    <div class="p-4 bg-blue-50 border-t border-blue-200">
+                        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+<!-- =====================================================
+     INICIO DE LOS EXÁMENES
+     ===================================================== -->
+
+     <div class="theme-card bg-white border border-blue-200 rounded-xl shadow-sm hover:border-blue-600 transition-all duration-200 overflow-hidden flex flex-col justify-between" data-id="ex-2022-c1">
+    <div class="w-full text-left p-4 flex items-center justify-between gap-2">
+        <div>
+            <span class="text-xs font-bold text-blue-600 uppercase tracking-wider">2026 - TEMA IMPORTANT</span>
+            <h4 class="text-sm font-bold text-black mt-1 line-clamp-3">Examen PRESSUPOSTOS I GASTOS.</h4>
+        </div>
+    </div>
+    <div class="px-4 pb-4 pt-2 border-t border-blue-100 bg-blue-50/50 flex items-center justify-between mt-auto">
+        <span class="text-xs font-semibold px-2 py-0.5 bg-white border border-blue-200 text-blue-700 rounded">Disponible</span>
+        <div class="flex items-center gap-1.5">
+            <a href="examensant/2026_temaimportant.html" class="px-2.5 py-1 text-xs font-bold text-white bg-blue-600 hover:bg-blue-700 rounded transition-colors shadow-sm">Test</a>
+        </div>
+    </div>
+</div>
+       <!-- =====================================================
+     INICIO DE LOS EXÁMENES
+     ===================================================== -->  
+<!-- =====================================================
+     INICIO DE LOS EXÁMENES
+     ===================================================== -->
+
+     <div class="theme-card bg-white border border-blue-200 rounded-xl shadow-sm hover:border-blue-600 transition-all duration-200 overflow-hidden flex flex-col justify-between" data-id="ex-2022-c1">
+    <div class="w-full text-left p-4 flex items-center justify-between gap-2">
+        <div>
+            <span class="text-xs font-bold text-blue-600 uppercase tracking-wider">2026</span>
+            <h4 class="text-sm font-bold text-black mt-1 line-clamp-3">Examen Convocatòria anterior C1 GENE.</h4>
+        </div>
+    </div>
+    <div class="px-4 pb-4 pt-2 border-t border-blue-100 bg-blue-50/50 flex items-center justify-between mt-auto">
+        <span class="text-xs font-semibold px-2 py-0.5 bg-white border border-blue-200 text-blue-700 rounded">Disponible</span>
+        <div class="flex items-center gap-1.5">
+            <a href="examensant/2026_c1_gene_test.html" class="px-2.5 py-1 text-xs font-bold text-white bg-blue-600 hover:bg-blue-700 rounded transition-colors shadow-sm">Test</a>
+        </div>
+    </div>
+</div>
+       <!-- =====================================================
+     INICIO DE LOS EXÁMENES
+     ===================================================== -->     
+
+
+<div class="theme-card bg-white border border-blue-200 rounded-xl shadow-sm hover:border-blue-600 transition-all duration-200 overflow-hidden flex flex-col justify-between" data-id="ex-2022-c1">
+    <div class="w-full text-left p-4 flex items-center justify-between gap-2">
+        <div>
+            <span class="text-xs font-bold text-blue-600 uppercase tracking-wider">2025</span>
+            <h4 class="text-sm font-bold text-black mt-1 line-clamp-3">Examen Convocatòria anterior C1 BOSSA AMB.</h4>
+        </div>
+    </div>
+    <div class="px-4 pb-4 pt-2 border-t border-blue-100 bg-blue-50/50 flex items-center justify-between mt-auto">
+        <span class="text-xs font-semibold px-2 py-0.5 bg-white border border-blue-200 text-blue-700 rounded">Disponible</span>
+        <div class="flex items-center gap-1.5">
+            <a href="examensant/2025_c1_bossa_test.html" class="px-2.5 py-1 text-xs font-bold text-white bg-blue-600 hover:bg-blue-700 rounded transition-colors shadow-sm">Test</a>
+        </div>
+    </div>
+</div>
+<!-- =====================================================
+INICIO DE LOS EXÁMENES
+===================================================== -->        
+                <div class="theme-card bg-white border border-blue-200 rounded-xl shadow-sm hover:border-blue-600 transition-all duration-200 overflow-hidden flex flex-col justify-between" data-id="ex-2022-c1">
+                    <div class="w-full text-left p-4 flex items-center justify-between gap-2">
+                        <div>
+                            <span class="text-xs font-bold text-blue-600 uppercase tracking-wider">2022</span>
+                            <h4 class="text-sm font-bold text-black mt-1 line-clamp-3">Examen Convocatòria anterior C1 AMB, IMET i IMPSOL - SUPÒSITS.</h4>
+                        </div>
+                    </div>
+                    <div class="px-4 pb-4 pt-2 border-t border-blue-100 bg-blue-50/50 flex items-center justify-between mt-auto">
+                        <span class="text-xs font-semibold px-2 py-0.5 bg-white border border-blue-200 text-blue-700 rounded">Disponible</span>
+                        <div class="flex items-center gap-1.5">
+                            <a href="examensant/2022_c1_suposit_test.html" class="px-2.5 py-1 text-xs font-bold text-white bg-blue-600 hover:bg-blue-700 rounded transition-colors shadow-sm">Test</a>
+                        </div>
+                    </div>
+                </div>
+
+<!-- =====================================================
+INICIO DE LOS EXÁMENES
+===================================================== -->        
+                <div class="theme-card bg-white border border-blue-200 rounded-xl shadow-sm hover:border-blue-600 transition-all duration-200 overflow-hidden flex flex-col justify-between" data-id="ex-2022-c1">
+                    <div class="w-full text-left p-4 flex items-center justify-between gap-2">
+                        <div>
+                            <span class="text-xs font-bold text-blue-600 uppercase tracking-wider">2021</span>
+                            <h4 class="text-sm font-bold text-black mt-1 line-clamp-3">Examen Borsa C1 2021 TEST1</h4>
+                        </div>
+                    </div>
+                    <div class="px-4 pb-4 pt-2 border-t border-blue-100 bg-blue-50/50 flex items-center justify-between mt-auto">
+                        <span class="text-xs font-semibold px-2 py-0.5 bg-white border border-blue-200 text-blue-700 rounded">Disponible</span>
+                        <div class="flex items-center gap-1.5">
+                            <a href="examensant/2021_c1_borsa_test1.html" class="px-2.5 py-1 text-xs font-bold text-white bg-blue-600 hover:bg-blue-700 rounded transition-colors shadow-sm">Test</a>
+                        </div>
+                    </div>
+                </div>
+
+
+ <!-- =====================================================
+     INICIO DE LOS EXÁMENES
+     ===================================================== -->    
+                <div class="theme-card bg-white border border-blue-200 rounded-xl shadow-sm hover:border-blue-600 transition-all duration-200 overflow-hidden flex flex-col justify-between" data-id="ex-2022-c1">
+                    <div class="w-full text-left p-4 flex items-center justify-between gap-2">
+                        <div>
+                            <span class="text-xs font-bold text-blue-600 uppercase tracking-wider">2021</span>
+                            <h4 class="text-sm font-bold text-black mt-1 line-clamp-3">Examen Borsa C1 2021 TEST2</h4>
+                        </div>
+                    </div>
+                    <div class="px-4 pb-4 pt-2 border-t border-blue-100 bg-blue-50/50 flex items-center justify-between mt-auto">
+                        <span class="text-xs font-semibold px-2 py-0.5 bg-white border border-blue-200 text-blue-700 rounded">Disponible</span>
+                        <div class="flex items-center gap-1.5">
+                            <a href="examensant/2021_c1_borsa_test2.html" class="px-2.5 py-1 text-xs font-bold text-white bg-blue-600 hover:bg-blue-700 rounded transition-colors shadow-sm">Test</a>
+                        </div>
+                    </div>
+                </div>
+
+
+ <!-- =====================================================
+     INICIO DE LOS EXÁMENES
+     ===================================================== -->
+      <!-- =====================================================
+     INICIO DE LOS EXÁMENES
+     ===================================================== -->    
+                <div class="theme-card bg-white border border-blue-200 rounded-xl shadow-sm hover:border-blue-600 transition-all duration-200 overflow-hidden flex flex-col justify-between" data-id="ex-2022-c1">
+                    <div class="w-full text-left p-4 flex items-center justify-between gap-2">
+                        <div>
+                            <span class="text-xs font-bold text-blue-600 uppercase tracking-wider">2019 SUPÒSIT 2</span>
+                            <h4 class="text-sm font-bold text-black mt-1 line-clamp-3">Examen Supòsit 2</h4>
+                        </div>
+                    </div>
+                    <div class="px-4 pb-4 pt-2 border-t border-blue-100 bg-blue-50/50 flex items-center justify-between mt-auto">
+                        <span class="text-xs font-semibold px-2 py-0.5 bg-white border border-blue-200 text-blue-700 rounded">Disponible</span>
+                        <div class="flex items-center gap-1.5">
+                            <a href="examensant/2019_c1_amb_suposit2.html" class="px-2.5 py-1 text-xs font-bold text-white bg-blue-600 hover:bg-blue-700 rounded transition-colors shadow-sm">Test</a>
+                        </div>
+                    </div>
+                </div>
+    <!-- =====================================================
+     INICIO DE LOS EXÁMENES
+     ===================================================== -->    
+                <div class="theme-card bg-white border border-blue-200 rounded-xl shadow-sm hover:border-blue-600 transition-all duration-200 overflow-hidden flex flex-col justify-between" data-id="ex-2022-c1">
+                    <div class="w-full text-left p-4 flex items-center justify-between gap-2">
+                        <div>
+                            <span class="text-xs font-bold text-blue-600 uppercase tracking-wider">2019 SUPÒSIT 1</span>
+                            <h4 class="text-sm font-bold text-black mt-1 line-clamp-3">Examen Supòsit 1</h4>
+                        </div>
+                    </div>
+                    <div class="px-4 pb-4 pt-2 border-t border-blue-100 bg-blue-50/50 flex items-center justify-between mt-auto">
+                        <span class="text-xs font-semibold px-2 py-0.5 bg-white border border-blue-200 text-blue-700 rounded">Disponible</span>
+                        <div class="flex items-center gap-1.5">
+                            <a href="examensant/2019_c1_amb_suposit1.html" class="px-2.5 py-1 text-xs font-bold text-white bg-blue-600 hover:bg-blue-700 rounded transition-colors shadow-sm">Test</a>
+                        </div>
+                    </div>
+                </div>
+
+
+
+ <!-- =====================================================
+     INICIO DE LOS EXÁMENES
+     ===================================================== -->
+
+
+ <!-- =====================================================
+     INICIO DE LOS EXÁMENES
+     ===================================================== -->
+     
+     <div class="theme-card bg-white border border-blue-200 rounded-xl shadow-sm hover:border-blue-600 transition-all duration-200 overflow-hidden flex flex-col justify-between" data-id="ex-2022-c1">
+    <div class="w-full text-left p-4 flex items-center justify-between gap-2">
+        <div>
+            <span class="text-xs font-bold text-blue-600 uppercase tracking-wider">2019</span>
+            <h4 class="text-sm font-bold text-black mt-1 line-clamp-3">Examen Convocatòria anterior C1 AMB.</h4>
+        </div>
+    </div>
+    <div class="px-4 pb-4 pt-2 border-t border-blue-100 bg-blue-50/50 flex items-center justify-between mt-auto">
+        <span class="text-xs font-semibold px-2 py-0.5 bg-white border border-blue-200 text-blue-700 rounded">Disponible</span>
+        <div class="flex items-center gap-1.5">
+            <a href="examensant/2019_c1_amb_test.html" class="px-2.5 py-1 text-xs font-bold text-white bg-blue-600 hover:bg-blue-700 rounded transition-colors shadow-sm">Test</a>
+        </div>
+    </div>
+</div>
+ <!-- =====================================================
+     INICIO DE LOS EXÁMENES
+     ===================================================== -->
+
+                           
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="w-full border-t border-gray-200 bg-white py-4 mt-8">
+        <div class="max-w-7xl mx-auto px-4 text-center text-xs text-gray-500">
+            © 2026 OpoAMB | &copy; Creat per JOMP
+        </div>
+    </footer>
+
+   <script>
+    // 1. Restaurar l'estat quan la pàgina escarrega completament
+    document.addEventListener("DOMContentLoaded", () => {
+        // Restaurar blocs principals
+        const savedMainBlocks = JSON.parse(localStorage.getItem('openMainBlocks') || '[]');
+        savedMainBlocks.forEach(blockId => {
+            const block = document.querySelector(`[data-block="${blockId}"]`);
+            if (block) {
+                const content = block.querySelector('.main-block-content');
+                const arrow = block.querySelector('.main-arrow');
+                if (content && arrow) {
+                    content.classList.remove('hidden');
+                    arrow.classList.add('rotate-180');
+                }
+            }
+        });
+
+        // Restaurar acords (acordions)
+        const savedAccordions = JSON.parse(localStorage.getItem('openAccordions') || '[]');
+        savedAccordions.forEach(cardId => {
+            const card = document.querySelector(`[data-id="${cardId}"]`);
+            if (card) {
+                const content = card.querySelector('.accordion-content');
+                const arrow = card.querySelector('.arrow-icon');
+                if (content && arrow) {
+                    content.classList.remove('hidden');
+                    arrow.classList.add('rotate-180');
+                }
+            }
+        });
+    });
+
+    function toggleMainBlock(blockId) {
+        const block = document.querySelector(`[data-block="${blockId}"]`);
+        const content = block.querySelector('.main-block-content');
+        const arrow = block.querySelector('.main-arrow');
+        
+        content.classList.toggle('hidden');
+        arrow.classList.toggle('rotate-180');
+
+        // Guardar l'estat actualitzat
+        saveStateToLocalStorage();
+    }
+
+    function toggleAccordion(cardId) {
+        const card = document.querySelector(`[data-id="${cardId}"]`);
+        const content = card.querySelector('.accordion-content');
+        const arrow = card.querySelector('.arrow-icon');
+        
+        content.classList.toggle('hidden');
+        arrow.classList.toggle('rotate-180');
+
+        // Guardar l'estat actualitzat
+        saveStateToLocalStorage();
+    }
+
+    function saveStateToLocalStorage() {
+        // Recollir tots els IDs dels blocs principals que estan oberts (no tenen la classe 'hidden')
+        const openMainBlocks = [];
+        document.querySelectorAll('[data-block]').forEach(block => {
+            const content = block.querySelector('.main-block-content');
+            if (content && !content.classList.contains('hidden')) {
+                openMainBlocks.push(block.getAttribute('data-block'));
+            }
+        });
+
+        // Recollir tots els IDs dels acordions que estan oberts
+        const openAccordions = [];
+        document.querySelectorAll('[data-id]').forEach(card => {
+            const content = card.querySelector('.accordion-content');
+            if (content && !content.classList.contains('hidden')) {
+                openAccordions.push(card.getAttribute('data-id'));
+            }
+        });
+
+        // Desar-ho a la memòria del navegador
+        localStorage.setItem('openMainBlocks', JSON.stringify(openMainBlocks));
+        localStorage.setItem('openAccordions', JSON.stringify(openAccordions));
+    }
+</script>
+</body>
+</html>
